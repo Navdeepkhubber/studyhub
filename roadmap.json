@@ -1,0 +1,1541 @@
+{
+  "tracks": [
+    {
+      "id": "A",
+      "name": "Data engineering core",
+      "goal": "What data engineering interviews probe hardest: SQL, Spark internals, lakehouse, modeling, pipelines, system design.",
+      "groups": [
+        {
+          "t": "SQL",
+          "i": [
+            "*Window functions: ROW_NUMBER, RANK, LAG and LEAD, running totals, frames",
+            "*CTEs and recursive CTEs",
+            "*Joins: anti, semi, self; cardinality and fan-out",
+            "*Gaps and islands, sessionization, top-N per group",
+            "*Deduplication and latest record per key",
+            "NULL semantics, COALESCE, CASE, conditional aggregation",
+            "Query plans, indexes, partition pruning",
+            "Pivot and unpivot, date and string functions"
+          ]
+        },
+        {
+          "t": "SQL fundamentals and database objects",
+          "i": [
+            "DDL and DML: CREATE, ALTER, DROP, TRUNCATE, INSERT, UPDATE, DELETE",
+            "Constraints: primary key, foreign key, unique, not null, check",
+            "Subqueries: scalar, column, row, table, correlated",
+            "Views, stored procedures, functions, dynamic SQL",
+            "*Transactions: ACID, BEGIN, COMMIT, ROLLBACK, SAVEPOINT",
+            "*Isolation levels and the anomalies each prevents",
+            "GRANT and REVOKE, database security practices",
+            "Query optimization: selective projection, fewer correlated subqueries, join order, using indexes"
+          ]
+        },
+        {
+          "t": "Python",
+          "i": [
+            "*Lists, dicts, sets, comprehensions and their complexity",
+            "*Generators, iterators, context managers",
+            "Decorators, closures, args and kwargs",
+            "OOP, dataclasses, type hints",
+            "Exceptions, logging, retries with backoff",
+            "*pandas: groupby, merge, window, memory tricks",
+            "pytest, fixtures, mocking",
+            "Packaging, virtual environments, project layout",
+            "Concurrency: threading, multiprocessing, asyncio, the GIL",
+            "Regular expressions",
+            "Static typing with mypy or pyright; Pydantic for validation",
+            "Tooling: uv or poetry, pyproject.toml, ruff or black",
+            "Polars and DuckDB for single-node data work",
+            "FastAPI basics for serving data or models"
+          ]
+        },
+        {
+          "t": "Spark and PySpark",
+          "i": [
+            "*Architecture: driver, executors, DAG, stages, tasks",
+            "*Lazy evaluation, transformations vs actions, narrow vs wide",
+            "*Shuffle: what triggers it and how to reduce it",
+            "*Join strategies: broadcast, sort-merge, shuffle hash",
+            "*Data skew: salting and AQE skew handling",
+            "*Partitioning, repartition vs coalesce, bucketing",
+            "cache and persist, storage levels",
+            "UDF vs pandas UDF vs built-ins; Catalyst and Tungsten",
+            "Reading the Spark UI: stages, spill, skew, GC",
+            "Memory model, executor sizing, small files problem",
+            "Structured Streaming: triggers, watermarks, checkpoints, stateful operations"
+          ]
+        },
+        {
+          "t": "Delta Lake and lakehouse",
+          "i": [
+            "*Transaction log, ACID, optimistic concurrency",
+            "*MERGE, upserts, SCD2 with Delta",
+            "*OPTIMIZE, Z-ORDER or liquid clustering, VACUUM",
+            "Time travel, restore, Change Data Feed",
+            "Schema enforcement and evolution",
+            "Delta vs Iceberg vs Hudi",
+            "*Medallion architecture: bronze, silver, gold",
+            "Unity Catalog: catalogs, schemas, lineage, access control",
+            "Auto Loader, Delta Live Tables, Workflows",
+            "Photon, cluster types, cost controls"
+          ]
+        },
+        {
+          "t": "Modeling and warehousing",
+          "i": [
+            "*OLTP vs OLAP, row vs columnar",
+            "*Kimball: facts, dimensions, grain, star vs snowflake",
+            "*Slowly changing dimensions: types 1, 2, 3, 6",
+            "Data Vault basics and one-big-table tradeoffs",
+            "Normalization and denormalization",
+            "Surrogate keys, conformed dimensions, bridge tables",
+            "Partitioning and clustering in Snowflake, BigQuery, Redshift",
+            "Semantic layer and metric definitions"
+          ]
+        },
+        {
+          "t": "Pipelines and orchestration",
+          "i": [
+            "*Batch vs streaming; ETL vs ELT; Lambda vs Kappa",
+            "*Idempotency, retries, backfills, reprocessing",
+            "*Late and out-of-order data, watermarks",
+            "*CDC: log-based vs query-based, Debezium",
+            "*Airflow: DAGs, operators, sensors, XCom, scheduling pitfalls",
+            "dbt: models, incremental, tests, snapshots",
+            "*Kafka: topics, partitions, consumer groups, offsets, delivery semantics",
+            "Exactly-once vs at-least-once, deduplication",
+            "API and file ingestion patterns, schema drift"
+          ]
+        },
+        {
+          "t": "Quality, operations, platform",
+          "i": [
+            "*Data quality checks: freshness, volume, schema, uniqueness",
+            "Observability, lineage, alerting, SLAs and SLOs",
+            "*CI/CD for pipelines: Git flow, tests, deploy tooling",
+            "Infrastructure as code: Terraform basics",
+            "Docker basics",
+            "Cost optimization: compute, storage, queries",
+            "Security: RBAC, PII masking, encryption, row and column security",
+            "Governance, catalogs, data contracts"
+          ]
+        },
+        {
+          "t": "Storage, formats, cloud",
+          "i": [
+            "*Parquet internals: row groups, column chunks, encodings, predicate pushdown",
+            "Avro vs ORC vs JSON vs CSV; compression codecs",
+            "Object storage semantics and the small files problem",
+            "One cloud in depth: storage, compute, identity, networking, managed ETL",
+            "Distributed systems basics: partitioning, replication, CAP, consensus overview",
+            "Index structures: B-tree and LSM"
+          ]
+        },
+        {
+          "t": "System design",
+          "i": [
+            "*Framework: requirements, scale, SLAs, data model, flow, failure modes, cost",
+            "*Design a batch lakehouse for daily analytics",
+            "*Design a streaming pipeline with CDC into a lakehouse",
+            "Design a feature or embedding pipeline for ML and RAG",
+            "Design a data quality and observability platform",
+            "Capacity estimation: rows per day, bytes per row, cluster sizing",
+            "Tradeoff vocabulary: latency, freshness, cost, consistency, complexity"
+          ]
+        },
+        {
+          "t": "General system design",
+          "i": [
+            "*Performance vs scalability; latency vs throughput",
+            "*CAP theorem; availability vs consistency",
+            "*Consistency patterns: weak, eventual, strong",
+            "Availability patterns: fail-over, replication, active-active, active-passive; the nines",
+            "DNS and CDNs, push and pull",
+            "*Load balancing: layer 4 vs layer 7, algorithms, vs reverse proxy",
+            "*Caching: cache-aside, write-through, write-behind, refresh-ahead",
+            "*Asynchronism: message queues, task queues, back pressure",
+            "Communication: HTTP, TCP, UDP, REST, RPC, gRPC, GraphQL",
+            "*Idempotent operations and safe retries",
+            "Data patterns: CQRS, event sourcing, materialized views",
+            "Reliability patterns: circuit breaker, bulkhead, retry, compensating transaction",
+            "Performance antipatterns: chatty I/O, busy database, retry storm, no caching",
+            "Monitoring: health, availability, performance, instrumentation, alerts"
+          ]
+        },
+        {
+          "t": "Lifecycle and foundations",
+          "i": [
+            "*Data engineering lifecycle: generation, storage, ingestion, transformation, serving",
+            "Data engineering vs data science vs analytics roles",
+            "Choosing technologies: build vs buy, cost, scale, team skills",
+            "Data sources: databases, APIs, logs, mobile apps, IoT",
+            "Linux and shell basics",
+            "*Git and GitHub workflows",
+            "Networking basics: HTTP, TCP, DNS, ports",
+            "Languages beyond Python: Java, Scala, Go"
+          ]
+        },
+        {
+          "t": "Databases beyond SQL",
+          "i": [
+            "*When to pick SQL vs NoSQL",
+            "Document stores: MongoDB, CosmosDB, CouchDB, Elasticsearch",
+            "Wide-column stores: Cassandra, BigTable, HBase",
+            "Key-value stores: Redis, DynamoDB, Memcached",
+            "Graph databases: Neo4j, Neptune",
+            "Horizontal vs vertical scaling",
+            "Sharding, replication, federation"
+          ]
+        },
+        {
+          "t": "Architectures and vocabulary",
+          "i": [
+            "Data warehouse vs data lake vs lakehouse",
+            "Data marts",
+            "*Data mesh: domain ownership, data as a product",
+            "Data fabric, data hub, metadata-first architecture",
+            "Serverless options",
+            "Cloud architectures: single region, multi-region, multi-cloud"
+          ]
+        },
+        {
+          "t": "Hadoop and cluster computing",
+          "i": [
+            "Cluster computing basics and distributed file systems",
+            "HDFS: blocks, replication, NameNode and DataNodes",
+            "MapReduce model and why Spark replaced it",
+            "YARN and job scheduling",
+            "Kubernetes as a cluster manager",
+            "Hadoop ecosystem at a glance"
+          ]
+        },
+        {
+          "t": "Cloud platforms",
+          "i": [
+            "Cloud basics: IaaS vs PaaS vs SaaS, shared responsibility, well-architected",
+            "*AWS core: IAM, VPC, EC2, S3, Lambda, RDS, DynamoDB, CloudWatch",
+            "AWS data services: Glue, Redshift",
+            "Azure: virtual machines, Blob Storage, SQL Database, Data Factory",
+            "Google Cloud: Compute Engine, Cloud Storage, Cloud SQL, BigQuery, Dataflow",
+            "Containers on cloud: ECS, EKS, GKE, Fargate",
+            "Know one cloud deeply and map the others by analogy"
+          ]
+        },
+        {
+          "t": "Messaging systems",
+          "i": [
+            "*Sync vs async communication; messages vs streams",
+            "*Kafka vs RabbitMQ vs SQS and SNS: when each fits",
+            "Pub/sub, queues, consumer groups, dead-letter queues",
+            "Back pressure and retries"
+          ]
+        },
+        {
+          "t": "Delivery: testing, CI/CD, IaC, containers",
+          "i": [
+            "*Test types: unit, integration, end-to-end, functional, load, smoke",
+            "*CI/CD tools: GitHub Actions, GitLab CI, CircleCI, ArgoCD",
+            "*Infrastructure as code: declarative vs imperative, idempotency, environments",
+            "Terraform, OpenTofu, AWS CDK",
+            "*Docker images and containers",
+            "Kubernetes basics: pods, deployments, services",
+            "Monitoring tools: Prometheus, Datadog, Sentry, New Relic"
+          ]
+        },
+        {
+          "t": "Serving and reverse ETL",
+          "i": [
+            "Serving analytics: BI tools such as Power BI, Tableau, Looker, Streamlit",
+            "*ETL vs reverse ETL and their use cases",
+            "Reverse ETL tools: Hightouch, Census, Segment",
+            "Serving to applications: APIs and low-latency stores"
+          ]
+        },
+        {
+          "t": "Governance, privacy, regulation",
+          "i": [
+            "*Authentication vs authorization",
+            "Encryption at rest and in transit",
+            "Tokenization, data masking, data obfuscation",
+            "*Data lineage and metadata management",
+            "Data interoperability and data contracts",
+            "Privacy law overview: GDPR, ECPA, EU AI Act, India's DPDP Act",
+            "Data and AI regulation: what changes for pipelines that feed models"
+          ]
+        },
+        {
+          "t": "Data engineering roadmap details",
+          "i": [
+            "Skills and responsibilities of a data engineer; choosing the right technologies",
+            "Data modelling techniques and data collection considerations",
+            "Relational databases: MySQL, PostgreSQL, MariaDB, Aurora, Oracle, Microsoft SQL Server",
+            "Warehouses: BigQuery, Snowflake, Amazon Redshift; lake platforms: Databricks Delta Lake, Snowflake, Onehouse",
+            "Ingestion types: batch, hybrid, streaming, realtime",
+            "ETL process: extract, transform, load",
+            "Pipeline tools: Airflow, dbt, Luigi, Prefect (spelled Perfect on the roadmap)",
+            "CI/CD tools: GitHub Actions, CircleCI, GitLab CI, ArgoCD",
+            "IaC: reusability, environment management, Google Deployment Manager",
+            "Core services across clouds: Amazon EC2, RDS, S3, Glue; Azure VMs, Blob, SQL Database, Data Factory; Compute Engine, Cloud Storage, Cloud SQL, Dataflow",
+            "BI tools: Microsoft Power BI, Tableau, Looker, Streamlit",
+            "Reverse ETL use cases: syncing warehouse data into CRM, marketing and support tools",
+            "Version control systems: what they solve and why Git is the standard tool"
+          ]
+        },
+        {
+          "t": "SQL language reference",
+          "i": [
+            "What relational databases are; RDBMS benefits and limitations; SQL vs NoSQL",
+            "SQL keywords, data types, operators, basic syntax and statements",
+            "Aggregates: SUM, COUNT, AVG, MIN, MAX with GROUP BY and HAVING",
+            "Joins: INNER, LEFT, RIGHT, FULL OUTER, SELF, CROSS",
+            "Subquery types: scalar, column, row, table; nested and correlated",
+            "String functions: CONCAT, LENGTH, SUBSTRING, REPLACE, UPPER, LOWER",
+            "Numeric functions: FLOOR, CEILING, ABS, MOD, ROUND",
+            "Date and time: DATE, TIME, TIMESTAMP, DATEPART, DATEADD",
+            "Conditional: CASE, NULLIF, COALESCE",
+            "Views: create, modify, drop; managing indexes",
+            "Data integrity and security: constraints, GRANT, REVOKE",
+            "Performance: query analysis, using indexes, optimizing joins, reducing subqueries, selective projection",
+            "Advanced SQL: RANK, DENSE_RANK, LEAD, LAG, ROW_NUMBER, recursive queries, pivot and unpivot, CTEs, dynamic SQL"
+          ]
+        },
+        {
+          "t": "Python language and ecosystem",
+          "i": [
+            "Basics: syntax, variables, data types, type casting, conditionals, loops, exceptions, functions and built-ins",
+            "Data structures: lists, tuples, sets, dictionaries",
+            "Modules: built-in and custom; PyPI; common packages",
+            "Package managers: pip, conda, uv, poetry, pipenv; pyproject.toml configuration",
+            "Environments: venv, virtualenv, pyenv",
+            "Paradigms: list comprehensions, generator expressions, context managers, lambdas, decorators, iterators",
+            "Object oriented programming: classes, inheritance, methods and dunder methods",
+            "Concurrency: multiprocessing, threading, asynchrony, the GIL",
+            "Static typing: typing, mypy, pyright, pyre, Pydantic",
+            "Code formatting: yapf, black, ruff; documentation with Sphinx",
+            "Testing: pytest, unittest, doctest, nose, tox",
+            "Web frameworks: FastAPI, Django, Flask (sync and async); Pyramid; Tornado, Sanic, aiohttp, gevent (async)",
+            "Plotly Dash for data apps"
+          ]
+        },
+        {
+          "t": "Cloud design patterns",
+          "i": [
+            "Design and implementation: strangler fig, sidecar, ambassador, anti-corruption layer, backends for frontend, compute resource consolidation, external config store, gateway routing, gateway offloading, gateway aggregation, pipes and filters, static content hosting, leader election",
+            "Data management: valet key, sharding, materialized view, index table, event sourcing, CQRS, cache-aside",
+            "Messaging: sequential convoy, scheduling agent supervisor, queue-based load leveling, publisher/subscriber, priority queue, competing consumers, choreography, claim check, async request reply",
+            "Availability and resiliency: deployment stamps, geodes, throttling, health endpoint monitoring, bulkhead, circuit breaker, compensating transaction, retry",
+            "Security: federated identity, gatekeeper, valet key",
+            "Application layer: microservices, service discovery",
+            "Background jobs: event-driven, schedule-driven, returning results",
+            "Replication: master-slave, master-master; AP vs CP systems; how to approach a system design interview",
+            "Availability numbers: 99.9% (three nines), 99.99% (four nines); availability in parallel vs in sequence",
+            "Caching layers: client, CDN, web server, database, application",
+            "Antipatterns: improper instantiation, monolithic persistence, noisy neighbor, synchronous I/O, extraneous fetching, busy frontend",
+            "Monitoring: usage and security monitoring",
+            "High availability patterns: deployment stamps, geodes, bulkhead, circuit breaker, health endpoint monitoring"
+          ]
+        },
+        {
+          "t": "AWS: foundations and networking",
+          "i": [
+            "Public vs private vs hybrid cloud; IaaS, PaaS, SaaS; global infrastructure; shared responsibility; Well-Architected Framework",
+            "IAM: users, groups, roles, policies (identity-based and resource-based), instance profiles, assuming roles",
+            "VPC: CIDR blocks, public and private subnets, route tables, security groups, internet gateway, NAT gateway",
+            "EC2: instance types, CPU credits, storage volumes, key pairs, Elastic IP, user data scripts, purchasing options, AMIs, launch templates",
+            "Auto scaling: groups and scaling policies; Elastic Load Balancers",
+            "S3: buckets and objects, lifecycle rules, storage classes (Standard, S3-IA, Glacier)",
+            "Route 53: hosted zones, routing policies, health checks",
+            "CloudWatch: metrics, events, logs; CloudFront: distributions, policies, invalidations",
+            "SES: sandbox and sending limits, identity verification, DKIM setup, feedback handling, configuration sets, sender reputation, dedicated IP",
+            "Learn by building: deploy a small app using the services above"
+          ]
+        },
+        {
+          "t": "AWS: data, containers, serverless",
+          "i": [
+            "RDS: DB instances, storage types (general purpose, provisioned IOPS, magnetic), backup and restore",
+            "DynamoDB: tables, items, attributes, primary keys, secondary indexes, data modeling, streams, capacity settings, limits, quotas, backup and restore, DynamoDB Local",
+            "ElastiCache: Redis and Memcached",
+            "Containers: ECR, ECS (clusters, container agents, tasks, services), EKS, Fargate, launch configuration and autoscaling groups",
+            "Lambda: creating and invoking functions, layers, custom runtimes, versioning and aliases, EventBridge scheduled execution, cold starts and limits",
+            "API Gateway and Lambda@Edge"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "GenAI, RAG and agents",
+      "goal": "From how LLMs work to retrieval, agent harnesses, evaluation and applying them to data work.",
+      "groups": [
+        {
+          "t": "LLM fundamentals",
+          "i": [
+            "*Tokenization (BPE), context windows, token costs",
+            "*Embeddings and similarity: cosine, dot product",
+            "*Transformer: self-attention, multi-head, positional encoding, KV cache",
+            "Decoder-only vs encoder-decoder vs encoder-only",
+            "*Sampling: temperature, top-p, top-k, determinism",
+            "Pretraining, SFT, RLHF, DPO at a conceptual level",
+            "Scaling laws, mixture of experts, long-context tradeoffs",
+            "Hallucination causes and mitigations",
+            "Reading benchmark claims critically",
+            "Open-weight vs closed-weight models and licences",
+            "Reasoning models vs standard models",
+            "Streamed vs unstreamed responses",
+            "Frequency and presence penalties, stop sequences, max length",
+            "Token pricing: input vs output, estimating cost"
+          ]
+        },
+        {
+          "t": "Prompting and tool use",
+          "i": [
+            "*Zero-shot, few-shot, chain-of-thought, system prompts",
+            "*Structured outputs and JSON schema",
+            "*Function and tool calling end to end",
+            "Prompt versioning and testing",
+            "Prompt caching and batching for cost",
+            "Prompt injection basics",
+            "Techniques: step-back, self-consistency, tree of thoughts, ReAct prompting",
+            "Automatic prompt engineering: using an LLM to write prompts",
+            "Improving reliability: debiasing, ensembling, self-evaluation, calibration",
+            "Delimiting sections with XML tags; variables and templates",
+            "Role, contextual and system prompting"
+          ]
+        },
+        {
+          "t": "RAG",
+          "i": [
+            "*Pipeline: ingest, chunk, embed, index, retrieve, rerank, generate",
+            "*Chunking: fixed, semantic, hierarchical, overlap",
+            "Embedding model choice and dimensionality",
+            "*Vector stores and ANN: HNSW, IVF, pgvector, FAISS, Qdrant",
+            "*Hybrid search: BM25 plus dense, reciprocal rank fusion",
+            "*Reranking with cross-encoders",
+            "Query rewriting, HyDE, multi-query, metadata filters",
+            "Parent-document retrieval, GraphRAG, agentic RAG",
+            "*Evaluation: recall@k, MRR, nDCG, faithfulness, answer relevance",
+            "Failure modes: stale index, bad chunks, lost in the middle, citation errors",
+            "Document ETL: PDFs, tables, OCR, incremental re-indexing",
+            "RAG vs fine-tuning: use cases",
+            "Frameworks: LangChain, LlamaIndex, or SDKs directly",
+            "Other vector stores: Chroma, Weaviate, LanceDB, Supabase, MongoDB Atlas",
+            "Embedding use cases: semantic search, classification, recommendations, anomaly detection"
+          ]
+        },
+        {
+          "t": "Agents and harness",
+          "i": [
+            "*Agent loop: model, tools, observation, stop condition",
+            "*Workflows vs agents: chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer",
+            "*Context engineering: what goes in the window, compaction, retrieval on demand",
+            "Memory: short-term, long-term, scratchpads, files",
+            "Planning, ReAct, reflection loops",
+            "Subagents and delegation",
+            "Model Context Protocol (MCP) and tool design",
+            "*Permissions, sandboxing, human in the loop, guardrails",
+            "Multi-agent patterns and when not to use them",
+            "Harness evals: task suites, trajectories, pass rate, cost per task",
+            "Failure analysis: loops, tool misuse, context overflow",
+            "*Tool definition: name, description, input and output schema, error handling, examples",
+            "Architectures: RAG agent, ReAct, chain of thought, planner-executor, DAG agents, tree of thought",
+            "Memory types: episodic vs semantic; summarization, user profile storage, forgetting and aging",
+            "MCP parts: hosts, clients, servers; local vs remote deployment; building a server",
+            "Frameworks overview: LangChain, LlamaIndex, Haystack, AutoGen, CrewAI",
+            "Build the loop by hand: parse model output, handle errors and rate limits",
+            "Provider tool-use APIs: Anthropic tool use, OpenAI function calling, Gemini function calling",
+            "Example tools: web search, code execution, database queries, API requests, email and chat, file system",
+            "Red teaming agents: jailbreaks, tool abuse, PII leaks"
+          ]
+        },
+        {
+          "t": "Adaptation and fine-tuning",
+          "i": [
+            "*Prompt vs RAG vs fine-tune: decision criteria",
+            "LoRA, QLoRA, PEFT",
+            "Distillation, quantization, serving basics",
+            "Instruction data curation and synthetic data",
+            "Hugging Face stack: transformers, datasets, PEFT, TRL",
+            "Embedding fine-tuning for retrieval"
+          ]
+        },
+        {
+          "t": "Evaluation and LLMOps",
+          "i": [
+            "*Build an eval set from real examples; golden sets",
+            "*LLM-as-judge: strengths, biases, calibration against humans",
+            "Regression testing for prompts and pipelines",
+            "Tracing and observability: tokens, latency, cost per request",
+            "Routing, caching, fallbacks, rate limits",
+            "Safety: prompt injection, data leakage, PII handling",
+            "Monitoring drift in production",
+            "Eval tools: Ragas, DeepEval, LangSmith",
+            "Observability tools: Langfuse, LangSmith, Helicone, openllmetry",
+            "Unit tests for individual tools and integration tests for flows",
+            "Human-in-the-loop evaluation",
+            "Bias and toxicity guardrails, moderation APIs, adversarial testing"
+          ]
+        },
+        {
+          "t": "GenAI applied to data work",
+          "i": [
+            "*LLM batch classification at scale: prompts, schema, retries, cost",
+            "*Confidence and calibration for LLM classifiers",
+            "Text-to-SQL and its failure modes",
+            "Embedding pipelines on Delta tables, vector search",
+            "LLM-assisted data quality and enrichment",
+            "Unstructured document ETL into a lakehouse",
+            "Governance for AI on client data"
+          ]
+        },
+        {
+          "t": "Models, platforms, local inference",
+          "i": [
+            "Model families: OpenAI, Anthropic Claude, Google Gemini, Meta, Mistral, Cohere",
+            "Hosting options: Azure AI, AWS SageMaker, Hugging Face, Replicate",
+            "*Open-source models: Hugging Face Hub, tasks, inference SDK",
+            "Running models locally with Ollama",
+            "Choosing between open and closed models",
+            "AI code editors and code completion tools"
+          ]
+        },
+        {
+          "t": "Multimodal AI",
+          "i": [
+            "Image understanding and generation",
+            "Speech to text and text to speech",
+            "Video and audio understanding",
+            "Multimodal apps with LangChain or LlamaIndex"
+          ]
+        },
+        {
+          "t": "Prompt engineering roadmap",
+          "i": [
+            "LLMs and how they work; common terminology: LLM, tokens, context window, hallucination, agents, prompt injection, model weights and parameters, fine-tuning vs prompt engineering, AI vs AGI, RAG",
+            "What a prompt is; what prompt engineering is",
+            "Models offered by OpenAI, Google, Anthropic, Meta, xAI",
+            "LLM configuration: sampling parameters (temperature, top-k, top-p), output control (max tokens, stop sequences), repetition penalties (frequency, presence), structured outputs",
+            "*Prompting techniques: zero-shot, one-shot and few-shot, system, role and contextual prompting, step-back, chain of thought, self-consistency, tree of thoughts, ReAct",
+            "Automatic prompt engineering: using an LLM to generate prompts",
+            "Best practice: provide few-shot examples, keep prompts short, ask for structured output, use variables and placeholders, prefer clear instructions over constraints, control output length, experiment with formats",
+            "Best practice: tune sampling, guard against prompt injection, automate evaluation and unit tests, version prompts, optimize latency and cost, document decisions, delimit sections with triple backticks or XML tags",
+            "Improving reliability: prompt debiasing, prompt ensembling, LLM self-evaluation, calibrating LLMs",
+            "AI red teaming",
+            "Sanitize user text and guard against prompt injection in every prompt template"
+          ]
+        },
+        {
+          "t": "Agent foundations",
+          "i": [
+            "Prerequisites: basic backend development, Git and terminal usage, REST API knowledge",
+            "AI agents 101: what agents are, what tools are",
+            "Agent loop: perception and user input, reason and plan, acting and tool invocation, observation and reflection",
+            "Writing good prompts: be specific, provide context, use technical terms, use examples, iterate and test, specify length and format",
+            "Tool usage examples: web search, code execution and REPL, database queries, API requests, email, Slack and SMS, file system access",
+            "Example use cases: personal assistant, code generation, data analysis, web scraping and crawling, NPC and game AI",
+            "Creating MCP servers; core components; deployment modes: local desktop and remote or cloud",
+            "Maintaining memory: RAG and vector databases, SQL or custom stores, user profile storage, summarization and compression, forgetting and aging",
+            "Short-term memory within the prompt; long-term memory in a vector DB, SQL or custom store",
+            "Manual agents: direct LLM API calls, implementing the loop, parsing model output, error and rate-limit handling",
+            "Function calling: LLM native, OpenAI functions and Assistants API, Gemini, Anthropic tool use",
+            "Frameworks: LangChain, LlamaIndex, Haystack, AutoGen, CrewAI, Smol Depot (as listed)",
+            "Debugging and monitoring: structured logging and tracing",
+            "Security and ethics: prompt injection and jailbreaks, tool sandboxing and permissioning, data privacy and PII redaction, bias and toxicity guardrails, safety and red team testing",
+            "Model mechanics: how a model turns a prompt into output tokens, one step at a time",
+            "Understand the basics of RAG before giving an agent retrieval: when retrieval beats a longer context"
+          ]
+        },
+        {
+          "t": "AI engineer roadmap details",
+          "i": [
+            "AI engineer vs ML engineer; roles and responsibilities; impact on product development; AI vs AGI",
+            "Using pre-trained models: benefits, limitations and considerations",
+            "Model capabilities, context length, knowledge cut-off dates; popular models: OpenAI, Claude, Gemini, Mistral, Cohere",
+            "OpenAI platform: Chat Completions API, writing prompts, maximum tokens, token counting, pricing considerations, managing tokens, Playground",
+            "AI safety and ethics: prompt injection attacks, security and privacy concerns, bias and fairness, moderation API",
+            "Safety practice: adversarial testing, robust prompt engineering, know your customers and use cases, constraining outputs and inputs, adding end-user IDs in prompts",
+            "Open-source AI: popular open-source models, finding them on Hugging Face, Hugging Face tasks and Hub, inference SDK, Transformers.js",
+            "Ollama: models and SDK",
+            "Embeddings: what they are, OpenAI embedding models and API, Sentence Transformers, open-source embeddings, pricing",
+            "Embedding use cases: semantic search, data classification, recommendation systems, anomaly detection",
+            "Vector databases: purpose and functionality; pick one of Chroma, Pinecone, Weaviate, FAISS, LanceDB, Qdrant, Supabase, MongoDB Atlas",
+            "Implementing vector search: indexing embeddings, performing similarity search",
+            "RAG use cases; RAG vs fine-tuning; implementing RAG: chunking, embedding, vector database, retrieval process, generation",
+            "Ways to implement RAG: SDKs directly, LangChain, LlamaIndex; alternative: OpenAI Assistants API",
+            "Agent use cases; building agents manually, with OpenAI functions and tools, or the Assistants API",
+            "Multimodal AI use cases: image understanding and generation, video understanding, audio processing, text-to-speech, speech-to-text",
+            "Implementing multimodal AI: OpenAI Vision API, DALL-E API, Whisper API, Hugging Face models, LangChain and LlamaIndex for multimodal apps",
+            "Development tools: AI code editors and code completion tools",
+            "Understanding AI safety issues and where they show up in product design"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Math, statistics and ML",
+      "goal": "The foundation for the Master's: the math behind models, classical ML, deep learning, forecasting.",
+      "groups": [
+        {
+          "t": "Linear algebra",
+          "i": [
+            "*Vectors, dot product, norms, projections",
+            "*Matrix multiplication as a linear map",
+            "*Eigenvalues, eigenvectors, SVD",
+            "*PCA from covariance and from SVD",
+            "Rank, null space, least squares",
+            "Positive definite matrices, conditioning",
+            "Determinants, inverses, diagonalization"
+          ]
+        },
+        {
+          "t": "Calculus and optimization",
+          "i": [
+            "*Derivatives, chain rule, partial derivatives",
+            "*Gradient, Jacobian, Hessian",
+            "*Gradient descent, SGD, momentum, Adam",
+            "Convexity, local vs global minima",
+            "Lagrange multipliers, constrained optimization",
+            "Learning rate schedules",
+            "Discrete mathematics: sets, logic, counting, graphs"
+          ]
+        },
+        {
+          "t": "Probability",
+          "i": [
+            "*Conditional probability and Bayes' theorem",
+            "*Random variables, expectation, variance, covariance",
+            "*Bernoulli, binomial, Poisson, normal, exponential",
+            "Law of large numbers, central limit theorem",
+            "*Maximum likelihood and MAP estimation",
+            "Entropy, KL divergence, cross-entropy",
+            "Markov chains basics"
+          ]
+        },
+        {
+          "t": "Statistics and experiments",
+          "i": [
+            "*Sampling, bias, confidence intervals",
+            "*Hypothesis tests: p-values, type I and II errors, power",
+            "t-test, chi-square, ANOVA, nonparametric tests",
+            "*A/B test design and pitfalls: peeking, multiple comparisons",
+            "Bootstrap and permutation tests",
+            "Linear regression assumptions and diagnostics",
+            "Bayesian inference basics: priors, posteriors",
+            "Causal inference intro: confounding, DAGs, propensity scores",
+            "Variance reduction in A/B tests: CUPED, stratification",
+            "Minimum detectable effect and sample size",
+            "Ratio metrics and the delta method",
+            "Econometrics: regression, time series regression, fitting distributions"
+          ]
+        },
+        {
+          "t": "Classical machine learning",
+          "i": [
+            "*Linear and logistic regression, L1 and L2 regularization",
+            "*Bias-variance tradeoff, overfitting, cross-validation",
+            "k-NN, naive Bayes, SVM",
+            "*Decision trees, random forests, gradient boosting",
+            "*Metrics: precision, recall, F1, ROC-AUC, PR-AUC, log loss, calibration",
+            "Clustering: k-means, GMM, hierarchical, DBSCAN",
+            "Dimensionality reduction: PCA, t-SNE, UMAP",
+            "Imbalanced data, leakage, feature engineering",
+            "Time series: decomposition, ARIMA, ETS, backtesting",
+            "Probabilistic forecasting: quantile regression, prediction intervals, CRPS",
+            "Polynomial regression, Lasso, Ridge, ElasticNet",
+            "Clustering families: exclusive, overlapping, hierarchical, probabilistic",
+            "Validation: k-fold, LOOCV, confusion matrix",
+            "Feature scaling, normalization, selection",
+            "Semi-supervised and self-supervised learning overview"
+          ]
+        },
+        {
+          "t": "Deep learning",
+          "i": [
+            "*Perceptron and backpropagation from scratch",
+            "Activations, initialization, normalization, dropout",
+            "*Training loops in PyTorch, mixed precision, checkpoints",
+            "CNNs and image basics",
+            "RNNs, LSTMs, and why transformers replaced them",
+            "*Build a small GPT (nanoGPT style)",
+            "Transfer learning and fine-tuning",
+            "CNN parts: convolution, padding, strides, pooling",
+            "GRU and LSTM details; attention mechanisms",
+            "Autoencoders and generative adversarial networks",
+            "TensorFlow and Keras awareness"
+          ]
+        },
+        {
+          "t": "Reinforcement learning and recommenders",
+          "i": [
+            "What RL is: agent, environment, reward",
+            "Q-learning and Deep Q-Networks",
+            "Policy gradient and actor-critic methods",
+            "Recommendation systems basics"
+          ]
+        },
+        {
+          "t": "NLP and computer vision",
+          "i": [
+            "Tokenization, stemming, lemmatization",
+            "Embeddings and attention models",
+            "*Transformers for NLP tasks",
+            "Image classification and segmentation",
+            "Image generation basics",
+            "AutoML and model hosting on the Hugging Face Hub"
+          ]
+        },
+        {
+          "t": "Practice and professional skills",
+          "i": [
+            "*EDA and visualization with pandas and matplotlib",
+            "scikit-learn pipelines",
+            "Experiment tracking with MLflow",
+            "MLOps: deployment, monitoring, drift, retraining",
+            "Fairness, explainability (SHAP), model cards",
+            "Reading and summarizing research papers",
+            "Technical writing and reports",
+            "Git and turning notebooks into reproducible code"
+          ]
+        },
+        {
+          "t": "ML foundations",
+          "i": [
+            "ML engineer role: skills and responsibilities; ML engineer vs AI engineer",
+            "Mathematical foundations: scalars, vectors, tensors, matrix operations, determinants, inverses, eigenvalues, diagonalization, SVD",
+            "Calculus: derivatives, partial derivatives, chain rule, gradient, Jacobian, Hessian; differential calculus; mathematical analysis",
+            "Probability and statistics: basics, Bayes theorem, random variables and PDFs, types of distribution; descriptive and inferential statistics; graphs and charts",
+            "Programming fundamentals: Python syntax, variables, data structures, loops, conditionals, exceptions, functions and built-ins, OOP",
+            "Essential libraries: NumPy, Pandas, Matplotlib, Seaborn",
+            "Data collection: internet, APIs, mobile apps, IoT, databases (SQL, NoSQL); formats CSV, Excel, JSON, Parquet",
+            "Preprocessing: cleaning, feature engineering, feature scaling and normalization, dimensionality reduction, feature selection",
+            "Learning types: supervised, unsupervised, semi-supervised, self-supervised, reinforcement",
+            "scikit-learn workflow: data loading, train-test split, data preparation, model selection, tuning, prediction",
+            "Classification: KNN, logistic regression, SVM, decision trees, random forest, gradient boosting machines",
+            "Regression: linear, polynomial, Lasso, Ridge, ElasticNet",
+            "Unsupervised: PCA, autoencoders, clustering (exclusive, overlapping, hierarchical, probabilistic)",
+            "Model evaluation: accuracy, precision, recall, F1, ROC-AUC, log loss, confusion matrix; k-fold cross validation and LOOCV",
+            "Deep learning basics: perceptron, multi-layer perceptrons, forward propagation, back propagation, activation functions, loss functions",
+            "Deep learning libraries: TensorFlow, Keras, PyTorch, scikit-learn",
+            "CNNs: convolution, pooling, padding, strides; applications: image and video recognition, classification, segmentation, recommendation systems",
+            "RNN, GRU, LSTM; attention, self-attention, multi-head attention, transformers",
+            "Autoencoders, generative adversarial networks, explainable AI",
+            "NLP: tokenization, lemmatization, stemming, embeddings, attention models",
+            "Ensembles: bagging, boosting, stacking, voting; classic ML vs advanced ML (ensembles and neural networks)"
+          ]
+        },
+        {
+          "t": "Python for data analysis: basics",
+          "i": [
+            "Data types: integers, floats, strings, booleans, null; arithmetic, comparison and logical operators; printing variables",
+            "Data structures: lists, tuples, dictionaries, sets; type casting; working with strings",
+            "Conditionals, loops, list comprehensions",
+            "Functions and methods: built-in functions, defining functions, args and kwargs, lambda functions",
+            "Package management: pip, conda, uv; virtualenv and venv",
+            "Environments: JupyterLab, Google Colab, VS Code",
+            "SQL from Python: sqlite3, SQLAlchemy, DuckDB, Pandas; SQL fundamentals",
+            "Where this leads: Python developer, machine learning and data engineer paths"
+          ]
+        },
+        {
+          "t": "Python for data analysis: pandas and NumPy",
+          "i": [
+            "*NumPy: arrays and ndarray, array operations, indexing and slicing, linear algebra basics, random module",
+            "*pandas: Series and DataFrame, reading data, indexing and slicing, filtering and querying, groupby and aggregation, merging and joining, reshaping",
+            "Polars as a faster DataFrame option",
+            "Reading local files: CSV, Excel, JSON, Parquet",
+            "Reading web data: APIs with requests, BeautifulSoup, scrapy",
+            "*Missing values: isnull and isna, dropping vs imputing, forward and backward fill",
+            "*Outlier detection: IQR, z-score, visual inspection",
+            "String cleaning: strip, replace, split, re; pandas string methods",
+            "Data type conversion: casting types, parsing dates, encoding categories"
+          ]
+        },
+        {
+          "t": "Python for data analysis: EDA and visualization",
+          "i": [
+            "*Descriptive statistics: mean, median, mode, variance and standard deviation, correlation and covariance",
+            "*Distribution analysis: histogram, boxplot",
+            "*Relationship analysis: scatterplot, correlation matrix, cross-tabulation",
+            "Matplotlib: plot categories, subplots and figures, customizing plots, saving figures",
+            "Seaborn: distribution plots, categorical plots, regression plots, heatmaps, customizing",
+            "Interactive visualization: Plotly; dashboards: Streamlit, Dash, Power BI, Tableau",
+            "Advanced: OOP for data analysis, SciPy, scikit-learn for statistics and ML",
+            "Geospatial analysis with GeoPandas",
+            "Big data tools: Dask, PySpark; data pipelines with Airflow",
+            "Data sources for data science: file handling, databases, APIs, web mining",
+            "Libraries for ML and deep learning: scikit-learn, TensorFlow, PyTorch; AutoML platforms",
+            "Move toward AI personalization: building systems that adapt to user data",
+            "Model hosting: GitHub, Hugging Face"
+          ]
+        },
+        {
+          "t": "Courses, books and papers on the roadmaps",
+          "i": [
+            "Coursera: Introduction to Statistics; Probability and Statistics; Hypothesis Testing",
+            "Coursera: Algebra and Differential Calculus; Mathematics for Machine Learning",
+            "Econometrics: Fundamentals of Econometrics and Intro to Econometrics (books); Coursera Econometrics and Linear Regression",
+            "Kaggle: Learn Python, Learn Time Series, Time Series Basics; ARIMA and time series model tutorials; a forecasting task with solution",
+            "Python practice: Google's Python Class, algorithmic exercises, LeetCode study plans, Algorithms Specialization; SQL tutorial course",
+            "EDA courses: with Python and pandas, for machine learning, with Seaborn",
+            "A/B testing reading: Practitioner's Guide to Statistical Tests, experiment design, increasing test sensitivity, minimum detectable effect",
+            "Variance reduction papers: Improving Test Sensitivity (CUPED), CUPED at Booking.com, DoorDash CUPAC, Netflix stratification",
+            "Ratio metrics: paper on ratio metrics; Microsoft delta method in metric analytics",
+            "ML: Open Machine Learning Course, Machine Learning Specialization, Pattern Recognition and Machine Learning by Bishop with its GitHub notes and code",
+            "Deep learning: Deep Learning Specialization, Deep Learning Book, Attention Is All You Need, The Illustrated Transformer",
+            "MLOps Specialization: deployment models and CI/CD for ML"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "name": "Coding and interview craft",
+      "goal": "The screening rounds: algorithms, timed SQL and PySpark, behavioral stories, mocks.",
+      "groups": [
+        {
+          "t": "Data structures and algorithms",
+          "i": [
+            "*Arrays, strings, hash maps",
+            "*Two pointers and sliding window",
+            "*Stacks, queues, linked lists",
+            "*Trees, BST, BFS and DFS on trees and graphs",
+            "Heaps and top-K",
+            "*Binary search and variants",
+            "Recursion and backtracking",
+            "Dynamic programming: 1D then 2D",
+            "Sorting and Big-O analysis",
+            "Intervals and prefix sums"
+          ]
+        },
+        {
+          "t": "SQL and PySpark drills",
+          "i": [
+            "*50 SQL problems across windows, joins, aggregation",
+            "*20 PySpark DataFrame problems: explode, window, joins, dedupe",
+            "Timed SQL: 20 minutes per medium problem",
+            "Explain-the-plan questions",
+            "Debug a slow query out loud"
+          ]
+        },
+        {
+          "t": "Behavioral and resume",
+          "i": [
+            "*Six STAR stories: impact, conflict, failure, leadership, ambiguity, deadline",
+            "*Resume bullets with numbers: cost saved, runtime cut, data volume",
+            "*A deep-dive script for each major project",
+            "Questions to ask interviewers",
+            "Compensation research and negotiation basics",
+            "LinkedIn and GitHub cleanup"
+          ]
+        },
+        {
+          "t": "Mock interviews",
+          "i": [
+            "*Spark theory round",
+            "*SQL round",
+            "*System design round",
+            "Behavioral round",
+            "Weekly review of weak spots"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "name": "Projects and portfolio",
+      "goal": "Proof of skill. One finished, documented project per track beats several half-built ones.",
+      "groups": [
+        {
+          "t": "Build",
+          "i": [
+            "*Spark optimization case study with before and after metrics",
+            "*End-to-end lakehouse pipeline: CDC, medallion, quality checks, CI/CD",
+            "*RAG app with a labeled eval set and metrics",
+            "*Agent with tool calling and an eval harness",
+            "*Probabilistic forecasting project with calibrated intervals",
+            "LLM classification with a calibration analysis"
+          ]
+        },
+        {
+          "t": "Ship",
+          "i": [
+            "README: problem, design, results, how to run",
+            "One blog post per project",
+            "Architecture diagram per project",
+            "Pin the top four repos, keep commit history clean",
+            "Link projects from the resume"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "name": "R programming",
+      "goal": "Full coverage of the roadmap.sh R roadmap: some data science courses teach in R, and tidyverse skills transfer to your Python work.",
+      "groups": [
+        {
+          "t": "R: setup and syntax",
+          "i": [
+            "R vs Python: when each fits",
+            "Installing R; setting up; your first R script",
+            "Creating variables; operators; the pipe; comments",
+            "Conditional statements and loops",
+            "Package management: installing packages, CRAN, renv, pak",
+            "IDEs: RStudio, Positron, VS Code",
+            "Publish your work: Quarto, R Markdown"
+          ]
+        },
+        {
+          "t": "R: data types and structures",
+          "i": [
+            "Data types: numeric, integer, character, logical, complex",
+            "Type conversion",
+            "*Vectors and lists",
+            "Matrices and arrays",
+            "*Factors",
+            "*Data frames, tibbles, data tables"
+          ]
+        },
+        {
+          "t": "R: functions and errors",
+          "i": [
+            "Functions: arguments and defaults, scopes, recursion",
+            "The apply family",
+            "Error handling",
+            "Debugging"
+          ]
+        },
+        {
+          "t": "R: importing and cleaning",
+          "i": [
+            "Importing data: CSV, Excel, text, JSON, APIs, web scraping",
+            "Data type conversion: casting types, parsing dates, encoding categories",
+            "String cleaning: strip, replace, split",
+            "*Missing values: is.na, dropping vs imputing, forward and backward fill",
+            "*Outlier detection: IQR, z-score, visual inspection",
+            "Exploratory analysis: summary statistics, distribution analysis, relationship analysis"
+          ]
+        },
+        {
+          "t": "R: tidyverse and manipulation",
+          "i": [
+            "*tidyverse overview: ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, forcats, lubridate",
+            "*Filter, query, arrange",
+            "*Group by and summarize; mutate and transform",
+            "Window functions",
+            "*Joins and reshaping",
+            "Map functions with purrr",
+            "Working with data tables",
+            "Strings and regular expressions with stringr",
+            "Dates and times with lubridate"
+          ]
+        },
+        {
+          "t": "R: visualization",
+          "i": [
+            "Base R plotting",
+            "*ggplot2: common plots, grammar of graphics, aesthetic mappings",
+            "Overplotting techniques; faceting and themes; best practices",
+            "Interactive plots with plotly",
+            "Dashboards: Shiny, Power BI, Tableau"
+          ]
+        },
+        {
+          "t": "R: statistics, ML and NLP",
+          "i": [
+            "*Descriptive statistics, probability distributions, sampling, correlation",
+            "*Linear and logistic regression",
+            "*Hypothesis testing",
+            "Time series analysis",
+            "Packages: stats, rstatix",
+            "Machine learning with tidymodels",
+            "NLP: tidytext, quanteda"
+          ]
+        },
+        {
+          "t": "R: applications",
+          "i": [
+            "Network analysis: igraph, tidygraph",
+            "Geospatial analysis: sf, terra, tmap, leaflet",
+            "Big data tools: sparklyr",
+            "Parallel computing"
+          ]
+        }
+      ]
+    }
+  ],
+  "weeks": [
+    {
+      "n": 1,
+      "f": [
+        [
+          "ML",
+          "Audit your skills in Python, pandas, R, algebra and statistics; do a short EDA on one real dataset"
+        ],
+        [
+          "STATS",
+          "Descriptive statistics, sampling, distributions and visualisation"
+        ],
+        [
+          "DE",
+          "One SQL window exercise and one Spark execution-plan review"
+        ],
+        [
+          "PRJ",
+          "Choose a dataset and write a one-page question, data dictionary and reproducible notebook"
+        ]
+      ],
+      "o": "Baseline EDA notebook, data dictionary and gap list"
+    },
+    {
+      "n": 2,
+      "f": [
+        [
+          "ML",
+          "Vectors, matrix multiplication, projections, eigenvectors and SVD; connect each to PCA"
+        ],
+        [
+          "STATS",
+          "Covariance and correlation; calculate both by hand on a tiny dataset"
+        ],
+        [
+          "DE",
+          "Review Parquet and columnar storage; solve one SQL problem"
+        ],
+        [
+          "PRJ",
+          "Implement PCA with NumPy and compare with scikit-learn"
+        ]
+      ],
+      "o": "PCA notebook with explanation of variance retained"
+    },
+    {
+      "n": 3,
+      "f": [
+        [
+          "STATS",
+          "Conditional probability, Bayes theorem, random variables, expectation and variance"
+        ],
+        [
+          "ML",
+          "Bernoulli, binomial, Poisson and normal distributions; simulate the law of large numbers and CLT"
+        ],
+        [
+          "DE",
+          "Practice one Spark join or shuffle diagnosis"
+        ],
+        [
+          "PRJ",
+          "Simulate a real data quality or forecasting uncertainty problem"
+        ]
+      ],
+      "o": "Probability simulation with plots and written interpretation"
+    },
+    {
+      "n": 4,
+      "f": [
+        [
+          "STATS",
+          "Sampling bias, confidence intervals, hypothesis tests, type I/II error and power"
+        ],
+        [
+          "ML",
+          "Bootstrap and permutation tests; avoid leakage and p-value misuse"
+        ],
+        [
+          "DE",
+          "Create an idempotent data ingestion step for the project dataset"
+        ],
+        [
+          "PRJ",
+          "Design and analyse a small A/B test simulation"
+        ]
+      ],
+      "o": "A/B test notebook with assumptions, effect size and conclusion"
+    },
+    {
+      "n": 5,
+      "f": [
+        [
+          "STATS",
+          "Linear regression assumptions, diagnostics, maximum likelihood and logistic regression"
+        ],
+        [
+          "ML",
+          "L1/L2 regularisation, bias\u2013variance and feature scaling"
+        ],
+        [
+          "DE",
+          "Model the dataset in a simple star schema"
+        ],
+        [
+          "PRJ",
+          "Fit baseline and regularised models; document errors and diagnostics"
+        ]
+      ],
+      "o": "Regression report with model comparison and residual plots"
+    },
+    {
+      "n": 6,
+      "f": [
+        [
+          "ML",
+          "Train/test splits, cross-validation, pipelines, leakage and model selection"
+        ],
+        [
+          "STATS",
+          "Metrics: RMSE/MAE, precision, recall, F1, ROC/PR AUC and calibration"
+        ],
+        [
+          "DE",
+          "Build a reproducible pipeline with a quality check"
+        ],
+        [
+          "PRJ",
+          "Create a held-out evaluation and a short model card"
+        ]
+      ],
+      "o": "Reproducible scikit-learn pipeline and evaluation report"
+    },
+    {
+      "n": 7,
+      "f": [
+        [
+          "ML",
+          "Decision trees, random forests, gradient boosting and feature importance"
+        ],
+        [
+          "STATS",
+          "Uncertainty and bootstrap intuition for model comparison"
+        ],
+        [
+          "DE",
+          "One Kafka or Structured Streaming concept and one SQL problem"
+        ],
+        [
+          "PRJ",
+          "Compare boosting with regression; inspect error slices"
+        ]
+      ],
+      "o": "Model comparison table with error analysis"
+    },
+    {
+      "n": 8,
+      "f": [
+        [
+          "ML",
+          "Clustering, PCA and dimensionality reduction; interpret results rather than just plotting"
+        ],
+        [
+          "STATS",
+          "Multivariate distributions and statistical computing in R"
+        ],
+        [
+          "DE",
+          "Review data lineage, privacy and reproducible transforms"
+        ],
+        [
+          "PRJ",
+          "Read one research paper and write its question, method, evidence and limitations"
+        ]
+      ],
+      "o": "Clustering/PCA notebook plus one-page paper critique"
+    },
+    {
+      "n": 9,
+      "f": [
+        [
+          "ML",
+          "Backpropagation, gradient descent, initialization, regularisation and PyTorch training loops"
+        ],
+        [
+          "STATS",
+          "Compare optimization behaviour and validation curves"
+        ],
+        [
+          "DE",
+          "Review distributed data loading and Parquet performance"
+        ],
+        [
+          "PRJ",
+          "Train a small PyTorch model with a fixed baseline and seed"
+        ]
+      ],
+      "o": "PyTorch experiment with learning curves and reproducible code"
+    },
+    {
+      "n": 10,
+      "f": [
+        [
+          "DE",
+          "Spark execution, shuffles, joins, skew, Delta Lake and distributed design"
+        ],
+        [
+          "ML",
+          "Explain when a dataset needs distributed ML rather than local tools"
+        ],
+        [
+          "STATS",
+          "Revisit regression diagnostics and inference weak spots"
+        ],
+        [
+          "PRJ",
+          "Build one tested batch pipeline feeding the ML project"
+        ]
+      ],
+      "o": "Data pipeline diagram, tests and measured runtime"
+    },
+    {
+      "n": 11,
+      "f": [
+        [
+          "STATS",
+          "Time series decomposition, autocorrelation, ARIMA and prediction intervals"
+        ],
+        [
+          "ML",
+          "Time-aware backtesting, quantile loss and calibration"
+        ],
+        [
+          "DE",
+          "Handle late events, backfills and idempotent reprocessing"
+        ],
+        [
+          "PRJ",
+          "Start a forecasting project with a seasonal baseline"
+        ]
+      ],
+      "o": "Forecast baseline with backtest and interval coverage"
+    },
+    {
+      "n": 12,
+      "f": [
+        [
+          "STATS",
+          "Review probability, inference, regression and multivariate methods"
+        ],
+        [
+          "ML",
+          "Explain your model choices and evaluate failure modes"
+        ],
+        [
+          "DE",
+          "Practice one data system design review and one SQL problem"
+        ],
+        [
+          "PRJ",
+          "Clean repository, README and reproducibility steps; list gaps for weeks 13\u201320"
+        ]
+      ],
+      "o": "Portfolio checkpoint: one complete project and a personalised gap list"
+    },
+    {
+      "n": 13,
+      "f": [
+        [
+          "ML",
+          "Linear algebra in depth: SVD, PCA derivation (MIT 18.06, 3Blue1Brown); calculus for ML: gradients and Jacobians"
+        ],
+        [
+          "PRJ",
+          "Set up the forecasting project: data and a baseline"
+        ],
+        [
+          "AI",
+          "Keep skills warm: one improvement to the RAG or agent project"
+        ],
+        [
+          "DE",
+          "Upkeep: one SQL and one Spark problem"
+        ],
+        [
+          "R",
+          "R setup and syntax: install R, RStudio or Positron or VS Code, CRAN, renv, pak, variables, operators, pipe, conditionals, loops"
+        ]
+      ],
+      "o": "Notes and exercises for SVD and PCA"
+    },
+    {
+      "n": 14,
+      "f": [
+        [
+          "ML",
+          "Probability in depth: MLE, MAP, Bayesian basics; ISLP chapters 1 to 3"
+        ],
+        [
+          "PRJ",
+          "Baseline forecast with backtesting"
+        ],
+        [
+          "AI",
+          "Read one RAG or evaluation paper or engineering post"
+        ],
+        [
+          "DE",
+          "Upkeep: one SQL and one Spark problem"
+        ],
+        [
+          "R",
+          "R data types and structures: numeric, integer, character, logical, complex; vectors, lists, matrices, arrays, factors, data frames, tibbles, data tables"
+        ]
+      ],
+      "o": "ISLP chapter 2 and 3 labs done"
+    },
+    {
+      "n": 15,
+      "f": [
+        [
+          "ML",
+          "Statistical inference: tests, power, A/B testing (CUPED, MDE, ratio metrics), bootstrap; ISLP chapters 4 and 5"
+        ],
+        [
+          "PRJ",
+          "Add quantile models and prediction intervals"
+        ],
+        [
+          "AI",
+          "Evaluation practice: extend an eval set"
+        ],
+        [
+          "DE",
+          "Upkeep: one SQL and one Spark problem"
+        ],
+        [
+          "R",
+          "R functions and errors: arguments, scopes, recursion, apply family, error handling, debugging; importing CSV, Excel, text, JSON, APIs, web scraping"
+        ]
+      ],
+      "o": "A/B test simulation notebook"
+    },
+    {
+      "n": 16,
+      "f": [
+        [
+          "ML",
+          "Regularization, trees, boosting; ISLP chapters 6 to 8"
+        ],
+        [
+          "PRJ",
+          "Gradient boosting forecasting model and comparison"
+        ],
+        [
+          "AI",
+          "LoRA fine-tune on a small model, end to end"
+        ],
+        [
+          "DE",
+          "Upkeep: one SQL and one Spark problem"
+        ],
+        [
+          "R",
+          "R cleaning and EDA: casting, dates, strings, missing values, outliers, summary statistics, distributions, relationships"
+        ]
+      ],
+      "o": "Model comparison table with backtest metrics"
+    },
+    {
+      "n": 17,
+      "f": [
+        [
+          "ML",
+          "Optimization and deep learning: SGD, Adam, backprop, PyTorch (fast.ai, Karpathy); reinforcement learning overview"
+        ],
+        [
+          "PRJ",
+          "Neural forecasting baseline or calibration study"
+        ],
+        [
+          "AI",
+          "Transformer internals review"
+        ],
+        [
+          "DE",
+          "Upkeep: one SQL and one Spark problem"
+        ],
+        [
+          "R",
+          "tidyverse: dplyr, tidyr, purrr, stringr, forcats, lubridate; joins, reshaping, window functions, map functions, data tables"
+        ]
+      ],
+      "o": "PyTorch model trained and tracked in MLflow"
+    },
+    {
+      "n": 18,
+      "f": [
+        [
+          "ML",
+          "Time series and probabilistic forecasting: ARIMA, quantile loss, CRPS, calibration (FPP3); econometrics view of regression"
+        ],
+        [
+          "PRJ",
+          "Calibration and coverage evaluation"
+        ],
+        [
+          "AI",
+          "Agent or RAG project polish"
+        ],
+        [
+          "DE",
+          "Upkeep: one SQL and one Spark problem"
+        ],
+        [
+          "R",
+          "R visualization: base plots, ggplot2 grammar of graphics, faceting, themes, plotly, Shiny"
+        ]
+      ],
+      "o": "Forecasting project results section"
+    },
+    {
+      "n": 19,
+      "f": [
+        [
+          "ML",
+          "NLP and LLM depth: tokenization, stemming, lemmatization, embeddings; read Attention Is All You Need and the LoRA paper"
+        ],
+        [
+          "PRJ",
+          "Write up the forecasting project: README and blog post"
+        ],
+        [
+          "AI",
+          "Evaluation and safety reading; multimodal basics (vision, speech)"
+        ],
+        [
+          "DE",
+          "Upkeep: one SQL and one Spark problem"
+        ],
+        [
+          "R",
+          "R statistics and ML: stats, rstatix, regression, hypothesis tests, time series, tidymodels; NLP with tidytext and quanteda"
+        ]
+      ],
+      "o": "Two paper summaries; project write-up draft"
+    },
+    {
+      "n": 20,
+      "f": [
+        [
+          "ML",
+          "Consolidate: gap check against course prerequisites, reread weak notes"
+        ],
+        [
+          "PRJ",
+          "Finish write-ups, tidy GitHub"
+        ],
+        [
+          "AI",
+          "Light reading"
+        ],
+        [
+          "DE",
+          "Light upkeep"
+        ],
+        [
+          "R",
+          "R applications: igraph, tidygraph, sf, terra, tmap, leaflet, sparklyr, parallel computing; Quarto and R Markdown"
+        ]
+      ],
+      "o": "Gap list for the first semester; projects public"
+    },
+    {
+      "n": 21,
+      "f": [
+        [
+          "DE",
+          "AWS foundations: IAM, VPC and networking, EC2, auto scaling, load balancers, S3, Route 53, CloudWatch, CloudFront, SES"
+        ],
+        [
+          "DE",
+          "Well-Architected Framework, shared responsibility, global infrastructure"
+        ]
+      ],
+      "o": "Small app deployed across IAM, VPC, EC2 and S3"
+    },
+    {
+      "n": 22,
+      "f": [
+        [
+          "DE",
+          "AWS data, containers and serverless: RDS, DynamoDB, ElastiCache, ECR, ECS, EKS, Fargate, Lambda, API Gateway, Lambda@Edge, EventBridge"
+        ],
+        [
+          "PRJ",
+          "Rebuild one pipeline step as a Lambda plus S3 flow"
+        ]
+      ],
+      "o": "Small serverless data pipeline on AWS"
+    },
+    {
+      "n": 23,
+      "f": [
+        [
+          "DE",
+          "Backend and web basics: REST APIs, Git and terminal, FastAPI, Flask, Django, async frameworks, Plotly Dash"
+        ],
+        [
+          "AI",
+          "Serve a RAG or agent project behind an API endpoint"
+        ]
+      ],
+      "o": "One project reachable through an API"
+    },
+    {
+      "n": 24,
+      "f": [
+        [
+          "PRJ",
+          "Sweep the board: finish every unticked topic you rate as important, skim the rest"
+        ],
+        [
+          "ML",
+          "Geospatial analysis with GeoPandas, network analysis basics, game and NPC uses of agents"
+        ]
+      ],
+      "o": "Every board card reviewed at least once"
+    }
+  ],
+  "phases": [
+    {
+      "name": "Phase 1: Foundations",
+      "weeks": [
+        1,
+        4
+      ],
+      "exit": "Exit check, end of week 4: explain a Spark job from code to tasks, write window-function SQL without lookups, and have a working RAG v1."
+    },
+    {
+      "name": "Phase 2: Depth",
+      "weeks": [
+        5,
+        8
+      ],
+      "exit": "Exit check, end of week 8: model a warehouse for a case, design an idempotent pipeline with CDC and late data, show an agent with eval results."
+    },
+    {
+      "name": "Phase 3: System design and mocks",
+      "weeks": [
+        9,
+        12
+      ],
+      "exit": "Exit check, end of week 12: two full mock loops done, six STAR stories written, two public projects, applications sent."
+    },
+    {
+      "name": "Phase 4: Master's preparation",
+      "weeks": [
+        13,
+        20
+      ],
+      "exit": "Exit check, end of week 20: comfortable with the math in ISLP chapters 1 to 8, a forecasting project written up, two ML papers read, R covered from basics to ggplot2, tidymodels and Quarto."
+    },
+    {
+      "name": "Phase 5: Extended coverage",
+      "weeks": [
+        21,
+        24
+      ],
+      "exit": "Runs at about 6 hours a week alongside the first weeks of the Master's: AWS in depth, backend and web basics, and a final sweep of anything left unticked."
+    }
+  ]
+}
