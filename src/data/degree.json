@@ -1,0 +1,145 @@
+{
+  "catalogue": "https://study.auckland.ac.nz/ords/r/uoa/catalogue/plan?p7_code=DATA-T4MDataSci",
+  "programme2027": "https://study.auckland.ac.nz/ords/r/uoa/catalogue/program?p0_catalogue_term=Summer&p0_catalogue_year=2027&p5_code=MDataSci",
+  "guide": "https://www.auckland.ac.nz/assets/science/About-the-faculty/Computer/docs/Master%20of%20Data%20Science%20Enrolment%20and%20Programme%20Information.pdf",
+  "courseGroups": [
+    {
+      "title": "Compulsory core",
+      "points": "45 points",
+      "codes": "COMPSCI 752 · COMPSCI 760 · STATS 769",
+      "description": "Big Data Management, Advanced Topics in Machine Learning, and Advanced Data Science Practice. All three are required."
+    },
+    {
+      "title": "Regression choice",
+      "points": "At least 15 points",
+      "codes": "STATS 762 or STATS 763",
+      "description": "Regression for Data Science or Advanced Regression Methodology."
+    },
+    {
+      "title": "Group 1: foundations & bridging",
+      "points": "Exactly 60 points",
+      "codes": "COMPSCI 717 · 751 · 762 · DATASCI 709 · STATS 707 · 709 · 765 · 782",
+      "description": "Your offer may allocate bridging courses here. Do not treat every listed course as required."
+    },
+    {
+      "title": "Group 2: statistics elective",
+      "points": "At least 15 points",
+      "codes": "STATS 705 · 730 · 731 · 763 · 767 · 784 · 786 · 787",
+      "description": "Options include inference, Bayesian methods, multivariate analysis, data mining, forecasting and visualisation."
+    },
+    {
+      "title": "Group 3: computer science elective",
+      "points": "At least 15 points",
+      "codes": "COMPSCI 711 · 720 · 734 · 750 · 753",
+      "description": "Options include parallel computing, algorithms, enterprise computing, complexity and massive-data algorithms."
+    },
+    {
+      "title": "Group 4: wider electives",
+      "points": "0–45 points",
+      "codes": "Approved 700-level options",
+      "description": "Choose with prerequisites, availability and the full 240-point total in mind. The catalogue lists the eligible courses."
+    },
+    {
+      "title": "Statistical computing",
+      "points": "15 points",
+      "codes": "DATASCI 779",
+      "description": "Statistical Computing Skills for Professional Data Scientists; the University guide places it in Semester Three."
+    },
+    {
+      "title": "Research project",
+      "points": "30 points",
+      "codes": "DATASCI 791 or 791A + 791B",
+      "description": "A one-semester or two-semester research-project structure in the catalogue. The University guide says the project is full-time in the final semester."
+    }
+  ],
+  "bridgeLessons": {
+    "stats": [
+      "R basics, data frames and descriptive statistics",
+      "Probability and common distributions",
+      "Sampling and simulation",
+      "Confidence intervals and hypothesis tests",
+      "Linear and logistic regression",
+      "R data cleaning and graphics",
+      "Likelihood and model diagnostics",
+      "Statistical learning and cross-validation",
+      "Bootstrap and multivariate basics",
+      "R project and reproducible report",
+      "Predictive modelling review",
+      "Review STATS 707/765 readiness"
+    ],
+    "cs": [
+      "Python algorithmic complexity and arrays",
+      "Stacks, queues and linked structures",
+      "Recursion and trees",
+      "Graphs: BFS and DFS",
+      "Sorting and binary search",
+      "Dynamic programming foundations",
+      "Relational modelling and SQL",
+      "Indexes and query execution",
+      "Transactions and isolation",
+      "Database design and normalization",
+      "Distributed database concepts",
+      "Review COMPSCI 717/751 readiness"
+    ]
+  },
+  "bridgeResources": {
+    "stats": [
+      [
+        "R for Data Science",
+        "https://r4ds.hadley.nz/"
+      ],
+      [
+        "OpenIntro Statistics",
+        "https://www.openintro.org/book/os/"
+      ],
+      [
+        "ISLP Python labs",
+        "https://islp.readthedocs.io/en/latest/labs.html"
+      ]
+    ],
+    "cs": [
+      [
+        "MIT 6.006 Algorithms",
+        "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+      ],
+      [
+        "PostgreSQL tutorial",
+        "https://www.postgresql.org/docs/current/tutorial.html"
+      ],
+      [
+        "LeetCode study plans",
+        "https://leetcode.com/studyplan/"
+      ]
+    ]
+  },
+  "bridgeWeeks": {
+    "stats": [
+      2,
+      13,
+      14,
+      18,
+      19,
+      20,
+      22,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "cs": [
+      4,
+      10,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ]
+  }
+}

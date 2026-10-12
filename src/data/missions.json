@@ -1,0 +1,177 @@
+[
+  {
+    "steps": [
+      "Run a Python and pandas baseline exercise; note three weak areas in your weekly notes.",
+      "Use one dataset to make a data dictionary, missingness table and five exploratory plots.",
+      "Solve one SQL window question and inspect one Spark query plan."
+    ],
+    "proof": "Notebook runs from the README; every field has a definition; your question and next analysis step are written."
+  },
+  {
+    "steps": [
+      "Work a small matrix multiplication and covariance example by hand.",
+      "Implement PCA with NumPy; compare components and explained variance with scikit-learn.",
+      "Review Parquet columnar storage and solve one SQL problem."
+    ],
+    "proof": "Notebook explains centering, retained variance and when PCA would harm interpretation."
+  },
+  {
+    "steps": [
+      "Simulate conditional probability and Bayes rule on a small example.",
+      "Plot binomial, Poisson and normal samples; compare simulated and theoretical moments.",
+      "Diagnose one Spark join or shuffle with an execution plan."
+    ],
+    "proof": "Plots have labels and a short interpretation of assumptions and uncertainty."
+  },
+  {
+    "steps": [
+      "Write a hypothesis, outcome metric, sample-size assumption and test plan.",
+      "Simulate an A/B test; calculate an interval, p-value and effect size.",
+      "Make one ingestion step safe to rerun without duplicate records."
+    ],
+    "proof": "Notebook separates practical impact from statistical significance and lists bias risks."
+  },
+  {
+    "steps": [
+      "Fit a mean or majority baseline, a regularised regression and a tree model.",
+      "Compare held-out performance and inspect residuals or classification errors.",
+      "Sketch a star schema and explain the table grain."
+    ],
+    "proof": "Report includes baseline, split method, metrics, assumptions and residual plots."
+  },
+  {
+    "steps": [
+      "Build a scikit-learn Pipeline for preprocessing and modelling.",
+      "Use cross-validation only on training data; keep one untouched test set.",
+      "Add a data-quality check and a short model card.",
+      "Write a one-page LLM glossary; compare zero-shot and few-shot prompts that return JSON for one data question."
+    ],
+    "proof": "One command reproduces training; model card lists intended use, metrics and limits."
+  },
+  {
+    "steps": [
+      "Compare regression or logistic regression with random forest and boosting.",
+      "Inspect error slices and feature importance without claiming causality.",
+      "Review one streaming concept and solve a SQL problem.",
+      "Record ten retrieval queries and compare keyword and embedding results."
+    ],
+    "proof": "Comparison table uses the same split and metric; explain where each model fails."
+  },
+  {
+    "steps": [
+      "Run clustering and PCA on a suitable dataset; check scaling and cluster stability.",
+      "Read one research paper and summarise question, method, evidence and limitations.",
+      "Record data lineage and privacy considerations for the project.",
+      "Label answers for held-out questions and calculate retrieval recall."
+    ],
+    "proof": "Notebook explains why clusters are or are not useful; critique is one page."
+  },
+  {
+    "steps": [
+      "Implement a small PyTorch model with fixed seed and baseline.",
+      "Plot training and validation losses; change one hyperparameter at a time.",
+      "Review distributed loading or Parquet performance in your data pipeline.",
+      "Build a cited answerer and test at least three questions with no supporting passage."
+    ],
+    "proof": "Reproducible training script, learning curves and a written failure analysis."
+  },
+  {
+    "steps": [
+      "Draw the data flow from source through quality checks to model input.",
+      "Build or refactor one batch step; test a rerun and measure runtime.",
+      "Explain a Spark join, shuffle or skew issue and one possible fix.",
+      "Score the 20-question RAG set and save failure examples."
+    ],
+    "proof": "Diagram, passing checks and before/after runtime are saved with the project."
+  },
+  {
+    "steps": [
+      "Create a seasonal-naive forecast before any complex model.",
+      "Use rolling-origin backtesting and measure MAE or RMSE.",
+      "Document late data and backfill handling for the pipeline.",
+      "Test a malicious retrieved passage and document the mitigation."
+    ],
+    "proof": "Forecast chart, backtest table and interval coverage or uncertainty note."
+  },
+  {
+    "steps": [
+      "Re-run one project from a clean environment.",
+      "Write README sections for question, data, methods, results, limits and reproduction.",
+      "List three specific gaps to address in weeks 13–20.",
+      "Publish the RAG baseline report with metrics, cost and latency."
+    ],
+    "proof": "A reviewer can reproduce results and understand the trade-offs without asking you."
+  },
+  {
+    "steps": [
+      "Derive PCA or SVD on a small matrix and complete one MIT exercise.",
+      "Set up R and complete vector/data-frame exercises.",
+      "Check the forecasting dataset and baseline; do one SQL/Spark upkeep problem.",
+      "Save a zero-shot and few-shot prompt, their outputs and the structured-output pass rate."
+    ],
+    "proof": "Saved derivation, working R script and documented forecast baseline."
+  },
+  {
+    "steps": [
+      "Work through probability or likelihood examples; run ISLP regression labs.",
+      "Use R to import, clean and summarise the forecast data.",
+      "Backtest the baseline and write what it cannot capture.",
+      "Implement one typed agent tool and test success, failure and stop paths."
+    ],
+    "proof": "Lab code runs; R summary matches Python checks; baseline backtest is recorded."
+  },
+  {
+    "steps": [
+      "Simulate power and minimum detectable effect for an A/B test.",
+      "Fit a quantile forecast and compare interval coverage with the baseline.",
+      "Complete one R functions exercise and one SQL upkeep question.",
+      "Add five hard or unanswerable cases to the AI evaluation set and label failures."
+    ],
+    "proof": "Notebook states metric, design assumptions, power, coverage and decision."
+  },
+  {
+    "steps": [
+      "Compare regularised, tree and boosting models on one fixed backtest.",
+      "Use R to clean missing values and produce an EDA summary.",
+      "Keep the AI work small: evaluate an existing RAG answer set.",
+      "Write a prompt-vs-RAG-vs-fine-tuning decision note for your use case."
+    ],
+    "proof": "Model comparison includes error slices, runtime and a justified choice."
+  },
+  {
+    "steps": [
+      "Train a small PyTorch model; log parameters, metrics and artifacts.",
+      "Use dplyr and tidyr to reproduce one Python transformation in R.",
+      "Do one SQL/Spark upkeep problem and note the result.",
+      "Estimate token counts and cost for three representative prompts."
+    ],
+    "proof": "Training can be rerun, metrics are saved, and R/Python outputs agree."
+  },
+  {
+    "steps": [
+      "Evaluate forecasting models across several time windows.",
+      "Check interval calibration and plot residuals by segment.",
+      "Make one clear ggplot2 graphic for a non-technical reader.",
+      "Test the agent tool with a denied permission, a retry and a trace."
+    ],
+    "proof": "Results section reports uncertainty, failure cases and a defensible recommendation."
+  },
+  {
+    "steps": [
+      "Read two papers or technical articles; write one-page summaries with limitations.",
+      "Draft the forecasting project README and plain-English results.",
+      "For the AI project, record a small eval set and failure categories.",
+      "Run one prompt-injection test and one multimodal comparison; record results."
+    ],
+    "proof": "Two cited summaries, reproducible project draft and an AI evaluation table."
+  },
+  {
+    "steps": [
+      "Run final projects from clean instructions and fix broken steps.",
+      "Publish three concise project pages or READMEs with links and screenshots.",
+      "Record remaining prerequisite gaps and the first-semester study plan.",
+      "Publish the AI demo with its evaluation set, limits and cost notes."
+    ],
+    "proof": "Portfolio links work; each project shows question, method, result, limitations and your contribution."
+  }
+]

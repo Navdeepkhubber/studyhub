@@ -1,0 +1,118 @@
+[
+  {
+    "key": "sql",
+    "name": "SQL",
+    "when": "Use with scheduled weekly checkpoints",
+    "cadence": "2\u20133 problems per week \u00b7 45\u201360 minutes",
+    "goal": "Start with SELECT, joins and grouping; move to CTEs and window functions.",
+    "resources": [
+      [
+        "START HERE",
+        "LeetCode SQL 50",
+        "https://leetcode.com/studyplan/top-sql-50/",
+        "Follow the basic-to-intermediate sequence."
+      ],
+      [
+        "MORE REPETITIONS",
+        "HackerRank SQL",
+        "https://www.hackerrank.com/domains/sql",
+        "Filter by joins, aggregation and advanced select."
+      ],
+      [
+        "INTERVIEW PRACTICE",
+        "DataLemur SQL",
+        "https://datalemur.com/questions",
+        "Try one timed analytics question after the basics."
+      ]
+    ]
+  },
+  {
+    "key": "python",
+    "name": "Python",
+    "when": "Use with scheduled weekly checkpoints",
+    "cadence": "2 small exercises per week \u00b7 30\u201345 minutes",
+    "goal": "Work in Python first, then reuse the same ideas in notebooks and data projects.",
+    "resources": [
+      [
+        "START HERE",
+        "Exercism Python",
+        "https://exercism.org/tracks/python/exercises",
+        "Short coding exercises with tests and feedback."
+      ],
+      [
+        "DATA SCIENCE",
+        "Kaggle Python",
+        "https://www.kaggle.com/learn/python",
+        "Complete the interactive lesson exercises."
+      ],
+      [
+        "DATA WRANGLING",
+        "Kaggle Pandas",
+        "https://www.kaggle.com/learn/pandas",
+        "Practise selecting, grouping and joining real data."
+      ]
+    ]
+  },
+  {
+    "key": "r",
+    "name": "R",
+    "when": "Use with scheduled weekly checkpoints",
+    "cadence": "1\u20132 exercises per week \u00b7 30\u201345 minutes",
+    "goal": "Get comfortable with vectors and functions, then practise tidy data analysis.",
+    "resources": [
+      [
+        "START HERE",
+        "Exercism R",
+        "https://exercism.org/tracks/r/exercises/",
+        "Work through the language exercises in order."
+      ],
+      [
+        "APPLIED R",
+        "R for Data Science",
+        "https://r4ds.hadley.nz/",
+        "Do the end-of-chapter exercises with your own dataset."
+      ],
+      [
+        "MODELLING",
+        "Tidy Modeling with R",
+        "https://www.tmwr.org/",
+        "Run the worked examples after your R foundations."
+      ]
+    ]
+  },
+  {
+    "key": "ai",
+    "name": "AI engineering",
+    "when": "Use with scheduled weekly checkpoints",
+    "cadence": "One small experiment per week \u00b7 60\u201390 minutes",
+    "goal": "Build one cited RAG system and improve it with a held-out evaluation set.",
+    "resources": [
+      [
+        "FOUNDATIONS",
+        "Hugging Face LLM course",
+        "https://huggingface.co/learn/llm-course",
+        "Learn tokenization, embeddings and model basics."
+      ],
+      [
+        "BUILD",
+        "Hugging Face agents course",
+        "https://huggingface.co/learn/agents-course",
+        "Practise retrieval and tool use on a small project."
+      ],
+      [
+        "EVALUATE",
+        "Ragas documentation",
+        "https://docs.ragas.io/",
+        "Measure retrieval and answer quality on your own questions."
+      ]
+    ]
+  },
+  {
+    "key": "dsa",
+    "name": "DSA",
+    "when": "Use with scheduled weekly checkpoints",
+    "cadence": "1\u20132 problems per week \u00b7 45\u201360 minutes if relevant",
+    "goal": "Follow the complete A2Z sequence with its video lessons and direct practice problems.",
+    "resources": "DSA_TRACKERS"
+  }
+]

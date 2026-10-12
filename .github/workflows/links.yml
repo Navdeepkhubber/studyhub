@@ -1,0 +1,35 @@
+name: Weekly link check
+on:
+  schedule: [{ cron: '0 20 * * 0' }]   # Sunday 20:00 UTC (Monday morning in NZ)
+  workflow_dispatch:
+permissions: { contents: write, pull-requests: write, issues: write }
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      # 1. takeUforward: drop dead article links, resolve moved ones, rebuild DSA data.
+      - run: npm run links:tuf && npm run data:dsa && npm run check:data
+      - name: Open a PR if the DSA data changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: chore/refresh-dsa-links
+          title: 'Refresh takeUforward links'
+          commit-message: 'chore: refresh takeUforward links'
+          body: 'Automated weekly check. Review the diff in src/data/dsa/ and merge.'
+          add-paths: src/data/dsa/
+      # 2. Curriculum links: report broken ones as an issue (kept up to date, not duplicated).
+      - name: Check curriculum links
+        id: check
+        run: npm run check:links -- --strict
+        continue-on-error: true
+      - name: Report broken links
+        if: steps.check.outcome == 'failure'
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          n=$(gh issue list --label broken-links --state open --json number -q '.[0].number')
+          gh label create broken-links --color d73a4a --force >/dev/null
+          if [ -n "$n" ]; then gh issue edit "$n" --body-file link-report.md; else gh issue create --title "Broken links" --label broken-links --body-file link-report.md; fi

@@ -1,0 +1,1078 @@
+{
+  "version": 1,
+  "source": "13 local roadmap PDFs and the Master of Data Science enrolment guide",
+  "weeks": [
+    {
+      "n": 1,
+      "title": "Python + Lifecycle and foundations",
+      "topics": [
+        "A-22-0",
+        "A-11-0",
+        "F-0-0",
+        "A-21-0"
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Python + SQL fundamentals and database objects",
+      "topics": [
+        "A-22-1",
+        "A-11-1",
+        "A-2-1",
+        "A-20-0",
+        "F-0-1",
+        "C-10-0",
+        "A-21-1"
+      ]
+    },
+    {
+      "n": 3,
+      "title": "SQL fundamentals and database objects + Python",
+      "topics": [
+        "A-11-2",
+        "A-20-12",
+        "F-0-2",
+        "C-9-4",
+        "C-10-1",
+        "A-1-0",
+        "A-22-6",
+        "D-0-8"
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Python + Lifecycle and foundations",
+      "topics": [
+        "A-22-2",
+        "A-11-3",
+        "A-11-4",
+        "A-2-4",
+        "F-0-3",
+        "C-10-2",
+        "D-0-0",
+        "A-1-1",
+        "A-2-0"
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Python language and ecosystem + SQL fundamentals and database objects",
+      "topics": [
+        "A-22-3",
+        "A-22-4",
+        "A-11-5",
+        "A-1-4",
+        "A-2-6",
+        "A-20-2",
+        "F-0-4",
+        "C-10-3"
+      ]
+    },
+    {
+      "n": 6,
+      "title": "SQL fundamentals and database objects + SQL language reference",
+      "topics": [
+        "A-11-6",
+        "A-1-5",
+        "A-1-6",
+        "A-2-7",
+        "A-21-2",
+        "F-0-5",
+        "C-10-4",
+        "A-2-2"
+      ]
+    },
+    {
+      "n": 7,
+      "title": "Python + SQL fundamentals and database objects",
+      "topics": [
+        "A-22-5",
+        "A-11-7",
+        "A-2-8",
+        "A-2-9",
+        "A-21-3",
+        "F-0-6",
+        "F-1-0",
+        "C-0-0",
+        "C-9-1",
+        "C-10-5",
+        "C-11-0",
+        "D-0-1"
+      ]
+    },
+    {
+      "n": 8,
+      "title": "Python + SQL language reference",
+      "topics": [
+        "A-2-10",
+        "A-21-4",
+        "F-1-1",
+        "C-0-1",
+        "C-9-5",
+        "C-10-6",
+        "C-11-1",
+        "A-1-2",
+        "A-2-3"
+      ]
+    },
+    {
+      "n": 9,
+      "title": "Python + SQL",
+      "topics": [
+        "A-2-11",
+        "A-2-12",
+        "A-21-5",
+        "A-0-0",
+        "F-1-2",
+        "C-0-2",
+        "C-10-7",
+        "C-11-2"
+      ]
+    },
+    {
+      "n": 10,
+      "title": "SQL language reference + SQL",
+      "topics": [
+        "A-22-9",
+        "A-2-13",
+        "A-21-6",
+        "A-21-7",
+        "A-0-1",
+        "F-1-3",
+        "C-11-3",
+        "D-0-2",
+        "A-2-5"
+      ]
+    },
+    {
+      "n": 11,
+      "title": "SQL + SQL language reference",
+      "topics": [
+        "A-22-10",
+        "A-21-8",
+        "A-0-2",
+        "F-1-4",
+        "C-0-4",
+        "C-1-0",
+        "C-9-6",
+        "C-11-4",
+        "C-12-0"
+      ]
+    },
+    {
+      "n": 12,
+      "title": "SQL + SQL language reference",
+      "topics": [
+        "A-21-9",
+        "A-0-3",
+        "A-0-4",
+        "F-1-5",
+        "F-2-0",
+        "C-0-5",
+        "C-1-1",
+        "C-9-2",
+        "C-11-5",
+        "C-12-1",
+        "C-13-1"
+      ]
+    },
+    {
+      "n": 13,
+      "title": "SQL language reference + SQL",
+      "topics": [
+        "A-21-10",
+        "A-21-11",
+        "A-0-5",
+        "F-3-0",
+        "C-0-6",
+        "C-1-2",
+        "C-2-0",
+        "C-11-6",
+        "C-12-2",
+        "D-0-3"
+      ]
+    },
+    {
+      "n": 14,
+      "title": "SQL + SQL language reference",
+      "topics": [
+        "A-21-12",
+        "A-0-6",
+        "F-2-1",
+        "C-1-3",
+        "C-2-1",
+        "C-9-3",
+        "C-11-7",
+        "C-12-3",
+        "C-13-5",
+        "A-1-3"
+      ]
+    },
+    {
+      "n": 15,
+      "title": "SQL + R: functions and errors",
+      "topics": [
+        "A-0-7",
+        "F-2-2",
+        "F-3-1",
+        "C-1-4",
+        "C-2-2",
+        "C-11-8",
+        "C-12-4",
+        "C-13-0",
+        "A-1-7"
+      ]
+    },
+    {
+      "n": 16,
+      "title": "Databases beyond SQL + R: importing and cleaning",
+      "topics": [
+        "A-12-0",
+        "F-3-2",
+        "C-1-5",
+        "C-12-5",
+        "D-0-4",
+        "A-5-4",
+        "A-6-8"
+      ]
+    },
+    {
+      "n": 17,
+      "title": "Python for data analysis: EDA and visualization + Databases beyond SQL",
+      "topics": [
+        "A-12-1",
+        "A-20-1",
+        "F-2-3",
+        "C-1-6",
+        "C-2-3",
+        "C-12-6",
+        "C-12-7"
+      ]
+    },
+    {
+      "n": 18,
+      "title": "Modeling and warehousing + Databases beyond SQL",
+      "topics": [
+        "A-5-0",
+        "A-12-2",
+        "F-3-3",
+        "C-2-4",
+        "C-3-0",
+        "C-12-8",
+        "C-13-4",
+        "D-0-5"
+      ]
+    },
+    {
+      "n": 19,
+      "title": "Statistics and experiments + Modeling and warehousing",
+      "topics": [
+        "A-5-1",
+        "F-3-4",
+        "F-4-0",
+        "C-2-5",
+        "C-3-1",
+        "C-3-2",
+        "C-12-9"
+      ]
+    },
+    {
+      "n": 20,
+      "title": "Modeling and warehousing + Databases beyond SQL",
+      "topics": [
+        "A-5-2",
+        "A-12-3",
+        "F-4-1",
+        "C-2-6",
+        "C-3-3",
+        "C-12-10",
+        "C-0-3"
+      ]
+    },
+    {
+      "n": 21,
+      "title": "Modeling and warehousing + Databases beyond SQL",
+      "topics": [
+        "A-5-3",
+        "A-12-4",
+        "F-3-5",
+        "C-3-4",
+        "C-9-7",
+        "C-12-11",
+        "D-0-6",
+        "D-1-0"
+      ]
+    },
+    {
+      "n": 22,
+      "title": "Statistics and experiments + Modeling and warehousing",
+      "topics": [
+        "A-12-5",
+        "F-4-2",
+        "C-3-5",
+        "C-3-6",
+        "C-12-12",
+        "C-13-2"
+      ]
+    },
+    {
+      "n": 23,
+      "title": "Modeling and warehousing + Storage, formats, cloud",
+      "topics": [
+        "A-5-5",
+        "A-8-0",
+        "A-12-6",
+        "A-13-0",
+        "F-4-3",
+        "C-3-7",
+        "C-13-6"
+      ]
+    },
+    {
+      "n": 24,
+      "title": "Modeling and warehousing + Data engineering roadmap details",
+      "topics": [
+        "A-5-6",
+        "A-20-3",
+        "F-4-4",
+        "C-3-8",
+        "C-9-8",
+        "C-13-7",
+        "D-0-7"
+      ]
+    },
+    {
+      "n": 25,
+      "title": "Statistics and experiments + Modeling and warehousing",
+      "topics": [
+        "A-5-7",
+        "A-8-1",
+        "A-13-1",
+        "F-4-5",
+        "F-5-0",
+        "C-3-9",
+        "C-3-10",
+        "C-4-0",
+        "C-13-8",
+        "A-6-0"
+      ]
+    },
+    {
+      "n": 26,
+      "title": "Classical machine learning + Storage, formats, cloud",
+      "topics": [
+        "A-8-2",
+        "A-13-2",
+        "F-4-6",
+        "C-3-11",
+        "C-4-1",
+        "C-4-2",
+        "C-9-0"
+      ]
+    },
+    {
+      "n": 27,
+      "title": "Architectures and vocabulary + R: visualization",
+      "topics": [
+        "A-13-3",
+        "F-5-1",
+        "C-4-3",
+        "C-9-9"
+      ]
+    },
+    {
+      "n": 28,
+      "title": "Storage, formats, cloud + R: tidyverse and manipulation",
+      "topics": [
+        "A-8-3",
+        "F-4-7",
+        "C-4-4",
+        "C-8-0",
+        "C-9-11",
+        "B-10-14"
+      ]
+    },
+    {
+      "n": 29,
+      "title": "Classical machine learning + LLM fundamentals",
+      "topics": [
+        "A-3-0",
+        "A-8-4",
+        "A-13-4",
+        "F-4-8",
+        "F-5-2",
+        "C-4-5",
+        "C-4-6",
+        "C-9-10",
+        "B-0-0",
+        "B-0-1"
+      ]
+    },
+    {
+      "n": 30,
+      "title": "Spark and PySpark + Architectures and vocabulary",
+      "topics": [
+        "A-3-1",
+        "A-3-2",
+        "A-13-5",
+        "C-4-7",
+        "B-0-2",
+        "B-11-0",
+        "D-0-9"
+      ]
+    },
+    {
+      "n": 31,
+      "title": "Classical machine learning + LLM fundamentals",
+      "topics": [
+        "A-3-3",
+        "A-8-5",
+        "A-14-0",
+        "F-5-3",
+        "F-6-0",
+        "C-4-8",
+        "C-4-9",
+        "C-9-13",
+        "B-0-3",
+        "B-0-4",
+        "E-0-0"
+      ]
+    },
+    {
+      "n": 32,
+      "title": "LLM fundamentals + Spark and PySpark",
+      "topics": [
+        "A-22-11",
+        "A-3-4",
+        "C-4-10",
+        "C-9-12",
+        "C-13-9",
+        "B-0-5",
+        "B-0-6",
+        "B-11-1"
+      ]
+    },
+    {
+      "n": 33,
+      "title": "Spark and PySpark + LLM fundamentals",
+      "topics": [
+        "A-3-5",
+        "A-3-6",
+        "A-14-1",
+        "F-5-4",
+        "F-6-1",
+        "C-4-11",
+        "C-8-1",
+        "C-9-20",
+        "B-0-7",
+        "B-0-8",
+        "B-7-0",
+        "B-11-2",
+        "D-1-1"
+      ]
+    },
+    {
+      "n": 34,
+      "title": "Classical machine learning + Spark and PySpark",
+      "topics": [
+        "A-3-7",
+        "A-14-2",
+        "C-4-12",
+        "C-4-13",
+        "B-0-9",
+        "B-7-1"
+      ]
+    },
+    {
+      "n": 35,
+      "title": "Spark and PySpark + LLM fundamentals",
+      "topics": [
+        "A-3-8",
+        "A-3-9",
+        "A-14-3",
+        "A-20-4",
+        "F-6-2",
+        "C-4-14",
+        "C-5-0",
+        "C-9-14",
+        "B-0-10",
+        "B-0-11",
+        "B-1-0",
+        "B-1-1",
+        "B-7-2",
+        "B-9-0",
+        "B-11-3"
+      ]
+    },
+    {
+      "n": 36,
+      "title": "LLM fundamentals + Prompting and tool use",
+      "topics": [
+        "A-3-10",
+        "A-4-0",
+        "A-20-5",
+        "C-5-1",
+        "C-9-15",
+        "B-0-12",
+        "B-0-13",
+        "B-1-2",
+        "B-1-3",
+        "B-7-3",
+        "B-9-1",
+        "B-9-2",
+        "B-11-6"
+      ]
+    },
+    {
+      "n": 37,
+      "title": "Delta Lake and lakehouse + Pipelines and orchestration",
+      "topics": [
+        "A-4-1",
+        "A-4-2",
+        "A-14-4",
+        "F-6-3",
+        "C-5-2",
+        "B-1-4",
+        "B-6-0",
+        "B-7-4",
+        "B-9-3",
+        "B-11-7",
+        "D-1-2"
+      ]
+    },
+    {
+      "n": 38,
+      "title": "Prompting and tool use + Delta Lake and lakehouse",
+      "topics": [
+        "A-4-3",
+        "A-6-1",
+        "A-14-5",
+        "C-5-3",
+        "B-1-5",
+        "B-1-6",
+        "B-6-1",
+        "B-7-5",
+        "B-9-4",
+        "E-0-1",
+        "B-10-15"
+      ]
+    },
+    {
+      "n": 39,
+      "title": "Delta Lake and lakehouse + Prompting and tool use",
+      "topics": [
+        "A-4-4",
+        "A-4-5",
+        "F-6-4",
+        "C-5-4",
+        "C-8-2",
+        "B-1-7",
+        "B-1-8",
+        "B-2-0",
+        "B-2-1",
+        "B-6-2",
+        "B-9-5",
+        "B-9-6",
+        "B-11-8"
+      ]
+    },
+    {
+      "n": 40,
+      "title": "Deep learning + Prompting and tool use",
+      "topics": [
+        "A-4-6",
+        "A-6-2",
+        "A-16-0",
+        "C-5-5",
+        "C-5-6",
+        "C-9-16",
+        "B-1-9",
+        "B-1-10",
+        "B-2-2",
+        "B-6-3",
+        "B-9-7",
+        "B-11-9"
+      ]
+    },
+    {
+      "n": 41,
+      "title": "Delta Lake and lakehouse + RAG",
+      "topics": [
+        "A-4-7",
+        "A-4-8",
+        "A-6-3",
+        "F-6-5",
+        "C-5-7",
+        "C-13-10",
+        "B-2-3",
+        "B-2-4",
+        "B-6-4",
+        "B-9-8",
+        "B-9-9"
+      ]
+    },
+    {
+      "n": 42,
+      "title": "RAG + Delta Lake and lakehouse",
+      "topics": [
+        "A-4-9",
+        "A-6-4",
+        "A-16-1",
+        "C-5-8",
+        "C-9-17",
+        "B-2-5",
+        "B-2-6",
+        "B-6-5",
+        "B-9-10"
+      ]
+    },
+    {
+      "n": 43,
+      "title": "Pipelines and orchestration + Quality, operations, platform",
+      "topics": [
+        "A-6-5",
+        "A-7-0",
+        "A-20-6",
+        "F-6-6",
+        "F-7-0",
+        "C-5-9",
+        "C-7-0",
+        "C-9-19",
+        "B-6-6",
+        "B-11-10"
+      ]
+    },
+    {
+      "n": 44,
+      "title": "RAG + Pipelines and orchestration",
+      "topics": [
+        "A-6-6",
+        "A-7-1",
+        "A-16-2",
+        "C-5-10",
+        "C-8-3",
+        "C-9-18",
+        "B-2-8",
+        "B-2-9",
+        "B-11-11",
+        "E-0-2"
+      ]
+    },
+    {
+      "n": 45,
+      "title": "RAG + Delivery: testing, CI/CD, IaC, containers",
+      "topics": [
+        "A-17-0",
+        "C-6-0",
+        "C-7-1",
+        "B-2-10",
+        "B-2-11",
+        "B-10-0",
+        "B-11-12",
+        "D-1-3"
+      ]
+    },
+    {
+      "n": 46,
+      "title": "AI engineer roadmap details + Pipelines and orchestration",
+      "topics": [
+        "A-6-7",
+        "A-7-2",
+        "A-16-3",
+        "F-7-1",
+        "C-7-2",
+        "B-2-12",
+        "B-10-1",
+        "B-11-4",
+        "B-11-13"
+      ]
+    },
+    {
+      "n": 47,
+      "title": "RAG + Agent foundations",
+      "topics": [
+        "A-7-3",
+        "A-17-1",
+        "A-20-7",
+        "C-6-1",
+        "B-2-13",
+        "B-2-14",
+        "B-10-2",
+        "B-10-3"
+      ]
+    },
+    {
+      "n": 48,
+      "title": "Agents and harness + Quality, operations, platform",
+      "topics": [
+        "A-7-4",
+        "A-17-2",
+        "F-7-2",
+        "C-7-3",
+        "C-13-3",
+        "B-3-0",
+        "B-3-1",
+        "B-10-4",
+        "B-11-5"
+      ]
+    },
+    {
+      "n": 49,
+      "title": "Agents and harness + Quality, operations, platform",
+      "topics": [
+        "A-22-8",
+        "A-7-5",
+        "A-18-0",
+        "C-6-2",
+        "C-7-4",
+        "C-8-4",
+        "B-3-2",
+        "B-3-3",
+        "B-5-0",
+        "B-10-5",
+        "B-11-18"
+      ]
+    },
+    {
+      "n": 50,
+      "title": "General system design + Delivery: testing, CI/CD, IaC, containers",
+      "topics": [
+        "A-10-0",
+        "A-17-3",
+        "B-3-4",
+        "B-10-6"
+      ]
+    },
+    {
+      "n": 51,
+      "title": "Agents and harness + Agent foundations",
+      "topics": [
+        "A-7-6",
+        "A-10-1",
+        "A-17-4",
+        "A-18-1",
+        "F-7-3",
+        "C-6-3",
+        "C-7-5",
+        "B-3-5",
+        "B-3-6",
+        "B-5-1",
+        "B-10-7",
+        "B-10-8",
+        "E-0-3"
+      ]
+    },
+    {
+      "n": 52,
+      "title": "Agents and harness + Quality, operations, platform",
+      "topics": [
+        "A-7-7",
+        "A-10-2",
+        "A-17-5",
+        "B-3-7",
+        "B-3-8",
+        "B-5-2",
+        "B-10-9",
+        "B-11-14",
+        "B-2-7"
+      ]
+    },
+    {
+      "n": 53,
+      "title": "General system design + Agents and harness",
+      "topics": [
+        "A-10-3",
+        "A-10-4",
+        "A-18-2",
+        "A-20-11",
+        "B-3-9",
+        "B-3-10",
+        "B-5-3",
+        "B-10-10",
+        "D-1-4"
+      ]
+    },
+    {
+      "n": 54,
+      "title": "Agents and harness + General system design",
+      "topics": [
+        "A-10-5",
+        "A-17-6",
+        "A-20-8",
+        "A-23-0",
+        "C-8-5",
+        "B-3-11",
+        "B-3-12",
+        "B-10-11"
+      ]
+    },
+    {
+      "n": 55,
+      "title": "Python language and ecosystem + Agents and harness",
+      "topics": [
+        "A-22-7",
+        "A-22-12",
+        "A-9-0",
+        "A-10-6",
+        "A-18-3",
+        "A-23-1",
+        "B-3-13",
+        "B-3-14",
+        "B-4-0",
+        "B-5-4",
+        "B-10-12",
+        "B-10-13"
+      ]
+    },
+    {
+      "n": 56,
+      "title": "General system design + Governance, privacy, regulation",
+      "topics": [
+        "A-10-7",
+        "A-19-0",
+        "A-23-2",
+        "B-3-15",
+        "B-5-5"
+      ]
+    },
+    {
+      "n": 57,
+      "title": "Agents and harness + System design",
+      "topics": [
+        "A-9-1",
+        "A-10-8",
+        "A-19-1",
+        "A-20-10",
+        "A-23-3",
+        "B-3-16",
+        "B-3-17",
+        "B-4-1",
+        "B-5-6"
+      ]
+    },
+    {
+      "n": 58,
+      "title": "Agents and harness + System design",
+      "topics": [
+        "A-9-2",
+        "A-10-9",
+        "A-15-0",
+        "A-23-4",
+        "B-3-18",
+        "B-3-19",
+        "B-4-2",
+        "B-8-0",
+        "D-2-0",
+        "E-0-4"
+      ]
+    },
+    {
+      "n": 59,
+      "title": "General system design + Cloud platforms",
+      "topics": [
+        "A-10-10",
+        "A-10-11",
+        "A-15-1",
+        "A-19-2",
+        "A-23-5",
+        "A-24-0",
+        "B-4-3",
+        "B-5-7",
+        "B-11-15"
+      ]
+    },
+    {
+      "n": 60,
+      "title": "AWS: foundations and networking + System design",
+      "topics": [
+        "A-9-3",
+        "A-10-12",
+        "A-19-3",
+        "A-24-1",
+        "A-24-2",
+        "C-8-6",
+        "B-5-8",
+        "B-8-1",
+        "B-11-16",
+        "D-2-1"
+      ]
+    },
+    {
+      "n": 61,
+      "title": "General system design + Cloud platforms",
+      "topics": [
+        "A-10-13",
+        "A-15-2",
+        "A-19-4",
+        "A-23-6",
+        "A-24-3",
+        "B-4-4",
+        "B-5-9"
+      ]
+    },
+    {
+      "n": 62,
+      "title": "AWS: foundations and networking + System design",
+      "topics": [
+        "A-9-4",
+        "A-15-3",
+        "A-20-9",
+        "A-23-7",
+        "A-24-4",
+        "A-24-5",
+        "B-4-5",
+        "B-8-2",
+        "B-11-17",
+        "D-2-2",
+        "D-3-0",
+        "E-1-0"
+      ]
+    },
+    {
+      "n": 63,
+      "title": "System design + Cloud platforms",
+      "topics": [
+        "A-9-5",
+        "A-15-4",
+        "A-19-5",
+        "A-23-8",
+        "A-24-6",
+        "B-5-10"
+      ]
+    },
+    {
+      "n": 64,
+      "title": "AWS: foundations and networking + Governance, privacy, regulation",
+      "topics": [
+        "A-19-6",
+        "A-23-9",
+        "A-24-7",
+        "A-24-8",
+        "C-13-11",
+        "B-5-11",
+        "B-8-3",
+        "D-2-3",
+        "D-3-1",
+        "E-0-5",
+        "E-1-1"
+      ]
+    },
+    {
+      "n": 65,
+      "title": "System design + Cloud platforms",
+      "topics": [
+        "A-9-6",
+        "A-15-5",
+        "A-23-10",
+        "A-24-9",
+        "A-25-0",
+        "C-8-7"
+      ]
+    },
+    {
+      "n": 66,
+      "title": "Cloud platforms + Cloud design patterns",
+      "topics": [
+        "A-15-6",
+        "A-23-11",
+        "A-25-1",
+        "D-2-4",
+        "D-3-2"
+      ]
+    },
+    {
+      "n": 67,
+      "title": "Cloud design patterns + AWS: data, containers, serverless",
+      "topics": [
+        "A-23-12",
+        "A-25-2",
+        "E-1-2"
+      ]
+    },
+    {
+      "n": 68,
+      "title": "Behavioral and resume + Mock interviews",
+      "topics": [
+        "D-2-5",
+        "D-3-3"
+      ]
+    },
+    {
+      "n": 69,
+      "title": "AWS: data, containers, serverless + Ship",
+      "topics": [
+        "A-25-3",
+        "E-1-3"
+      ]
+    },
+    {
+      "n": 70,
+      "title": "AWS: data, containers, serverless + Mock interviews",
+      "topics": [
+        "A-25-4",
+        "D-3-4"
+      ]
+    },
+    {
+      "n": 71,
+      "title": "AWS: data, containers, serverless",
+      "topics": [
+        "A-25-5"
+      ]
+    },
+    {
+      "n": 72,
+      "title": "Ship",
+      "topics": [
+        "E-1-4"
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "name": "Foundations: tools, coding, and data",
+      "start": 1,
+      "end": 8
+    },
+    {
+      "name": "Mathematics, data analysis, and SQL",
+      "start": 9,
+      "end": 16
+    },
+    {
+      "name": "Statistics, databases, and modelling",
+      "start": 17,
+      "end": 24
+    },
+    {
+      "name": "Classical ML and distributed data",
+      "start": 25,
+      "end": 32
+    },
+    {
+      "name": "Deep learning and data pipelines",
+      "start": 33,
+      "end": 40
+    },
+    {
+      "name": "RAG, quality, and advanced ML",
+      "start": 41,
+      "end": 48
+    },
+    {
+      "name": "Agents, evaluation, and design",
+      "start": 49,
+      "end": 56
+    },
+    {
+      "name": "Cloud, deployment, and portfolio",
+      "start": 57,
+      "end": 64
+    },
+    {
+      "name": "Integration and master’s readiness",
+      "start": 65,
+      "end": 72
+    }
+  ]
+}

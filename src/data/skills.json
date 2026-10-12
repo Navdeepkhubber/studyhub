@@ -1,0 +1,154 @@
+[
+  {
+    "name": "Data engineering",
+    "description": "Keep your existing strength current and demonstrable.",
+    "skills": [
+      {
+        "id": "sql",
+        "name": "Advanced SQL",
+        "week": "See complete weekly plan",
+        "evidence": "Queries with joins, CTEs, windows and explanation of trade-offs",
+        "learn": "https://www.postgresql.org/docs/current/tutorial.html",
+        "practice": "https://leetcode.com/studyplan/top-sql-50/"
+      },
+      {
+        "id": "python-eng",
+        "name": "Production Python",
+        "week": "See complete weekly plan",
+        "evidence": "Tested pipeline with README and rerun instructions",
+        "learn": "https://docs.python.org/3/tutorial/",
+        "practice": "https://exercism.org/tracks/python/exercises"
+      },
+      {
+        "id": "spark",
+        "name": "Spark and data architecture",
+        "week": "See complete weekly plan",
+        "evidence": "Measured job, execution plan and data-flow diagram",
+        "learn": "https://spark.apache.org/docs/latest/sql-programming-guide.html",
+        "practice": "https://github.com/DataTalksClub/data-engineering-zoomcamp"
+      },
+      {
+        "id": "quality",
+        "name": "Data quality and orchestration",
+        "week": "See complete weekly plan",
+        "evidence": "Idempotent ingestion, checks and reproducible schedule",
+        "learn": "https://docs.getdbt.com/docs/build/data-tests",
+        "practice": "https://learn.getdbt.com/"
+      }
+    ]
+  },
+  {
+    "name": "Data science",
+    "description": "Prioritise these for the Auckland statistics bridge and degree.",
+    "skills": [
+      {
+        "id": "stats",
+        "name": "Probability and inference",
+        "week": "See complete weekly plan",
+        "evidence": "Simulation and A/B analysis with assumptions and uncertainty",
+        "learn": "https://www.openintro.org/book/os/",
+        "practice": "https://seeing-theory.brown.edu/"
+      },
+      {
+        "id": "ml",
+        "name": "Statistical learning",
+        "week": "See complete weekly plan",
+        "evidence": "Baseline-to-model comparison on an untouched test set",
+        "learn": "https://www.statlearning.com/",
+        "practice": "https://islp.readthedocs.io/en/latest/labs.html"
+      },
+      {
+        "id": "evaluation",
+        "name": "Experiment and model evaluation",
+        "week": "See complete weekly plan",
+        "evidence": "Backtest, error slices, calibration and model card",
+        "learn": "https://scikit-learn.org/stable/model_selection.html",
+        "practice": "https://www.kaggle.com/learn/intermediate-machine-learning"
+      },
+      {
+        "id": "r",
+        "name": "R and visualisation",
+        "week": "See complete weekly plan",
+        "evidence": "R analysis and publication-ready ggplot with interpretation",
+        "learn": "https://r4ds.hadley.nz/",
+        "practice": "https://exercism.org/tracks/r/exercises/"
+      }
+    ]
+  },
+  {
+    "name": "AI engineering",
+    "description": "Build one credible system and evaluate it; avoid chasing every tool.",
+    "skills": [
+      {
+        "id": "dl",
+        "name": "Deep learning foundations",
+        "week": "See complete weekly plan",
+        "evidence": "Small PyTorch model with curves and baseline",
+        "learn": "https://pytorch.org/tutorials/",
+        "practice": "https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html"
+      },
+      {
+        "id": "prompting",
+        "name": "Prompt design and structured outputs",
+        "week": "See complete weekly plan",
+        "evidence": "Versioned prompt comparison with schema checks and a held-out evaluation set",
+        "learn": "https://huggingface.co/learn/llm-course",
+        "practice": "https://huggingface.co/learn/agents-course"
+      },
+      {
+        "id": "retrieval",
+        "name": "Embeddings and retrieval",
+        "week": "See complete weekly plan",
+        "evidence": "Keyword and vector search comparison with recall on held-out queries",
+        "learn": "https://huggingface.co/learn/llm-course",
+        "practice": "https://www.sbert.net/"
+      },
+      {
+        "id": "rag",
+        "name": "Retrieval and LLM apps",
+        "week": "See complete weekly plan",
+        "evidence": "RAG demo with citations and a documented dataset",
+        "learn": "https://huggingface.co/learn/llm-course",
+        "practice": "https://huggingface.co/learn/agents-course"
+      },
+      {
+        "id": "ai-eval",
+        "name": "AI evaluation and safety",
+        "week": "See complete weekly plan",
+        "evidence": "Held-out questions, failure labels and a before/after comparison",
+        "learn": "https://huggingface.co/learn/agents-course",
+        "practice": "https://docs.ragas.io/"
+      },
+      {
+        "id": "agents",
+        "name": "Tool use and agent workflows",
+        "week": "See complete weekly plan",
+        "evidence": "Small tool-using workflow with limits, traces and failure tests",
+        "learn": "https://huggingface.co/learn/agents-course",
+        "practice": "https://huggingface.co/learn/agents-course"
+      },
+      {
+        "id": "mlops",
+        "name": "Serving and MLOps",
+        "week": "See complete weekly plan",
+        "evidence": "Versioned API or batch inference with tests and monitoring plan",
+        "learn": "https://mlflow.org/docs/latest/",
+        "practice": "https://fastapi.tiangolo.com/tutorial/"
+      }
+    ]
+  },
+  {
+    "name": "Computer science bridge",
+    "description": "Optional preparation for algorithms coursework or coding interviews.",
+    "skills": [
+      {
+        "id": "algorithms",
+        "name": "Algorithms and problem solving",
+        "week": "See complete weekly plan",
+        "evidence": "Explained solutions with complexity notes for arrays, trees, graphs and dynamic programming",
+        "learn": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+        "practice": "https://takeuforward.org/prep-hub/strivers-a2z-dsa-sheet"
+      }
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "pipeline",
+    "name": "Reliable data-to-model pipeline",
+    "role": "Data engineer \u2192 ML engineer",
+    "weeks": "Build and finish through the complete weekly plan",
+    "brief": "Ingest a public dataset, test quality, model it for analytics, train a baseline and ship reproducible outputs.",
+    "criteria": [
+      "Clear data contract and dictionary",
+      "Idempotent ingestion with automated checks",
+      "SQL/Spark transformation and architecture diagram",
+      "Baseline model with held-out evaluation",
+      "README with runtime, trade-offs and limitations"
+    ]
+  },
+  {
+    "id": "forecast",
+    "name": "Statistical forecasting study",
+    "role": "Data scientist",
+    "weeks": "Build and finish through the complete weekly plan",
+    "brief": "Answer a real forecasting question with honest backtests and uncertainty, using Python and R where useful.",
+    "criteria": [
+      "Seasonal-naive baseline and time-aware backtest",
+      "At least two compared models",
+      "Error analysis and interval coverage",
+      "One R analysis or visualisation",
+      "Plain-English recommendation and limitations"
+    ]
+  },
+  {
+    "id": "rag",
+    "name": "Evaluated AI assistant",
+    "role": "AI engineer",
+    "weeks": "Build and finish through the complete weekly plan",
+    "brief": "Create a small retrieval assistant over a bounded document set, then show when it succeeds and fails.",
+    "criteria": [
+      "Dataset and intended users documented",
+      "Retrieved sources shown with each answer",
+      "Held-out question set and evaluation rubric",
+      "Failure analysis, privacy and safety notes",
+      "Demo or API plus reproducible setup"
+    ]
+  }
+]
