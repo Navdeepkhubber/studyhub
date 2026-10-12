@@ -46,12 +46,12 @@ export function describe(key: string): ProblemRef | null {
     const it = ids.length ? a2zById.get(ids[0]) : undefined;
     const title = it?.title ?? nc?.title ?? slug;
     const where = it ? `A2Z step ${a2zLocation.get(it.id)!.step.step}` : nc ? `NeetCode · ${nc.pattern}` : 'LeetCode';
-    const href = it ? `#dsa?tab=a2z&q=${encodeURIComponent(it.title)}` : `#dsa?tab=ncall&q=${encodeURIComponent(title)}`;
+    const href = it ? `/dsa?tab=a2z&q=${encodeURIComponent(it.title)}` : `/dsa?tab=ncall&q=${encodeURIComponent(title)}`;
     return { key, title, where, href, solved: (s) => (it ? a2zSolved(s, it) : nc ? ncSolved(s, nc) : false) };
   }
   const it = a2zById.get(key.slice(4));
   if (!it) return null;
-  return { key, title: it.title, where: `A2Z step ${a2zLocation.get(it.id)!.step.step}`, href: `#dsa?tab=a2z&q=${encodeURIComponent(it.title)}`, solved: (s) => a2zSolved(s, it) };
+  return { key, title: it.title, where: `A2Z step ${a2zLocation.get(it.id)!.step.step}`, href: `/dsa?tab=a2z&q=${encodeURIComponent(it.title)}`, solved: (s) => a2zSolved(s, it) };
 }
 
 /** Problems in study order for a list. */

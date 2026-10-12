@@ -41,7 +41,7 @@ function useTheme() {
   const toggle = () => {
     const next = theme === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', next === 'dark' ? '#0c1d22' : '#f6f8f6');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', next === 'dark' ? '#0b192b' : '#fbfbf9');
     try { localStorage.setItem('studyhub-theme', next); } catch { /* storage blocked */ }
     setTheme(next);
   };
@@ -62,8 +62,8 @@ export function App() {
     };
     window.addEventListener('keydown', onKey); return () => window.removeEventListener('keydown', onKey);
   }, []);
-  useEffect(() => { setMenu(false); if (!route.query.get('focus')) window.scrollTo(0, 0); }, [route]);
-  useEffect(() => { if (route.path === 'overview') go('today'); }, [route.path]); // Overview was merged into Today
+  useEffect(() => { setMenu(false); if (!route.query.get('focus')) window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, [route]);
+  useEffect(() => { if (route.path === 'overview') go('today', { replace: true }); }, [route.path]); // Overview was merged into Today
   useEffect(() => {
     void initFileSync();
     // Ask once for durable storage as soon as there is something worth keeping.
@@ -76,12 +76,12 @@ export function App() {
   const title = route.week !== null ? `Week ${route.week}` : pageTitle[path];
   const progress = coreProgress(s);
   const Page = pages[path];
-  const link = (n: NavItem) => <a key={n.id} href={`#${n.id}`} aria-current={path === n.id ? 'page' : undefined}>{n.icon}<span>{n.label}</span></a>;
+  const link = (n: NavItem) => <a key={n.id} href={`/${n.id}`} aria-current={path === n.id ? 'page' : undefined}>{n.icon}<span>{n.label}</span></a>;
 
   return <div className="app">
     <a className="skip-link" href="#main" onClick={(e) => { e.preventDefault(); document.getElementById('main')?.focus(); }}>Skip to content</a>
     <aside className={`sidebar ${menu ? 'open' : ''}`} aria-label="Sidebar">
-      <a className="brand" href="#today"><span className="brand-mark" aria-hidden><img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" /></span><span>STUDY<br /><strong>HUB</strong></span></a>
+      <a className="brand" href="/today"><span className="brand-mark" aria-hidden><img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" /></span><span>STUDY<br /><strong>HUB</strong></span></a>
       <p className="eyebrow side-label">Your workspace</p>
       <nav aria-label="Main navigation">
         {nav.filter((n) => !n.more && n.id !== 'settings').map(link)}
@@ -107,7 +107,7 @@ export function App() {
       <footer>Personal study guide · Progress stays in this browser · Ctrl+K to search</footer>
     </div>
     <nav className="tabbar" aria-label="Quick navigation">
-      {nav.filter((n) => n.tab).map((n) => <a key={n.id} href={`#${n.id}`} aria-current={path === n.id ? 'page' : undefined}>{n.icon}<span>{n.short}</span></a>)}
+      {nav.filter((n) => n.tab).map((n) => <a key={n.id} href={`/${n.id}`} aria-current={path === n.id ? 'page' : undefined}>{n.icon}<span>{n.short}</span></a>)}
       <button onClick={() => setMenu(!menu)} aria-expanded={menu} aria-label={menu ? 'Close menu' : 'More pages'}>{menu ? <X size={18} aria-hidden /> : <Menu size={18} aria-hidden />}<span>More</span></button>
     </nav>
     <CommandPalette open={palette} onClose={() => setPalette(false)} />

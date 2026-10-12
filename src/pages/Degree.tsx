@@ -18,7 +18,7 @@ export function Degree() {
     <section className="hero"><div><Label>University of Auckland · 240 points</Label><h2>Two years of data science, with a bridge matched to your prior study.</h2>
       <p>Complete the compulsory computer science and statistics core, approved elective groups, statistical computing, and a 30-point research project. Your data engineering experience supports the big-data work; the bridge prepares you for the other discipline.</p></div>
       <div className="hero-actions"><a className="btn light" href={degree.catalogue} target="_blank" rel="noopener noreferrer">Official 240-point plan</a><a className="btn outline-light" href={degree.guide} target="_blank" rel="noopener noreferrer">Enrolment guide</a></div></section>
-    <Panel><Label>Your bridging path</Label><h3>{bridgeName(s.bridge)}</h3><p>{text}</p><Btn small href="#settings">Set bridging courses</Btn></Panel>
+    <Panel><Label>Your bridging path</Label><h3>{bridgeName(s.bridge)}</h3><p>{text}</p><Btn small href="/settings">Set bridging courses</Btn></Panel>
     <SectionHead title="240-point requirement map">Meet each group’s rule and make course choices that total 240 points.</SectionHead>
     <div className="card-grid">{degree.courseGroups.map((g) => <div key={g.title} className="card"><span className="code">{g.points}</span><h3>{g.title}</h3><p className="codes">{g.codes}</p><p>{g.description}</p><Ext href={degree.catalogue}>View in official plan</Ext></div>)}</div>
     <SectionHead title="Sequencing checkpoints">From the University’s 240-point enrolment guide.</SectionHead>

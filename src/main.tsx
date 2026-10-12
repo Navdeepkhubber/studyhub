@@ -1,10 +1,12 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { installLinkNavigation } from './lib/router';
 import { App } from './App';
 import '@fontsource-variable/dm-sans';
 import '@fontsource-variable/manrope';
 import './styles.css';
 
+installLinkNavigation();
 const root = document.getElementById('root');
 if (!root) throw new Error('Missing root element');
 createRoot(root).render(<React.StrictMode><App /></React.StrictMode>);

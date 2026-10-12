@@ -14,5 +14,5 @@ export function focusImpact(tag: string, focus: string): Impact {
   else if (tag === 'PRJ') skills = [/rag|agent|ai /.test(t) ? 'rag' : /pipeline|ingest|data quality/.test(t) ? 'quality' : /forecast|backtest|model|evaluation/.test(t) ? 'evaluation' : 'ml'];
   const portfolio = tag === 'PRJ' || tag === 'AI';
   const goal = portfolio ? 'Portfolio proof' : tag === 'DE' ? 'Engineering portfolio' : tag === 'R' ? 'Statistics bridge' : 'Master’s readiness';
-  return { skills, goal, goalHref: portfolio || tag === 'DE' ? '#career' : '#degree' };
+  return { skills, goal, goalHref: portfolio || tag === 'DE' ? '/career' : '/degree' };
 }
