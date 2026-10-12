@@ -20,9 +20,9 @@ export const Btn = ({ href, children, variant = 'primary', small }: { href: stri
 export function Check({ checked, onChange, label, children, disabled }: { checked: boolean; onChange: (v: boolean) => void; label?: string; children?: ReactNode; disabled?: boolean }) {
   return <label className={`check ${disabled ? 'disabled' : ''}`}><input type="checkbox" checked={checked} disabled={disabled} onChange={(e) => onChange(e.target.checked)} />{children ?? <span>{label}</span>}</label>;
 }
-export function ImpactTags({ skills, goal, goalHref = '#degree' }: { skills: string[]; goal: string; goalHref?: string }) {
+export function ImpactTags({ skills, goal, goalHref = '/degree' }: { skills: string[]; goal: string; goalHref?: string }) {
   return <div className="impact-tags">
-    {skills.map((id) => <a key={id} className="tag tag-skill" href={`#skills?focus=${id}`} title="Open this skill in the skill map">Skill: {skillNames[id]}</a>)}
+    {skills.map((id) => <a key={id} className="tag tag-skill" href={`/skills?focus=${id}`} title="Open this skill in the skill map">Skill: {skillNames[id]}</a>)}
     <a className="tag tag-goal" href={goalHref} title="See how this supports your plan">Goal: {goal}</a>
   </div>;
 }

@@ -23,7 +23,7 @@ Passphrase encryption was built and then removed; it can be added back later.
 
 ## Deploy to a subdomain
 
-Static site, hash routing (no server rewrites needed).
+Static site with clean paths (`/plan`, `/week-3`). The build also writes `dist/404.html` (a copy of the app shell) so deep links and refreshes work on GitHub Pages; hosts that fall back to `index.html` work as-is. Old `#plan`-style links are redirected automatically.
 
 1. Host build command: `npm ci && npm run build`, output directory: `dist`.
 2. Point a DNS record for your subdomain (for example `study`) at the host.
@@ -31,7 +31,7 @@ Static site, hash routing (no server rewrites needed).
 
 ## GitHub Pages option
 
-The repository includes `.github/workflows/pages.yml`. On each push to `main`, GitHub Actions installs dependencies, checks the curriculum, runs unit tests, builds the app, and deploys `dist/` to GitHub Pages. The relative Vite base and app asset paths support both a temporary `https://<owner>.github.io/<repo>/` project URL and a root-level custom domain such as `https://study.navdeep.dev/`.
+The repository includes `.github/workflows/pages.yml`. On each push to `main`, GitHub Actions installs dependencies, checks the curriculum, runs unit tests, builds the app, and deploys `dist/` to GitHub Pages. The app is built for a root-level domain such as `https://study.navdeep.dev/` (Vite `base` is `/`). It will not load from a `https://<owner>.github.io/<repo>/` project URL.
 
 1. Create a GitHub repository and push this source to its `main` branch. On GitHub Free, Pages requires a public repository; a Pages website is publicly accessible even if a paid plan permits a private source repository.
 2. In the repository's **Settings → Pages**, choose **GitHub Actions** as the build source. Wait for the workflow to deploy and test the `github.io` URL before changing DNS.

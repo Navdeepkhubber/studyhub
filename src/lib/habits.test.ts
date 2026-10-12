@@ -60,7 +60,7 @@ describe('dsa habits', () => {
   });
   it('describes canonical keys for both trackers', () => {
     const d = describeKey(canonA2z(a2zItems[0]));
-    expect(d?.title).toBe(a2zItems[0].title); expect(d?.href).toContain('#dsa?tab=a2z');
+    expect(d?.title).toBe(a2zItems[0].title); expect(d?.href).toContain('/dsa?tab=a2z');
     expect(describeKey('lc:two-sum')?.title).toBeTruthy();
   });
 });

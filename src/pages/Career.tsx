@@ -14,7 +14,7 @@ export function Career() {
   return <>
     <section className="intro"><Label>Career path · New Zealand</Label><h2>Build proof for three related roles.</h2>
       <p>Your data engineering experience is a strong base. Add statistical reasoning, responsible model evaluation and one evaluated AI application. The projects below are designed to produce evidence you can discuss in interviews during or after the degree.</p>
-      <Btn small href="#skills">Review skill gaps</Btn></section>
+      <Btn small href="/skills">Review skill gaps</Btn></section>
     <div className="card-grid three">{roles.map(([code, title, text, url]) => <article key={code} className="card"><span className="code">{code}</span><h3>{title}</h3><p>{text}</p><Ext href={url}>Browse current NZ roles</Ext></article>)}</div>
     <SectionHead title="Portfolio build tracker">Use public or permitted datasets. Save your project link and tick each review criterion when the proof is visible.</SectionHead>
     <div className="card-grid three">{portfolioProjects.map((p) => {

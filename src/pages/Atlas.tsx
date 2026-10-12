@@ -33,7 +33,7 @@ export function Atlas() {
         return <div key={x.key} data-topic-key={x.key} className={`coverage-item ${done ? 'covered' : ''}`}>
           <span className="coverage-symbol" aria-hidden>{done ? '✓' : '○'}</span>
           <span className={x.priority ? 'star' : ''}>{x.priority ? '★ ' : ''}{x.text}</span>
-          <small>{carried ? 'Previously checked' : done ? 'Covered' : 'Planned'} · <a href={`#week-${scheduled.week}?focus=lesson-${scheduled.key}`}>Week {scheduled.week}</a></small>
+          <small>{carried ? 'Previously checked' : done ? 'Covered' : 'Planned'} · <a href={`/week-${scheduled.week}?focus=lesson-${scheduled.key}`}>Week {scheduled.week}</a></small>
         </div>;
       })}</section>;
   }));

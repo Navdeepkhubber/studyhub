@@ -15,13 +15,13 @@ const pages = [['Today', 'today'], ['Weekly plan', 'plan'], ['Practice Hub', 'pr
 
 function buildIndex(): Item[] {
   const idx: Item[] = [];
-  roadmap.weeks.forEach((w) => idx.push({ type: 'Week', label: `Week ${w.n} · ${weekTitles[w.n - 1]}`, href: `#week-${w.n}` }));
-  roadmapViews.forEach((r) => idx.push({ type: 'Roadmap', label: r.name, href: `#atlas?roadmap=${r.id}` }));
-  skillLanes.forEach((l) => l.skills.forEach((s) => idx.push({ type: 'Skill', label: s.name, href: `#skills?focus=${s.id}` })));
-  a2zItems.forEach((it) => idx.push({ type: 'A2Z problem', label: `${it.title} (Step ${a2zLocation.get(it.id)?.step.step})`, href: `#dsa?tab=a2z&q=${encodeURIComponent(it.title)}` }));
-  neetcode.problems.filter((p) => p.nc150).forEach((p) => idx.push({ type: 'NeetCode 150', label: `${p.title} · ${p.pattern}`, href: `#dsa?tab=nc150&q=${encodeURIComponent(p.title)}` }));
-  curriculumTopicForKey.forEach((t) => idx.push({ type: 'Roadmap topic', label: `${t.group} · ${t.text}`, href: `#week-${t.week}?focus=lesson-${t.key}` }));
-  pages.forEach(([label, h]) => idx.push({ type: 'Page', label, href: `#${h}` }));
+  roadmap.weeks.forEach((w) => idx.push({ type: 'Week', label: `Week ${w.n} · ${weekTitles[w.n - 1]}`, href: `/week-${w.n}` }));
+  roadmapViews.forEach((r) => idx.push({ type: 'Roadmap', label: r.name, href: `/atlas?roadmap=${r.id}` }));
+  skillLanes.forEach((l) => l.skills.forEach((s) => idx.push({ type: 'Skill', label: s.name, href: `/skills?focus=${s.id}` })));
+  a2zItems.forEach((it) => idx.push({ type: 'A2Z problem', label: `${it.title} (Step ${a2zLocation.get(it.id)?.step.step})`, href: `/dsa?tab=a2z&q=${encodeURIComponent(it.title)}` }));
+  neetcode.problems.filter((p) => p.nc150).forEach((p) => idx.push({ type: 'NeetCode 150', label: `${p.title} · ${p.pattern}`, href: `/dsa?tab=nc150&q=${encodeURIComponent(p.title)}` }));
+  curriculumTopicForKey.forEach((t) => idx.push({ type: 'Roadmap topic', label: `${t.group} · ${t.text}`, href: `/week-${t.week}?focus=lesson-${t.key}` }));
+  pages.forEach(([label, h]) => idx.push({ type: 'Page', label, href: `/${h}` }));
   return idx;
 }
 

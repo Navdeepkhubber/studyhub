@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { readFileSync } from 'node:fs';
 const curriculum = JSON.parse(readFileSync(new URL('../src/data/curriculum-plan.json', import.meta.url), 'utf8')) as { weeks: { n: number; topics: string[] }[] };
 const weekTopics = (n: number) => curriculum.weeks[n-1].topics;
-import { daysFromNow, open, settle, stored } from './helpers';
+import { daysFromNow, navTo, open, settle, stored } from './helpers';
 
 test('search engines are asked not to index the site', async ({ request }) => {
   expect(await (await request.get('/')).text()).toContain('noindex');
@@ -37,16 +37,16 @@ test('first run can start today and offers next Monday as a quick choice', async
 test('Today opens the next exact roadmap checkpoint', async ({ page }) => {
   await open(page, {});
   await page.getByRole('link', { name: 'Start learning' }).click();
-  await expect(page).toHaveURL(/#week-1\?focus=lesson-A-22-0$/);
+  await expect(page).toHaveURL(/\/week-1\?focus=lesson-A-22-0$/);
   await expect(page.locator('#lesson-A-22-0')).toBeFocused();
   await page.locator('#lesson-A-22-0 input').check();
-  await page.evaluate(() => { location.hash = 'today'; });
+  await navTo(page, 'today');
   await page.getByRole('link', { name: 'Start learning' }).click();
-  await expect(page).toHaveURL(/#week-1\?focus=lesson-A-11-0$/);
+  await expect(page).toHaveURL(/\/week-1\?focus=lesson-A-11-0$/);
 });
 
 test('each weekly checkpoint supplies reading, practice and a concrete action', async ({ page }) => {
-  await open(page, {}, '#week-1');
+  await open(page, {}, 'week-1');
   await expect(page.locator('.curriculum-item')).toHaveCount(weekTopics(1).length);
   await expect(page.locator('.curriculum-item .topic-study')).toHaveCount(weekTopics(1).length);
   const python = page.locator('#lesson-A-22-0');
@@ -55,18 +55,18 @@ test('each weekly checkpoint supplies reading, practice and a concrete action', 
   await expect(page.locator('.weekly-workload')).toContainText('4 DSA practice days per calendar week');
   await expect(python.getByRole('link', { name: 'Exercism Python exercises' })).toBeVisible();
   await expect(python.locator('.topic-action')).toContainText('short script');
-  await page.evaluate(() => { location.hash = 'week-72'; });
+  await navTo(page, 'week-72');
   await expect(page.locator('.curriculum-item .topic-study')).toHaveCount(weekTopics(72).length);
 });
 
 test('selected master’s bridge also has study and practice links', async ({ page }) => {
-  await open(page, { bridge: 'stats' }, '#week-2');
+  await open(page, { bridge: 'stats' }, 'week-2');
   await expect(page.locator('.bridge-task .topic-study').getByRole('link')).toHaveCount(2);
   await expect(page.locator('.weekly-coverage')).toContainText(`Roadmap + bridge coverage · 0/${weekTopics(2).length + 1}`);
 });
 
 test('a Notion page link is saved and the final week check requires completed work', async ({ page }) => {
-  await open(page, {}, '#week-1');
+  await open(page, {}, 'week-1');
   const finish = page.locator('#weekly-mission input[type="checkbox"]');
   await expect(finish).toBeDisabled();
   await page.getByLabel('Link to this week’s Notion page').fill('https://www.notion.so/study-week-1');
@@ -84,21 +84,21 @@ test('a Notion page link is saved and the final week check requires completed wo
 });
 
 test('topic recall and portfolio milestones connect back to the weekly plan', async ({ page }) => {
-  await open(page, { topics: { 'A-22-0': true }, topicReviews: { 'A-22-0': { due: daysFromNow(-1), step: 0 } } }, '#week-1');
+  await open(page, { topics: { 'A-22-0': true }, topicReviews: { 'A-22-0': { due: daysFromNow(-1), step: 0 } } }, 'week-1');
   const review = page.locator('#review-panel');
   await expect(review).toContainText('1 topic review due');
   await review.getByRole('button', { name: 'Remembered' }).click();
   await expect(review).toContainText('No topic reviews due');
-  await page.evaluate(() => { location.hash = 'week-20'; });
+  await navTo(page, 'week-20');
   const milestone = page.locator('.milestone-row').filter({ hasText: 'Reliable data-to-model pipeline' });
   await expect(milestone).toBeVisible();
   await milestone.getByRole('checkbox').check();
-  await page.evaluate(() => { location.hash = 'career'; });
+  await navTo(page, 'career');
   await expect(page.getByRole('heading', { name: 'Reliable data-to-model pipeline' }).locator('..').getByRole('checkbox').first()).toBeChecked();
 });
 
 test('two tabs stay in sync and an idle tab never overwrites newer work', async ({ page, context }) => {
-  await open(page, {}, '#week-1');
+  await open(page, {}, 'week-1');
   const other = await context.newPage(); await other.goto('/#week-1'); await expect(other.locator('main#main')).toBeVisible({ timeout: 15_000 });
   await page.locator('.curriculum-item input').first().check(); await settle(page);
   await expect(other.locator('.curriculum-item input').first()).toBeChecked(); // picked up live
@@ -107,7 +107,7 @@ test('two tabs stay in sync and an idle tab never overwrites newer work', async 
 });
 
 test('simultaneous edits in two tabs preserve both notes', async ({ page, context }) => {
-  await open(page, {}, '#week-1');
+  await open(page, {}, 'week-1');
   const other = await context.newPage();
   await other.goto('/#week-2');
   await expect(other.getByLabel('Your notes')).toBeVisible();
@@ -124,7 +124,7 @@ test('simultaneous edits in two tabs preserve both notes', async ({ page, contex
 test('every page renders without errors', async ({ page }) => {
   const errors = await open(page, {});
   for (const h of ['plan', 'practice', 'dsa', 'skills', 'career', 'atlas', 'degree', 'settings', 'overview', ...Array.from({ length: 72 }, (_, i) => `week-${i + 1}`)]) {
-    await page.evaluate((x) => { location.hash = x; }, h);
+    await navTo(page, h);
     await expect(page.locator('main')).not.toBeEmpty();
   }
   await expect(page.locator('h1')).toHaveText('Week 72');
@@ -132,7 +132,7 @@ test('every page renders without errors', async ({ page }) => {
 });
 
 test('all-track coverage mirrors the exact weekly checkpoint', async ({ page }) => {
-  await open(page, {}, '#week-2');
+  await open(page, {}, 'week-2');
   const list = page.locator('.weekly-coverage');
   const topics = weekTopics(2);
   await expect(list).toContainText(`Roadmap coverage · 0/${topics.length}`);
@@ -144,10 +144,10 @@ test('all-track coverage mirrors the exact weekly checkpoint', async ({ page }) 
   await expect(list.locator(`[data-topic-key="${key}"]`)).toHaveClass(/covered/);
   await settle(page);
   expect((await stored(page)).topics?.[key]).toBe(true);
-  await page.evaluate(() => { location.hash = 'atlas'; });
+  await navTo(page, 'atlas');
   await expect(page.locator(`[data-topic-key="${key}"]`)).toHaveClass(/covered/);
   await expect(page.locator(`[data-topic-key="${key}"]`)).toContainText('Week 2');
-  await page.evaluate(() => { location.hash = 'week-2'; });
+  await navTo(page, 'week-2');
   await page.locator(`#lesson-${key} input`).uncheck();
   await page.locator('.weekly-coverage summary').click();
   await expect(page.locator(`[data-topic-key="${key}"]`)).not.toHaveClass(/covered/);
@@ -160,7 +160,7 @@ test('command palette: fuzzy matches and remembers recent picks', async ({ page 
   await palette.getByRole('combobox').fill('rvrs lnkd');
   await expect(palette.getByRole('option').first()).toContainText(/Reverse/i);
   await page.keyboard.press('Enter');
-  await expect(page).toHaveURL(/#dsa\?/);
+  await expect(page).toHaveURL(/\/dsa\?/);
   await expect(palette).toBeHidden();
   await page.keyboard.press('Control+k');
   await expect(palette).toBeVisible();
@@ -168,7 +168,7 @@ test('command palette: fuzzy matches and remembers recent picks', async ({ page 
 });
 
 test('DSA: twins sync, daily goal, revision queue, notes and continue card', async ({ page }) => {
-  await open(page, {}, '#dsa?tab=nc150&q=two%20sum');
+  await open(page, {}, 'dsa?tab=nc150&q=two%20sum');
   const row = page.locator('.dsa-row').filter({ has: page.getByRole('heading', { name: 'Two Sum', exact: true }) });
   await row.getByRole('checkbox', { name: 'Done' }).check();
   await expect(page.locator('.dsa-today .goal strong')).toHaveText('1 / 2');
@@ -203,9 +203,9 @@ test('backup: reminder, restore with comparison, and undo', async ({ page }) => 
   await page.getByRole('region', { name: 'Backup reminder' }).getByRole('button', { name: 'Download backup' }).click();
   const file = await (await dl).path();
   await expect(page.getByRole('region', { name: 'Backup reminder' })).toBeHidden();
-  await page.evaluate(() => { location.hash = 'week-1'; });
+  await navTo(page, 'week-1');
   await page.locator('.curriculum-item input').first().check(); await settle(page);
-  await page.evaluate(() => { location.hash = 'settings'; });
+  await navTo(page, 'settings');
   await page.getByLabel('Restore from a backup file').setInputFiles(file!);
   const dialog = page.getByRole('dialog', { name: 'Replace your current progress?' });
   await expect(dialog.getByRole('row', { name: /Plan tasks ticked 2 1/ })).toBeVisible();
@@ -242,7 +242,7 @@ for (const theme of ['light', 'dark'] as const) {
     await page.evaluate((t) => { document.documentElement.dataset.theme = t; }, theme);
     const problems: string[] = [];
     for (const h of ['today', 'plan', 'week-2', 'dsa', 'practice', 'skills', 'atlas', 'career', 'degree', 'settings']) {
-      await page.evaluate((x) => { location.hash = x; }, h); await page.waitForTimeout(150);
+      await navTo(page, h); await page.waitForTimeout(150);
       const r = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa']).analyze();
       for (const v of r.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical'))
         problems.push(`${h}: ${v.id} (${v.nodes.length}) e.g. ${v.nodes[0].target.join(' ')}`);
@@ -250,3 +250,53 @@ for (const theme of ['light', 'dark'] as const) {
     expect(problems).toEqual([]);
   });
 }
+
+test.describe('clean URLs and smooth navigation', () => {
+  test('navigating never puts a # in the address bar, and back/forward work', async ({ page }) => {
+    await open(page, {});
+    await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Weekly plan' }).click();
+    await expect(page).toHaveURL(/\/plan$/);
+    await expect(page.locator('h1')).toHaveText('Weekly plan');
+    await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'DSA tracker' }).click();
+    await expect(page).toHaveURL(/\/dsa$/);
+    expect(page.url()).not.toContain('#');
+    await page.goBack();
+    await expect(page).toHaveURL(/\/plan$/);
+    await expect(page.locator('h1')).toHaveText('Weekly plan');
+    await page.goForward();
+    await expect(page.locator('h1')).toHaveText('DSA tracker');
+  });
+
+  test('a link to a week keeps its query string and focuses the target', async ({ page }) => {
+    await open(page, {});
+    await page.getByRole('link', { name: 'Start learning' }).click();
+    await expect(page).toHaveURL(/\/week-1\?focus=lesson-A-22-0$/);
+    expect(page.url()).not.toContain('#');
+  });
+
+  test('refreshing or opening a deep link lands on the same page', async ({ page }) => {
+    await open(page, {}, 'week-2');
+    await expect(page.locator('h1')).toHaveText('Week 2');
+    await page.reload();
+    await expect(page.locator('h1')).toHaveText('Week 2');
+    await expect(page).toHaveURL(/\/week-2$/);
+  });
+
+  test('old #hash links are redirected to clean paths', async ({ page }) => {
+    await open(page, {});
+    await page.goto('/#plan');
+    await expect(page).toHaveURL(/\/plan$/);
+    await expect(page.locator('h1')).toHaveText('Weekly plan');
+    await page.goto('/#week-3?focus=review-panel');
+    await expect(page).toHaveURL(/\/week-3\?focus=review-panel$/);
+    await expect(page.locator('h1')).toHaveText('Week 3');
+  });
+
+  test('switching pages starts at the top and does not scroll-animate', async ({ page }) => {
+    await open(page, {}, 'plan');
+    await page.evaluate(() => window.scrollTo({ top: 1200, behavior: 'instant' }));
+    await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Skill map' }).click();
+    await expect(page.locator('h1')).toHaveText('Skill map');
+    await expect.poll(() => page.evaluate(() => window.scrollY), { timeout: 1000 }).toBe(0);
+  });
+});

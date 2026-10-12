@@ -1,5 +1,5 @@
 /* Study Hub service worker: network-first for pages, stale-while-revalidate for hashed assets. */
-const CACHE = 'studyhub-v7';
+const CACHE = 'studyhub-v8';
 const ROOT = new URL('./', self.registration.scope).toString();
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.add(new Request(ROOT, { cache: 'reload' }))).catch(() => {}).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });

@@ -11,4 +11,4 @@ export function nextWeekActivity(s:AppState,w:Week):NextActivity|null {
   if(!s.done[`w${w.n}-output`] || !weekOutputReady(s,w.n))return {target:'weekly-mission',title:'Finish the week',detail:w.o};
   return null;
 }
-export const activityHref=(week:number,activity:NextActivity)=>`#week-${week}?focus=${activity.target}`;
+export const activityHref=(week:number,activity:NextActivity)=>`/week-${week}?focus=${activity.target}`;

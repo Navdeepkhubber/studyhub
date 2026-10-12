@@ -45,7 +45,7 @@ function DsaPanel() {
     <div className="goal-row"><strong>{done} / {s.dsaGoal}</strong><span>problems solved today</span></div>
     <Progress value={Math.min(100, Math.round((done / s.dsaGoal) * 100))} label="Daily DSA goal" />
     {next && <a className="next-up" href={next.href}><span className="eyebrow">Next up</span><b>{next.title}</b><small>{next.where}</small></a>}
-    <div className="row">{due > 0 ? <a className="btn small" href="#dsa?tab=revise">Review {due} due {due === 1 ? 'problem' : 'problems'}</a> : <span className="tiny muted">No revisions due today.</span>}<a className="link" href="#dsa">Open DSA tracker</a></div>
+    <div className="row">{due > 0 ? <a className="btn small" href="/dsa?tab=revise">Review {due} due {due === 1 ? 'problem' : 'problems'}</a> : <span className="tiny muted">No revisions due today.</span>}<a className="link" href="/dsa">Open DSA tracker</a></div>
   </Panel>;
 }
 
@@ -73,14 +73,14 @@ export function Today() {
       <div className="streak" aria-label={`${streak} day streak`}><Flame size={26} className={streak ? 'on' : ''} aria-hidden /><div><strong>{streak}</strong><small>day streak · best {longestStreak(s)}</small></div></div>
     </div>
     <BehindBanner />
-    {reviewsDue>0&&<div className="banner info" role="region" aria-label="Topic reviews due"><p><b>{reviewsDue} topic {reviewsDue===1?'review':'reviews'} due.</b> Try recalling the ideas before opening your notes.</p><a className="btn small" href={`#week-${cw}?focus=review-panel`}>Review now</a></div>}
+    {reviewsDue>0&&<div className="banner info" role="region" aria-label="Topic reviews due"><p><b>{reviewsDue} topic {reviewsDue===1?'review':'reviews'} due.</b> Try recalling the ideas before opening your notes.</p><a className="btn small" href={`/week-${cw}?focus=review-panel`}>Review now</a></div>}
     <div className="today-grid">
       <Panel className="start-panel">
         <Label>{wait > 0 ? 'Week 1 preview' : 'Start learning'}</Label>
         {activity ? <>
           <h3>{activity.title}</h3><p>{activity.detail}</p>
           <Btn href={activityHref(cw, activity)}>{wait > 0 ? 'Start early' : 'Start learning'}</Btn>
-        </> : <><h3>Week {cw} is complete</h3><p>Review your work or choose another week.</p><Btn href="#plan">Open weekly plan</Btn></>}
+        </> : <><h3>Week {cw} is complete</h3><p>Review your work or choose another week.</p><Btn href="/plan">Open weekly plan</Btn></>}
         {next.length > 0 && <div className="start-focus"><Label>Weekly task checklist</Label><div className="task-list">{next.map((x) => <Check key={x.id} checked={isWeekTaskDone(s,x)} disabled={x.tag==='DELIVERABLE'&&!weekOutputReady(s,w.n)} onChange={(v) => x.topicKey ? toggleCurriculumTopic(x.topicKey,v) : x.portfolioKey ? togglePortfolio(x.portfolioKey,v) : toggleTask(x.id,v)}><span><b>{x.topicKey ? curriculumTopicForKey.get(x.topicKey)?.group : x.tag === 'BRIDGE' ? 'Master’s bridge' : x.portfolioKey ? 'Portfolio milestone' : 'Finish the week'}</b>{x.text.length > 110 ? `${x.text.slice(0, 110)}…` : x.text}</span></Check>)}</div></div>}
       </Panel>
       <TimerPanel />
@@ -94,10 +94,10 @@ export function Today() {
     <div className="stats-grid">
       <div className="stat"><span>Current week</span><strong>{wait > 0 ? '—' : cw}</strong><small>{wait > 0 ? `Starts ${startLabel}` : weekRange(s, cw)}</small></div>
       <div className="stat"><span>Study blocks completed</span><strong>{complete}/{CORE_WEEKS}</strong><small>Full curriculum</small></div>
-      <div className="stat"><span>Weekly target</span><strong>{s.hours}h</strong><small><a href="#settings">Adjust in settings</a></small></div>
+      <div className="stat"><span>Weekly target</span><strong>{s.hours}h</strong><small><a href="/settings">Adjust in settings</a></small></div>
       <div className="stat"><span>Time logged</span><strong>{Math.round(Object.values(s.activity).reduce((a, d) => a + d.minutes, 0) / 60)}h</strong><small>All time</small></div>
     </div>
-    <SectionHead title="Up next" action={<a className="link" href="#plan">Full plan →</a>}>One deliverable each week keeps momentum.</SectionHead>
+    <SectionHead title="Up next" action={<a className="link" href="/plan">Full plan →</a>}>One deliverable each week keeps momentum.</SectionHead>
     <div className="week-grid">{core.slice(cw - 1, cw + 2).map((x) => <WeekCard key={x.n} s={s} w={x} />)}</div>
   </>;
 }
