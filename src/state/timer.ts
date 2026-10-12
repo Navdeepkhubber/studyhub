@@ -49,7 +49,7 @@ function complete(away = false) {
   if (!away) {
     chime();
     if (typeof Notification !== 'undefined' && Notification.permission === 'granted' && document.visibilityState !== 'visible') {
-      try { new Notification('Focus session complete', { body: `${mins} minutes logged in Study Hub.`, icon: '/icons/icon-192.png' }); } catch { /* ignore */ }
+      try { new Notification('Focus session complete', { body: `${mins} minutes logged in Study Hub.`, icon: `${import.meta.env.BASE_URL}icons/icon-192.png` }); } catch { /* ignore */ }
     }
   }
 }

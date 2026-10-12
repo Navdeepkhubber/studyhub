@@ -81,7 +81,7 @@ export function App() {
   return <div className="app">
     <a className="skip-link" href="#main" onClick={(e) => { e.preventDefault(); document.getElementById('main')?.focus(); }}>Skip to content</a>
     <aside className={`sidebar ${menu ? 'open' : ''}`} aria-label="Sidebar">
-      <a className="brand" href="#today"><span className="brand-mark" aria-hidden><img src="/favicon.svg" alt="" /></span><span>STUDY<br /><strong>HUB</strong></span></a>
+      <a className="brand" href="#today"><span className="brand-mark" aria-hidden><img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" /></span><span>STUDY<br /><strong>HUB</strong></span></a>
       <p className="eyebrow side-label">Your workspace</p>
       <nav aria-label="Main navigation">
         {nav.filter((n) => !n.more && n.id !== 'settings').map(link)}

@@ -11,6 +11,6 @@ createRoot(root).render(<React.StrictMode><App /></React.StrictMode>);
 
 // Register after load (or right away if load already fired).
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
-  const register = () => navigator.serviceWorker.register('/sw.js').catch(() => { /* offline mode is optional */ });
+  const register = () => navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => { /* offline mode is optional */ });
   if (document.readyState === 'complete') void register(); else window.addEventListener('load', () => void register());
 }
