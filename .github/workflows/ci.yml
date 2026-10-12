@@ -1,8 +1,27 @@
-name: CI
-on: [push, pull_request]
+name: CI & Deploy
+
+# One workflow: test every PR and every push to main, then deploy to GitHub Pages
+# only after the tests pass on main. (Previously CI and Deploy were separate
+# workflows that both repeated install + data checks + unit tests.)
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# A newer push to the same PR cancels the older run. Runs on main are never
+# cancelled, so a deploy in progress is not interrupted.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -10,9 +29,51 @@ jobs:
       - run: npm ci
       - run: npm run check:data
       - run: npm test
-      # End-to-end tests build the site, then exercise every page, backups, offline mode and accessibility in Chromium.
-      - run: npx playwright install --with-deps chromium
+
+      # Cache the Chromium download; it only changes when Playwright is upgraded.
+      - id: pw-version
+        run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        id: pw-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.pw-version.outputs.version }}
+      - name: Install Chromium (browser + OS deps)
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+      - name: Install OS deps only (browser restored from cache)
+        if: steps.pw-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
+
+      # End-to-end tests build the site (npm run build -> dist/), then exercise
+      # every page, backups, offline mode and accessibility in Chromium.
       - run: npx playwright test
+
+      # Reuse the dist/ that Playwright just tested, so deploy ships exactly what was verified.
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        with:
+          path: dist
+
       - uses: actions/upload-artifact@v4
         if: failure()
         with: { name: playwright-report, path: playwright-report/, retention-days: 7 }
+
+  deploy:
+    needs: test
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - id: deployment
+        uses: actions/deploy-pages@v4
