@@ -14,8 +14,8 @@ export function Plan(){
   const phase=filter==='current'?phaseNow:Number(filter);
   const weeks=filter==='all'?roadmap.weeks:filter==='incomplete'?roadmap.weeks.filter(w=>weekPercent(s,w)<100):roadmap.weeks.slice(phase*8,phase*8+8);
   return <>
-    <SectionHead title="Complete weekly curriculum">{curriculum.weeks.length} study blocks (about {calendarWeeks} calendar weeks at {s.hours} hours/week), all 593 Atlas checkpoints, plus the master’s bridge selected in Settings. Each checkpoint has reading, practice and a small task. Follow them in order and save your work.</SectionHead>
-    <div className="callout"><b>How to use this plan:</b> Open the current week, work through its checkpoint groups from top to bottom, save an example for each, then check it off. Roadmap coverage mirrors those exact checkmarks. Dense blocks automatically span extra calendar weeks to fit your hour target. DSA is scheduled on study days at your daily problem goal; open a week for its time estimate. You can also shift the start date in Today.</div>
+    <SectionHead title="Your weekly plan">Open a week, follow its lessons in order, and check off what you finish.</SectionHead>
+    <details className="callout rules"><summary>How the full plan works</summary><p>{curriculum.weeks.length} study blocks cover 593 checkpoints across about {calendarWeeks} calendar weeks at {s.hours} hours per week. Each checkpoint has a reading, practice, and a small task. Dense blocks take longer, and DSA practice is included in the schedule. You can adjust your start date and study hours in <a href="/settings">Settings</a>.</p></details>
     {!weekWorkload(currentWeek(s),s).dsaFeasible && <div className="callout" role="alert">Your DSA daily goal cannot fit the current weekly hour target. The dates exclude DSA until you lower the goal or raise hours in <a href="/settings">Settings</a>.</div>}
     <div className="toolbar" role="group" aria-label="Filter weeks">
       <button className={`chip ${filter==='current'?'active':''}`} onClick={()=>setFilter('current')}>Current phase</button>

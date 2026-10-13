@@ -52,7 +52,8 @@ function DsaPanel() {
 export function Today() {
   const s = useAppState();
   const cw = currentWeek(s), w = roadmap.weeks[cw - 1], wait = daysUntilStart(s);
-  const next = weekTasks(w,s).filter((x) => !isWeekTaskDone(s,x)).slice(0, 5);
+  const remaining = weekTasks(w,s).filter((x) => !isWeekTaskDone(s,x));
+  const next = remaining.slice(0, 3);
   const activity = nextWeekActivity(s, w);
   const reviewsDue = dueTopicReviews(s).length;
   const days = last7Days().map((d) => ({ d, mins: s.activity[d]?.minutes ?? 0, active: isActive(s.activity[d]) }));
@@ -74,23 +75,27 @@ export function Today() {
     </div>
     <BehindBanner />
     {reviewsDue>0&&<div className="banner info" role="region" aria-label="Topic reviews due"><p><b>{reviewsDue} topic {reviewsDue===1?'review':'reviews'} due.</b> Try recalling the ideas before opening your notes.</p><a className="btn small" href={`/week-${cw}?focus=review-panel`}>Review now</a></div>}
-    <div className="today-grid">
+    <div className="today-primary">
       <Panel className="start-panel">
-        <Label>{wait > 0 ? 'Week 1 preview' : 'Start learning'}</Label>
+        <Label>Your next step</Label>
         {activity ? <>
           <h3>{activity.title}</h3><p>{activity.detail}</p>
           <Btn href={activityHref(cw, activity)}>{wait > 0 ? 'Start early' : 'Start learning'}</Btn>
         </> : <><h3>Week {cw} is complete</h3><p>Review your work or choose another week.</p><Btn href="/plan">Open weekly plan</Btn></>}
-        {next.length > 0 && <div className="start-focus"><Label>Weekly task checklist</Label><div className="task-list">{next.map((x) => <Check key={x.id} checked={isWeekTaskDone(s,x)} disabled={x.tag==='DELIVERABLE'&&!weekOutputReady(s,w.n)} onChange={(v) => x.topicKey ? toggleCurriculumTopic(x.topicKey,v) : x.portfolioKey ? togglePortfolio(x.portfolioKey,v) : toggleTask(x.id,v)}><span><b>{x.topicKey ? curriculumTopicForKey.get(x.topicKey)?.group : x.tag === 'BRIDGE' ? 'Master’s bridge' : x.portfolioKey ? 'Portfolio milestone' : 'Finish the week'}</b>{x.text.length > 110 ? `${x.text.slice(0, 110)}…` : x.text}</span></Check>)}</div></div>}
+        {next.length > 0 && <details className="start-focus"><summary>See next {next.length} tasks</summary><div className="task-list">{next.map((x) => <Check key={x.id} checked={isWeekTaskDone(s,x)} disabled={x.tag==='DELIVERABLE'&&!weekOutputReady(s,w.n)} onChange={(v) => x.topicKey ? toggleCurriculumTopic(x.topicKey,v) : x.portfolioKey ? togglePortfolio(x.portfolioKey,v) : toggleTask(x.id,v)}><span><b>{x.topicKey ? curriculumTopicForKey.get(x.topicKey)?.group : x.tag === 'BRIDGE' ? 'Master’s bridge' : x.portfolioKey ? 'Portfolio milestone' : 'Finish the week'}</b>{x.text.length > 110 ? `${x.text.slice(0, 110)}…` : x.text}</span></Check>)}</div><a className="link" href={`/week-${cw}`}>View all week {cw} tasks →</a></details>}
       </Panel>
+      <div className="today-shortcuts"><a href={`/week-${cw}`}><b>This week</b><span>See the full learning plan →</span></a><a href="/dsa"><b>Practice DSA</b><span>Pick up your next problem →</span></a></div>
+    </div>
+    <SectionHead title="Study tools">Use these when you need them.</SectionHead>
+    <div className="today-grid">
       <TimerPanel />
       <DsaPanel />
-      <Panel>
+    </div>
+    <details className="today-extra"><summary>Activity and upcoming weeks</summary><div className="today-grid"><Panel>
         <Label>Last 7 days</Label>
         <div className="activity-bars">{days.map(({ d, mins, active }) => <div key={d} className={`bar ${active ? 'active' : ''}`} title={`${d}: ${mins} minutes${active ? ', active' : ''}`}><div className="bar-fill" style={{ height: `${Math.max(4, Math.round((mins / max) * 100))}%` }} /><span>{d.slice(-2)}</span><small>{mins}m</small></div>)}</div>
         <p className="tiny muted">Bars show logged minutes. A day counts toward your streak if you log time, tick a task or solve a problem.</p>
-      </Panel>
-    </div>
+      </Panel></div>
     <div className="stats-grid">
       <div className="stat"><span>Current week</span><strong>{wait > 0 ? '—' : cw}</strong><small>{wait > 0 ? `Starts ${startLabel}` : weekRange(s, cw)}</small></div>
       <div className="stat"><span>Study blocks completed</span><strong>{complete}/{CORE_WEEKS}</strong><small>Full curriculum</small></div>
@@ -99,5 +104,6 @@ export function Today() {
     </div>
     <SectionHead title="Up next" action={<a className="link" href="/plan">Full plan →</a>}>One deliverable each week keeps momentum.</SectionHead>
     <div className="week-grid">{core.slice(cw - 1, cw + 2).map((x) => <WeekCard key={x.n} s={s} w={x} />)}</div>
+    </details>
   </>;
 }

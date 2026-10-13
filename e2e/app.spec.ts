@@ -236,6 +236,18 @@ test('works offline after the first visit', async ({ page, context }) => {
   await context.setOffline(false);
 });
 
+test('theme switch follows navigation and persists after reload', async ({ page }) => {
+  await open(page, {});
+  await page.getByRole('button', { name: 'Switch to dark mode' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Weekly plan' }).click();
+  await expect(page.locator('h1')).toHaveText('Weekly plan');
+  await page.reload();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await page.getByRole('button', { name: 'Switch to light mode' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+});
+
 for (const theme of ['light', 'dark'] as const) {
   test(`accessibility (axe, ${theme})`, async ({ page }) => {
     await open(page, { done: { 'w1-t0': true }, lastBackupAt: Date.now() });

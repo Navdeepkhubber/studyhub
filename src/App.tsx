@@ -26,7 +26,7 @@ const nav: NavItem[] = [
   { id: 'today', label: 'Today', short: 'Today', icon: <CircleDot size={18} aria-hidden />, tab: true },
   { id: 'plan', label: 'Weekly plan', short: 'Plan', icon: <CalendarDays size={18} aria-hidden />, tab: true },
   { id: 'dsa', label: 'DSA tracker', short: 'DSA', icon: <Binary size={18} aria-hidden />, tab: true },
-  { id: 'practice', label: 'Practice', short: 'Practice', icon: <PencilLine size={18} aria-hidden />, tab: true },
+  { id: 'practice', label: 'Practice resources', short: 'Practice', icon: <PencilLine size={18} aria-hidden />, more: true },
   { id: 'skills', label: 'Skill map', short: 'Skills', icon: <Layers size={18} aria-hidden /> },
   { id: 'career', label: 'Career & portfolio', short: 'Career', icon: <Briefcase size={18} aria-hidden />, more: true },
   { id: 'atlas', label: 'Topic atlas', short: 'Atlas', icon: <MapIcon size={18} aria-hidden />, more: true },
@@ -85,7 +85,7 @@ export function App() {
       <p className="eyebrow side-label">Your workspace</p>
       <nav aria-label="Main navigation">
         {nav.filter((n) => !n.more && n.id !== 'settings').map(link)}
-        <details className="nav-more" open={nav.some((n) => n.more && n.id === path)}><summary><span>More views</span></summary>{nav.filter((n) => n.more).map(link)}</details>
+        <details className="nav-more" open={nav.some((n) => n.more && n.id === path)}><summary><span>Explore</span></summary>{nav.filter((n) => n.more).map(link)}</details>
         {link(nav.find((n) => n.id === 'settings')!)}
       </nav>
       <div className="side-bottom">
@@ -96,7 +96,7 @@ export function App() {
     {menu && <div className="scrim" onClick={() => setMenu(false)} aria-hidden />}
     <div className="main-wrap">
       <header className="topbar">
-        <div><span className="eyebrow">Personal learning platform</span><h1>{title}</h1></div>
+        <div><h1>{title}</h1></div>
         <div className="top-right">
           <span className="date-pill">{fmtDay(new Date(), { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' })}</span>
           <button className="icon-btn search-btn" onClick={() => setPalette(true)} aria-label="Search (Ctrl+K)"><Search size={18} aria-hidden /><kbd>Ctrl K</kbd></button>

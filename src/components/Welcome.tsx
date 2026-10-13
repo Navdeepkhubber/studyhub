@@ -26,15 +26,15 @@ export function Welcome() {
   return <dialog ref={ref} className="modal welcome" aria-labelledby="welcome-title" onCancel={(e) => e.preventDefault()}>
     <span className="eyebrow">Welcome to Study Hub</span>
     <h2 id="welcome-title">Set up your plan</h2>
-    <p className="muted">Three details make every date, week and suggestion fit you. You can change them later in Settings.</p>
+    <p className="muted">Choose a start date and weekly study time. You can change both later.</p>
     <label className="form-row"><span>When does week 1 start?</span><input type="date" value={start} onChange={(e) => setStart(e.target.value)} /></label>
     <div className="start-options" role="group" aria-label="Quick start date">
       <button type="button" className={`chip ${start === today ? 'active' : ''}`} aria-pressed={start === today} onClick={() => setStart(today)}>Start today</button>
       <button type="button" className={`chip ${start === nextMonday ? 'active' : ''}`} aria-pressed={start === nextMonday} onClick={() => setStart(nextMonday)}>Next Monday</button>
     </div>
     <label className="form-row"><span>Hours you can study each week</span><input type="number" min={2} max={40} value={hours} onChange={(e) => setHours(e.target.value)} /></label>
-    <label className="form-row"><span>Bridging courses in your offer</span><select value={bridge} onChange={(e) => setBridge(e.target.value as Bridge)}>
-      <option value="unknown">Not sure yet</option><option value="stats">STATS 707 + STATS 765</option><option value="cs">COMPSCI 717 + COMPSCI 751</option><option value="other">Other combination</option></select></label>
+    <details className="welcome-optional"><summary>Add bridging courses (optional)</summary><label className="form-row"><span>Bridging courses in your offer</span><select value={bridge} onChange={(e) => setBridge(e.target.value as Bridge)}>
+      <option value="unknown">Not sure yet</option><option value="stats">STATS 707 + STATS 765</option><option value="cs">COMPSCI 717 + COMPSCI 751</option><option value="other">Other combination</option></select></label></details>
     <div className="modal-actions"><label className="link file-link">Restore a backup instead<input type="file" accept="application/json,.json" hidden onChange={async (e) => {
       const f = e.target.files?.[0]; if (!f) return;
       try { const next = parseBackup(await f.text()); replaceState({ ...next, onboarded: true }, 'welcome-restore'); notify('Progress restored.'); } catch { notify('That file is not a valid Study Hub backup.'); }
