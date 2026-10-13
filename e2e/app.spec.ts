@@ -45,6 +45,46 @@ test('Today opens the next exact roadmap checkpoint', async ({ page }) => {
   await expect(page).toHaveURL(/\/week-1\?focus=lesson-A-11-0$/);
 });
 
+test('expanding Today tasks keeps the shortcut cards and timer controls in place', async ({ page }) => {
+  await open(page, {});
+  const shortcuts = page.locator('.today-shortcuts a');
+  const before = await shortcuts.evaluateAll((links) => links.map((link) => {
+    const { y, height } = link.getBoundingClientRect();
+    return { y, height };
+  }));
+  await page.locator('.start-focus summary').click();
+  await expect(page.locator('.start-focus')).toHaveAttribute('open', '');
+  const after = await shortcuts.evaluateAll((links) => links.map((link) => {
+    const { y, height } = link.getBoundingClientRect();
+    return { y, height };
+  }));
+  expect(after).toEqual(before);
+
+  const reset = page.getByRole('button', { name: 'Reset' });
+  const resetX = (await reset.boundingBox())!.x;
+  await page.getByRole('button', { name: 'Start', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Pause' })).toBeVisible();
+  expect((await reset.boundingBox())!.x).toBe(resetX);
+  await page.getByRole('button', { name: 'Pause' }).click();
+});
+
+test('DSA action labels keep adjacent buttons in place', async ({ page }) => {
+  await open(page, {}, 'dsa?tab=nc150&q=two%20sum');
+  const row = page.locator('.dsa-row').filter({ has: page.getByRole('heading', { name: 'Two Sum', exact: true }) });
+  const note = row.getByRole('button', { name: 'Add note' });
+  const before = await note.boundingBox();
+  await row.getByRole('button', { name: 'Revise later' }).click();
+  await expect(row.getByRole('button', { name: 'In revision' })).toBeVisible();
+  const revised = await note.boundingBox();
+  expect(revised?.x).toBe(before?.x);
+  expect(revised?.width).toBe(before?.width);
+  await note.click();
+  await row.getByLabel('Your note for this problem').fill('Remember the hash map');
+  const noted = await row.getByRole('button', { name: 'Note', exact: true }).boundingBox();
+  expect(noted?.x).toBe(before?.x);
+  expect(noted?.width).toBe(before?.width);
+});
+
 test('each weekly checkpoint supplies reading, practice and a concrete action', async ({ page }) => {
   await open(page, {}, 'week-1');
   await expect(page.locator('.curriculum-item')).toHaveCount(weekTopics(1).length);

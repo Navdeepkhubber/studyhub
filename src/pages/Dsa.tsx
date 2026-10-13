@@ -21,8 +21,8 @@ function RowTools({ s, k }: { s: AppState; k: string }) {
   const flagged = !!s.dsaRevise[k];
   return <>
     <div className="row-tools">
-      <button className={`tool ${flagged ? 'on' : ''}`} aria-pressed={flagged} onClick={() => setRevision(k, !flagged)} title={flagged ? 'Remove from revision' : 'Add to revision queue'}>{flagged ? <BookmarkCheck size={15} aria-hidden /> : <Bookmark size={15} aria-hidden />}{flagged ? 'In revision' : 'Revise later'}</button>
-      <button className={`tool ${s.dsaNotes[k] ? 'on' : ''}`} aria-expanded={open} onClick={() => setOpen(!open)}><NotebookPen size={15} aria-hidden />{s.dsaNotes[k] ? 'Note' : 'Add note'}</button>
+      <button className={`tool revision-tool ${flagged ? 'on' : ''}`} aria-pressed={flagged} onClick={() => setRevision(k, !flagged)} title={flagged ? 'Remove from revision' : 'Add to revision queue'}>{flagged ? <BookmarkCheck size={15} aria-hidden /> : <Bookmark size={15} aria-hidden />}{flagged ? 'In revision' : 'Revise later'}</button>
+      <button className={`tool note-tool ${s.dsaNotes[k] ? 'on' : ''}`} aria-expanded={open} onClick={() => setOpen(!open)}><NotebookPen size={15} aria-hidden />{s.dsaNotes[k] ? 'Note' : 'Add note'}</button>
     </div>
     {open && <textarea className="dsa-note" aria-label="Your note for this problem" value={s.dsaNotes[k] ?? ''} onChange={(e) => setDsaNote(k, e.target.value)} placeholder="Key idea, edge cases, complexity, what tripped you up…" />}
   </>;

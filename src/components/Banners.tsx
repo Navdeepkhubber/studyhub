@@ -35,7 +35,7 @@ export function BehindBanner() {
     <Clock size={20} aria-hidden />
     <p><b>{tasks.length} unfinished {tasks.length === 1 ? 'task' : 'tasks'} from earlier weeks</b> ({weeks.map((w) => `week ${w}`).join(', ')}). Catch up, or move the whole plan a week later so the dates match where you are.</p>
     <div className="banner-actions">
-      <button className="btn small ghost" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? 'Hide list' : 'Show them'}</button>
+      <button className="btn small ghost catch-up-toggle" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? 'Hide list' : 'Show them'}</button>
       <button className="btn small" onClick={() => { shiftPlan(1); notify('Plan moved one week later.', { label: 'Undo', run: () => shiftPlan(-1) }); }}>Shift plan by 1 week</button>
     </div>
     {open && <ul className="behind-list">{tasks.slice(0, 12).map((t) => <li key={t.id}><a href={`/week-${t.id.match(/^w(\d+)-/)![1]}`}>Week {t.id.match(/^w(\d+)-/)![1]}</a> · {t.text.length > 90 ? `${t.text.slice(0, 90)}…` : t.text}</li>)}{tasks.length > 12 && <li className="muted">and {tasks.length - 12} more</li>}</ul>}

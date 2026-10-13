@@ -25,7 +25,7 @@ function TimerPanel() {
     <div className="focus-head"><Label>Focus timer · {t.preset} min</Label><button className="link" onClick={() => timer.setPreset(t.preset === 25 ? 50 : 25)}>Switch to {t.preset === 25 ? 50 : 25} min</button></div>
     <div className="timer-display" role="timer" aria-label={`${mm} minutes ${ss} seconds remaining`}>{mm}:{ss}</div>
     <div className="timer-controls">
-      <button className="btn" onClick={() => timer.toggle()}>{t.running ? <Pause size={15} aria-hidden /> : <Play size={15} aria-hidden />}{t.running ? 'Pause' : 'Start'}</button>
+      <button className="btn timer-toggle" onClick={() => timer.toggle()}>{t.running ? <Pause size={15} aria-hidden /> : <Play size={15} aria-hidden />}{t.running ? 'Pause' : 'Start'}</button>
       <button className="btn ghost small" onClick={() => timer.reset()}><RotateCcw size={14} aria-hidden />Reset</button>
       {perm === 'default' && <button className="btn ghost small" onClick={async () => setPerm(await enableNotifications())}><Bell size={14} aria-hidden />Notify me</button>}
     </div>
