@@ -132,7 +132,7 @@ function DsaInner({ initTab, initQ }: { initTab: Tab; initQ: string }) {
     <section className="dsa-intro">
       <Label>Data structures and algorithms</Label><h2>Learn, then solve, then revise</h2>
       <p>Follow Striver’s A2Z in order, or drill patterns with NeetCode. Problems that appear in both share one done tick, one note and one revision schedule. Reading links go to takeUforward’s current blog articles.</p>
-      <ImpactTags skills={['algorithms']} goal="CS bridge and interviews" />
+      <ImpactTags skills={['algorithms']} goal="Technical interview practice" />
       <div className="dsa-sources"><Ext href={a2z.meta.sheetUrl}>Live A2Z sheet ({a2z.meta.tufTopicCountLive} topics)</Ext><Ext href={neetcode.meta.practiceUrl}>NeetCode practice lists</Ext><Checked source="dsa" /></div>
     </section>
     <div className="dsa-today">

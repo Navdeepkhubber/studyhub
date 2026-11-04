@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "source": "13 local roadmap PDFs and the Master of Data Science enrolment guide",
+  "source": "72-block StudyHub plan: cybersecurity roadmap plus the AUT Master of Cyber Security and Digital Forensics; existing non-cyber study tracks retained.",
   "weeks": [
     {
       "n": 1,
@@ -14,26 +14,26 @@
     },
     {
       "n": 2,
-      "title": "Python + SQL fundamentals and database objects",
+      "title": "Python + SQL fundamentals and database objects · Security practice · Security practice · Security practice",
       "topics": [
         "A-22-1",
         "A-11-1",
         "A-2-1",
         "A-20-0",
         "F-0-1",
-        "C-10-0",
+        "C-0-0",
         "A-21-1"
       ]
     },
     {
       "n": 3,
-      "title": "SQL fundamentals and database objects + Python",
+      "title": "SQL fundamentals and database objects + Python · Security practice · Security practice · Security practice",
       "topics": [
         "A-11-2",
         "A-20-12",
         "F-0-2",
-        "C-9-4",
-        "C-10-1",
+        "C-0-1",
+        "C-0-2",
         "A-1-0",
         "A-22-6",
         "D-0-8"
@@ -41,14 +41,14 @@
     },
     {
       "n": 4,
-      "title": "Python + Lifecycle and foundations",
+      "title": "Python + Lifecycle and foundations · Security practice · Security practice · Security practice",
       "topics": [
         "A-22-2",
         "A-11-3",
         "A-11-4",
         "A-2-4",
         "F-0-3",
-        "C-10-2",
+        "C-0-3",
         "D-0-0",
         "A-1-1",
         "A-2-0"
@@ -56,7 +56,7 @@
     },
     {
       "n": 5,
-      "title": "Python language and ecosystem + SQL fundamentals and database objects",
+      "title": "Python language and ecosystem + SQL fundamentals and database objects · Security practice · Security practice · Security practice",
       "topics": [
         "A-22-3",
         "A-22-4",
@@ -65,12 +65,12 @@
         "A-2-6",
         "A-20-2",
         "F-0-4",
-        "C-10-3"
+        "C-0-4"
       ]
     },
     {
       "n": 6,
-      "title": "SQL fundamentals and database objects + SQL language reference",
+      "title": "SQL fundamentals and database objects + SQL language reference · Security practice · Security practice · Security practice",
       "topics": [
         "A-11-6",
         "A-1-5",
@@ -78,13 +78,13 @@
         "A-2-7",
         "A-21-2",
         "F-0-5",
-        "C-10-4",
+        "C-0-5",
         "A-2-2"
       ]
     },
     {
       "n": 7,
-      "title": "Python + SQL fundamentals and database objects",
+      "title": "Python + SQL fundamentals and database objects · Security practice · Security practice · Security practice",
       "topics": [
         "A-22-5",
         "A-11-7",
@@ -93,45 +93,45 @@
         "A-21-3",
         "F-0-6",
         "F-1-0",
-        "C-0-0",
-        "C-9-1",
-        "C-10-5",
-        "C-11-0",
+        "C-0-6",
+        "C-1-0",
+        "C-1-1",
+        "C-1-2",
         "D-0-1"
       ]
     },
     {
       "n": 8,
-      "title": "Python + SQL language reference",
+      "title": "Python + SQL language reference · Security practice · Security practice · Security practice",
       "topics": [
         "A-2-10",
         "A-21-4",
         "F-1-1",
-        "C-0-1",
-        "C-9-5",
-        "C-10-6",
-        "C-11-1",
+        "C-1-3",
+        "C-1-4",
+        "C-1-5",
+        "C-1-6",
         "A-1-2",
         "A-2-3"
       ]
     },
     {
       "n": 9,
-      "title": "Python + SQL",
+      "title": "Python + SQL · Security practice · Security practice · Security practice",
       "topics": [
         "A-2-11",
         "A-2-12",
         "A-21-5",
         "A-0-0",
         "F-1-2",
-        "C-0-2",
-        "C-10-7",
-        "C-11-2"
+        "C-2-0",
+        "C-2-1",
+        "C-2-2"
       ]
     },
     {
       "n": 10,
-      "title": "SQL language reference + SQL",
+      "title": "SQL language reference + SQL · Security practice · Security practice · Security practice",
       "topics": [
         "A-22-9",
         "A-2-13",
@@ -139,98 +139,98 @@
         "A-21-7",
         "A-0-1",
         "F-1-3",
-        "C-11-3",
+        "C-2-3",
         "D-0-2",
         "A-2-5"
       ]
     },
     {
       "n": 11,
-      "title": "SQL + SQL language reference",
+      "title": "SQL + SQL language reference · Security practice · Security practice · Security practice",
       "topics": [
         "A-22-10",
         "A-21-8",
         "A-0-2",
         "F-1-4",
-        "C-0-4",
-        "C-1-0",
-        "C-9-6",
-        "C-11-4",
-        "C-12-0"
+        "C-2-4",
+        "C-2-5",
+        "C-2-6",
+        "C-3-0",
+        "C-3-1"
       ]
     },
     {
       "n": 12,
-      "title": "SQL + SQL language reference",
+      "title": "SQL + SQL language reference · Security practice · Security practice · Security practice",
       "topics": [
         "A-21-9",
         "A-0-3",
         "A-0-4",
         "F-1-5",
         "F-2-0",
-        "C-0-5",
-        "C-1-1",
-        "C-9-2",
-        "C-11-5",
-        "C-12-1",
-        "C-13-1"
+        "C-3-2",
+        "C-3-3",
+        "C-3-4",
+        "C-3-5",
+        "C-3-6",
+        "C-3-7"
       ]
     },
     {
       "n": 13,
-      "title": "SQL language reference + SQL",
+      "title": "SQL language reference + SQL · Security practice · Security practice · Security practice",
       "topics": [
         "A-21-10",
         "A-21-11",
         "A-0-5",
         "F-3-0",
-        "C-0-6",
-        "C-1-2",
-        "C-2-0",
-        "C-11-6",
-        "C-12-2",
+        "C-3-8",
+        "C-3-9",
+        "C-3-10",
+        "C-3-11",
+        "C-4-0",
         "D-0-3"
       ]
     },
     {
       "n": 14,
-      "title": "SQL + SQL language reference",
+      "title": "SQL + SQL language reference · Security practice · Security practice · Security practice",
       "topics": [
         "A-21-12",
         "A-0-6",
         "F-2-1",
-        "C-1-3",
-        "C-2-1",
-        "C-9-3",
-        "C-11-7",
-        "C-12-3",
-        "C-13-5",
+        "C-4-1",
+        "C-4-2",
+        "C-4-3",
+        "C-4-4",
+        "C-4-5",
+        "C-4-6",
         "A-1-3"
       ]
     },
     {
       "n": 15,
-      "title": "SQL + R: functions and errors",
+      "title": "SQL + R: functions and errors · Security practice · Security practice · Security practice",
       "topics": [
         "A-0-7",
         "F-2-2",
         "F-3-1",
-        "C-1-4",
-        "C-2-2",
-        "C-11-8",
-        "C-12-4",
-        "C-13-0",
+        "C-4-7",
+        "C-4-8",
+        "C-4-9",
+        "C-4-10",
+        "C-4-11",
         "A-1-7"
       ]
     },
     {
       "n": 16,
-      "title": "Databases beyond SQL + R: importing and cleaning",
+      "title": "Databases beyond SQL + R: importing and cleaning · Security practice · Security practice · Security practice",
       "topics": [
         "A-12-0",
         "F-3-2",
-        "C-1-5",
-        "C-12-5",
+        "C-4-12",
+        "C-4-13",
         "D-0-4",
         "A-5-4",
         "A-6-8"
@@ -238,184 +238,184 @@
     },
     {
       "n": 17,
-      "title": "Python for data analysis: EDA and visualization + Databases beyond SQL",
+      "title": "Python for data analysis: EDA and visualization + Databases beyond SQL · Security practice · Security practice · Security practice",
       "topics": [
         "A-12-1",
         "A-20-1",
         "F-2-3",
-        "C-1-6",
-        "C-2-3",
-        "C-12-6",
-        "C-12-7"
+        "C-4-14",
+        "C-5-0",
+        "C-5-1",
+        "C-5-2"
       ]
     },
     {
       "n": 18,
-      "title": "Modeling and warehousing + Databases beyond SQL",
+      "title": "Modeling and warehousing + Databases beyond SQL · Security practice · Security practice · Security practice",
       "topics": [
         "A-5-0",
         "A-12-2",
         "F-3-3",
-        "C-2-4",
-        "C-3-0",
-        "C-12-8",
-        "C-13-4",
+        "C-5-3",
+        "C-5-4",
+        "C-5-5",
+        "C-5-6",
         "D-0-5"
       ]
     },
     {
       "n": 19,
-      "title": "Statistics and experiments + Modeling and warehousing",
+      "title": "Cybersecurity and experiments + Modeling and warehousing · Security practice · Security practice · Security practice",
       "topics": [
         "A-5-1",
         "F-3-4",
         "F-4-0",
-        "C-2-5",
-        "C-3-1",
-        "C-3-2",
-        "C-12-9"
+        "C-5-7",
+        "C-5-8",
+        "C-5-9",
+        "C-5-10"
       ]
     },
     {
       "n": 20,
-      "title": "Modeling and warehousing + Databases beyond SQL",
+      "title": "Modeling and warehousing + Databases beyond SQL · Security practice · Security practice · Security practice",
       "topics": [
         "A-5-2",
         "A-12-3",
         "F-4-1",
-        "C-2-6",
-        "C-3-3",
-        "C-12-10",
-        "C-0-3"
+        "C-6-0",
+        "C-6-1",
+        "C-6-2",
+        "C-6-3"
       ]
     },
     {
       "n": 21,
-      "title": "Modeling and warehousing + Databases beyond SQL",
+      "title": "Modeling and warehousing + Databases beyond SQL · Security practice · Security practice · Security practice",
       "topics": [
         "A-5-3",
         "A-12-4",
         "F-3-5",
-        "C-3-4",
-        "C-9-7",
-        "C-12-11",
+        "C-7-0",
+        "C-7-1",
+        "C-7-2",
         "D-0-6",
         "D-1-0"
       ]
     },
     {
       "n": 22,
-      "title": "Statistics and experiments + Modeling and warehousing",
+      "title": "Cybersecurity and experiments + Modeling and warehousing · Security practice · Security practice · Security practice",
       "topics": [
         "A-12-5",
         "F-4-2",
-        "C-3-5",
-        "C-3-6",
-        "C-12-12",
-        "C-13-2"
+        "C-7-3",
+        "C-7-4",
+        "C-7-5",
+        "C-8-0"
       ]
     },
     {
       "n": 23,
-      "title": "Modeling and warehousing + Storage, formats, cloud",
+      "title": "Modeling and warehousing + Storage, formats, cloud · Security practice · Security practice · Security practice",
       "topics": [
         "A-5-5",
         "A-8-0",
         "A-12-6",
         "A-13-0",
         "F-4-3",
-        "C-3-7",
-        "C-13-6"
+        "C-8-1",
+        "C-8-2"
       ]
     },
     {
       "n": 24,
-      "title": "Modeling and warehousing + Data engineering roadmap details",
+      "title": "Modeling and warehousing + Data engineering roadmap details · Security practice · Security practice · Security practice",
       "topics": [
         "A-5-6",
         "A-20-3",
         "F-4-4",
-        "C-3-8",
-        "C-9-8",
-        "C-13-7",
+        "C-8-3",
+        "C-8-4",
+        "C-8-5",
         "D-0-7"
       ]
     },
     {
       "n": 25,
-      "title": "Statistics and experiments + Modeling and warehousing",
+      "title": "Cybersecurity and experiments + Modeling and warehousing · Security practice · Security practice · Security practice",
       "topics": [
         "A-5-7",
         "A-8-1",
         "A-13-1",
         "F-4-5",
         "F-5-0",
-        "C-3-9",
-        "C-3-10",
-        "C-4-0",
-        "C-13-8",
+        "C-8-6",
+        "C-8-7",
+        "C-9-0",
+        "C-9-1",
         "A-6-0"
       ]
     },
     {
       "n": 26,
-      "title": "Classical machine learning + Storage, formats, cloud",
+      "title": "Cybersecurity + Storage, formats, cloud · Security practice · Security practice · Security practice",
       "topics": [
         "A-8-2",
         "A-13-2",
         "F-4-6",
-        "C-3-11",
-        "C-4-1",
-        "C-4-2",
-        "C-9-0"
+        "C-9-2",
+        "C-9-3",
+        "C-9-4",
+        "C-9-5"
       ]
     },
     {
       "n": 27,
-      "title": "Architectures and vocabulary + R: visualization",
+      "title": "Architectures and vocabulary + R: visualization · Security practice · Security practice · Security practice",
       "topics": [
         "A-13-3",
         "F-5-1",
-        "C-4-3",
-        "C-9-9"
+        "C-9-6",
+        "C-9-7"
       ]
     },
     {
       "n": 28,
-      "title": "Storage, formats, cloud + R: tidyverse and manipulation",
+      "title": "Storage, formats, cloud + R: tidyverse and manipulation · Security practice · Security practice · Security practice",
       "topics": [
         "A-8-3",
         "F-4-7",
-        "C-4-4",
-        "C-8-0",
-        "C-9-11",
+        "C-9-8",
+        "C-9-9",
+        "C-9-10",
         "B-10-14"
       ]
     },
     {
       "n": 29,
-      "title": "Classical machine learning + LLM fundamentals",
+      "title": "Cybersecurity + LLM fundamentals · Security practice · Security practice · Security practice",
       "topics": [
         "A-3-0",
         "A-8-4",
         "A-13-4",
         "F-4-8",
         "F-5-2",
-        "C-4-5",
-        "C-4-6",
-        "C-9-10",
+        "C-9-11",
+        "C-9-12",
+        "C-9-13",
         "B-0-0",
         "B-0-1"
       ]
     },
     {
       "n": 30,
-      "title": "Spark and PySpark + Architectures and vocabulary",
+      "title": "Spark and PySpark + Architectures and vocabulary · Security practice · Security practice · Security practice",
       "topics": [
         "A-3-1",
         "A-3-2",
         "A-13-5",
-        "C-4-7",
+        "C-9-14",
         "B-0-2",
         "B-11-0",
         "D-0-9"
@@ -423,16 +423,16 @@
     },
     {
       "n": 31,
-      "title": "Classical machine learning + LLM fundamentals",
+      "title": "Cybersecurity + LLM fundamentals · Security practice · Security practice · Security practice",
       "topics": [
         "A-3-3",
         "A-8-5",
         "A-14-0",
         "F-5-3",
         "F-6-0",
-        "C-4-8",
-        "C-4-9",
-        "C-9-13",
+        "C-9-15",
+        "C-9-16",
+        "C-9-17",
         "B-0-3",
         "B-0-4",
         "E-0-0"
@@ -440,13 +440,13 @@
     },
     {
       "n": 32,
-      "title": "LLM fundamentals + Spark and PySpark",
+      "title": "LLM fundamentals + Spark and PySpark · Security practice · Security practice · Security practice",
       "topics": [
         "A-22-11",
         "A-3-4",
-        "C-4-10",
-        "C-9-12",
-        "C-13-9",
+        "C-9-18",
+        "C-9-19",
+        "C-9-20",
         "B-0-5",
         "B-0-6",
         "B-11-1"
@@ -454,16 +454,16 @@
     },
     {
       "n": 33,
-      "title": "Spark and PySpark + LLM fundamentals",
+      "title": "Spark and PySpark + LLM fundamentals · Security practice · Security practice · Security practice",
       "topics": [
         "A-3-5",
         "A-3-6",
         "A-14-1",
         "F-5-4",
         "F-6-1",
-        "C-4-11",
-        "C-8-1",
-        "C-9-20",
+        "C-10-0",
+        "C-10-1",
+        "C-10-2",
         "B-0-7",
         "B-0-8",
         "B-7-0",
@@ -473,28 +473,28 @@
     },
     {
       "n": 34,
-      "title": "Classical machine learning + Spark and PySpark",
+      "title": "Cybersecurity + Spark and PySpark · Security practice · Security practice · Security practice",
       "topics": [
         "A-3-7",
         "A-14-2",
-        "C-4-12",
-        "C-4-13",
+        "C-10-3",
+        "C-10-4",
         "B-0-9",
         "B-7-1"
       ]
     },
     {
       "n": 35,
-      "title": "Spark and PySpark + LLM fundamentals",
+      "title": "Spark and PySpark + LLM fundamentals · Security practice · Security practice · Security practice",
       "topics": [
         "A-3-8",
         "A-3-9",
         "A-14-3",
         "A-20-4",
         "F-6-2",
-        "C-4-14",
-        "C-5-0",
-        "C-9-14",
+        "C-10-5",
+        "C-10-6",
+        "C-10-7",
         "B-0-10",
         "B-0-11",
         "B-1-0",
@@ -506,13 +506,13 @@
     },
     {
       "n": 36,
-      "title": "LLM fundamentals + Prompting and tool use",
+      "title": "LLM fundamentals + Prompting and tool use · Security practice · Security practice · Security practice",
       "topics": [
         "A-3-10",
         "A-4-0",
         "A-20-5",
-        "C-5-1",
-        "C-9-15",
+        "C-11-0",
+        "C-11-1",
         "B-0-12",
         "B-0-13",
         "B-1-2",
@@ -525,13 +525,13 @@
     },
     {
       "n": 37,
-      "title": "Delta Lake and lakehouse + Pipelines and orchestration",
+      "title": "Delta Lake and lakehouse + Pipelines and orchestration · Security practice · Security practice · Security practice",
       "topics": [
         "A-4-1",
         "A-4-2",
         "A-14-4",
         "F-6-3",
-        "C-5-2",
+        "C-11-2",
         "B-1-4",
         "B-6-0",
         "B-7-4",
@@ -542,12 +542,12 @@
     },
     {
       "n": 38,
-      "title": "Prompting and tool use + Delta Lake and lakehouse",
+      "title": "Prompting and tool use + Delta Lake and lakehouse · Security practice · Security practice · Security practice",
       "topics": [
         "A-4-3",
         "A-6-1",
         "A-14-5",
-        "C-5-3",
+        "C-11-3",
         "B-1-5",
         "B-1-6",
         "B-6-1",
@@ -559,13 +559,13 @@
     },
     {
       "n": 39,
-      "title": "Delta Lake and lakehouse + Prompting and tool use",
+      "title": "Delta Lake and lakehouse + Prompting and tool use · Security practice · Security practice · Security practice",
       "topics": [
         "A-4-4",
         "A-4-5",
         "F-6-4",
-        "C-5-4",
-        "C-8-2",
+        "C-11-4",
+        "C-11-5",
         "B-1-7",
         "B-1-8",
         "B-2-0",
@@ -578,14 +578,14 @@
     },
     {
       "n": 40,
-      "title": "Deep learning + Prompting and tool use",
+      "title": "Cybersecurity + Prompting and tool use · Security practice · Security practice · Security practice",
       "topics": [
         "A-4-6",
         "A-6-2",
         "A-16-0",
-        "C-5-5",
-        "C-5-6",
-        "C-9-16",
+        "C-11-6",
+        "C-11-7",
+        "C-11-8",
         "B-1-9",
         "B-1-10",
         "B-2-2",
@@ -596,14 +596,14 @@
     },
     {
       "n": 41,
-      "title": "Delta Lake and lakehouse + RAG",
+      "title": "Delta Lake and lakehouse + RAG · Security practice · Security practice · Security practice",
       "topics": [
         "A-4-7",
         "A-4-8",
         "A-6-3",
         "F-6-5",
-        "C-5-7",
-        "C-13-10",
+        "C-12-0",
+        "C-12-1",
         "B-2-3",
         "B-2-4",
         "B-6-4",
@@ -613,13 +613,13 @@
     },
     {
       "n": 42,
-      "title": "RAG + Delta Lake and lakehouse",
+      "title": "RAG + Delta Lake and lakehouse · Security practice · Security practice · Security practice",
       "topics": [
         "A-4-9",
         "A-6-4",
         "A-16-1",
-        "C-5-8",
-        "C-9-17",
+        "C-12-2",
+        "C-12-3",
         "B-2-5",
         "B-2-6",
         "B-6-5",
@@ -628,30 +628,30 @@
     },
     {
       "n": 43,
-      "title": "Pipelines and orchestration + Quality, operations, platform",
+      "title": "Pipelines and orchestration + Quality, operations, platform · Security practice · Security practice · Security practice",
       "topics": [
         "A-6-5",
         "A-7-0",
         "A-20-6",
         "F-6-6",
         "F-7-0",
-        "C-5-9",
-        "C-7-0",
-        "C-9-19",
+        "C-12-4",
+        "C-12-5",
+        "C-12-6",
         "B-6-6",
         "B-11-10"
       ]
     },
     {
       "n": 44,
-      "title": "RAG + Pipelines and orchestration",
+      "title": "RAG + Pipelines and orchestration · Security practice · Security practice · Security practice",
       "topics": [
         "A-6-6",
         "A-7-1",
         "A-16-2",
-        "C-5-10",
-        "C-8-3",
-        "C-9-18",
+        "C-12-7",
+        "C-12-8",
+        "C-12-9",
         "B-2-8",
         "B-2-9",
         "B-11-11",
@@ -660,11 +660,11 @@
     },
     {
       "n": 45,
-      "title": "RAG + Delivery: testing, CI/CD, IaC, containers",
+      "title": "RAG + Delivery: testing, CI/CD, IaC, containers · Security practice · Security practice · Security practice",
       "topics": [
         "A-17-0",
-        "C-6-0",
-        "C-7-1",
+        "C-12-10",
+        "C-12-11",
         "B-2-10",
         "B-2-11",
         "B-10-0",
@@ -674,13 +674,13 @@
     },
     {
       "n": 46,
-      "title": "AI engineer roadmap details + Pipelines and orchestration",
+      "title": "AI engineer roadmap details + Pipelines and orchestration · Security practice · Security practice · Security practice",
       "topics": [
         "A-6-7",
         "A-7-2",
         "A-16-3",
         "F-7-1",
-        "C-7-2",
+        "C-12-12",
         "B-2-12",
         "B-10-1",
         "B-11-4",
@@ -689,12 +689,12 @@
     },
     {
       "n": 47,
-      "title": "RAG + Agent foundations",
+      "title": "RAG + Agent foundations · Security practice · Security practice · Security practice",
       "topics": [
         "A-7-3",
         "A-17-1",
         "A-20-7",
-        "C-6-1",
+        "C-13-0",
         "B-2-13",
         "B-2-14",
         "B-10-2",
@@ -703,13 +703,13 @@
     },
     {
       "n": 48,
-      "title": "Agents and harness + Quality, operations, platform",
+      "title": "Agents and harness + Quality, operations, platform · Security practice · Security practice · Security practice",
       "topics": [
         "A-7-4",
         "A-17-2",
         "F-7-2",
-        "C-7-3",
-        "C-13-3",
+        "C-13-1",
+        "C-13-2",
         "B-3-0",
         "B-3-1",
         "B-10-4",
@@ -718,14 +718,14 @@
     },
     {
       "n": 49,
-      "title": "Agents and harness + Quality, operations, platform",
+      "title": "Agents and harness + Quality, operations, platform · Security practice · Security practice · Security practice",
       "topics": [
         "A-22-8",
         "A-7-5",
         "A-18-0",
-        "C-6-2",
-        "C-7-4",
-        "C-8-4",
+        "C-13-3",
+        "C-13-4",
+        "C-13-5",
         "B-3-2",
         "B-3-3",
         "B-5-0",
@@ -745,15 +745,15 @@
     },
     {
       "n": 51,
-      "title": "Agents and harness + Agent foundations",
+      "title": "Agents and harness + Agent foundations · Security practice · Security practice · Security practice",
       "topics": [
         "A-7-6",
         "A-10-1",
         "A-17-4",
         "A-18-1",
         "F-7-3",
-        "C-6-3",
-        "C-7-5",
+        "C-13-6",
+        "C-13-7",
         "B-3-5",
         "B-3-6",
         "B-5-1",
@@ -794,13 +794,13 @@
     },
     {
       "n": 54,
-      "title": "Agents and harness + General system design",
+      "title": "Agents and harness + General system design · Security practice · Security practice · Security practice",
       "topics": [
         "A-10-5",
         "A-17-6",
         "A-20-8",
         "A-23-0",
-        "C-8-5",
+        "C-13-8",
         "B-3-11",
         "B-3-12",
         "B-10-11"
@@ -883,14 +883,14 @@
     },
     {
       "n": 60,
-      "title": "AWS: foundations and networking + System design",
+      "title": "AWS: foundations and networking + System design · Security practice · Security practice · Security practice",
       "topics": [
         "A-9-3",
         "A-10-12",
         "A-19-3",
         "A-24-1",
         "A-24-2",
-        "C-8-6",
+        "C-13-9",
         "B-5-8",
         "B-8-1",
         "B-11-16",
@@ -942,13 +942,13 @@
     },
     {
       "n": 64,
-      "title": "AWS: foundations and networking + Governance, privacy, regulation",
+      "title": "AWS: foundations and networking + Governance, privacy, regulation · Security practice · Security practice · Security practice",
       "topics": [
         "A-19-6",
         "A-23-9",
         "A-24-7",
         "A-24-8",
-        "C-13-11",
+        "C-13-10",
         "B-5-11",
         "B-8-3",
         "D-2-3",
@@ -959,14 +959,14 @@
     },
     {
       "n": 65,
-      "title": "System design + Cloud platforms",
+      "title": "System design + Cloud platforms · Security practice · Security practice · Security practice",
       "topics": [
         "A-9-6",
         "A-15-5",
         "A-23-10",
         "A-24-9",
         "A-25-0",
-        "C-8-7"
+        "C-13-11"
       ]
     },
     {
@@ -1030,47 +1030,47 @@
   ],
   "phases": [
     {
-      "name": "Foundations: tools, coding, and data",
+      "name": "Foundations & security thinking",
       "start": 1,
       "end": 8
     },
     {
-      "name": "Mathematics, data analysis, and SQL",
+      "name": "Systems, networks & scripting",
       "start": 9,
       "end": 16
     },
     {
-      "name": "Statistics, databases, and modelling",
+      "name": "Secure programming & identity",
       "start": 17,
       "end": 24
     },
     {
-      "name": "Classical ML and distributed data",
+      "name": "Web application security",
       "start": 25,
       "end": 32
     },
     {
-      "name": "Deep learning and data pipelines",
+      "name": "Penetration testing practice",
       "start": 33,
       "end": 40
     },
     {
-      "name": "RAG, quality, and advanced ML",
+      "name": "SOC operations & incident response",
       "start": 41,
       "end": 48
     },
     {
-      "name": "Agents, evaluation, and design",
+      "name": "Digital forensics",
       "start": 49,
       "end": 56
     },
     {
-      "name": "Cloud, deployment, and portfolio",
+      "name": "Cloud & application security engineering",
       "start": 57,
       "end": 64
     },
     {
-      "name": "Integration and master’s readiness",
+      "name": "Research, dissertation & career portfolio",
       "start": 65,
       "end": 72
     }

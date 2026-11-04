@@ -574,217 +574,217 @@
     },
     {
       "id": "C",
-      "name": "Math, statistics and ML",
-      "goal": "The foundation for the Master's: the math behind models, classical ML, deep learning, forecasting.",
+      "name": "Cybersecurity and digital forensics",
+      "goal": "Build academic mastery and demonstrable skills for security engineering, penetration testing, application security, SOC and digital forensics roles.",
       "groups": [
         {
-          "t": "Linear algebra",
+          "t": "Security foundations",
           "i": [
-            "*Vectors, dot product, norms, projections",
-            "*Matrix multiplication as a linear map",
-            "*Eigenvalues, eigenvectors, SVD",
-            "*PCA from covariance and from SVD",
-            "Rank, null space, least squares",
-            "Positive definite matrices, conditioning",
-            "Determinants, inverses, diagonalization"
+            "*Security principles: confidentiality, integrity, availability",
+            "*Threat, vulnerability, exploit and risk",
+            "*Assets, trust boundaries and attack surface",
+            "*Adversary goals, capability and opportunity",
+            "Threat modelling with STRIDE",
+            "Risk assessment: likelihood, impact and treatment",
+            "Security controls: preventive, detective, corrective"
           ]
         },
         {
-          "t": "Calculus and optimization",
+          "t": "Networking and protocols",
           "i": [
-            "*Derivatives, chain rule, partial derivatives",
-            "*Gradient, Jacobian, Hessian",
-            "*Gradient descent, SGD, momentum, Adam",
-            "Convexity, local vs global minima",
-            "Lagrange multipliers, constrained optimization",
-            "Learning rate schedules",
-            "Discrete mathematics: sets, logic, counting, graphs"
+            "*TCP/IP, OSI layers, routing and subnetting",
+            "*DNS resolution, records, caching and abuse cases",
+            "*HTTP request/response, headers, cookies and sessions",
+            "*TLS handshake, certificates and common configuration errors",
+            "Ports, sockets, NAT, firewalls and network segmentation",
+            "Packet capture with Wireshark: filters and protocol reading",
+            "Network scanning concepts and safe lab scope"
           ]
         },
         {
-          "t": "Probability",
+          "t": "Linux, Windows and scripting",
           "i": [
-            "*Conditional probability and Bayes' theorem",
-            "*Random variables, expectation, variance, covariance",
-            "*Bernoulli, binomial, Poisson, normal, exponential",
-            "Law of large numbers, central limit theorem",
-            "*Maximum likelihood and MAP estimation",
-            "Entropy, KL divergence, cross-entropy",
-            "Markov chains basics"
+            "*Linux filesystem, permissions, users and groups",
+            "*Processes, services, logs and systemd",
+            "*Shell navigation, pipes, redirection and safe automation",
+            "*Windows architecture, accounts, services and event logs",
+            "PowerShell fundamentals for administration and investigation",
+            "Python for parsing, API use and security automation",
+            "Git, branches, commits and reproducible lab notes"
           ]
         },
         {
-          "t": "Statistics and experiments",
+          "t": "Programming and secure coding",
           "i": [
-            "*Sampling, bias, confidence intervals",
-            "*Hypothesis tests: p-values, type I and II errors, power",
-            "t-test, chi-square, ANOVA, nonparametric tests",
-            "*A/B test design and pitfalls: peeking, multiple comparisons",
-            "Bootstrap and permutation tests",
-            "Linear regression assumptions and diagnostics",
-            "Bayesian inference basics: priors, posteriors",
-            "Causal inference intro: confounding, DAGs, propensity scores",
-            "Variance reduction in A/B tests: CUPED, stratification",
-            "Minimum detectable effect and sample size",
-            "Ratio metrics and the delta method",
-            "Econometrics: regression, time series regression, fitting distributions"
+            "*Python data types, functions, modules and exceptions",
+            "*HTTP clients, JSON, APIs and input validation",
+            "*JavaScript execution model, DOM and browser security",
+            "*SQL fundamentals and parameterized queries",
+            "*Memory, processes and basic C concepts for vulnerability literacy",
+            "*Authentication, authorization and session design",
+            "Secrets management and configuration hygiene",
+            "Unit and integration testing for security behavior",
+            "Dependency management, SBOM concepts and supply-chain risk",
+            "Read code and trace untrusted input to sensitive operations",
+            "Applied lab 11: practise programming and secure coding with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 12: practise programming and secure coding with a bounded scenario, capture evidence, and document the mitigation"
           ]
         },
         {
-          "t": "Classical machine learning",
+          "t": "Cryptography and identity",
           "i": [
-            "*Linear and logistic regression, L1 and L2 regularization",
-            "*Bias-variance tradeoff, overfitting, cross-validation",
-            "k-NN, naive Bayes, SVM",
-            "*Decision trees, random forests, gradient boosting",
-            "*Metrics: precision, recall, F1, ROC-AUC, PR-AUC, log loss, calibration",
-            "Clustering: k-means, GMM, hierarchical, DBSCAN",
-            "Dimensionality reduction: PCA, t-SNE, UMAP",
-            "Imbalanced data, leakage, feature engineering",
-            "Time series: decomposition, ARIMA, ETS, backtesting",
-            "Probabilistic forecasting: quantile regression, prediction intervals, CRPS",
-            "Polynomial regression, Lasso, Ridge, ElasticNet",
-            "Clustering families: exclusive, overlapping, hierarchical, probabilistic",
-            "Validation: k-fold, LOOCV, confusion matrix",
-            "Feature scaling, normalization, selection",
-            "Semi-supervised and self-supervised learning overview"
+            "*Cryptographic goals and correct primitive selection",
+            "*Encoding versus encryption versus hashing",
+            "*Symmetric encryption, modes and authenticated encryption",
+            "*Public-key cryptography, signatures and key exchange",
+            "*Password hashing, salts and work factors",
+            "*PKI, certificates, trust chains and revocation",
+            "*MFA, passkeys and phishing-resistant authentication",
+            "*OAuth 2.0, OpenID Connect and SAML concepts",
+            "Key lifecycle, storage, rotation and access",
+            "Common crypto failures and how to review implementations",
+            "Applied lab 11: practise cryptography and identity with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 12: practise cryptography and identity with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 13: practise cryptography and identity with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 14: practise cryptography and identity with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 15: practise cryptography and identity with a bounded scenario, capture evidence, and document the mitigation"
           ]
         },
         {
-          "t": "Deep learning",
+          "t": "Web application security",
           "i": [
-            "*Perceptron and backpropagation from scratch",
-            "Activations, initialization, normalization, dropout",
-            "*Training loops in PyTorch, mixed precision, checkpoints",
-            "CNNs and image basics",
-            "RNNs, LSTMs, and why transformers replaced them",
-            "*Build a small GPT (nanoGPT style)",
-            "Transfer learning and fine-tuning",
-            "CNN parts: convolution, padding, strides, pooling",
-            "GRU and LSTM details; attention mechanisms",
-            "Autoencoders and generative adversarial networks",
-            "TensorFlow and Keras awareness"
+            "*OWASP Top 10:2025 overview and risk context",
+            "*HTTP security headers, CORS and browser boundaries",
+            "*Access control failures and IDOR testing in a lab",
+            "*SQL injection: root cause, safe reproduction and remediation",
+            "*Cross-site scripting: reflected, stored and DOM cases",
+            "*CSRF, cookies, SameSite and request integrity",
+            "Server-side request forgery and egress controls",
+            "Path traversal, file upload and parser risks",
+            "Authentication, session fixation and account recovery",
+            "Business logic abuse and race condition fundamentals",
+            "API security: object authorization, rate limits and schema validation"
           ]
         },
         {
-          "t": "Reinforcement learning and recommenders",
+          "t": "Penetration testing methodology",
           "i": [
-            "What RL is: agent, environment, reward",
-            "Q-learning and Deep Q-Networks",
-            "Policy gradient and actor-critic methods",
-            "Recommendation systems basics"
+            "*Rules of engagement, authorization and scope",
+            "*Reconnaissance: passive sources and asset inventory",
+            "Service discovery and evidence-based enumeration",
+            "Vulnerability triage: exploitability, impact and false positives"
           ]
         },
         {
-          "t": "NLP and computer vision",
+          "t": "SOC and incident response",
           "i": [
-            "Tokenization, stemming, lemmatization",
-            "Embeddings and attention models",
-            "*Transformers for NLP tasks",
-            "Image classification and segmentation",
-            "Image generation basics",
-            "AutoML and model hosting on the Hugging Face Hub"
+            "*SOC roles, alert lifecycle and escalation quality",
+            "*Log sources: endpoint, identity, DNS, proxy and cloud",
+            "*SIEM data model, normalization and enrichment",
+            "Detection engineering: hypothesis, query and test data",
+            "MITRE ATT&CK mapping and analytic coverage",
+            "Windows event analysis and Sysmon fundamentals"
           ]
         },
         {
-          "t": "Practice and professional skills",
+          "t": "Digital forensics",
           "i": [
-            "*EDA and visualization with pandas and matplotlib",
-            "scikit-learn pipelines",
-            "Experiment tracking with MLflow",
-            "MLOps: deployment, monitoring, drift, retraining",
-            "Fairness, explainability (SHAP), model cards",
-            "Reading and summarizing research papers",
-            "Technical writing and reports",
-            "Git and turning notebooks into reproducible code"
+            "*Forensic principles: integrity, repeatability and documentation",
+            "*Chain of custody and evidence handling requirements",
+            "*Disk images, partitions, file systems and acquisition",
+            "*Forensic imaging, write blockers and verification hashes",
+            "Deleted files, metadata and file-system artefacts",
+            "Windows artefacts: registry, event logs, Prefetch and timelines",
+            "Linux artefacts: auth logs, shell history and journal",
+            "Mobile forensics scope, acquisition constraints and privacy"
           ]
         },
         {
-          "t": "ML foundations",
+          "t": "Cloud and infrastructure security",
           "i": [
-            "ML engineer role: skills and responsibilities; ML engineer vs AI engineer",
-            "Mathematical foundations: scalars, vectors, tensors, matrix operations, determinants, inverses, eigenvalues, diagonalization, SVD",
-            "Calculus: derivatives, partial derivatives, chain rule, gradient, Jacobian, Hessian; differential calculus; mathematical analysis",
-            "Probability and statistics: basics, Bayes theorem, random variables and PDFs, types of distribution; descriptive and inferential statistics; graphs and charts",
-            "Programming fundamentals: Python syntax, variables, data structures, loops, conditionals, exceptions, functions and built-ins, OOP",
-            "Essential libraries: NumPy, Pandas, Matplotlib, Seaborn",
-            "Data collection: internet, APIs, mobile apps, IoT, databases (SQL, NoSQL); formats CSV, Excel, JSON, Parquet",
-            "Preprocessing: cleaning, feature engineering, feature scaling and normalization, dimensionality reduction, feature selection",
-            "Learning types: supervised, unsupervised, semi-supervised, self-supervised, reinforcement",
-            "scikit-learn workflow: data loading, train-test split, data preparation, model selection, tuning, prediction",
-            "Classification: KNN, logistic regression, SVM, decision trees, random forest, gradient boosting machines",
-            "Regression: linear, polynomial, Lasso, Ridge, ElasticNet",
-            "Unsupervised: PCA, autoencoders, clustering (exclusive, overlapping, hierarchical, probabilistic)",
-            "Model evaluation: accuracy, precision, recall, F1, ROC-AUC, log loss, confusion matrix; k-fold cross validation and LOOCV",
-            "Deep learning basics: perceptron, multi-layer perceptrons, forward propagation, back propagation, activation functions, loss functions",
-            "Deep learning libraries: TensorFlow, Keras, PyTorch, scikit-learn",
-            "CNNs: convolution, pooling, padding, strides; applications: image and video recognition, classification, segmentation, recommendation systems",
-            "RNN, GRU, LSTM; attention, self-attention, multi-head attention, transformers",
-            "Autoencoders, generative adversarial networks, explainable AI",
-            "NLP: tokenization, lemmatization, stemming, embeddings, attention models",
-            "Ensembles: bagging, boosting, stacking, voting; classic ML vs advanced ML (ensembles and neural networks)"
+            "*Shared responsibility and cloud threat modelling",
+            "*AWS IAM identity policies, roles and least privilege",
+            "*Cloud network boundaries, security groups and private access",
+            "*Object storage exposure, encryption and access logging",
+            "*Cloud audit logs and incident investigation basics",
+            "*Containers: image hygiene, isolation and runtime risks",
+            "*Kubernetes identity, network policy and secrets basics",
+            "*Infrastructure as code review and policy checks",
+            "*CI/CD pipeline permissions and artifact integrity",
+            "*Cloud detection, posture management and response patterns",
+            "*Applied lab 11: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 12: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 13: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 14: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 15: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 16: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 17: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 18: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 19: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 20: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 21: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation"
           ]
         },
         {
-          "t": "Python for data analysis: basics",
+          "t": "Application security and DevSecOps",
           "i": [
-            "Data types: integers, floats, strings, booleans, null; arithmetic, comparison and logical operators; printing variables",
-            "Data structures: lists, tuples, dictionaries, sets; type casting; working with strings",
-            "Conditionals, loops, list comprehensions",
-            "Functions and methods: built-in functions, defining functions, args and kwargs, lambda functions",
-            "Package management: pip, conda, uv; virtualenv and venv",
-            "Environments: JupyterLab, Google Colab, VS Code",
-            "SQL from Python: sqlite3, SQLAlchemy, DuckDB, Pandas; SQL fundamentals",
-            "Where this leads: Python developer, machine learning and data engineer paths"
+            "*Secure SDLC and security requirements",
+            "*Code review for trust boundaries and authorization",
+            "*SAST, DAST, SCA and secrets scanning: strengths and limits",
+            "*Threat modelling during design and change review",
+            "CI security gates with actionable findings",
+            "Dependency pinning, provenance and artifact signing",
+            "Container and infrastructure scanning workflow",
+            "Vulnerability management, SLAs and exception handling"
           ]
         },
         {
-          "t": "Python for data analysis: pandas and NumPy",
+          "t": "Research methods and dissertation",
           "i": [
-            "*NumPy: arrays and ndarray, array operations, indexing and slicing, linear algebra basics, random module",
-            "*pandas: Series and DataFrame, reading data, indexing and slicing, filtering and querying, groupby and aggregation, merging and joining, reshaping",
-            "Polars as a faster DataFrame option",
-            "Reading local files: CSV, Excel, JSON, Parquet",
-            "Reading web data: APIs with requests, BeautifulSoup, scrapy",
-            "*Missing values: isnull and isna, dropping vs imputing, forward and backward fill",
-            "*Outlier detection: IQR, z-score, visual inspection",
-            "String cleaning: strip, replace, split, re; pandas string methods",
-            "Data type conversion: casting types, parsing dates, encoding categories"
+            "*Turn a broad security topic into a researchable question",
+            "*Literature search, source evaluation and research gap",
+            "*Research design: experiment, case study or measurement",
+            "*Ethics, privacy, consent and responsible disclosure",
+            "*Data collection, provenance and reproducibility",
+            "Evaluation metrics, baselines and validity threats",
+            "Research proposal: question, method, scope and timeline",
+            "Maintain a literature matrix and annotated bibliography",
+            "Reproducible experiments, versioning and audit trail"
           ]
         },
         {
-          "t": "Python for data analysis: EDA and visualization",
+          "t": "Security architecture and engineering",
           "i": [
-            "*Descriptive statistics: mean, median, mode, variance and standard deviation, correlation and covariance",
-            "*Distribution analysis: histogram, boxplot",
-            "*Relationship analysis: scatterplot, correlation matrix, cross-tabulation",
-            "Matplotlib: plot categories, subplots and figures, customizing plots, saving figures",
-            "Seaborn: distribution plots, categorical plots, regression plots, heatmaps, customizing",
-            "Interactive visualization: Plotly; dashboards: Streamlit, Dash, Power BI, Tableau",
-            "Advanced: OOP for data analysis, SciPy, scikit-learn for statistics and ML",
-            "Geospatial analysis with GeoPandas",
-            "Big data tools: Dask, PySpark; data pipelines with Airflow",
-            "Data sources for data science: file handling, databases, APIs, web mining",
-            "Libraries for ML and deep learning: scikit-learn, TensorFlow, PyTorch; AutoML platforms",
-            "Move toward AI personalization: building systems that adapt to user data",
-            "Model hosting: GitHub, Hugging Face"
+            "*Security architecture principles and trust boundaries",
+            "*Zero trust concepts and practical access decisions",
+            "*Network segmentation and secure remote access",
+            "*Risk registers, treatment plans and control ownership",
+            "*NIST SP 800-53 control families and evidence",
+            "*ISO/IEC 27001 ISMS concepts and audit evidence",
+            "*Privacy by design and data minimization",
+            "Business continuity, backup and recovery testing",
+            "Third-party risk and software supplier assurance",
+            "Communicate security trade-offs to technical and business audiences",
+            "Project scoping, threat model and acceptance criteria",
+            "Build a hardened Linux service and document baseline",
+            "Implement a log pipeline with parsing and detection rules"
           ]
         },
         {
-          "t": "Courses, books and papers on the roadmaps",
+          "t": "Career readiness and professional practice",
           "i": [
-            "Coursera: Introduction to Statistics; Probability and Statistics; Hypothesis Testing",
-            "Coursera: Algebra and Differential Calculus; Mathematics for Machine Learning",
-            "Econometrics: Fundamentals of Econometrics and Intro to Econometrics (books); Coursera Econometrics and Linear Regression",
-            "Kaggle: Learn Python, Learn Time Series, Time Series Basics; ARIMA and time series model tutorials; a forecasting task with solution",
-            "Python practice: Google's Python Class, algorithmic exercises, LeetCode study plans, Algorithms Specialization; SQL tutorial course",
-            "EDA courses: with Python and pandas, for machine learning, with Seaborn",
-            "A/B testing reading: Practitioner's Guide to Statistical Tests, experiment design, increasing test sensitivity, minimum detectable effect",
-            "Variance reduction papers: Improving Test Sensitivity (CUPED), CUPED at Booking.com, DoorDash CUPAC, Netflix stratification",
-            "Ratio metrics: paper on ratio metrics; Microsoft delta method in metric analytics",
-            "ML: Open Machine Learning Course, Machine Learning Specialization, Pattern Recognition and Machine Learning by Bishop with its GitHub notes and code",
-            "Deep learning: Deep Learning Specialization, Deep Learning Book, Attention Is All You Need, The Illustrated Transformer",
-            "MLOps Specialization: deployment models and CI/CD for ML"
+            "*Choose target role and map evidence to role requirements",
+            "*Translate technical work into concise STAR examples",
+            "*Write a security-focused resume with measurable evidence",
+            "*Portfolio hygiene: remove secrets, sanitize data and verify licenses",
+            "*Interview fundamentals: networking, Linux, web and security concepts",
+            "*SOC analyst scenario: triage, explain, escalate",
+            "Penetration tester scenario: scope, evidence and remediation",
+            "Application security scenario: review, prioritize and partner",
+            "Security engineer scenario: design controls and measure outcomes",
+            "Create a 90-day learning and job-search plan",
+            "Applied lab 11: practise career readiness and professional practice with a bounded scenario, capture evidence, and document the mitigation",
+            "Applied lab 12: practise career readiness and professional practice with a bounded scenario, capture evidence, and document the mitigation"
           ]
         }
       ]

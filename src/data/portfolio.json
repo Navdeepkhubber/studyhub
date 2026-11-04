@@ -1,44 +1,92 @@
 [
   {
-    "id": "pipeline",
-    "name": "Reliable data-to-model pipeline",
-    "role": "Data engineer \u2192 ML engineer",
-    "weeks": "Build and finish through the complete weekly plan",
-    "brief": "Ingest a public dataset, test quality, model it for analytics, train a baseline and ship reproducible outputs.",
+    "id": "soc",
+    "name": "SOC alert triage and detection pack",
+    "role": "SOC Analyst · Detection Engineer",
+    "weeks": "Weeks 25–38",
+    "brief": "Build a reproducible mini-SIEM workflow on a public or synthetic log set. Normalize events, investigate a seeded scenario, write and test detections, then communicate the incident.",
     "criteria": [
-      "Clear data contract and dictionary",
-      "Idempotent ingestion with automated checks",
-      "SQL/Spark transformation and architecture diagram",
-      "Baseline model with held-out evaluation",
-      "README with runtime, trade-offs and limitations"
+      "Document data source, lab boundaries and event schema",
+      "Create a timeline with evidence-linked conclusions",
+      "Write detections mapped to ATT&CK with test cases",
+      "Record triage decision, escalation and containment recommendation",
+      "Explain false positives, coverage gaps and next steps",
+      "Publish sanitized query/rules, screenshots and reproducible setup"
     ]
   },
   {
-    "id": "forecast",
-    "name": "Statistical forecasting study",
-    "role": "Data scientist",
-    "weeks": "Build and finish through the complete weekly plan",
-    "brief": "Answer a real forecasting question with honest backtests and uncertainty, using Python and R where useful.",
+    "id": "webapp",
+    "name": "Web application security assessment",
+    "role": "Penetration Tester · Application Security Analyst",
+    "weeks": "Weeks 15–28",
+    "brief": "Assess a deliberately vulnerable local application or authorized training target. Demonstrate root causes, validate fixes and produce a professional report.",
     "criteria": [
-      "Seasonal-naive baseline and time-aware backtest",
-      "At least two compared models",
-      "Error analysis and interval coverage",
-      "One R analysis or visualisation",
-      "Plain-English recommendation and limitations"
+      "Define authorization, scope, rules and target version",
+      "Create an application map and threat model",
+      "Reproduce findings with minimal, safe proof",
+      "Rate impact and likelihood with a consistent rationale",
+      "Give code-level remediation and a retest result",
+      "Publish a concise executive summary and technical report"
     ]
   },
   {
-    "id": "rag",
-    "name": "Evaluated AI assistant",
-    "role": "AI engineer",
-    "weeks": "Build and finish through the complete weekly plan",
-    "brief": "Create a small retrieval assistant over a bounded document set, then show when it succeeds and fails.",
+    "id": "secure-ci",
+    "name": "Secure application delivery pipeline",
+    "role": "Application Security Engineer · Security Engineer",
+    "weeks": "Weeks 29–44",
+    "brief": "Build a small web service and add practical security checks to its development and deployment workflow.",
     "criteria": [
-      "Dataset and intended users documented",
-      "Retrieved sources shown with each answer",
-      "Held-out question set and evaluation rubric",
-      "Failure analysis, privacy and safety notes",
-      "Demo or API plus reproducible setup"
+      "Threat model and security requirements",
+      "Implement authentication, authorization and input validation tests",
+      "Add SAST, dependency and secret scanning with triage notes",
+      "Use least-privilege CI identities and protected secrets",
+      "Generate an SBOM and document dependency risk decisions",
+      "Show pipeline evidence, limitations and remediation workflow"
+    ]
+  },
+  {
+    "id": "forensics",
+    "name": "Digital forensics investigation casefile",
+    "role": "Digital Forensics Analyst · Incident Responder",
+    "weeks": "Weeks 39–52",
+    "brief": "Investigate a legally obtained training image, provided disk artefacts or PCAP. Preserve integrity, build a timeline and write defensible findings.",
+    "criteria": [
+      "Record authority, scope, acquisition details and chain of custody",
+      "Verify evidence hashes and preserve source images",
+      "Correlate artefacts into a sourced timeline",
+      "Separate observed facts from inference and hypotheses",
+      "Document tools, versions, methods and limitations",
+      "Deliver a clear case report with reproducible steps"
+    ]
+  },
+  {
+    "id": "cloud",
+    "name": "Cloud security baseline as code",
+    "role": "Cloud Security Engineer · Security Engineer",
+    "weeks": "Weeks 45–58",
+    "brief": "Model a small cloud environment and implement identity, network, logging and storage protections as code; use a sandbox or static validation where possible.",
+    "criteria": [
+      "Draw trust boundaries and data flows",
+      "Apply least privilege and review effective access",
+      "Define network boundaries and private service access",
+      "Enable audit logging, encryption and alert examples",
+      "Add policy checks and explain failures versus exceptions",
+      "Document deployment assumptions, teardown and cost/safety controls"
+    ]
+  },
+  {
+    "id": "research",
+    "name": "Security research dissertation companion",
+    "role": "Security Researcher · Graduate Security Roles",
+    "weeks": "Across programme",
+    "brief": "Create a reproducible companion repository for an AUT-approved research question. Keep academic research design distinct from the public portfolio summary.",
+    "criteria": [
+      "State question, scope, literature gap and contribution",
+      "Record ethics, consent, permissions and data provenance",
+      "Make the method and evaluation reproducible",
+      "Compare to a baseline and discuss validity threats",
+      "Present results, negative findings and limitations accurately",
+      "Prepare sanitized artefacts, abstract, poster and defence notes"
     ]
   }
 ]

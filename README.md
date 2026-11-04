@@ -1,6 +1,6 @@
 # Study Hub
 
-A personal learning platform with 72 ordered study blocks covering 593 roadmap checkpoints, a DSA tracker (Striver A2Z + NeetCode), AI engineering practice, skills, career and degree planning. Study block dates adapt to the learner’s available hours, so a dense block can span more than one calendar week.
+A personal learning platform with 72 ordered study blocks covering 593 roadmap checkpoints, a DSA tracker (Striver A2Z + NeetCode), AI engineering practice, cybersecurity learning, career and degree planning. Study block dates adapt to the learner’s available hours, so a dense block can span more than one calendar week.
 Built with the same stack as [navdeep.dev](https://navdeep.dev) (React 19, strict TypeScript, Vite 6, lucide-react) in its own repo,
 with its own look: the original Study Compass theme (teal, mint, navy; Manrope + DM Sans), in light and dark.
 
@@ -78,7 +78,7 @@ The live A2Z sheet has 495 topics; this tracker has 477 (new topics must be adde
 
 ## Topic atlas
 
-`src/data/roadmaps.ts` maps the 13 roadmap PDFs to groups in `roadmap.json` (method documented in the file; edit freely).
+`src/data/roadmaps.ts` maps external role roadmaps and security learning views to groups in `roadmap.json` (method documented in the file; edit freely).
 
 ## Scripts
 

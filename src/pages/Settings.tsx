@@ -1,5 +1,4 @@
 import { useEffect, useState, useSyncExternalStore } from 'react';
-import type { Bridge } from '../data/types';
 import { downloadBackup } from '../lib/backup';
 import { chooseSyncFile, fileSyncSupported, getSyncStatus, onSyncStatus, reconnectSyncFile, stopFileSync } from '../lib/fileSync';
 import { calcStreak, longestStreak } from '../lib/progress';
@@ -16,7 +15,6 @@ export function Settings() {
   const s = useAppState();
   const [start, setStart] = useState(s.start);
   const [hours, setHours] = useState(String(s.hours));
-  const [bridge, setBridge] = useState<Bridge>(s.bridge);
   const [pending, setPending] = useState<AppState | null>(null);
   const [persist, setPersist] = useState<string>('checking');
   const sync = useSyncExternalStore(onSyncStatus, getSyncStatus, getSyncStatus);
@@ -38,12 +36,10 @@ export function Settings() {
       <Panel><h3>Plan settings</h3>
         <Field label="Week 1 start date"><input type="date" value={start} onChange={(e) => setStart(e.target.value)} /></Field>
         <Field label="Hours per week"><input type="number" min={2} max={40} value={hours} onChange={(e) => setHours(e.target.value)} /></Field>
-        <Field label="Confirmed degree"><input value="Master of Data Science · taught 240 points" disabled /></Field>
-        <Field label="Bridging courses listed in your offer"><select value={bridge} onChange={(e) => setBridge(e.target.value as Bridge)}>
-          <option value="unknown">Not recorded yet</option><option value="stats">STATS 707 + STATS 765</option><option value="cs">COMPSCI 717 + COMPSCI 751</option><option value="other">Other combination · follow my offer</option></select></Field>
+        <Field label="Confirmed degree"><input value="AUT Master of Cyber Security and Digital Forensics · AK1324 · 180 points" disabled /></Field>
         <Field label="Daily DSA goal (problems)"><input type="number" min={1} max={20} value={s.dsaGoal} onChange={(e) => setDsaGoal(Number(e.target.value))} /></Field>
         <p className="tiny muted">The dates and study-day schedule recalculate from your available hours. Your checkmarks and notes stay attached to the same checkpoints.</p>
-        <button className="btn" onClick={() => { const h = Number(hours); if (start && h >= 2 && h <= 40) { saveSettings({ start, hours: h, bridge }); notify('Settings saved.'); } else notify('Enter hours between 2 and 40.'); }}>Save settings</button>
+        <button className="btn" onClick={() => { const h = Number(hours); if (start && h >= 2 && h <= 40) { saveSettings({ start, hours: h, bridge: s.bridge }); notify('Settings saved.'); } else notify('Enter hours between 2 and 40.'); }}>Save settings</button>
       </Panel>
       <Panel><h3>Your activity</h3>
         <div className="stats-grid three"><div className="stat"><span>Streak</span><strong>{calcStreak(s)}</strong><small>Best: {longestStreak(s)}</small></div>
@@ -68,7 +64,7 @@ export function Settings() {
       </Panel>
     </div>
     <Panel className="mt"><h3>Study method</h3><p>For each week: learn the essential idea, solve a practice problem, build a small artefact, then write a short reflection in your weekly notes. If a week overruns, move the remaining topics into notes and continue, or shift the plan from the Today page.</p>
-      <p className="tiny muted">The full curriculum extends beyond the original pre-master window. Your offer and the University’s course schedule determine your actual enrolment sequence; check the 2027 regulations before enrolling.</p></Panel>
+      <p className="tiny muted">The full curriculum extends beyond the original pre-master window. Check AUT’s current programme page and your approved study plan for course availability and research approval requirements.</p></Panel>
     <ConfirmDialog open={!!pending} title="Replace your current progress?" confirmLabel="Replace with backup" danger onCancel={() => setPending(null)}
       onConfirm={() => { if (pending) { replaceState(pending, 'restore'); notify('Backup restored.', { label: 'Undo', run: () => { undoReplace(); notify('Previous progress is back.'); } }); } setPending(null); }}>
       {inc && <table className="compare"><thead><tr><th></th><th>Now</th><th>Backup</th></tr></thead><tbody>

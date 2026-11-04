@@ -5,15 +5,15 @@ import { Btn, Check, Ext, Field, Label, Panel, SectionHead } from '../components
 import { Checked } from '../components/Checked';
 
 const roles = [
-  ['Role 01', 'Data engineer / analytics engineer', 'Show reliable pipelines, SQL, Python, cloud data and measured performance. Your existing experience should be visible in project decisions.', 'https://www.seek.co.nz/data-engineer-jobs'],
-  ['Role 02', 'Data scientist', 'Show statistical inference, experiments, honest validation, R/Python and clear communication. Auckland coursework and the forecasting study support this path.', 'https://www.seek.co.nz/data-scientist-jobs'],
-  ['Role 03', 'ML / AI engineer', 'Show deployable models, retrieval, evaluation, testing and safe operation. One evaluated system is more persuasive than a collection of demos.', 'https://www.seek.co.nz/machine-learning-engineer-jobs'],
+  ['Role 01', 'SOC Analyst / Detection Engineer', 'Show alert triage, log analysis, clear escalation, tested detections and incident communication.', 'https://www.seek.co.nz/soc-analyst-jobs'],
+  ['Role 02', 'Penetration Tester', 'Show authorized lab methodology, careful evidence, risk-ranked findings, remediation and retesting.', 'https://www.seek.co.nz/penetration-tester-jobs'],
+  ['Role 03', 'Security Engineer / Application Security Analyst', 'Show secure design, code review, CI security controls, cloud fundamentals and strong engineering collaboration.', 'https://www.seek.co.nz/cyber-security-jobs'],
 ];
 export function Career() {
   const s = useAppState();
   return <>
-    <section className="intro"><Label>Career path · New Zealand</Label><h2>Build proof for three related roles.</h2>
-      <p>Your data engineering experience is a strong base. Add statistical reasoning, responsible model evaluation and one evaluated AI application. The projects below are designed to produce evidence you can discuss in interviews during or after the degree.</p>
+    <section className="intro"><Label>Career path · New Zealand</Label><h2>Build proof for cybersecurity roles.</h2>
+      <p>Connect AUT coursework and practical labs to evidence for SOC, penetration testing, application security, security engineering and digital forensics roles. These projects are scoped for isolated labs, public data or explicitly authorized targets.</p>
       <Btn small href="/skills">Review skill gaps</Btn></section>
     <div className="card-grid three">{roles.map(([code, title, text, url]) => <article key={code} className="card"><span className="code">{code}</span><h3>{title}</h3><p>{text}</p><Ext href={url}>Browse current NZ roles</Ext></article>)}</div>
     <SectionHead title="Portfolio build tracker">Use public or permitted datasets. Save your project link and tick each review criterion when the proof is visible.</SectionHead>
@@ -24,8 +24,8 @@ export function Career() {
         <Field label="Project URL"><input type="url" value={s.portfolioLinks[p.id] ?? ''} onChange={(e) => setText('portfolioLinks', p.id, e.target.value)} placeholder="https://github.com/..." autoComplete="off" /></Field></Panel>;
     })}</div>
     <Panel className="mt"><Label>NZ role signals</Label><h3>What employers are asking for</h3>
-      <p>Recent New Zealand postings emphasise advanced SQL and Python, applied modelling, end-to-end delivery, privacy, and communicating results. Some research and analyst roles also explicitly ask for R and causal or forecasting work. These are examples, not a complete or permanent job-market survey.</p>
-      <p><Ext href="https://jobs.govt.nz/jobtools/jncustomsearch.viewFullSingle?in_jnCounter=226704024&in_orderby=dateinput+desc&in_organid=16563">ACC data scientist example</Ext> · <Ext href="https://jobs.govt.nz/jobs/NZ-1951809">MSD forecasting example</Ext> · <Ext href="https://jobs.lever.co/tracksuit-limited/8a3a1a5a-c713-4fea-8b43-2180a46d855b">Tracksuit data scientist example</Ext></p>
+      <p>Use current New Zealand job listings to check role requirements before applying. Employers commonly distinguish hands-on monitoring and response, testing and reporting, and secure engineering; tailor project evidence to each role and validate current requirements against live postings.</p>
+      <p><Ext href="https://www.seek.co.nz/cyber-security-jobs">Current cybersecurity roles in New Zealand</Ext> · <Ext href="https://www.seek.co.nz/security-analyst-jobs">Security analyst roles</Ext></p>
       <p className="tiny muted">Role links may expire. Re-check current listings and work eligibility before applying. <Checked source="career" /></p></Panel>
   </>;
 }

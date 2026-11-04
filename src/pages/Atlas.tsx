@@ -38,7 +38,7 @@ export function Atlas() {
       })}</section>;
   }));
   return <>
-    <Callout><b>What is included:</b> {total} grouped topic checkpoints across {roadmap.tracks.length} tracks. Related concepts are merged, so this is not a one-to-one copy of any single roadmap. All Atlas checkpoints from the 13 roadmap views are scheduled across the complete weekly plan. Each checkpoint links to its exact weekly task; checking it here or in the week updates both views. Views are mapped from your 13 roadmap PDFs. <Checked source="roadmaps" /></Callout>
+    <Callout><b>What is included:</b> {total} grouped topic checkpoints across {roadmap.tracks.length} tracks. Related concepts are merged, so this is not a one-to-one copy of any single roadmap. All Atlas checkpoints are scheduled across the complete weekly plan. Each checkpoint links to its exact weekly task; checking it here or in the week updates both views. Views combine role roadmaps and official programme context. <Checked source="roadmaps" /></Callout>
     <SectionHead title={`${roadmapViews.length} roadmap views`}>Select one to inspect its related topics. Overlapping topics appear in several views.</SectionHead>
     <div className="card-grid three">{roadmapViews.map((r) => <div key={r.id} className={`card ${rm === r.id ? 'selected' : ''}`}><Label>Source roadmap</Label><h3>{r.name}</h3><p>{roadmapScope(r)}</p>
       <div className="row"><button className="btn small" onClick={() => { setRm(r.id); document.getElementById('topic-count')?.scrollIntoView({ behavior: 'smooth' }); }}>View topics</button><Ext href={r.url}>Open source</Ext></div></div>)}</div>

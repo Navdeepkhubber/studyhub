@@ -1,4 +1,4 @@
-import { curriculumTopicsForWeek, bridgeForWeek } from './curriculum-progress';
+import { curriculumTopicsForWeek } from './curriculum-progress';
 import type { AppState } from '../state/model';
 import { portfolioMilestonesForWeek } from './week-activities';
 
@@ -11,11 +11,10 @@ export function checkpointMinutes(text: string, priority = false): number {
 export function weekWorkload(n: number, s: AppState) {
   const topics = curriculumTopicsForWeek(n);
   const topicMinutes = topics.reduce((sum, t) => sum + checkpointMinutes(t.text, t.priority), 0);
-  const bridgeMinutes = bridgeForWeek(s, n) ? 90 : 0;
   const finishMinutes = 60;
   const reviewMinutes = 30;
   const portfolioMinutes = portfolioMilestonesForWeek(n).length * 90;
-  const coreMinutes = topicMinutes + bridgeMinutes + finishMinutes + reviewMinutes + portfolioMinutes;
+  const coreMinutes = topicMinutes + finishMinutes + reviewMinutes + portfolioMinutes;
   // Schedule the daily problem goal on study days rather than assuming one hour per block.
   const dsaPracticeDays = Math.min(4, Math.max(1, Math.floor(s.hours / 3)));
   const dsaMinutesPerDay = s.dsaGoal * 25;
@@ -25,7 +24,7 @@ export function weekWorkload(n: number, s: AppState) {
   const calendarWeeks = Math.max(1, Math.ceil(coreMinutes / (dsaFeasible ? capacity - dsaMinutesPerWeek : capacity)));
   const dsaMinutes = dsaFeasible ? dsaMinutesPerWeek * calendarWeeks : 0;
   const total = coreMinutes + dsaMinutes;
-  return { topicMinutes, bridgeMinutes, finishMinutes, reviewMinutes, dsaMinutes, dsaMinutesPerDay, dsaMinutesPerWeek, dsaPracticeDays, dsaFeasible, portfolioMinutes, total, calendarWeeks };
+  return { topicMinutes, finishMinutes, reviewMinutes, dsaMinutes, dsaMinutesPerDay, dsaMinutesPerWeek, dsaPracticeDays, dsaFeasible, portfolioMinutes, total, calendarWeeks };
 }
 export const sessionsPerCalendarWeek = (hours: number) => Math.max(2, Math.ceil(hours * 60 / 180));
 export const sessionTargetMinutes = (hours: number) => Math.ceil(hours * 60 / sessionsPerCalendarWeek(hours));
@@ -48,7 +47,6 @@ export function studySessions(n: number, s: AppState) {
   }
   const items = [
     ...topics.map(t => ({ title: t.text, minutes: checkpointMinutes(t.text, t.priority) })),
-    ...(bridgeForWeek(s, n) ? [{ title: 'Master’s bridge lesson', minutes: 90 }] : []),
     ...portfolioMilestonesForWeek(n).map(m => ({ title: `${m.project.name}: ${m.criterion}`, minutes: 90 })),
     { title: 'Recall completed topics without notes', minutes: 30 },
     { title: 'Save evidence and finish the week', minutes: 60 },

@@ -1,6 +1,6 @@
 import { roadmap } from '../data';
 import type { Week } from '../data/types';
-import { bridgeForWeek, curriculumTopicsForWeek } from './curriculum-progress';
+import { curriculumTopicsForWeek } from './curriculum-progress';
 import { isCurriculumTopicDone } from './curriculum-progress';
 import { dayOffset, todayKey } from './dates';
 import { isActive, type AppState } from '../state/model';
@@ -9,11 +9,9 @@ import { portfolioMilestonesForWeek } from './week-activities';
 export const CORE_WEEKS = roadmap.weeks.length;
 export const MAX_WEEK = roadmap.weeks.length;
 export interface Task { id: string; tag: string; text: string; topicKey?: string; portfolioKey?: string }
-export const weekTasks = (w: Week, s?: AppState): Task[] => {
-  const bridge = s ? bridgeForWeek(s,w.n) : null;
+export const weekTasks = (w: Week, _s?: AppState): Task[] => {
   return [
     ...curriculumTopicsForWeek(w.n).map(t=>({id:t.taskId,tag:t.trackId,text:t.text,topicKey:t.key})),
-    ...(bridge?[{id:bridge.id,tag:'BRIDGE',text:bridge.text}]:[]),
     ...portfolioMilestonesForWeek(w.n).map(m=>({id:`w${w.n}-portfolio-${m.key}`,tag:'PORTFOLIO',text:`${m.project.name}: ${m.criterion}`,portfolioKey:m.key})),
     {id:`w${w.n}-output`,tag:'DELIVERABLE',text:w.o},
   ];

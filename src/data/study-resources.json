@@ -3023,6 +3023,102 @@
     "final755": [
       "Transformers.js documentation",
       "https://huggingface.co/docs/transformers.js/index"
+    ],
+    "cyberFund": [
+      "NIST Cybersecurity Framework 2.0",
+      "https://www.nist.gov/cyberframework"
+    ],
+    "cyberNist": [
+      "NIST SP 800-61 Rev. 3 Incident Response",
+      "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+    ],
+    "cyberAttack": [
+      "MITRE ATT&CK Enterprise",
+      "https://attack.mitre.org/"
+    ],
+    "cyberNetwork": [
+      "Cisco Networking Basics",
+      "https://skillsforall.com/course/networking-basics"
+    ],
+    "cyberLinux": [
+      "Linux Journey",
+      "https://linuxjourney.com/"
+    ],
+    "cyberPython": [
+      "Python tutorial",
+      "https://docs.python.org/3/tutorial/"
+    ],
+    "cyberSecure": [
+      "OWASP Cheat Sheet Series",
+      "https://cheatsheetseries.owasp.org/"
+    ],
+    "cyberWstg": [
+      "OWASP Web Security Testing Guide",
+      "https://owasp.org/www-project-web-security-testing-guide/"
+    ],
+    "cyberTop10": [
+      "OWASP Top 10",
+      "https://owasp.org/www-project-top-ten/"
+    ],
+    "cyberPortswigger": [
+      "PortSwigger Web Security Academy",
+      "https://portswigger.net/web-security"
+    ],
+    "cyberTryHack": [
+      "TryHackMe learning paths",
+      "https://tryhackme.com/paths"
+    ],
+    "cyberHTB": [
+      "Hack The Box Academy",
+      "https://academy.hackthebox.com/"
+    ],
+    "cyberForensics": [
+      "NIST Computer Forensics Tool Testing",
+      "https://www.nist.gov/itl/ssd/software-quality-group/computer-forensics-tool-testing-program-cftt"
+    ],
+    "cyberDFIR": [
+      "DFIR Diva resources",
+      "https://dfirdiva.com/"
+    ],
+    "cyberBlue": [
+      "Microsoft Learn: security operations",
+      "https://learn.microsoft.com/training/browse/?terms=security%20operations"
+    ],
+    "cyberSigma": [
+      "Sigma rules specification",
+      "https://sigmahq.io/docs/"
+    ],
+    "cyberCloud": [
+      "AWS Security Documentation",
+      "https://docs.aws.amazon.com/security/"
+    ],
+    "cyberWell": [
+      "OWASP SAMM",
+      "https://owaspsamm.org/"
+    ],
+    "cyberResearch": [
+      "AUT research repository",
+      "https://openrepository.aut.ac.nz/"
+    ],
+    "cyberResearchMethods": [
+      "AUT postgraduate research",
+      "https://www.aut.ac.nz/research/postgraduate-research"
+    ],
+    "cyberCisa": [
+      "CISA Secure by Design",
+      "https://www.cisa.gov/securebydesign"
+    ],
+    "cyberPractice": [
+      "OverTheWire Wargames",
+      "https://overthewire.org/wargames/"
+    ],
+    "cyberCapstone": [
+      "CyberDefenders blue-team labs",
+      "https://cyberdefenders.org/"
+    ],
+    "cyberHacksplaining": [
+      "Hacksplaining interactive security lessons",
+      "https://www.hacksplaining.com/lessons"
     ]
   },
   "groups": {
@@ -3217,74 +3313,117 @@
       "Implement one small feature and document safety and cost trade-offs."
     ],
     "C-0": [
-      "mitLinear",
-      "mitLinearWork",
-      "Solve one worked example by hand and verify it in Python or R."
+      "cyberFund",
+      "cyberCapstone",
+      "Create a concise lab note: concept, threat, control, verification evidence and one remaining question.",
+      [
+        "cyberFund"
+      ]
     ],
     "C-1": [
-      "mitCalc",
-      "mitCalcWork",
-      "Work a derivative or optimization example and check it numerically."
+      "cyberNetwork",
+      "cyberNetwork",
+      "Demonstrate the concept in an isolated lab; save sanitized commands, expected output and a short explanation.",
+      [
+        "cyberNetwork"
+      ]
     ],
     "C-2": [
-      "seeing",
-      "openIntro",
-      "Calculate or simulate one probability example and explain the result."
+      "cyberLinux",
+      "cyberPractice",
+      "Build a small reproducible artifact, test the security property, and document assumptions and limitations.",
+      [
+        "cyberLinux"
+      ]
     ],
     "C-3": [
-      "openIntro",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
+      "cyberSecure",
+      "cyberPractice",
+      "Write a short design or review note with threat, evidence, impact, recommended fix and retest result.",
+      [
+        "cyberSecure"
+      ]
     ],
     "C-4": [
-      "skLearn",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
+      "cyberSecure",
+      "cyberPractice",
+      "Create a concise lab note: concept, threat, control, verification evidence and one remaining question.",
+      [
+        "cyberSecure"
+      ]
     ],
     "C-5": [
-      "torch",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
+      "cyberWstg",
+      "cyberPortswigger",
+      "Demonstrate the concept in an isolated lab; save sanitized commands, expected output and a short explanation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
     ],
     "C-6": [
-      "skLearn",
-      "skExamples",
-      "Implement or simulate a small example and explain its objective."
+      "cyberWstg",
+      "cyberHTB",
+      "Build a small reproducible artifact, test the security property, and document assumptions and limitations.",
+      [
+        "cyberHTB"
+      ]
     ],
     "C-7": [
-      "hfLlm",
-      "hfModelsPractice",
-      "Run a small text or image example and inspect failure cases."
+      "cyberNist",
+      "cyberCapstone",
+      "Write a short design or review note with threat, evidence, impact, recommended fix and retest result.",
+      [
+        "cyberCapstone"
+      ]
     ],
     "C-8": [
-      "skLearn",
-      "skExamples",
-      "Create a reproducible notebook or report for this checkpoint."
+      "cyberCloud",
+      "cyberCloud",
+      "Create a concise lab note: concept, threat, control, verification evidence and one remaining question.",
+      [
+        "cyberCloud"
+      ]
     ],
     "C-9": [
-      "islp",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment."
+      "cyberWell",
+      "cyberCapstone",
+      "Demonstrate the concept in an isolated lab; save sanitized commands, expected output and a short explanation.",
+      [
+        "cyberWell"
+      ]
     ],
     "C-10": [
-      "pyIntro",
-      "pyDataPractice",
-      "Run a short data-analysis script using this Python feature."
+      "cyberResearchMethods",
+      "cyberResearch",
+      "Build a small reproducible artifact, test the security property, and document assumptions and limitations.",
+      [
+        "cyberResearch"
+      ]
     ],
     "C-11": [
-      "pandas",
-      "pandasPractice",
-      "Clean or transform one dataset and save the before-and-after output."
+      "cyberFund",
+      "cyberCapstone",
+      "Write a short design or review note with threat, evidence, impact, recommended fix and retest result.",
+      [
+        "cyberFund"
+      ]
     ],
     "C-12": [
-      "matplotlib",
-      "plotPractice",
-      "Produce one figure or analysis and write its interpretation."
+      "cyberCapstone",
+      "cyberCapstone",
+      "Create a concise lab note: concept, threat, control, verification evidence and one remaining question.",
+      [
+        "cyberTryHack"
+      ]
     ],
     "C-13": [
-      "islp",
-      "islpLabs",
-      "Read the named chapter or paper and reproduce one worked result."
+      "cyberFund",
+      "cyberCapstone",
+      "Demonstrate the concept in an isolated lab; save sanitized commands, expected output and a short explanation.",
+      [
+        "cyberFund"
+      ]
     ],
     "D-0": [
       "dsa",
@@ -3426,82 +3565,6 @@
       "agentsPractice",
       "Build a bounded retrieval tool and inspect its citations."
     ],
-    "C-9-1": [
-      "mitLinear",
-      "mitLinearWork",
-      "Solve one matrix example by hand and with NumPy.",
-      [
-        "mitMatrix",
-        "mitEigen",
-        "mitSVD"
-      ]
-    ],
-    "C-9-2": [
-      "mitCalc",
-      "mitCalcWork",
-      "Differentiate a function and check the gradient numerically.",
-      [
-        "mitCalcDiff",
-        "curC_1_1"
-      ]
-    ],
-    "C-9-3": [
-      "openIntro",
-      "seeing",
-      "Simulate a distribution and explain the estimate.",
-      [
-        "curC_2_0",
-        "curC_2_3",
-        "curC_3_4"
-      ]
-    ],
-    "C-9-5": [
-      "numpy",
-      "pandasPractice",
-      "Load a dataset with NumPy and pandas and compare structures.",
-      [
-        "curC_8_0",
-        "matplotlib",
-        "curC_13_5"
-      ]
-    ],
-    "C-9-14": [
-      "torch",
-      "torchPractice",
-      "Implement a tiny forward and backward pass.",
-      [
-        "final738",
-        "final739",
-        "final740"
-      ]
-    ],
-    "C-11-0": [
-      "numpy",
-      "pandasPractice",
-      "Create an array, slice it, and compute a summary."
-    ],
-    "C-13-0": [
-      "course725",
-      "seeing",
-      "Work a sampling and hypothesis-testing example.",
-      [
-        "curC_3_1"
-      ]
-    ],
-    "C-13-1": [
-      "course726",
-      "mitLinearWork",
-      "Complete one algebra or calculus exercise."
-    ],
-    "C-13-7": [
-      "curC_3_8",
-      "islpLabs",
-      "Design a small A/B test and calculate a result.",
-      [
-        "course727",
-        "course728"
-      ]
-    ],
     "D-1-1": [
       "spark",
       "sparkPractice",
@@ -3579,11 +3642,6 @@
         "rWorkflow"
       ]
     ],
-    "C-10-0": [
-      "pySyntax",
-      "pyDataPractice",
-      "Run a short data-analysis script using this Python feature."
-    ],
     "A-21-1": [
       "sqlTutorial",
       "sqlPractice",
@@ -3598,22 +3656,6 @@
       "rWorkflow",
       "rPractice",
       "Run a small R script that demonstrates this checkpoint."
-    ],
-    "C-9-4": [
-      "pySyntax",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment.",
-      [
-        "pyControl",
-        "pyData",
-        "pyErrors",
-        "pyClasses"
-      ]
-    ],
-    "C-10-1": [
-      "pyData",
-      "pyDataPractice",
-      "Run a short data-analysis script using this Python feature."
     ],
     "A-1-0": [
       "sqlCreate",
@@ -3645,11 +3687,6 @@
       "rProgram",
       "rPractice",
       "Run a small R script that demonstrates this checkpoint."
-    ],
-    "C-10-2": [
-      "pyControl",
-      "pyDataPractice",
-      "Run a short data-analysis script using this Python feature."
     ],
     "A-1-1": [
       "sqlConstraints",
@@ -3683,11 +3720,6 @@
       "pyTest",
       "pyPractice",
       "Write a short script using this feature, then add one edge-case check."
-    ],
-    "C-10-3": [
-      "pyControl",
-      "pyDataPractice",
-      "Run a short data-analysis script using this Python feature."
     ],
     "A-1-5": [
       "sqlIsolation",
@@ -3745,21 +3777,6 @@
       "sqlSubqueries",
       "sqlPractice",
       "Run a query or database change that demonstrates the named SQL feature."
-    ],
-    "C-10-6": [
-      "pySQLite",
-      "pyDataPractice",
-      "Run a short data-analysis script using this Python feature."
-    ],
-    "C-11-1": [
-      "pandasTables",
-      "pandasPractice",
-      "Clean or transform one dataset and save the before-and-after output.",
-      [
-        "pandasSelect",
-        "pandasSummary",
-        "pandasCombine"
-      ]
     ],
     "A-1-2": [
       "sqlSubqueries",
@@ -4105,15 +4122,6 @@
         "webDNS"
       ]
     ],
-    "C-10-4": [
-      "pyPip",
-      "pyDataPractice",
-      "Create a venv, install a package, and compare a conda or uv workflow.",
-      [
-        "pyPipConda",
-        "pyUv"
-      ]
-    ],
     "A-2-2": [
       "pyArgs",
       "pyPractice",
@@ -4131,28 +4139,10 @@
         "langJava"
       ]
     ],
-    "C-0-0": [
-      "mitVectors",
-      "mitLinearWork",
-      "Compute a dot product, norm and projection by hand and with NumPy."
-    ],
-    "C-10-5": [
-      "jupyterIntro",
-      "pyDataPractice",
-      "Run a notebook locally and in Colab; save an executable copy.",
-      [
-        "colabIntro"
-      ]
-    ],
     "D-0-1": [
       "dsaArrays",
       "dsaPractice",
       "Solve one two-pointer and one sliding-window problem; explain the invariant."
-    ],
-    "C-0-1": [
-      "mitMatrix",
-      "mitLinearWork",
-      "Multiply matrices and describe the corresponding linear transformation."
     ],
     "A-2-11": [
       "pyPackaging",
@@ -4181,20 +4171,6 @@
       "sqlWindow",
       "sql50",
       "Calculate rank, lag and a running total over a partition; change the frame."
-    ],
-    "C-0-2": [
-      "mitEigen",
-      "mitLinearWork",
-      "Compute a 2x2 eigenpair and verify it with NumPy; inspect an SVD.",
-      [
-        "numpyEigen",
-        "mitSVD"
-      ]
-    ],
-    "C-11-2": [
-      "polarsExpr",
-      "pandasPractice",
-      "Recreate a pandas filter and group-by with Polars expressions."
     ],
     "A-22-9": [
       "pyRuff",
@@ -4226,14 +4202,6 @@
       "sql50",
       "Write a CTE and a recursive hierarchy query; explain termination."
     ],
-    "C-11-3": [
-      "pandasIO",
-      "pandasPractice",
-      "Load CSV, Excel, JSON and Parquet; check schema and missing values.",
-      [
-        "duckdbCsv"
-      ]
-    ],
     "A-2-5": [
       "pandasGroup",
       "pyPractice",
@@ -4262,24 +4230,6 @@
       "sql50",
       "Demonstrate anti, semi and self joins; measure fan-out with row counts."
     ],
-    "C-1-0": [
-      "mitCalcDiff",
-      "mitCalcWork",
-      "Differentiate a composite function using the chain rule; check numerically."
-    ],
-    "C-11-4": [
-      "pyRequests",
-      "pandasPractice",
-      "Fetch a public API and parse an HTML page; respect rate limits.",
-      [
-        "pyBS4"
-      ]
-    ],
-    "C-12-0": [
-      "numpyStats",
-      "plotPractice",
-      "Calculate mean, variance, standard deviation and correlation on sample data."
-    ],
     "A-21-9": [
       "sqlViews",
       "sqlPractice",
@@ -4295,21 +4245,6 @@
       [
         "sqlWindow"
       ]
-    ],
-    "C-0-5": [
-      "mitPositive",
-      "mitLinearWork",
-      "Test positive definiteness and compare condition numbers."
-    ],
-    "C-11-5": [
-      "pandasMissing",
-      "pandasPractice",
-      "Count, drop, impute and forward-fill missing values; compare consequences."
-    ],
-    "C-12-1": [
-      "seabornDist",
-      "plotPractice",
-      "Plot histograms and boxplots; explain the observed distribution."
     ],
     "A-21-10": [
       "sqlConstraints",
@@ -4336,19 +4271,6 @@
         "sqlAggregates"
       ]
     ],
-    "C-11-6": [
-      "seabornDist",
-      "pandasPractice",
-      "Flag outliers using IQR and z-scores; justify whether to retain them.",
-      [
-        "scipyStats"
-      ]
-    ],
-    "C-12-2": [
-      "seabornRel",
-      "plotPractice",
-      "Plot two variables and calculate a correlation matrix."
-    ],
     "A-21-12": [
       "sqlWindow",
       "sqlPractice",
@@ -4363,16 +4285,6 @@
       "sqlExplain",
       "sql50",
       "Use EXPLAIN to compare index and partition-pruning behavior."
-    ],
-    "C-11-7": [
-      "pandasString",
-      "pandasPractice",
-      "Clean, replace and split strings; test malformed values."
-    ],
-    "C-12-3": [
-      "matplotlibIntro",
-      "plotPractice",
-      "Create a figure with subplots, labels and a saved PNG."
     ],
     "A-1-3": [
       "sqlViews",
@@ -4391,19 +4303,6 @@
       [
         "sqlDate",
         "sqlString"
-      ]
-    ],
-    "C-11-8": [
-      "pandasTypes",
-      "pandasPractice",
-      "Cast columns, parse dates and encode one category."
-    ],
-    "C-12-4": [
-      "seabornDist",
-      "plotPractice",
-      "Create a categorical plot and a heatmap; customize labels.",
-      [
-        "seabornRel"
       ]
     ],
     "A-1-7": [
@@ -6164,613 +6063,6 @@
       "agentsPractice",
       "Implement one small feature and document safety and cost trade-offs."
     ],
-    "C-0-3": [
-      "curC_0_3",
-      "mitLinearWork",
-      "Solve one worked example by hand and verify it in Python or R."
-    ],
-    "C-0-4": [
-      "curC_0_4",
-      "mitLinearWork",
-      "Solve one worked example by hand and verify it in Python or R.",
-      [
-        "extra682"
-      ]
-    ],
-    "C-0-6": [
-      "curC_0_6",
-      "mitLinearWork",
-      "Solve one worked example by hand and verify it in Python or R."
-    ],
-    "C-1-1": [
-      "curC_1_1",
-      "mitCalcWork",
-      "Work a derivative or optimization example and check it numerically."
-    ],
-    "C-1-2": [
-      "curC_1_2",
-      "mitCalcWork",
-      "Work a derivative or optimization example and check it numerically."
-    ],
-    "C-1-3": [
-      "curC_1_3",
-      "mitCalcWork",
-      "Work a derivative or optimization example and check it numerically."
-    ],
-    "C-1-4": [
-      "curC_1_4",
-      "mitCalcWork",
-      "Work a derivative or optimization example and check it numerically."
-    ],
-    "C-1-5": [
-      "curC_1_5",
-      "mitCalcWork",
-      "Work a derivative or optimization example and check it numerically."
-    ],
-    "C-1-6": [
-      "curC_1_6",
-      "mitCalcWork",
-      "Work a derivative or optimization example and check it numerically."
-    ],
-    "C-2-0": [
-      "curC_2_0",
-      "openIntro",
-      "Calculate or simulate one probability example and explain the result."
-    ],
-    "C-2-1": [
-      "curC_2_1",
-      "openIntro",
-      "Calculate or simulate one probability example and explain the result."
-    ],
-    "C-2-2": [
-      "curC_2_2",
-      "openIntro",
-      "Calculate or simulate one probability example and explain the result."
-    ],
-    "C-2-3": [
-      "curC_2_3",
-      "openIntro",
-      "Calculate or simulate one probability example and explain the result."
-    ],
-    "C-2-4": [
-      "curC_2_4",
-      "openIntro",
-      "Calculate or simulate one probability example and explain the result."
-    ],
-    "C-2-5": [
-      "curC_2_5",
-      "openIntro",
-      "Calculate or simulate one probability example and explain the result."
-    ],
-    "C-2-6": [
-      "curC_2_6",
-      "openIntro",
-      "Calculate or simulate one probability example and explain the result."
-    ],
-    "C-3-0": [
-      "curC_3_0",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
-    ],
-    "C-3-1": [
-      "curC_3_1",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
-    ],
-    "C-3-2": [
-      "curC_3_2",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion.",
-      [
-        "extra683"
-      ]
-    ],
-    "C-3-3": [
-      "curC_3_3",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
-    ],
-    "C-3-4": [
-      "curC_3_4",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
-    ],
-    "C-3-5": [
-      "curC_3_5",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
-    ],
-    "C-3-6": [
-      "curC_3_6",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
-    ],
-    "C-3-7": [
-      "curC_3_7",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
-    ],
-    "C-3-8": [
-      "curC_3_8",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
-    ],
-    "C-3-9": [
-      "curC_3_9",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
-    ],
-    "C-3-10": [
-      "curC_3_10",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
-    ],
-    "C-3-11": [
-      "curC_3_11",
-      "islpLabs",
-      "Analyze a sample and write the assumptions and conclusion."
-    ],
-    "C-4-0": [
-      "curC_4_0",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-1": [
-      "curC_4_1",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-2": [
-      "curC_4_2",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data.",
-      [
-        "extra684",
-        "extra685",
-        "extra686"
-      ]
-    ],
-    "C-4-3": [
-      "curC_4_3",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-4": [
-      "curC_4_4",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-5": [
-      "curC_4_5",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-6": [
-      "curC_4_6",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data.",
-      [
-        "extra687"
-      ]
-    ],
-    "C-4-7": [
-      "curC_4_7",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-8": [
-      "curC_4_8",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-9": [
-      "curC_4_9",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-10": [
-      "curC_4_10",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-11": [
-      "curC_4_11",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-12": [
-      "curC_4_12",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-13": [
-      "curC_4_13",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-4-14": [
-      "curC_4_14",
-      "skExamples",
-      "Train a baseline and compare it with the named method using held-out data."
-    ],
-    "C-5-0": [
-      "curC_5_0",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
-    ],
-    "C-5-1": [
-      "curC_5_1",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
-    ],
-    "C-5-2": [
-      "curC_5_2",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
-    ],
-    "C-5-3": [
-      "curC_5_3",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
-    ],
-    "C-5-4": [
-      "curC_5_4",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
-    ],
-    "C-5-5": [
-      "curC_5_5",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
-    ],
-    "C-5-6": [
-      "curC_5_6",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
-    ],
-    "C-5-7": [
-      "curC_5_7",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
-    ],
-    "C-5-8": [
-      "curC_5_8",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
-    ],
-    "C-5-9": [
-      "curC_5_9",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
-    ],
-    "C-5-10": [
-      "curC_5_10",
-      "torchPractice",
-      "Train a small model and save the learning curve and error analysis."
-    ],
-    "C-6-0": [
-      "curC_6_0",
-      "skExamples",
-      "Implement or simulate a small example and explain its objective."
-    ],
-    "C-6-1": [
-      "curC_6_1",
-      "skExamples",
-      "Implement or simulate a small example and explain its objective."
-    ],
-    "C-6-2": [
-      "curC_6_2",
-      "skExamples",
-      "Implement or simulate a small example and explain its objective."
-    ],
-    "C-6-3": [
-      "curC_6_3",
-      "skExamples",
-      "Implement or simulate a small example and explain its objective."
-    ],
-    "C-7-0": [
-      "curC_7_0",
-      "hfModelsPractice",
-      "Run a small text or image example and inspect failure cases."
-    ],
-    "C-7-1": [
-      "curC_7_1",
-      "hfModelsPractice",
-      "Run a small text or image example and inspect failure cases."
-    ],
-    "C-7-2": [
-      "curC_7_2",
-      "hfModelsPractice",
-      "Run a small text or image example and inspect failure cases."
-    ],
-    "C-7-3": [
-      "curC_7_3",
-      "hfModelsPractice",
-      "Run a small text or image example and inspect failure cases."
-    ],
-    "C-7-4": [
-      "curC_7_4",
-      "hfModelsPractice",
-      "Run a small text or image example and inspect failure cases."
-    ],
-    "C-7-5": [
-      "curC_7_5",
-      "hfModelsPractice",
-      "Run a small text or image example and inspect failure cases."
-    ],
-    "C-8-0": [
-      "curC_8_0",
-      "skExamples",
-      "Create a reproducible notebook or report for this checkpoint."
-    ],
-    "C-8-1": [
-      "curC_8_1",
-      "skExamples",
-      "Create a reproducible notebook or report for this checkpoint."
-    ],
-    "C-8-2": [
-      "curC_8_2",
-      "skExamples",
-      "Create a reproducible notebook or report for this checkpoint."
-    ],
-    "C-8-3": [
-      "curC_8_3",
-      "skExamples",
-      "Create a reproducible notebook or report for this checkpoint."
-    ],
-    "C-8-4": [
-      "curC_8_4",
-      "skExamples",
-      "Create a reproducible notebook or report for this checkpoint."
-    ],
-    "C-8-5": [
-      "curC_8_5",
-      "skExamples",
-      "Create a reproducible notebook or report for this checkpoint."
-    ],
-    "C-8-6": [
-      "curC_8_6",
-      "skExamples",
-      "Create a reproducible notebook or report for this checkpoint."
-    ],
-    "C-8-7": [
-      "curC_8_7",
-      "skExamples",
-      "Create a reproducible notebook or report for this checkpoint."
-    ],
-    "C-9-0": [
-      "curC_9_0",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment."
-    ],
-    "C-9-6": [
-      "curC_9_6",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment.",
-      [
-        "curC_12_9"
-      ]
-    ],
-    "C-9-7": [
-      "curC_9_7",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment.",
-      [
-        "final737",
-        "curC_4_6"
-      ]
-    ],
-    "C-9-8": [
-      "curC_9_8",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment.",
-      [
-        "curC_4_14",
-        "curC_6_0"
-      ]
-    ],
-    "C-9-9": [
-      "curC_9_9",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment."
-    ],
-    "C-9-10": [
-      "curC_9_10",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment.",
-      [
-        "extra684",
-        "curC_9_20"
-      ]
-    ],
-    "C-9-11": [
-      "curC_9_11",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment."
-    ],
-    "C-9-12": [
-      "curC_9_12",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment.",
-      [
-        "curC_4_11",
-        "extra688"
-      ]
-    ],
-    "C-9-13": [
-      "curC_9_13",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment.",
-      [
-        "curC_4_12"
-      ]
-    ],
-    "C-9-15": [
-      "curC_9_15",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment.",
-      [
-        "final741",
-        "curC_12_10"
-      ]
-    ],
-    "C-9-16": [
-      "curC_9_16",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment."
-    ],
-    "C-9-17": [
-      "curC_9_17",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment.",
-      [
-        "curC_5_8"
-      ]
-    ],
-    "C-9-18": [
-      "curC_9_18",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment.",
-      [
-        "extra688"
-      ]
-    ],
-    "C-9-19": [
-      "curC_9_19",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment.",
-      [
-        "curC_9_17"
-      ]
-    ],
-    "C-9-20": [
-      "curC_9_20",
-      "islpLabs",
-      "Complete the matching lab or a small notebook experiment."
-    ],
-    "C-10-7": [
-      "curC_10_7",
-      "pyDataPractice",
-      "Run a short data-analysis script using this Python feature."
-    ],
-    "C-12-5": [
-      "curC_12_5",
-      "plotPractice",
-      "Produce one figure or analysis and write its interpretation.",
-      [
-        "extra689",
-        "curA_22_12",
-        "curA_20_10",
-        "tableau"
-      ]
-    ],
-    "C-12-6": [
-      "curC_12_6",
-      "plotPractice",
-      "Produce one figure or analysis and write its interpretation."
-    ],
-    "C-12-7": [
-      "curC_12_7",
-      "plotPractice",
-      "Produce one figure or analysis and write its interpretation."
-    ],
-    "C-12-8": [
-      "curC_12_8",
-      "plotPractice",
-      "Produce one figure or analysis and write its interpretation."
-    ],
-    "C-12-9": [
-      "curC_12_9",
-      "plotPractice",
-      "Produce one figure or analysis and write its interpretation."
-    ],
-    "C-12-10": [
-      "curC_12_10",
-      "plotPractice",
-      "Produce one figure or analysis and write its interpretation."
-    ],
-    "C-12-11": [
-      "curC_12_11",
-      "plotPractice",
-      "Produce one figure or analysis and write its interpretation."
-    ],
-    "C-12-12": [
-      "curC_12_12",
-      "plotPractice",
-      "Produce one figure or analysis and write its interpretation."
-    ],
-    "C-13-2": [
-      "curC_13_2",
-      "islpLabs",
-      "Read the named chapter or paper and reproduce one worked result.",
-      [
-        "course729",
-        "course730"
-      ]
-    ],
-    "C-13-3": [
-      "curC_13_3",
-      "islpLabs",
-      "Read the named chapter or paper and reproduce one worked result.",
-      [
-        "curC_13_4"
-      ]
-    ],
-    "C-13-4": [
-      "curC_13_4",
-      "islpLabs",
-      "Read the named chapter or paper and reproduce one worked result.",
-      [
-        "curD_3_1"
-      ]
-    ],
-    "C-13-5": [
-      "curC_13_5",
-      "islpLabs",
-      "Read the named chapter or paper and reproduce one worked result.",
-      [
-        "curC_8_0"
-      ]
-    ],
-    "C-13-6": [
-      "curC_13_6",
-      "islpLabs",
-      "Read the named chapter or paper and reproduce one worked result.",
-      [
-        "course731"
-      ]
-    ],
-    "C-13-8": [
-      "curC_13_8",
-      "islpLabs",
-      "Read the named chapter or paper and reproduce one worked result."
-    ],
-    "C-13-9": [
-      "curC_13_9",
-      "islpLabs",
-      "Read the named chapter or paper and reproduce one worked result.",
-      [
-        "course732"
-      ]
-    ],
-    "C-13-10": [
-      "curC_13_10",
-      "islpLabs",
-      "Read the named chapter or paper and reproduce one worked result.",
-      [
-        "course733",
-        "course734",
-        "course735"
-      ]
-    ],
-    "C-13-11": [
-      "curC_13_11",
-      "islpLabs",
-      "Read the named chapter or paper and reproduce one worked result.",
-      [
-        "course736"
-      ]
-    ],
     "D-0-2": [
       "curD_0_2",
       "dsaPractice",
@@ -6923,6 +6215,1137 @@
       "curE_1_4",
       "actions",
       "Improve the project README, tests or deployment and link the result."
+    ],
+    "C-0-0": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Security principles: confidentiality, integrity, availability”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-0-1": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Threat, vulnerability, exploit and risk”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-0-2": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Assets, trust boundaries and attack surface”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-0-3": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Adversary goals, capability and opportunity”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-0-4": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Threat modelling with STRIDE”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-0-5": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Risk assessment: likelihood, impact and treatment”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-0-6": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Security controls: preventive, detective, corrective”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-1-0": [
+      "cyberNetwork",
+      "cyberNetwork",
+      "For “TCP/IP, OSI layers, routing and subnetting”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberNetwork"
+      ]
+    ],
+    "C-1-1": [
+      "cyberNetwork",
+      "cyberNetwork",
+      "For “DNS resolution, records, caching and abuse cases”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberNetwork"
+      ]
+    ],
+    "C-1-2": [
+      "cyberNetwork",
+      "cyberNetwork",
+      "For “HTTP request/response, headers, cookies and sessions”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberNetwork"
+      ]
+    ],
+    "C-1-3": [
+      "cyberNetwork",
+      "cyberNetwork",
+      "For “TLS handshake, certificates and common configuration errors”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberNetwork"
+      ]
+    ],
+    "C-1-4": [
+      "cyberNetwork",
+      "cyberNetwork",
+      "For “Ports, sockets, NAT, firewalls and network segmentation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberNetwork"
+      ]
+    ],
+    "C-1-5": [
+      "cyberNetwork",
+      "cyberNetwork",
+      "For “Packet capture with Wireshark: filters and protocol reading”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberNetwork"
+      ]
+    ],
+    "C-1-6": [
+      "cyberNetwork",
+      "cyberNetwork",
+      "For “Network scanning concepts and safe lab scope”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberNetwork"
+      ]
+    ],
+    "C-2-0": [
+      "cyberLinux",
+      "cyberPractice",
+      "For “Linux filesystem, permissions, users and groups”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberLinux"
+      ]
+    ],
+    "C-2-1": [
+      "cyberLinux",
+      "cyberPractice",
+      "For “Processes, services, logs and systemd”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberLinux"
+      ]
+    ],
+    "C-2-2": [
+      "cyberLinux",
+      "cyberPractice",
+      "For “Shell navigation, pipes, redirection and safe automation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberLinux"
+      ]
+    ],
+    "C-2-3": [
+      "cyberLinux",
+      "cyberPractice",
+      "For “Windows architecture, accounts, services and event logs”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberLinux"
+      ]
+    ],
+    "C-2-4": [
+      "cyberLinux",
+      "cyberPractice",
+      "For “PowerShell fundamentals for administration and investigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberLinux"
+      ]
+    ],
+    "C-2-5": [
+      "cyberLinux",
+      "cyberPractice",
+      "For “Python for parsing, API use and security automation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberLinux"
+      ]
+    ],
+    "C-2-6": [
+      "cyberLinux",
+      "cyberPractice",
+      "For “Git, branches, commits and reproducible lab notes”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberLinux"
+      ]
+    ],
+    "C-3-0": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Python data types, functions, modules and exceptions”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-3-1": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “HTTP clients, JSON, APIs and input validation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-3-2": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “JavaScript execution model, DOM and browser security”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-3-3": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “SQL fundamentals and parameterized queries”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-3-4": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Memory, processes and basic C concepts for vulnerability literacy”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-3-5": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Authentication, authorization and session design”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-3-6": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Secrets management and configuration hygiene”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-3-7": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Unit and integration testing for security behavior”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-3-8": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Dependency management, SBOM concepts and supply-chain risk”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-3-9": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Read code and trace untrusted input to sensitive operations”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-3-10": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Applied lab 11: practise programming and secure coding with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-3-11": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Applied lab 12: practise programming and secure coding with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-0": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Cryptographic goals and correct primitive selection”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-1": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Encoding versus encryption versus hashing”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-2": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Symmetric encryption, modes and authenticated encryption”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-3": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Public-key cryptography, signatures and key exchange”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-4": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Password hashing, salts and work factors”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-5": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “PKI, certificates, trust chains and revocation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-6": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “MFA, passkeys and phishing-resistant authentication”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-7": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “OAuth 2.0, OpenID Connect and SAML concepts”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-8": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Key lifecycle, storage, rotation and access”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-9": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Common crypto failures and how to review implementations”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-10": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Applied lab 11: practise cryptography and identity with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-11": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Applied lab 12: practise cryptography and identity with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-12": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Applied lab 13: practise cryptography and identity with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-13": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Applied lab 14: practise cryptography and identity with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-4-14": [
+      "cyberSecure",
+      "cyberPractice",
+      "For “Applied lab 15: practise cryptography and identity with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberSecure"
+      ]
+    ],
+    "C-5-0": [
+      "cyberWstg",
+      "cyberPortswigger",
+      "For “OWASP Top 10:2025 overview and risk context”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
+    ],
+    "C-5-1": [
+      "cyberWstg",
+      "cyberPortswigger",
+      "For “HTTP security headers, CORS and browser boundaries”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
+    ],
+    "C-5-2": [
+      "cyberWstg",
+      "cyberPortswigger",
+      "For “Access control failures and IDOR testing in a lab”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
+    ],
+    "C-5-3": [
+      "cyberWstg",
+      "cyberPortswigger",
+      "For “SQL injection: root cause, safe reproduction and remediation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
+    ],
+    "C-5-4": [
+      "cyberWstg",
+      "cyberPortswigger",
+      "For “Cross-site scripting: reflected, stored and DOM cases”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
+    ],
+    "C-5-5": [
+      "cyberWstg",
+      "cyberPortswigger",
+      "For “CSRF, cookies, SameSite and request integrity”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
+    ],
+    "C-5-6": [
+      "cyberWstg",
+      "cyberPortswigger",
+      "For “Server-side request forgery and egress controls”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
+    ],
+    "C-5-7": [
+      "cyberWstg",
+      "cyberPortswigger",
+      "For “Path traversal, file upload and parser risks”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
+    ],
+    "C-5-8": [
+      "cyberWstg",
+      "cyberPortswigger",
+      "For “Authentication, session fixation and account recovery”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
+    ],
+    "C-5-9": [
+      "cyberWstg",
+      "cyberPortswigger",
+      "For “Business logic abuse and race condition fundamentals”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
+    ],
+    "C-5-10": [
+      "cyberWstg",
+      "cyberPortswigger",
+      "For “API security: object authorization, rate limits and schema validation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberPortswigger",
+        "cyberHacksplaining"
+      ]
+    ],
+    "C-6-0": [
+      "cyberWstg",
+      "cyberHTB",
+      "For “Rules of engagement, authorization and scope”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberHTB"
+      ]
+    ],
+    "C-6-1": [
+      "cyberWstg",
+      "cyberHTB",
+      "For “Reconnaissance: passive sources and asset inventory”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberHTB"
+      ]
+    ],
+    "C-6-2": [
+      "cyberWstg",
+      "cyberHTB",
+      "For “Service discovery and evidence-based enumeration”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberHTB"
+      ]
+    ],
+    "C-6-3": [
+      "cyberWstg",
+      "cyberHTB",
+      "For “Vulnerability triage: exploitability, impact and false positives”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberHTB"
+      ]
+    ],
+    "C-7-0": [
+      "cyberNist",
+      "cyberCapstone",
+      "For “SOC roles, alert lifecycle and escalation quality”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCapstone"
+      ]
+    ],
+    "C-7-1": [
+      "cyberNist",
+      "cyberCapstone",
+      "For “Log sources: endpoint, identity, DNS, proxy and cloud”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCapstone"
+      ]
+    ],
+    "C-7-2": [
+      "cyberNist",
+      "cyberCapstone",
+      "For “SIEM data model, normalization and enrichment”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCapstone"
+      ]
+    ],
+    "C-7-3": [
+      "cyberNist",
+      "cyberCapstone",
+      "For “Detection engineering: hypothesis, query and test data”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCapstone"
+      ]
+    ],
+    "C-7-4": [
+      "cyberNist",
+      "cyberCapstone",
+      "For “MITRE ATT&CK mapping and analytic coverage”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCapstone"
+      ]
+    ],
+    "C-7-5": [
+      "cyberNist",
+      "cyberCapstone",
+      "For “Windows event analysis and Sysmon fundamentals”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCapstone"
+      ]
+    ],
+    "C-8-0": [
+      "cyberCloud",
+      "cyberCloud",
+      "For “Forensic principles: integrity, repeatability and documentation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCloud"
+      ]
+    ],
+    "C-8-1": [
+      "cyberCloud",
+      "cyberCloud",
+      "For “Chain of custody and evidence handling requirements”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCloud"
+      ]
+    ],
+    "C-8-2": [
+      "cyberCloud",
+      "cyberCloud",
+      "For “Disk images, partitions, file systems and acquisition”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCloud"
+      ]
+    ],
+    "C-8-3": [
+      "cyberCloud",
+      "cyberCloud",
+      "For “Forensic imaging, write blockers and verification hashes”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCloud"
+      ]
+    ],
+    "C-8-4": [
+      "cyberCloud",
+      "cyberCloud",
+      "For “Deleted files, metadata and file-system artefacts”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCloud"
+      ]
+    ],
+    "C-8-5": [
+      "cyberCloud",
+      "cyberCloud",
+      "For “Windows artefacts: registry, event logs, Prefetch and timelines”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCloud"
+      ]
+    ],
+    "C-8-6": [
+      "cyberCloud",
+      "cyberCloud",
+      "For “Linux artefacts: auth logs, shell history and journal”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCloud"
+      ]
+    ],
+    "C-8-7": [
+      "cyberCloud",
+      "cyberCloud",
+      "For “Mobile forensics scope, acquisition constraints and privacy”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberCloud"
+      ]
+    ],
+    "C-9-0": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Shared responsibility and cloud threat modelling”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-1": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “AWS IAM identity policies, roles and least privilege”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-2": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Cloud network boundaries, security groups and private access”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-3": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Object storage exposure, encryption and access logging”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-4": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Cloud audit logs and incident investigation basics”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-5": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Containers: image hygiene, isolation and runtime risks”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-6": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Kubernetes identity, network policy and secrets basics”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-7": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Infrastructure as code review and policy checks”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-8": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “CI/CD pipeline permissions and artifact integrity”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-9": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Cloud detection, posture management and response patterns”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-10": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Applied lab 11: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-11": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Applied lab 12: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-12": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Applied lab 13: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-13": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Applied lab 14: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-14": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Applied lab 15: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-15": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Applied lab 16: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-16": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Applied lab 17: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-17": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Applied lab 18: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-18": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Applied lab 19: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-19": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Applied lab 20: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-9-20": [
+      "cyberWell",
+      "cyberCapstone",
+      "For “Applied lab 21: practise cloud and infrastructure security with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberWell"
+      ]
+    ],
+    "C-10-0": [
+      "cyberResearchMethods",
+      "cyberResearch",
+      "For “Secure SDLC and security requirements”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberResearch"
+      ]
+    ],
+    "C-10-1": [
+      "cyberResearchMethods",
+      "cyberResearch",
+      "For “Code review for trust boundaries and authorization”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberResearch"
+      ]
+    ],
+    "C-10-2": [
+      "cyberResearchMethods",
+      "cyberResearch",
+      "For “SAST, DAST, SCA and secrets scanning: strengths and limits”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberResearch"
+      ]
+    ],
+    "C-10-3": [
+      "cyberResearchMethods",
+      "cyberResearch",
+      "For “Threat modelling during design and change review”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberResearch"
+      ]
+    ],
+    "C-10-4": [
+      "cyberResearchMethods",
+      "cyberResearch",
+      "For “CI security gates with actionable findings”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberResearch"
+      ]
+    ],
+    "C-10-5": [
+      "cyberResearchMethods",
+      "cyberResearch",
+      "For “Dependency pinning, provenance and artifact signing”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberResearch"
+      ]
+    ],
+    "C-10-6": [
+      "cyberResearchMethods",
+      "cyberResearch",
+      "For “Container and infrastructure scanning workflow”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberResearch"
+      ]
+    ],
+    "C-10-7": [
+      "cyberResearchMethods",
+      "cyberResearch",
+      "For “Vulnerability management, SLAs and exception handling”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberResearch"
+      ]
+    ],
+    "C-11-0": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Turn a broad security topic into a researchable question”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-11-1": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Literature search, source evaluation and research gap”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-11-2": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Research design: experiment, case study or measurement”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-11-3": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Ethics, privacy, consent and responsible disclosure”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-11-4": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Data collection, provenance and reproducibility”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-11-5": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Evaluation metrics, baselines and validity threats”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-11-6": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Research proposal: question, method, scope and timeline”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-11-7": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Maintain a literature matrix and annotated bibliography”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-11-8": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Reproducible experiments, versioning and audit trail”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-12-0": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “Security architecture principles and trust boundaries”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-1": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “Zero trust concepts and practical access decisions”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-2": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “Network segmentation and secure remote access”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-3": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “Risk registers, treatment plans and control ownership”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-4": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “NIST SP 800-53 control families and evidence”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-5": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “ISO/IEC 27001 ISMS concepts and audit evidence”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-6": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “Privacy by design and data minimization”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-7": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “Business continuity, backup and recovery testing”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-8": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “Third-party risk and software supplier assurance”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-9": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “Communicate security trade-offs to technical and business audiences”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-10": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “Project scoping, threat model and acceptance criteria”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-11": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “Build a hardened Linux service and document baseline”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-12-12": [
+      "cyberCapstone",
+      "cyberCapstone",
+      "For “Implement a log pipeline with parsing and detection rules”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberTryHack"
+      ]
+    ],
+    "C-13-0": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Choose target role and map evidence to role requirements”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-13-1": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Translate technical work into concise STAR examples”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-13-2": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Write a security-focused resume with measurable evidence”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-13-3": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Portfolio hygiene: remove secrets, sanitize data and verify licenses”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-13-4": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Interview fundamentals: networking, Linux, web and security concepts”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-13-5": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “SOC analyst scenario: triage, explain, escalate”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-13-6": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Penetration tester scenario: scope, evidence and remediation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-13-7": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Application security scenario: review, prioritize and partner”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-13-8": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Security engineer scenario: design controls and measure outcomes”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-13-9": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Create a 90-day learning and job-search plan”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-13-10": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Applied lab 11: practise career readiness and professional practice with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
+    ],
+    "C-13-11": [
+      "cyberFund",
+      "cyberCapstone",
+      "For “Applied lab 12: practise career readiness and professional practice with a bounded scenario, capture evidence, and document the mitigation”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.",
+      [
+        "cyberFund"
+      ]
     ]
   }
 }

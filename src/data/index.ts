@@ -14,7 +14,6 @@ export const weekTitles = curriculum.weeks.map(w => w.title);
 export const phaseNames = curriculum.phases.map(p => p.name);
 export const degree = degreeJson as unknown as {
   catalogue: string; programme2027: string; guide: string; courseGroups: T.CourseGroup[];
-  bridgeLessons: Record<'stats' | 'cs', string[]>; bridgeWeeks: Record<'stats' | 'cs', number[]>; bridgeResources: Record<'stats' | 'cs', T.Pair[]>;
 };
 export const skillLanes = skillsJson as T.SkillLane[];
 export const portfolioProjects = portfolioJson as T.PortfolioProject[];
