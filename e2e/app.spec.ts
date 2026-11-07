@@ -99,10 +99,11 @@ test('each weekly checkpoint supplies reading, practice and a concrete action', 
   await expect(page.locator('.curriculum-item .topic-study')).toHaveCount(weekTopics(72).length);
 });
 
-test('selected master’s bridge also has study and practice links', async ({ page }) => {
+test('a legacy master’s bridge choice from an old backup adds no bridge task', async ({ page }) => {
   await open(page, { bridge: 'stats' }, 'week-2');
-  await expect(page.locator('.bridge-task .topic-study').getByRole('link')).toHaveCount(2);
-  await expect(page.locator('.weekly-coverage')).toContainText(`Roadmap + bridge coverage · 0/${weekTopics(2).length + 1}`);
+  await expect(page.locator('.curriculum-item').first()).toBeVisible();
+  await expect(page.locator('.bridge-task')).toHaveCount(0);
+  await expect(page.locator('.weekly-coverage')).not.toContainText('bridge');
 });
 
 test('a Notion page link is saved and the final week check requires completed work', async ({ page }) => {
@@ -129,17 +130,17 @@ test('topic recall and portfolio milestones connect back to the weekly plan', as
   await expect(review).toContainText('1 topic review due');
   await review.getByRole('button', { name: 'Remembered' }).click();
   await expect(review).toContainText('No topic reviews due');
-  await navTo(page, 'week-20');
-  const milestone = page.locator('.milestone-row').filter({ hasText: 'Reliable data-to-model pipeline' });
+  await navTo(page, 'week-15');
+  const milestone = page.locator('.milestone-row').filter({ hasText: 'Define authorization, scope, rules and target version' });
   await expect(milestone).toBeVisible();
   await milestone.getByRole('checkbox').check();
   await navTo(page, 'career');
-  await expect(page.getByRole('heading', { name: 'Reliable data-to-model pipeline' }).locator('..').getByRole('checkbox').first()).toBeChecked();
+  await expect(page.getByRole('checkbox', { name: 'Define authorization, scope, rules and target version' })).toBeChecked();
 });
 
 test('two tabs stay in sync and an idle tab never overwrites newer work', async ({ page, context }) => {
   await open(page, {}, 'week-1');
-  const other = await context.newPage(); await other.goto('/#week-1'); await expect(other.locator('main#main')).toBeVisible({ timeout: 15_000 });
+  const other = await context.newPage(); await other.goto('/week-1'); await expect(other.locator('main#main')).toBeVisible({ timeout: 15_000 });
   await page.locator('.curriculum-item input').first().check(); await settle(page);
   await expect(other.locator('.curriculum-item input').first()).toBeChecked(); // picked up live
   await other.close(); // closing the other tab must not clobber anything
