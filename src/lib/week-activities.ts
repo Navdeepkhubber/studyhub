@@ -3,15 +3,20 @@ import { curriculumTopicForKey, isCurriculumTopicDone } from './curriculum-progr
 import { todayKey } from './dates';
 import type { AppState } from '../state/model';
 
-/** Existing portfolio criteria become scheduled weekly milestones with shared checkmarks. */
-const milestoneWeeks: Record<string, number[]> = {
-  pipeline: [20, 34, 45, 62, 69],
-  forecast: [24, 31, 45, 58, 68],
-  rag: [42, 47, 52, 60, 69],
-};
+/**
+ * Portfolio criteria become scheduled weekly milestones with shared checkmarks.
+ * Each project's criteria are spread evenly across the weeks it declares in portfolio.json ("Weeks 25–38");
+ * a project spanning the whole programme ("Across programme") is spread over weeks 10–70.
+ * Derived from the data so a new project never silently drops out of the weekly plan.
+ */
+function milestoneWeek(weeks: string, index: number, count: number) {
+  const range = weeks.match(/(\d+)\D+(\d+)/);
+  const [from, to] = range ? [+range[1], +range[2]] : [10, 70];
+  return count > 1 ? Math.round(from + (index * (to - from)) / (count - 1)) : to;
+}
 export function portfolioMilestonesForWeek(week: number) {
   return portfolioProjects.flatMap(project => project.criteria.flatMap((criterion, index) =>
-    milestoneWeeks[project.id]?.[index] === week ? [{ key: `${project.id}-${index}`, project, criterion }] : []));
+    milestoneWeek(project.weeks, index, project.criteria.length) === week ? [{ key: `${project.id}-${index}`, project, criterion }] : []));
 }
 export function dueTopicReviews(s: AppState, today = todayKey()) {
   return [...curriculumTopicForKey.values()]

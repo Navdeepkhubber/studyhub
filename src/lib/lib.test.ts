@@ -3,7 +3,7 @@ import { defaultState, parseBackup, sanitize } from './../state/model';
 import { calcStreak, longestStreak, currentWeek, weekPercent, weekTasks, weekOutputReady, weekDate } from './progress';
 import { coverageForWeek, isTopicCovered } from './coverage';
 import { a2zItems, a2zByLc, ncBySlug, ncSolved, a2zSolved, setSolved } from './dsa';
-import { roadmap, neetcode } from '../data';
+import { roadmap, neetcode, portfolioProjects } from '../data';
 import { roadmapViews, roadmapHas } from '../data/roadmaps';
 import { studyResourcesFor } from '../data/study-resources';
 import { weekWorkload, studySessions, sessionTargetMinutes } from './study-workload';
@@ -77,12 +77,11 @@ describe('progress', () => {
     expect(weekPercent(s, w)).toBe(Math.round((1 / weekTasks(w,s).length) * 100));
     delete s.done[first.taskId];
     expect(isTopicCovered(s, first)).toBe(true);
-    s.bridge = 'stats';
-    expect(weekTasks(w,s).some(t => t.tag === 'BRIDGE')).toBe(true);
-    expect(weekTasks(roadmap.weeks[0],s).some(t => t.tag === 'BRIDGE')).toBe(false);
-    expect(weekTasks(w,s).find(t => t.tag === 'BRIDGE')?.id).toBe('w1-bridge-stats');
-    s.bridge = 'cs';
-    expect(weekTasks(roadmap.weeks[3],s).find(t => t.tag === 'BRIDGE')?.id).toBe('w1-bridge-cs');
+    // Bridge choices from old backups stay readable but are retired in the cybersecurity curriculum.
+    for (const bridge of ['stats', 'cs'] as const) {
+      s.bridge = bridge;
+      for (const week of roadmap.weeks) expect(weekTasks(week, s).some(t => t.tag === 'BRIDGE')).toBe(false);
+    }
   });
 });
 
@@ -164,8 +163,8 @@ describe('guided weekly study', () => {
   });
   it('keeps portfolio milestones in the week and final proof honest', () => {
     const s = defaultState();
-    expect(portfolioMilestonesForWeek(20).some(m => m.key === 'pipeline-0')).toBe(true);
-    expect(weekTasks(roadmap.weeks[19], s).some(t => t.portfolioKey === 'pipeline-0')).toBe(true);
+    expect(portfolioMilestonesForWeek(15).some(m => m.key === 'webapp-0')).toBe(true);
+    expect(weekTasks(roadmap.weeks[14], s).some(t => t.portfolioKey === 'webapp-0')).toBe(true);
     expect(weekOutputReady(s, 1)).toBe(false);
     for (const t of coverageForWeek(1)) s.topics[t.key] = true;
     expect(weekOutputReady(s, 1)).toBe(false);
@@ -175,6 +174,23 @@ describe('guided weekly study', () => {
     expect(weekPercent(s, roadmap.weeks[0])).toBe(100);
     delete s.topics[coverageForWeek(1)[0].key];
     expect(weekPercent(s, roadmap.weeks[0])).toBeLessThan(100);
+  });
+  it('schedules every portfolio criterion exactly once, inside its project\'s weeks', () => {
+    const scheduled = new Map<string, number>();
+    for (let week = 1; week <= roadmap.weeks.length; week++) {
+      for (const m of portfolioMilestonesForWeek(week)) {
+        expect(scheduled.has(m.key)).toBe(false);
+        scheduled.set(m.key, week);
+      }
+    }
+    for (const project of portfolioProjects) {
+      const range = project.weeks.match(/(\d+)\D+(\d+)/);
+      project.criteria.forEach((_, i) => {
+        const week = scheduled.get(`${project.id}-${i}`);
+        expect(week, `${project.id}-${i} is never scheduled`).toBeDefined();
+        if (range) { expect(week!).toBeGreaterThanOrEqual(+range[1]); expect(week!).toBeLessThanOrEqual(+range[2]); }
+      });
+    }
   });
   it('preserves Notion links and topic reviews in backups', () => {
     const s = parseBackup(JSON.stringify({ done: {}, weekNotionUrls: { 1: 'https://www.notion.so/example' }, topicReviews: { 'A-22-0': { due: '2026-10-11', step: 0 } } }));
