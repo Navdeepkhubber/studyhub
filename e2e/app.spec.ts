@@ -3,6 +3,10 @@ import AxeBuilder from '@axe-core/playwright';
 import { readFileSync } from 'node:fs';
 const curriculum = JSON.parse(readFileSync(new URL('../src/data/curriculum-plan.json', import.meta.url), 'utf8')) as { weeks: { n: number; topics: string[] }[] };
 const weekTopics = (n: number) => curriculum.weeks[n-1].topics;
+const resources = JSON.parse(readFileSync(new URL('../src/data/study-resources.json', import.meta.url), 'utf8')) as { sources: Record<string, [string, string]>; topics: Record<string, [string, string, string, string[]?]> };
+/** The first scheduled checkpoint, read from the plan so tests follow curriculum changes. */
+const FIRST = weekTopics(1)[0];
+const firstFocus = new RegExp(`/week-1\\?focus=lesson-${FIRST}$`);
 import { daysFromNow, navTo, open, settle, stored } from './helpers';
 
 test('search engines are asked not to index the site', async ({ request }) => {
@@ -37,12 +41,12 @@ test('first run can start today and offers next Monday as a quick choice', async
 test('Today opens the next exact roadmap checkpoint', async ({ page }) => {
   await open(page, {});
   await page.getByRole('link', { name: 'Start learning' }).click();
-  await expect(page).toHaveURL(/\/week-1\?focus=lesson-A-22-0$/);
-  await expect(page.locator('#lesson-A-22-0')).toBeFocused();
-  await page.locator('#lesson-A-22-0 input').check();
+  await expect(page).toHaveURL(firstFocus);
+  await expect(page.locator(`#lesson-${FIRST}`)).toBeFocused();
+  await page.locator(`#lesson-${FIRST} input`).check();
   await navTo(page, 'today');
   await page.getByRole('link', { name: 'Start learning' }).click();
-  await expect(page).toHaveURL(/\/week-1\?focus=lesson-A-11-0$/);
+  await expect(page).toHaveURL(new RegExp(`/week-1\\?focus=lesson-${weekTopics(1)[1]}$`));
 });
 
 test('expanding Today tasks keeps the shortcut cards and timer controls in place', async ({ page }) => {
@@ -89,11 +93,14 @@ test('each weekly checkpoint supplies reading, practice and a concrete action', 
   await open(page, {}, 'week-1');
   await expect(page.locator('.curriculum-item')).toHaveCount(weekTopics(1).length);
   await expect(page.locator('.curriculum-item .topic-study')).toHaveCount(weekTopics(1).length);
-  const firstLesson = page.locator('#lesson-C-0-0');
-  await expect(firstLesson.getByRole('link', { name: 'NIST Cybersecurity Framework 2.0' })).toHaveAttribute('href', 'https://www.nist.gov/cyberframework');
-  await expect(firstLesson.getByRole('link', { name: 'TryHackMe learning paths' })).toBeVisible();
+  // The first checkpoint sits in the open first group; its links come from the resource catalog.
+  const firstLesson = page.locator(`#lesson-${FIRST}`);
+  const [learnId, practiceId, action] = resources.topics[FIRST];
+  const [learnTitle, learnUrl] = resources.sources[learnId];
+  await expect(firstLesson.getByRole('link', { name: learnTitle, exact: true }).first()).toHaveAttribute('href', learnUrl);
+  await expect(firstLesson.getByRole('link', { name: resources.sources[practiceId][0], exact: true }).first()).toBeVisible();
   await expect(page.locator('.weekly-workload')).toContainText('4 DSA practice days per calendar week');
-  await expect(firstLesson.locator('.topic-action')).toContainText('hands-on exercise');
+  await expect(firstLesson.locator('.topic-action')).toContainText(action.slice(0, 40));
   await navTo(page, 'week-72');
   await expect(page.locator('.curriculum-item .topic-study')).toHaveCount(weekTopics(72).length);
 });
@@ -124,7 +131,7 @@ test('a Notion page link is saved and the final week check requires completed wo
 });
 
 test('topic recall and portfolio milestones connect back to the weekly plan', async ({ page }) => {
-  await open(page, { topics: { 'A-22-0': true }, topicReviews: { 'A-22-0': { due: daysFromNow(-1), step: 0 } } }, 'week-1');
+  await open(page, { topics: { [FIRST]: true }, topicReviews: { [FIRST]: { due: daysFromNow(-1), step: 0 } } }, 'week-1');
   const review = page.locator('#review-panel');
   await expect(review).toContainText('1 topic review due');
   await review.getByRole('button', { name: 'Remembered' }).click();
@@ -322,7 +329,7 @@ test.describe('clean URLs and smooth navigation', () => {
   test('a link to a week keeps its query string and focuses the target', async ({ page }) => {
     await open(page, {});
     await page.getByRole('link', { name: 'Start learning' }).click();
-    await expect(page).toHaveURL(/\/week-1\?focus=lesson-A-22-0$/);
+    await expect(page).toHaveURL(firstFocus);
     expect(page.url()).not.toContain('#');
   });
 

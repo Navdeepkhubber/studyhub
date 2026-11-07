@@ -1,5 +1,8 @@
 import { expect, test } from '@playwright/test';
 import { navTo, open, settle } from './helpers';
+import { readFileSync } from 'node:fs';
+const curriculum = JSON.parse(readFileSync(new URL('../src/data/curriculum-plan.json', import.meta.url), 'utf8')) as { weeks: { topics: string[] }[] };
+const FIRST = curriculum.weeks[0].topics[0];
 
 test('mobile: bottom tab bar, drawer, no sideways scrolling', async ({ page }) => {
   await open(page, {});
@@ -22,8 +25,8 @@ test('small phone and tablet keep the study flow usable in both themes', async (
   await page.getByRole('button', { name: 'Start', exact: true }).click();
   await expect(page.getByRole('button', { name: 'Pause' })).toBeVisible();
   await page.getByRole('link', { name: 'Start learning' }).click();
-  await expect(page).toHaveURL(/\/week-1\?focus=lesson-A-22-0$/);
-  await page.locator('#lesson-A-22-0 input').check();
+  await expect(page).toHaveURL(new RegExp(`/week-1\\?focus=lesson-${FIRST}$`));
+  await page.locator(`#lesson-${FIRST} input`).check();
   await settle(page);
   await navTo(page, 'today');
   await page.getByRole('button', { name: 'Switch to dark mode' }).click();
