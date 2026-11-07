@@ -21,7 +21,7 @@ for(const [key,row] of Object.entries({...resources.groups,...resources.topics})
 check(plan.phases.length===9&&plan.phases.every((p,i)=>p.start===i*8+1&&p.end===(i+1)*8),'phase ranges must cover blocks 1-72');
 const cyber=roadmap.tracks.find(t=>t.id==='C');
 check(cyber?.name==='Cybersecurity and digital forensics','track C must be the cybersecurity and digital forensics roadmap');
-check(cyber?.groups.length===26,'cybersecurity roadmap should have the 26-group Atlas layout');
+check(cyber?.groups.length===25,'cybersecurity roadmap should have the 25-group Atlas layout');
 check(plan.weeks.every(w=>w.topics.every(k=>k.startsWith('C-'))),'only cybersecurity checkpoints may be scheduled in the weekly plan');
 check(degree.catalogue.includes('master-of-cyber-security-and-digital-forensics'),'degree must link to the AUT programme page');
 check(degree.courseGroups.some(g=>g.codes.includes('COMP844')&&g.codes.includes('COMP832')&&g.codes.includes('ENGE817')),'AUT compulsory courses missing');

@@ -325,3 +325,27 @@ body,.topbar,.tabbar,footer,.panel,.card,.stat,.study-card,.practice-card,.skill
 :root[data-theme=dark] .elig-ok{background:#163726;color:#7fd3a0}:root[data-theme=dark] .elig-check{background:#3a2d16;color:#e3b36a}:root[data-theme=dark] .elig-no{background:#3a1b20;color:#e89aa5}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]) .elig-ok{background:#163726;color:#7fd3a0}:root:not([data-theme=light]) .elig-check{background:#3a2d16;color:#e3b36a}:root:not([data-theme=light]) .elig-no{background:#3a1b20;color:#e89aa5}}
 .cert-card .progress{margin:8px 0 4px}
+/* Week page: one ordered lesson list */
+.week-head{display:block;margin-bottom:18px}.week-head h2{margin:4px 0 6px}
+.week-meta{font-size:13px;font-weight:700;color:var(--muted);margin:10px 0 0}.week-meta span{color:var(--accent-ink)}
+.lesson-list{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:12px}
+.lesson{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.lesson.is-done{opacity:.78}
+.lesson-head{display:flex;gap:12px;align-items:flex-start}
+.lesson-num{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;background:var(--accent-soft);color:var(--accent-ink)}
+.lesson-title{flex:1;min-width:0}.lesson-title .check{font-weight:700;margin:0}
+.lesson-skill{margin:4px 0 0;font-size:12.5px;color:var(--muted);display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.lesson-skill .level-badge{margin-left:0}
+.lesson .topic-study{margin:10px 0 0 38px;display:grid;gap:4px;font-size:14px}
+.lesson .topic-study p{margin:0}.lesson .topic-study b{display:inline-block;min-width:66px;color:var(--ink)}
+.lesson-more{font-size:12.5px;color:var(--muted)}
+.week-planning summary{display:flex;justify-content:space-between;gap:12px;cursor:pointer;flex-wrap:wrap}
+.study-days{padding-left:18px;display:grid;gap:6px;font-size:13.5px}.study-days li span{display:block;color:var(--muted)}
+@media (max-width:600px){.lesson .topic-study{margin-left:0}.lesson .topic-study b{min-width:0;margin-right:4px}}
+details.skill-ladder>summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;cursor:pointer;list-style:none}
+details.skill-ladder>summary::-webkit-details-marker{display:none}
+details.skill-ladder>summary h3{margin:2px 0 0}
+details.skill-ladder[open]>summary{margin-bottom:8px}
+.lesson .topic-study p:not(.lesson-more){display:grid;grid-template-columns:66px 1fr;gap:8px;align-items:baseline}
+.lesson .topic-study p:not(.lesson-more) b{min-width:0}
+@media (max-width:600px){.lesson .topic-study p:not(.lesson-more){grid-template-columns:62px 1fr}}

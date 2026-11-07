@@ -109,7 +109,7 @@ test('a legacy master’s bridge choice from an old backup adds no bridge task',
   await open(page, { bridge: 'stats' }, 'week-2');
   await expect(page.locator('.curriculum-item').first()).toBeVisible();
   await expect(page.locator('.bridge-task')).toHaveCount(0);
-  await expect(page.locator('.weekly-coverage')).not.toContainText('bridge');
+  await expect(page.locator('main')).not.toContainText('bridge');
 });
 
 test('a Notion page link is saved and the final week check requires completed work', async ({ page }) => {
@@ -118,10 +118,7 @@ test('a Notion page link is saved and the final week check requires completed wo
   await expect(finish).toBeDisabled();
   await page.getByLabel('Link to this week’s Notion page').fill('https://www.notion.so/study-week-1');
   await expect(page.getByRole('link', { name: 'Open your week 1 notes' })).toHaveAttribute('href', 'https://www.notion.so/study-week-1');
-  for (const group of await page.locator('.curriculum-group').all()) {
-    if (!(await group.evaluate(el => el.hasAttribute('open')))) await group.locator('summary').click();
-    for (const checkbox of await group.locator('.curriculum-item input[type="checkbox"]').all()) await checkbox.check();
-  }
+  for (const checkbox of await page.locator('.curriculum-item input[type="checkbox"], .milestone-row input[type="checkbox"]').all()) await checkbox.check();
   await expect(finish).toBeEnabled();
   await finish.check();
   await expect(page.locator('.detail-head')).toContainText('100% complete');
@@ -178,17 +175,11 @@ test('every page renders without errors', async ({ page }) => {
   expect(errors).toEqual([]);
 });
 
-test('all-track coverage mirrors the exact weekly checkpoint', async ({ page }) => {
+test('a lesson ticked in the week shows as covered in the Atlas, and unticking clears it', async ({ page }) => {
   await open(page, {}, 'week-2');
-  const list = page.locator('.weekly-coverage');
-  const topics = weekTopics(2);
-  await expect(list).toContainText(`Roadmap coverage · 0/${topics.length}`);
-  await list.locator('summary').click();
-  await expect(list.locator('.coverage-item')).toHaveCount(topics.length);
-  await expect(list.getByRole('checkbox')).toHaveCount(0);
-  const key = topics[0];
+  const key = weekTopics(2)[0];
+  await expect(page.locator('.curriculum-item')).toHaveCount(weekTopics(2).length);
   await page.locator(`#lesson-${key} input`).check();
-  await expect(list.locator(`[data-topic-key="${key}"]`)).toHaveClass(/covered/);
   await settle(page);
   expect((await stored(page)).topics?.[key]).toBe(true);
   await navTo(page, 'atlas');
@@ -196,7 +187,8 @@ test('all-track coverage mirrors the exact weekly checkpoint', async ({ page }) 
   await expect(page.locator(`[data-topic-key="${key}"]`)).toContainText('Week 2');
   await navTo(page, 'week-2');
   await page.locator(`#lesson-${key} input`).uncheck();
-  await page.locator('.weekly-coverage summary').click();
+  await settle(page);
+  await navTo(page, 'atlas');
   await expect(page.locator(`[data-topic-key="${key}"]`)).not.toHaveClass(/covered/);
 });
 

@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import { roadmap } from '../data';
 import { isTopicCovered, scheduledTopicForKey } from '../lib/coverage';
-import { roadmapHas, roadmapScope, roadmapViews } from '../data/roadmaps';
+import { roadmapHas, roadmapViews } from '../data/roadmaps';
 import { useRoute } from '../lib/router';
 import { toggleCurriculumTopic } from '../state/actions';
 import { useAppState } from '../state/store';
-import { Callout, Check, Ext, Label, SectionHead } from '../components/ui';
+import { Callout, Check, Label, SectionHead } from '../components/ui';
 import { Checked } from '../components/Checked';
 
-const total = roadmap.tracks.reduce((a, t) => a + t.groups.reduce((b, g) => b + g.i.length, 0), 0);
 const LEVELS = [
   { key: 'B', name: 'Beginner' },
   { key: 'I', name: 'Intermediate' },
@@ -20,12 +19,13 @@ export function Atlas() {
   const s = useAppState();
   const route = useRoute();
   const [q, setQ] = useState('');
-  const [track, setTrack] = useState('all');
+  const [track, setTrack] = useState('C');
   const [rm, setRm] = useState(route.query.get('roadmap') ?? 'all');
   const [star, setStar] = useState(false);
   const [level, setLevel] = useState('all');
   const view = roadmapViews.find((r) => r.id === rm);
   let count = 0;
+  const filtering = !!(q || view || level !== 'all' || star);
 
   const renderItem = (x: { text: string; key: string; priority: boolean }) => {
     const scheduled = scheduledTopicForKey(x.key);
@@ -47,8 +47,8 @@ export function Atlas() {
     count += items.length;
     const hasLevels = items.some((x) => x.level);
     const doneInGroup = items.filter((x) => { const sc = scheduledTopicForKey(x.key); return sc && isTopicCovered(s, sc); }).length;
-    return <section key={`${t.id}-${gi}`} className="topic-group skill-ladder">
-      <div className="skill-ladder-head"><Label>{t.name}</Label><h3>{g.t}</h3><span className="tiny muted">{doneInGroup}/{items.length} done</span></div>
+    return <details key={`${t.id}-${gi}`} className="topic-group skill-ladder" open={filtering || undefined}>
+      <summary className="skill-ladder-head"><span><Label>{t.name}</Label><h3>{g.t}</h3></span><span className="tiny muted">{doneInGroup}/{items.length} done</span></summary>
       {hasLevels && level === 'all'
         ? LEVELS.map((lv) => {
             const forLevel = items.filter((x) => x.level === lv.key);
@@ -60,17 +60,14 @@ export function Atlas() {
             </div>;
           })
         : items.map(renderItem)}
-    </section>;
+    </details>;
   }));
   return <>
-    <Callout><b>What is included:</b> {total} grouped topic checkpoints across {roadmap.tracks.length} tracks. The cybersecurity and digital forensics track is scheduled across the weekly plan; each of its checkpoints links to its exact week, and checking it here or in the week updates both. The data engineering, GenAI and interview tracks are optional and unscheduled — tick them any time you brush up. Views map to job roles, AUT courses and the optional roadmaps. <Checked source="roadmaps" /></Callout>
-    <SectionHead title={`${roadmapViews.length} roadmap views`}>Select one to inspect its related topics. Overlapping topics appear in several views.</SectionHead>
-    <div className="card-grid three">{roadmapViews.map((r) => <div key={r.id} className={`card ${rm === r.id ? 'selected' : ''}`}><Label>Source roadmap</Label><h3>{r.name}</h3><p>{roadmapScope(r)}</p>
-      <div className="row"><button className="btn small" onClick={() => { setRm(r.id); document.getElementById('topic-count')?.scrollIntoView({ behavior: 'smooth' }); }}>View topics</button><Ext href={r.url}>Open source</Ext></div></div>)}</div>
-    <SectionHead title="Search the topic atlas">Pick a skill to see its Beginner, Intermediate and Advanced checkpoints laid out in order, each linking to its week. Filter by roadmap, track, level or text; checking a topic here updates the same progress.</SectionHead>
+    <Callout>Every skill, laid out Beginner to Advanced. The cybersecurity track is your weekly plan; the other tracks are optional extras you can tick off any time. Open a skill to see its lessons, or filter by course, role or level. <Checked source="roadmaps" /></Callout>
+    <SectionHead title="Find a skill">Showing your cybersecurity plan. Switch the track filter to see the optional extras.</SectionHead>
     <div className="toolbar">
       <input className="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search all roadmap topics…" aria-label="Search topics" />
-      <select className="chip" value={rm} onChange={(e) => setRm(e.target.value)} aria-label="Filter roadmap"><option value="all">All {roadmapViews.length} roadmaps</option>{roadmapViews.map((r) => <option key={r.id} value={r.id}>{r.name}</option>)}</select>
+      <select className="chip" value={rm} onChange={(e) => setRm(e.target.value)} aria-label="Filter roadmap"><option value="all">All courses and roles</option>{roadmapViews.map((r) => <option key={r.id} value={r.id}>{r.name}</option>)}</select>
       <select className="chip" value={track} onChange={(e) => setTrack(e.target.value)} aria-label="Filter track"><option value="all">All tracks</option>{roadmap.tracks.map((t) => <option key={t.id} value={t.id}>{t.name}</option>)}</select>
       <select className="chip" value={level} onChange={(e) => setLevel(e.target.value)} aria-label="Filter level"><option value="all">All levels</option>{LEVELS.map((l) => <option key={l.key} value={l.key}>{l.name}</option>)}</select>
       <Check checked={star} onChange={setStar} label="★ Priority only" />

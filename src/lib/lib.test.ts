@@ -85,11 +85,6 @@ describe('progress', () => {
       s.bridge = bridge;
       for (const week of roadmap.weeks) expect(weekTasks(week, s).some(t => t.tag === 'BRIDGE')).toBe(false);
     }
-    // Bridge choices from old backups stay readable but are retired in the cybersecurity curriculum.
-    for (const bridge of ['stats', 'cs'] as const) {
-      s.bridge = bridge;
-      for (const week of roadmap.weeks) expect(weekTasks(week, s).some(t => t.tag === 'BRIDGE')).toBe(false);
-    }
   });
 });
 
@@ -129,8 +124,8 @@ describe('roadmap views', () => {
     expect(has('enge817', 'C', cg('Research methods'))).toBe(true);
     expect(has('scripting', 'C', cg('Scripting and automation'))).toBe(true);
   });
-  it('has 22 views and each selects at least one group', () => {
-    expect(roadmapViews).toHaveLength(22);
+  it('has 21 views and each selects at least one group', () => {
+    expect(roadmapViews).toHaveLength(21);
     for (const v of roadmapViews) {
       const n = roadmap.tracks.flatMap((t) => t.groups.map((g) => roadmapHas(v, t, g))).filter(Boolean).length;
       expect(n, v.id).toBeGreaterThan(0);
@@ -148,13 +143,6 @@ describe('curriculum ordering', () => {
       expect(rank[t.level], `${t.group}: ${t.text} (week ${w.n})`).toBeGreaterThanOrEqual(prev);
       best.set(t.group, Math.max(prev, rank[t.level]));
     }
-  });
-  it('puts the internship application inside the March–April round for a 22 February start', () => {
-    const s = { ...defaultState(), start: '2027-02-22' };
-    const apply = roadmap.weeks.flatMap(w => coverageForWeek(w.n)).find(t => /March–April/.test(t.text))!;
-    expect(apply).toBeDefined();
-    const due = weekDate(s, apply.week);
-    expect(due.getTime()).toBeLessThan(new Date('2027-04-30T12:00:00').getTime());
   });
 });
 
@@ -212,8 +200,6 @@ describe('guided weekly study', () => {
     const s = defaultState();
     expect(portfolioMilestonesForWeek(15).some(m => m.key === 'webapp-0')).toBe(true);
     expect(weekTasks(roadmap.weeks[14], s).some(t => t.portfolioKey === 'webapp-0')).toBe(true);
-    expect(portfolioMilestonesForWeek(15).some(m => m.key === 'webapp-0')).toBe(true);
-    expect(weekTasks(roadmap.weeks[14], s).some(t => t.portfolioKey === 'webapp-0')).toBe(true);
     expect(weekOutputReady(s, 1)).toBe(false);
     for (const t of coverageForWeek(1)) s.topics[t.key] = true;
     expect(weekOutputReady(s, 1)).toBe(false);
@@ -223,23 +209,6 @@ describe('guided weekly study', () => {
     expect(weekPercent(s, roadmap.weeks[0])).toBe(100);
     delete s.topics[coverageForWeek(1)[0].key];
     expect(weekPercent(s, roadmap.weeks[0])).toBeLessThan(100);
-  });
-  it('schedules every portfolio criterion exactly once, inside its project\'s weeks', () => {
-    const scheduled = new Map<string, number>();
-    for (let week = 1; week <= roadmap.weeks.length; week++) {
-      for (const m of portfolioMilestonesForWeek(week)) {
-        expect(scheduled.has(m.key)).toBe(false);
-        scheduled.set(m.key, week);
-      }
-    }
-    for (const project of portfolioProjects) {
-      const range = project.weeks.match(/(\d+)\D+(\d+)/);
-      project.criteria.forEach((_, i) => {
-        const week = scheduled.get(`${project.id}-${i}`);
-        expect(week, `${project.id}-${i} is never scheduled`).toBeDefined();
-        if (range) { expect(week!).toBeGreaterThanOrEqual(+range[1]); expect(week!).toBeLessThanOrEqual(+range[2]); }
-      });
-    }
   });
   it('schedules every portfolio criterion exactly once, inside its project\'s weeks', () => {
     const scheduled = new Map<string, number>();

@@ -6,7 +6,7 @@ then `npm run check:data` after any change.
 
 ## What is scheduled
 
-Only the **cybersecurity and digital forensics track (C)** is scheduled, as 242
+Only the **cybersecurity and digital forensics track (C)** is scheduled, as 220
 checkpoints across 72 study blocks. Every checkpoint is tagged **Beginner,
 Intermediate or Advanced** (shown as a badge), progressing within each group. The
 data engineering (A), GenAI (B) and coding/interview (D) tracks are kept as
@@ -88,3 +88,22 @@ which shows exam-prep progress and how much of the feeding skill work is done.
 
 The cloud groups use Azure as the primary hands-on platform, because NZ SOC and
 security roles lean Microsoft, and name the AWS equivalent for each topic.
+
+## Study plan scope and resources (November 2026 revision)
+
+The weekly plan holds only skills to learn and practise. Job-search activities,
+career tasks and exam logistics (booking, exam formats) were removed from it;
+exam timing and costs live in the certification plan on the Career page.
+Governance stays only where AUT assesses it (risk assessment, security policy,
+controls), framed as practical documents.
+
+Each lesson has one place to learn, one hands-on place to practise and a
+specific task for its skill. Policy documents and link lists are no longer used
+as lessons. Primary resources include Professor Messer's free Security+ course,
+TryHackMe free rooms and role paths, OverTheWire Bandit, PortSwigger, OWASP Juice
+Shop, LetsDefend, CyberDefenders, Kusto Detective Agency, the Autopsy guide,
+crackmes.one, GOAD, Gandalf and USENIX Security papers. Some TryHackMe path rooms
+need a paid plan; the free-room guide lists what is free.
+
+The week page shows one numbered lesson list first; planning detail is collapsed
+at the bottom. The Atlas opens on the cybersecurity track with skills collapsed.

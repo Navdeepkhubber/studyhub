@@ -1,6 +1,6 @@
 # Study Hub
 
-A personal learning platform for the AUT Master of Cyber Security and Digital Forensics. 72 ordered study blocks schedule 242 cybersecurity and digital forensics checkpoints, each tagged Beginner/Intermediate/Advanced, balancing job-ready skills with masters coursework; data engineering, GenAI and interview topics stay optional in the Atlas for brush-up. Includes a DSA tracker (Striver A2Z + NeetCode), a security portfolio, and career and degree planning. Study block dates adapt to the learner’s available hours, so a dense block can span more than one calendar week.
+A personal learning platform for the AUT Master of Cyber Security and Digital Forensics. 72 ordered study blocks schedule 220 cybersecurity and digital forensics checkpoints, each tagged Beginner/Intermediate/Advanced, balancing job-ready skills with masters coursework; data engineering, GenAI and interview topics stay optional in the Atlas for brush-up. Includes a DSA tracker (Striver A2Z + NeetCode), a security portfolio, and career and degree planning. Study block dates adapt to the learner’s available hours, so a dense block can span more than one calendar week.
 Built with the same stack as [navdeep.dev](https://navdeep.dev) (React 19, strict TypeScript, Vite 6, lucide-react) in its own repo,
 with its own look: the original Study Compass theme (teal, mint, navy; Manrope + DM Sans), in light and dark.
 

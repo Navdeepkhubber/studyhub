@@ -1,6 +1,376 @@
 {
   "tracks": [
     {
+      "id": "C",
+      "name": "Cybersecurity and digital forensics",
+      "goal": "The scheduled core: academic mastery for the AUT masters plus demonstrable skills for security engineering, penetration testing, SOC, application security and digital forensics roles.",
+      "groups": [
+        {
+          "t": "Security foundations",
+          "i": [
+            "[B]*Security principles: confidentiality, integrity, availability",
+            "[B]*Threat, vulnerability, exploit and risk",
+            "[B]*Assets, trust boundaries and attack surface",
+            "[I]Adversary goals, capability and opportunity",
+            "[I]Threat modelling with STRIDE",
+            "[A]Risk assessment: likelihood, impact and treatment",
+            "[A]Security controls: preventive, detective, corrective",
+            "[A]Build a home lab: VMs, snapshots, isolated networking and safe scope"
+          ]
+        },
+        {
+          "t": "Networking and protocols",
+          "i": [
+            "[B]*TCP/IP, OSI layers, routing and subnetting",
+            "[B]*DNS resolution, records, caching and abuse cases",
+            "[B]*HTTP request/response, headers, cookies and sessions",
+            "[I]*TLS handshake, certificates and common configuration errors",
+            "[I]Ports, sockets, NAT, firewalls and network segmentation",
+            "[A]*Packet capture with Wireshark: filters and protocol reading",
+            "[A]Network scanning with nmap: host discovery and service enumeration in a lab"
+          ]
+        },
+        {
+          "t": "Linux and Windows for security",
+          "i": [
+            "[B]*Linux filesystem, permissions, users and groups",
+            "[B]*Processes, services, logs and systemd",
+            "[I]*Windows architecture, accounts, services and event logs",
+            "[A]The Windows registry, scheduled tasks and services for investigation",
+            "[A]Command-line fluency on both OSes for daily security work"
+          ]
+        },
+        {
+          "t": "Scripting and automation for security",
+          "i": [
+            "[B]*Bash basics: navigation, pipes, redirection, variables and globbing",
+            "[B]*Python from scratch: data types, control flow, functions, modules",
+            "[B]*Git and GitHub: branches, commits and reproducible lab notes",
+            "[B]PowerShell basics: cmdlets, objects, the pipeline and remoting",
+            "[I]*Bash scripting: loops, conditionals, functions and safe quoting",
+            "[I]Bash for security: grep, awk, sed, jq and log triage one-liners",
+            "[I]*Python files, strings and regular expressions for parsing logs",
+            "[I]*Python for the web: requests, JSON and talking to security APIs",
+            "[I]PowerShell for investigation: event logs, processes, the registry",
+            "[A]Python for automation: argparse, error handling, small security tools",
+            "[A]*Build a portfolio tool: automate a real security task end to end"
+          ]
+        },
+        {
+          "t": "Secure coding and application fundamentals",
+          "i": [
+            "[B]*HTTP clients, JSON, APIs and input validation",
+            "[B]*JavaScript execution model, the DOM and browser security",
+            "[B]*SQL fundamentals and parameterized queries",
+            "[I]Memory, processes and basic C concepts for vulnerability literacy",
+            "[I]*Authentication, authorization and session design",
+            "[I]Secrets management and configuration hygiene",
+            "[A]Unit and integration testing for security behaviour",
+            "[A]Dependency management, SBOM concepts and supply-chain risk",
+            "[A]*Read code and trace untrusted input to a sensitive operation"
+          ]
+        },
+        {
+          "t": "Cryptography and identity",
+          "i": [
+            "[B]*Cryptographic goals and correct primitive selection",
+            "[B]*Encoding versus encryption versus hashing",
+            "[B]*Symmetric encryption, modes and authenticated encryption",
+            "[B]*Public-key cryptography, signatures and key exchange",
+            "[I]*Password hashing, salts and work factors",
+            "[I]*PKI, certificates, trust chains and revocation",
+            "[I]MFA, passkeys and phishing-resistant authentication",
+            "[A]OAuth 2.0, OpenID Connect and SAML concepts",
+            "[A]Key lifecycle: storage, rotation and access",
+            "[A]Number theory basics behind RSA and Diffie-Hellman (COMP830)",
+            "[A]Common crypto failures and how to review an implementation"
+          ]
+        },
+        {
+          "t": "Web application security",
+          "i": [
+            "[B]*OWASP Top 10 overview and risk context",
+            "[B]*HTTP security headers, CORS and browser boundaries",
+            "[B]*Access control failures and IDOR testing in a lab",
+            "[B]*SQL injection: root cause, safe reproduction and remediation",
+            "[I]*Cross-site scripting: reflected, stored and DOM cases",
+            "[I]*CSRF, cookies, SameSite and request integrity",
+            "[I]Server-side request forgery and egress controls",
+            "[A]Path traversal, file upload and parser risks",
+            "[A]Authentication, session fixation and account recovery",
+            "[A]Business logic abuse and race-condition fundamentals",
+            "[A]API security: object authorization, rate limits and schema validation"
+          ]
+        },
+        {
+          "t": "Penetration testing methodology",
+          "i": [
+            "[B]*Rules of engagement, authorization and scope",
+            "[B]*Reconnaissance: passive sources and asset inventory",
+            "[B]Service discovery and evidence-based enumeration",
+            "[I]Vulnerability triage: exploitability, impact and false positives",
+            "[I]Exploitation in a lab: initial access and validation",
+            "[A]Post-exploitation, privilege escalation and lateral movement concepts",
+            "[A]*Report writing: findings, risk rating, remediation and retest",
+            "[A]Certification path: PNPT then OSCP (plan for the first years of work)"
+          ]
+        },
+        {
+          "t": "SOC and incident response",
+          "i": [
+            "[B]*SOC roles, alert lifecycle and escalation quality",
+            "[B]*Log sources: endpoint, identity, DNS, proxy and cloud",
+            "[B]*SIEM data model, normalization and enrichment",
+            "[I]Detection engineering: hypothesis, query and test data",
+            "[I]*MITRE ATT&CK mapping and analytic coverage",
+            "[A]Windows event analysis and Sysmon fundamentals",
+            "[A]*Incident response lifecycle: prepare, detect, contain, eradicate, recover",
+            "[A]Write and test a Sigma detection rule"
+          ]
+        },
+        {
+          "t": "Digital forensics",
+          "i": [
+            "[B]*Forensic principles: integrity, repeatability and documentation",
+            "[B]*Chain of custody and evidence-handling requirements",
+            "[B]*Disk images, partitions, file systems and acquisition",
+            "[B]*Forensic imaging, write blockers and verification hashes",
+            "[I]*Deleted files, metadata and file-system artefacts",
+            "[I]*Windows artefacts: registry, event logs, Prefetch and timelines",
+            "[I]Linux artefacts: auth logs, shell history and the journal",
+            "[A]Memory forensics with Volatility: processes, network and injection",
+            "[A]Mobile forensics scope, acquisition constraints and privacy",
+            "[A]Network forensics: carving a PCAP into a sourced timeline"
+          ]
+        },
+        {
+          "t": "Cloud and infrastructure security",
+          "i": [
+            "[B]*Shared responsibility and cloud threat modelling (Azure first, mapped to AWS)",
+            "[B]Certification (optional): SC-900 or AZ-900 fundamentals",
+            "[B]*Cloud identity: Entra ID, Azure RBAC and least privilege (compare AWS IAM)",
+            "[B]*Network boundaries: VNets, NSGs and private endpoints (compare AWS VPCs and security groups)",
+            "[I]*Storage exposure: Azure Storage access, encryption and logging (compare Amazon S3)",
+            "[I]*Cloud audit logs: Azure Activity and Entra sign-in logs (compare AWS CloudTrail)",
+            "[I]Containers: image hygiene, isolation and runtime risks",
+            "[A]Kubernetes identity, network policy and secrets basics (AKS and EKS)",
+            "[A]Infrastructure as code review and policy checks (Bicep, Terraform, Azure Policy)",
+            "[A]CI/CD pipeline permissions and artifact integrity",
+            "[A]Cloud detection and posture with Microsoft Defender for Cloud"
+          ]
+        },
+        {
+          "t": "Application security and DevSecOps",
+          "i": [
+            "[B]*Secure SDLC and security requirements",
+            "[B]*Code review for trust boundaries and authorization",
+            "[B]*SAST, DAST, SCA and secrets scanning: strengths and limits",
+            "[I]Threat modelling during design and change review",
+            "[I]CI security gates with actionable findings",
+            "[A]Dependency pinning, provenance and artifact signing",
+            "[A]Container and infrastructure scanning workflow",
+            "[A]Vulnerability management, SLAs and exception handling"
+          ]
+        },
+        {
+          "t": "Research methods and dissertation",
+          "i": [
+            "[B]*Turn a broad security topic into a researchable question (ENGE817)",
+            "[B]*Literature search, source evaluation and the research gap",
+            "[B]*Research design: experiment, case study or measurement",
+            "[I]*Ethics, privacy, consent and responsible disclosure",
+            "[I]Data collection, provenance and reproducibility",
+            "[I]Evaluation metrics, baselines and threats to validity",
+            "[A]*Research proposal: question, method, scope and timeline",
+            "[A]Maintain a literature matrix and annotated bibliography",
+            "[A]Reproducible experiments, versioning and an audit trail"
+          ]
+        },
+        {
+          "t": "Security architecture and governance",
+          "i": [
+            "[B]*Security architecture principles and trust boundaries",
+            "[B]*Zero trust: design the access decisions for a small organisation",
+            "[B]Network segmentation and secure remote access design",
+            "[I]*Risk assessment: build a risk register with likelihood, impact and treatment",
+            "[I]Controls in practice: map the CIS Controls to a small organisation (compare ISO 27001 and NZISM)",
+            "[I]CIS Benchmarks: harden a Linux or Windows host and verify the result",
+            "[A]Write a security policy and a network security policy for a case (COMP833)",
+            "[A]Privacy by design and data minimisation in a system you build",
+            "[A]Backup and recovery: design a plan and test a real restore"
+          ]
+        },
+        {
+          "t": "Cybercrime, law and policy (COMP844)",
+          "i": [
+            "[B]*Cybercrime typology: fraud, ransomware, intrusion, insider, nation-state",
+            "[B]*The cyber threat landscape and attacker motivations",
+            "[B]Cybercrime profiling and the socio-technical view of offending",
+            "[B]NZ legal context: Privacy Act 2020, Crimes Act computer offences, Harmful Digital Communications Act",
+            "[I]International law, jurisdiction and cross-border investigation",
+            "[I]Evidence law, admissibility and expert-witness duties",
+            "[I]Cyberwarfare, critical infrastructure and the dark web",
+            "[A]Security governance, policy writing and acceptable-use frameworks",
+            "[A]Ethics, responsible disclosure and the law around testing",
+            "[A]Write a case-study report with a risk-mitigation plan"
+          ]
+        },
+        {
+          "t": "SIEM and detection: Microsoft Sentinel & Defender",
+          "i": [
+            "[B]*SOC tooling landscape: SIEM, EDR/XDR, SOAR and where each fits",
+            "[B]*Microsoft Sentinel architecture: workspaces, data connectors, ingestion",
+            "[B]*KQL fundamentals: where, project, summarize, join, time windows",
+            "[B]*KQL for hunting: parsing logs, aggregations, anomalies",
+            "[B]Microsoft Defender XDR: endpoints, identity, email and cloud apps",
+            "[I]Analytics rules, incidents and the alert lifecycle in Sentinel",
+            "[I]Detection engineering: hypothesis, rule, test data, tuning",
+            "[I]Sigma rules and converting them to KQL",
+            "[I]SOAR playbooks and automated response in Sentinel",
+            "[I]Threat hunting with ATT&CK and KQL notebooks",
+            "[A]Security data engineering: log pipelines, parsing and normalization (Sentinel ASIM)",
+            "[A]Cost-aware ingestion: table plans, retention and filtering at the source",
+            "[A]Build a mini-SOC: ingest logs, write detections, triage an incident",
+            "[A]Portfolio: a detection pipeline that showcases your data engineering background"
+          ]
+        },
+        {
+          "t": "AI security",
+          "i": [
+            "[B]*How LLMs and ML systems work, from a security viewpoint",
+            "[B]*OWASP Top 10 for LLM applications",
+            "[B]*Prompt injection, direct and indirect, and jailbreaks",
+            "[B]Data poisoning, model and supply-chain integrity",
+            "[I]Securing AI pipelines: data, training, deployment, monitoring",
+            "[I]Sensitive-data disclosure, output handling and guardrails",
+            "[I]Agentic systems: tool abuse, excessive agency, sandboxing",
+            "[A]NIST AI Risk Management Framework and governance",
+            "[A]AI for defence: LLM-assisted triage, detection and log analysis",
+            "[A]Red-teaming an AI application end to end"
+          ]
+        },
+        {
+          "t": "Malware analysis and reverse engineering",
+          "i": [
+            "[B]*Malware types, behaviour and the analysis lab setup (isolated, snapshotted)",
+            "[B]*Static analysis: strings, hashes, PE structure, imports",
+            "[B]*Dynamic analysis: sandboxing, process and network behaviour",
+            "[B]Windows internals for analysts: processes, DLLs, registry, API calls",
+            "[I]Assembly and x86/x64 basics for reversing",
+            "[I]Disassembly and decompilation with Ghidra",
+            "[I]Debugging with x64dbg: breakpoints, memory, patching",
+            "[A]Unpacking, obfuscation and anti-analysis techniques",
+            "[A]Writing YARA rules from malware traits",
+            "[A]Document findings: IOCs, capability, attribution caveats"
+          ]
+        },
+        {
+          "t": "Cloud security depth (INFS803)",
+          "i": [
+            "[B]*Cloud models, shared responsibility and the Azure Well-Architected security pillar",
+            "[B]*Identity and access: Entra ID roles, managed identities, privileged access, federation",
+            "[B]*Network security: segmentation, private access and egress control in Azure and AWS",
+            "[B]Data protection: Azure Key Vault, encryption and key management (compare AWS KMS)",
+            "[I]Logging, monitoring and cloud-native detection with Defender for Cloud and Sentinel",
+            "[I]Posture management: Defender for Cloud secure score, Azure Policy and Prowler (multi-cloud)",
+            "[I]Container security: images, registries, runtime (Trivy, Falco)",
+            "[A]Kubernetes security: RBAC, network policy, secrets, admission control",
+            "[A]Infrastructure as code scanning (Checkov) and policy as code",
+            "[A]Cloud incident response and forensics across Azure and AWS",
+            "[A]Certification path: SC-500 Cloud and AI Security Engineer (replaced AZ-500; plan for after your first role)"
+          ]
+        },
+        {
+          "t": "Active Directory and Microsoft identity",
+          "i": [
+            "[B]*Active Directory fundamentals: domains, forests, OUs, users and groups",
+            "[B]*Group Policy, DNS and authentication flow in a Windows domain",
+            "[B]Entra ID and Microsoft 365 administration basics",
+            "[I]*Kerberos and NTLM: tickets, delegation and why they get abused",
+            "[I]Entra ID security: conditional access, MFA, privileged identity management",
+            "[I]AD attack paths in a lab: enumeration, BloodHound concepts, Kerberoasting",
+            "[A]Detecting identity attacks with Defender for Identity and Sentinel",
+            "[A]AD hardening: tiered admin model, LAPS, least privilege and auditing"
+          ]
+        },
+        {
+          "t": "Exam prep: CompTIA Security+ (SY0-701)",
+          "i": [
+            "[B]Domain 1 General Security Concepts (12%): control types, CIA and AAA, zero trust, change management, cryptographic solutions",
+            "[I]*Domain 2 Threats, Vulnerabilities and Mitigations (22%): threat actors, vectors, vulnerability types, indicators, mitigations",
+            "[I]Domain 3 Security Architecture (18%): architecture models, secure infrastructure, data protection, resilience and recovery",
+            "[I]*Domain 4 Security Operations (28%): hardening, asset and vulnerability management, monitoring, IAM, automation, IR, investigation",
+            "[I]Domain 5 Security Program Management and Oversight (20%): governance, risk, third parties, compliance, audits, awareness",
+            "[A]Performance-based questions: firewall rule ordering, device placement and log analysis",
+            "[A]*Timed full-length practice exams; drill any domain below 80%"
+          ]
+        },
+        {
+          "t": "Exam prep: eJPT (INE)",
+          "i": [
+            "[I]Assessment Methodologies (25%): host discovery, port and service enumeration, vulnerability identification",
+            "[I]Host and Network Auditing (25%): enumerate systems and services, gather hashes and credentials, transfer files",
+            "[I]*Host and Network Penetration Testing (35%): exploitation including Metasploit, brute force, hash cracking, pivoting",
+            "[I]Web Application Penetration Testing (15%): web recon, hidden directories, login brute force, common web vulnerabilities",
+            "[A]*Full practice lab under exam conditions with a methodology checklist and notes"
+          ]
+        },
+        {
+          "t": "Exam prep: Microsoft SC-200",
+          "i": [
+            "[B]Ingest data into Sentinel: data connectors, Windows Security Events via AMA, Syslog and CEF, Azure activity logs, custom tables",
+            "[I]Configure automation: Defender for Endpoint settings and ASR rules, automated investigation, Sentinel automation rules and playbooks",
+            "[I]*Configure detections: Advanced Hunting custom detections, Sentinel analytics rules (scheduled, NRT), MITRE ATT&CK coverage",
+            "[I]*Respond to incidents in Defender XDR: Office 365, Entra ID, Defender for Identity, Cloud Apps, Purview and Sentinel alerts",
+            "[I]Respond on endpoints and M365: device timelines, live response, investigation packages, Purview Audit",
+            "[A]*Threat hunting (20-25%): choose tables, KQL and Advanced Hunting, threat analytics, hunting graphs, Sentinel hunting queries",
+            "[A]Manage the platform: Sentinel roles, data retention tiers, workbooks and SOC optimization",
+            "[A]*Score 80% or more on the free Microsoft practice assessment"
+          ]
+        },
+        {
+          "t": "Exam prep: Blue Team Level 1 (BTL1)",
+          "i": [
+            "[B]Security Fundamentals: controls, networking, risk and Active Directory basics",
+            "[I]Phishing Analysis: headers, URLs, attachments, artefacts, defensive actions and reporting",
+            "[I]Threat Intelligence: actors and APTs, operational, tactical and strategic intelligence, MITRE ATT&CK",
+            "[I]*Digital Forensics: evidence collection, Windows and Linux investigations, Volatility, Autopsy",
+            "[I]*SIEM: logging, aggregation, correlation and investigation in Splunk",
+            "[A]*Incident Response: NIST lifecycle, linking SIEM alerts to forensic artefacts across one incident",
+            "[A]*Work three full investigations on CyberDefenders without hints"
+          ]
+        },
+        {
+          "t": "IoT security (COMP816)",
+          "i": [
+            "[B]*IoT architecture, protocols (MQTT, CoAP) and the expanded attack surface",
+            "[B]*Device, firmware, network and cloud layers of IoT risk",
+            "[I]Firmware extraction and analysis basics",
+            "[A]Hardware interfaces and common IoT weaknesses (OWASP IoT Top 10)",
+            "[A]Securing IoT: identity, updates, segmentation and monitoring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "name": "Certification alternatives (optional)",
+      "goal": "Optional: ISC2 CC as a cheaper, lighter alternative to Security+. Take one of the two, not both. Not scheduled.",
+      "groups": [
+        {
+          "t": "Exam prep: ISC2 Certified in Cybersecurity (CC)",
+          "i": [
+            "[B]Domain 1 Security Principles (24%): CIA, AAA, privacy, risk management, control types, ISC2 Code of Ethics",
+            "[I]Domain 2 Security Governance (17.3%): GRC planning, redundancy and BCDR, security awareness, measuring effectiveness",
+            "[I]Domain 3 Identity and Access Management Concepts (20%): logical access controls and identity lifecycle",
+            "[I]Domain 4 Networking and Cloud Security Concepts (21.3%): network security, architecture, cloud security, zero trust",
+            "[I]Domain 5 Security Operations and Incident Response (17.3%): data security, operations, IR, asset protection, testing",
+            "[A]*Timed practice exams written for the post-September 2026 outline"
+          ]
+        }
+      ]
+    },
+    {
       "id": "A",
       "name": "Data engineering (optional)",
       "goal": "Optional brush-up: SQL, Spark, lakehouse, pipelines and system design. Not scheduled — dip in from the Atlas on any day.",
@@ -568,405 +938,6 @@
             "Implementing multimodal AI: OpenAI Vision API, DALL-E API, Whisper API, Hugging Face models, LangChain and LlamaIndex for multimodal apps",
             "Development tools: AI code editors and code completion tools",
             "Understanding AI safety issues and where they show up in product design"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "C",
-      "name": "Cybersecurity and digital forensics",
-      "goal": "The scheduled core: academic mastery for the AUT masters plus demonstrable skills for security engineering, penetration testing, SOC, application security and digital forensics roles.",
-      "groups": [
-        {
-          "t": "Security foundations",
-          "i": [
-            "[B]*Security principles: confidentiality, integrity, availability",
-            "[B]*Threat, vulnerability, exploit and risk",
-            "[B]*Assets, trust boundaries and attack surface",
-            "[I]Adversary goals, capability and opportunity",
-            "[I]Threat modelling with STRIDE",
-            "[A]Risk assessment: likelihood, impact and treatment",
-            "[A]Security controls: preventive, detective, corrective",
-            "[A]Build a home lab: VMs, snapshots, isolated networking and safe scope"
-          ]
-        },
-        {
-          "t": "Networking and protocols",
-          "i": [
-            "[B]*TCP/IP, OSI layers, routing and subnetting",
-            "[B]*DNS resolution, records, caching and abuse cases",
-            "[B]*HTTP request/response, headers, cookies and sessions",
-            "[I]*TLS handshake, certificates and common configuration errors",
-            "[I]Ports, sockets, NAT, firewalls and network segmentation",
-            "[A]*Packet capture with Wireshark: filters and protocol reading",
-            "[A]Network scanning with nmap: host discovery and service enumeration in a lab"
-          ]
-        },
-        {
-          "t": "Linux and Windows for security",
-          "i": [
-            "[B]*Linux filesystem, permissions, users and groups",
-            "[B]*Processes, services, logs and systemd",
-            "[I]*Windows architecture, accounts, services and event logs",
-            "[A]The Windows registry, scheduled tasks and services for investigation",
-            "[A]Command-line fluency on both OSes for daily security work"
-          ]
-        },
-        {
-          "t": "Scripting and automation for security",
-          "i": [
-            "[B]*Bash basics: navigation, pipes, redirection, variables and globbing",
-            "[B]*Python from scratch: data types, control flow, functions, modules",
-            "[B]*Git and GitHub: branches, commits and reproducible lab notes",
-            "[B]PowerShell basics: cmdlets, objects, the pipeline and remoting",
-            "[I]*Bash scripting: loops, conditionals, functions and safe quoting",
-            "[I]Bash for security: grep, awk, sed, jq and log triage one-liners",
-            "[I]*Python files, strings and regular expressions for parsing logs",
-            "[I]*Python for the web: requests, JSON and talking to security APIs",
-            "[I]PowerShell for investigation: event logs, processes, the registry",
-            "[A]Python for automation: argparse, error handling, small security tools",
-            "[A]*Build a portfolio tool: automate a real security task end to end"
-          ]
-        },
-        {
-          "t": "Secure coding and application fundamentals",
-          "i": [
-            "[B]*HTTP clients, JSON, APIs and input validation",
-            "[B]*JavaScript execution model, the DOM and browser security",
-            "[B]*SQL fundamentals and parameterized queries",
-            "[I]Memory, processes and basic C concepts for vulnerability literacy",
-            "[I]*Authentication, authorization and session design",
-            "[I]Secrets management and configuration hygiene",
-            "[A]Unit and integration testing for security behaviour",
-            "[A]Dependency management, SBOM concepts and supply-chain risk",
-            "[A]*Read code and trace untrusted input to a sensitive operation"
-          ]
-        },
-        {
-          "t": "Cryptography and identity",
-          "i": [
-            "[B]*Cryptographic goals and correct primitive selection",
-            "[B]*Encoding versus encryption versus hashing",
-            "[B]*Symmetric encryption, modes and authenticated encryption",
-            "[B]*Public-key cryptography, signatures and key exchange",
-            "[I]*Password hashing, salts and work factors",
-            "[I]*PKI, certificates, trust chains and revocation",
-            "[I]MFA, passkeys and phishing-resistant authentication",
-            "[A]OAuth 2.0, OpenID Connect and SAML concepts",
-            "[A]Key lifecycle: storage, rotation and access",
-            "[A]Number theory basics behind RSA and Diffie-Hellman (COMP830)",
-            "[A]Common crypto failures and how to review an implementation"
-          ]
-        },
-        {
-          "t": "Web application security",
-          "i": [
-            "[B]*OWASP Top 10 overview and risk context",
-            "[B]*HTTP security headers, CORS and browser boundaries",
-            "[B]*Access control failures and IDOR testing in a lab",
-            "[B]*SQL injection: root cause, safe reproduction and remediation",
-            "[I]*Cross-site scripting: reflected, stored and DOM cases",
-            "[I]*CSRF, cookies, SameSite and request integrity",
-            "[I]Server-side request forgery and egress controls",
-            "[A]Path traversal, file upload and parser risks",
-            "[A]Authentication, session fixation and account recovery",
-            "[A]Business logic abuse and race-condition fundamentals",
-            "[A]API security: object authorization, rate limits and schema validation"
-          ]
-        },
-        {
-          "t": "Penetration testing methodology",
-          "i": [
-            "[B]*Rules of engagement, authorization and scope",
-            "[B]*Reconnaissance: passive sources and asset inventory",
-            "[B]Service discovery and evidence-based enumeration",
-            "[I]Vulnerability triage: exploitability, impact and false positives",
-            "[I]Exploitation in a lab: initial access and validation",
-            "[A]Post-exploitation, privilege escalation and lateral movement concepts",
-            "[A]*Report writing: findings, risk rating, remediation and retest",
-            "[A]Certification path: PNPT then OSCP (plan for the first years of work)"
-          ]
-        },
-        {
-          "t": "SOC and incident response",
-          "i": [
-            "[B]*SOC roles, alert lifecycle and escalation quality",
-            "[B]*Log sources: endpoint, identity, DNS, proxy and cloud",
-            "[B]*SIEM data model, normalization and enrichment",
-            "[I]Detection engineering: hypothesis, query and test data",
-            "[I]*MITRE ATT&CK mapping and analytic coverage",
-            "[A]Windows event analysis and Sysmon fundamentals",
-            "[A]*Incident response lifecycle: prepare, detect, contain, eradicate, recover",
-            "[A]Write and test a Sigma detection rule"
-          ]
-        },
-        {
-          "t": "Digital forensics",
-          "i": [
-            "[B]*Forensic principles: integrity, repeatability and documentation",
-            "[B]*Chain of custody and evidence-handling requirements",
-            "[B]*Disk images, partitions, file systems and acquisition",
-            "[B]*Forensic imaging, write blockers and verification hashes",
-            "[I]*Deleted files, metadata and file-system artefacts",
-            "[I]*Windows artefacts: registry, event logs, Prefetch and timelines",
-            "[I]Linux artefacts: auth logs, shell history and the journal",
-            "[A]Memory forensics with Volatility: processes, network and injection",
-            "[A]Mobile forensics scope, acquisition constraints and privacy",
-            "[A]Network forensics: carving a PCAP into a sourced timeline"
-          ]
-        },
-        {
-          "t": "Cloud and infrastructure security",
-          "i": [
-            "[B]*Shared responsibility and cloud threat modelling (Azure first, mapped to AWS)",
-            "[B]Certification (optional): SC-900 or AZ-900 fundamentals",
-            "[B]*Cloud identity: Entra ID, Azure RBAC and least privilege (compare AWS IAM)",
-            "[B]*Network boundaries: VNets, NSGs and private endpoints (compare AWS VPCs and security groups)",
-            "[I]*Storage exposure: Azure Storage access, encryption and logging (compare Amazon S3)",
-            "[I]*Cloud audit logs: Azure Activity and Entra sign-in logs (compare AWS CloudTrail)",
-            "[I]Containers: image hygiene, isolation and runtime risks",
-            "[A]Kubernetes identity, network policy and secrets basics (AKS and EKS)",
-            "[A]Infrastructure as code review and policy checks (Bicep, Terraform, Azure Policy)",
-            "[A]CI/CD pipeline permissions and artifact integrity",
-            "[A]Cloud detection and posture with Microsoft Defender for Cloud"
-          ]
-        },
-        {
-          "t": "Application security and DevSecOps",
-          "i": [
-            "[B]*Secure SDLC and security requirements",
-            "[B]*Code review for trust boundaries and authorization",
-            "[B]*SAST, DAST, SCA and secrets scanning: strengths and limits",
-            "[I]Threat modelling during design and change review",
-            "[I]CI security gates with actionable findings",
-            "[A]Dependency pinning, provenance and artifact signing",
-            "[A]Container and infrastructure scanning workflow",
-            "[A]Vulnerability management, SLAs and exception handling"
-          ]
-        },
-        {
-          "t": "Research methods and dissertation",
-          "i": [
-            "[B]*Turn a broad security topic into a researchable question (ENGE817)",
-            "[B]*Literature search, source evaluation and the research gap",
-            "[B]*Research design: experiment, case study or measurement",
-            "[I]*Ethics, privacy, consent and responsible disclosure",
-            "[I]Data collection, provenance and reproducibility",
-            "[I]Evaluation metrics, baselines and threats to validity",
-            "[A]*Research proposal: question, method, scope and timeline",
-            "[A]Maintain a literature matrix and annotated bibliography",
-            "[A]Reproducible experiments, versioning and an audit trail"
-          ]
-        },
-        {
-          "t": "Security architecture, engineering and career",
-          "i": [
-            "[B]*Security architecture principles and trust boundaries",
-            "[B]*Zero trust concepts and practical access decisions",
-            "[B]Network segmentation and secure remote access",
-            "[B]Risk registers, treatment plans and control ownership",
-            "[B]*NIST SP 800-53 control families and evidence",
-            "[I]ISO/IEC 27001 ISMS concepts and audit evidence",
-            "[I]CIS Controls and CIS Benchmarks for hardening",
-            "[I]NZ Information Security Manual (NZISM) and government context",
-            "[I]Privacy by design and data minimization",
-            "[I]Business continuity, backup and recovery testing",
-            "[A]*Choose a target role and map evidence to its requirements",
-            "[A]*Security-focused resume and STAR examples with measurable evidence",
-            "[A]Portfolio hygiene: remove secrets, sanitize data, verify licences",
-            "[A]*Interview preparation: networking, Linux, web, forensics and security concepts",
-            "[A]Build a 90-day learning and job-search plan"
-          ]
-        },
-        {
-          "t": "Cybercrime, law and policy (COMP844)",
-          "i": [
-            "[B]*Cybercrime typology: fraud, ransomware, intrusion, insider, nation-state",
-            "[B]*The cyber threat landscape and attacker motivations",
-            "[B]Cybercrime profiling and the socio-technical view of offending",
-            "[B]NZ legal context: Privacy Act 2020, Crimes Act computer offences, Harmful Digital Communications Act",
-            "[I]International law, jurisdiction and cross-border investigation",
-            "[I]Evidence law, admissibility and expert-witness duties",
-            "[I]Cyberwarfare, critical infrastructure and the dark web",
-            "[A]Security governance, policy writing and acceptable-use frameworks",
-            "[A]Ethics, responsible disclosure and the law around testing",
-            "[A]Write a case-study report with a risk-mitigation plan"
-          ]
-        },
-        {
-          "t": "SIEM and detection: Microsoft Sentinel & Defender",
-          "i": [
-            "[B]*SOC tooling landscape: SIEM, EDR/XDR, SOAR and where each fits",
-            "[B]*Microsoft Sentinel architecture: workspaces, data connectors, ingestion",
-            "[B]*KQL fundamentals: where, project, summarize, join, time windows",
-            "[B]*KQL for hunting: parsing logs, aggregations, anomalies",
-            "[B]Microsoft Defender XDR: endpoints, identity, email and cloud apps",
-            "[I]Analytics rules, incidents and the alert lifecycle in Sentinel",
-            "[I]Detection engineering: hypothesis, rule, test data, tuning",
-            "[I]Sigma rules and converting them to KQL",
-            "[I]SOAR playbooks and automated response in Sentinel",
-            "[I]Threat hunting with ATT&CK and KQL notebooks",
-            "[A]Security data engineering: log pipelines, parsing and normalization (Sentinel ASIM)",
-            "[A]Cost-aware ingestion: table plans, retention and filtering at the source",
-            "[A]Build a mini-SOC: ingest logs, write detections, triage an incident",
-            "[A]Portfolio: a detection pipeline that showcases your data engineering background"
-          ]
-        },
-        {
-          "t": "AI security",
-          "i": [
-            "[B]*How LLMs and ML systems work, from a security viewpoint",
-            "[B]*OWASP Top 10 for LLM applications",
-            "[B]*Prompt injection, direct and indirect, and jailbreaks",
-            "[B]Data poisoning, model and supply-chain integrity",
-            "[I]Securing AI pipelines: data, training, deployment, monitoring",
-            "[I]Sensitive-data disclosure, output handling and guardrails",
-            "[I]Agentic systems: tool abuse, excessive agency, sandboxing",
-            "[A]NIST AI Risk Management Framework and governance",
-            "[A]AI for defence: LLM-assisted triage, detection and log analysis",
-            "[A]Red-teaming an AI application end to end"
-          ]
-        },
-        {
-          "t": "Malware analysis and reverse engineering",
-          "i": [
-            "[B]*Malware types, behaviour and the analysis lab setup (isolated, snapshotted)",
-            "[B]*Static analysis: strings, hashes, PE structure, imports",
-            "[B]*Dynamic analysis: sandboxing, process and network behaviour",
-            "[B]Windows internals for analysts: processes, DLLs, registry, API calls",
-            "[I]Assembly and x86/x64 basics for reversing",
-            "[I]Disassembly and decompilation with Ghidra",
-            "[I]Debugging with x64dbg: breakpoints, memory, patching",
-            "[A]Unpacking, obfuscation and anti-analysis techniques",
-            "[A]Writing YARA rules from malware traits",
-            "[A]Document findings: IOCs, capability, attribution caveats"
-          ]
-        },
-        {
-          "t": "Cloud security depth (INFS803)",
-          "i": [
-            "[B]*Cloud models, shared responsibility and the Azure Well-Architected security pillar",
-            "[B]*Identity and access: Entra ID roles, managed identities, privileged access, federation",
-            "[B]*Network security: segmentation, private access and egress control in Azure and AWS",
-            "[B]Data protection: Azure Key Vault, encryption and key management (compare AWS KMS)",
-            "[I]Logging, monitoring and cloud-native detection with Defender for Cloud and Sentinel",
-            "[I]Posture management: Defender for Cloud secure score, Azure Policy and Prowler (multi-cloud)",
-            "[I]Container security: images, registries, runtime (Trivy, Falco)",
-            "[A]Kubernetes security: RBAC, network policy, secrets, admission control",
-            "[A]Infrastructure as code scanning (Checkov) and policy as code",
-            "[A]Cloud incident response and forensics across Azure and AWS",
-            "[A]Certification path: SC-500 Cloud and AI Security Engineer (replaced AZ-500; plan for after your first role)"
-          ]
-        },
-        {
-          "t": "Active Directory and Microsoft identity",
-          "i": [
-            "[B]*Active Directory fundamentals: domains, forests, OUs, users and groups",
-            "[B]*Group Policy, DNS and authentication flow in a Windows domain",
-            "[B]Entra ID and Microsoft 365 administration basics",
-            "[I]*Kerberos and NTLM: tickets, delegation and why they get abused",
-            "[I]Entra ID security: conditional access, MFA, privileged identity management",
-            "[I]AD attack paths in a lab: enumeration, BloodHound concepts, Kerberoasting",
-            "[A]Detecting identity attacks with Defender for Identity and Sentinel",
-            "[A]AD hardening: tiered admin model, LAPS, least privilege and auditing"
-          ]
-        },
-        {
-          "t": "NZ job search and professional presence",
-          "i": [
-            "[B]*Check work-rights eligibility on every listing before applying",
-            "[B]*NZ-format CV and tailored cover letter for security roles",
-            "[B]*LinkedIn profile and a GitHub with two or three security projects",
-            "[B]Register with Summer of Tech and AUT Employability and Careers",
-            "[I]*Apply in the March–April graduate and internship round",
-            "[I]Join the AUT Cyber Security & Intelligence club and compete in CTFs",
-            "[I]Network in person: meetups, Kawaiicon, the NZ Cyber Security Challenge",
-            "[I]Behavioural interviews: STAR stories from labs, projects and work",
-            "[A]Technical interviews: explain a lab, a detection or a finding out loud",
-            "[A]Write up and publish one project or CTF solution per month"
-          ]
-        },
-        {
-          "t": "Exam prep: CompTIA Security+ (SY0-701)",
-          "i": [
-            "[B]*Exam basics: 5 domains, up to 90 questions in 90 minutes, PBQs, 750/900 to pass; confirm SY0-701 or SY0-801 before booking",
-            "[B]Domain 1 General Security Concepts (12%): control types, CIA and AAA, zero trust, change management, cryptographic solutions",
-            "[I]*Domain 2 Threats, Vulnerabilities and Mitigations (22%): threat actors, vectors, vulnerability types, indicators, mitigations",
-            "[I]Domain 3 Security Architecture (18%): architecture models, secure infrastructure, data protection, resilience and recovery",
-            "[I]*Domain 4 Security Operations (28%): hardening, asset and vulnerability management, monitoring, IAM, automation, IR, investigation",
-            "[I]Domain 5 Security Program Management and Oversight (20%): governance, risk, third parties, compliance, audits, awareness",
-            "[A]Performance-based questions: firewall rule ordering, device placement and log analysis",
-            "[A]*Timed full-length practice exams; drill any domain below 80%",
-            "[A]Book and pass the exam"
-          ]
-        },
-        {
-          "t": "Exam prep: eJPT (INE)",
-          "i": [
-            "[B]*Exam basics: 48-hour browser lab, 35 questions, 70% to pass (PJPT is an Active Directory-focused alternative)",
-            "[I]Assessment Methodologies (25%): host discovery, port and service enumeration, vulnerability identification",
-            "[I]Host and Network Auditing (25%): enumerate systems and services, gather hashes and credentials, transfer files",
-            "[I]*Host and Network Penetration Testing (35%): exploitation including Metasploit, brute force, hash cracking, pivoting",
-            "[I]Web Application Penetration Testing (15%): web recon, hidden directories, login brute force, common web vulnerabilities",
-            "[A]*Full practice lab under exam conditions with a methodology checklist and notes",
-            "[A]Book and pass the exam"
-          ]
-        },
-        {
-          "t": "Exam prep: Microsoft SC-200",
-          "i": [
-            "[B]*Exam basics: skills outline as of 21 October 2026, 700 to pass, free annual renewal; free Microsoft Learn path and practice assessment",
-            "[B]Ingest data into Sentinel: data connectors, Windows Security Events via AMA, Syslog and CEF, Azure activity logs, custom tables",
-            "[I]Configure automation: Defender for Endpoint settings and ASR rules, automated investigation, Sentinel automation rules and playbooks",
-            "[I]*Configure detections: Advanced Hunting custom detections, Sentinel analytics rules (scheduled, NRT), MITRE ATT&CK coverage",
-            "[I]*Respond to incidents in Defender XDR: Office 365, Entra ID, Defender for Identity, Cloud Apps, Purview and Sentinel alerts",
-            "[I]Respond on endpoints and M365: device timelines, live response, investigation packages, Purview Audit",
-            "[A]*Threat hunting (20-25%): choose tables, KQL and Advanced Hunting, threat analytics, hunting graphs, Sentinel hunting queries",
-            "[A]Manage the platform: Sentinel roles, data retention tiers, workbooks and SOC optimization",
-            "[A]Practice assessment, then book and pass the exam"
-          ]
-        },
-        {
-          "t": "Exam prep: Blue Team Level 1 (BTL1)",
-          "i": [
-            "[B]*Exam basics: 24-hour practical incident response exam, 70% to pass (provider renamed Centri in June 2026)",
-            "[B]Security Fundamentals: controls, networking, risk and Active Directory basics",
-            "[I]Phishing Analysis: headers, URLs, attachments, artefacts, defensive actions and reporting",
-            "[I]Threat Intelligence: actors and APTs, operational, tactical and strategic intelligence, MITRE ATT&CK",
-            "[I]*Digital Forensics: evidence collection, Windows and Linux investigations, Volatility, Autopsy",
-            "[I]*SIEM: logging, aggregation, correlation and investigation in Splunk",
-            "[A]*Incident Response: NIST lifecycle, linking SIEM alerts to forensic artefacts across one incident",
-            "[A]Practise full investigations on CyberDefenders, then book and pass the exam"
-          ]
-        },
-        {
-          "t": "IoT security (COMP816)",
-          "i": [
-            "[B]*IoT architecture, protocols (MQTT, CoAP) and the expanded attack surface",
-            "[B]*Device, firmware, network and cloud layers of IoT risk",
-            "[I]Firmware extraction and analysis basics",
-            "[A]Hardware interfaces and common IoT weaknesses (OWASP IoT Top 10)",
-            "[A]Securing IoT: identity, updates, segmentation and monitoring"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "E",
-      "name": "Certification alternatives (optional)",
-      "goal": "Optional: ISC2 CC as a cheaper, lighter alternative to Security+. Take one of the two, not both. Not scheduled.",
-      "groups": [
-        {
-          "t": "Exam prep: ISC2 Certified in Cybersecurity (CC)",
-          "i": [
-            "[B]*Exam basics: adaptive, 100-125 items in 2 hours, 700/1000 to pass; outline effective 1 September 2026; US$199 plus US$50 a year",
-            "[B]Domain 1 Security Principles (24%): CIA, AAA, privacy, risk management, control types, ISC2 Code of Ethics",
-            "[I]Domain 2 Security Governance (17.3%): GRC planning, redundancy and BCDR, security awareness, measuring effectiveness",
-            "[I]Domain 3 Identity and Access Management Concepts (20%): logical access controls and identity lifecycle",
-            "[I]Domain 4 Networking and Cloud Security Concepts (21.3%): network security, architecture, cloud security, zero trust",
-            "[I]Domain 5 Security Operations and Incident Response (17.3%): data security, operations, IR, asset protection, testing",
-            "[A]Timed practice exams written for the post-September 2026 outline",
-            "[A]Book and pass the exam"
           ]
         }
       ]

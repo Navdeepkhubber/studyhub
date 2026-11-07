@@ -172,22 +172,16 @@ const securityGroups = [
     'Maintain a literature matrix and annotated bibliography',
     'Reproducible experiments, versioning and an audit trail',
   ] },
-  { t: 'Security architecture, engineering and career', i: [
+  { t: 'Security architecture and governance', i: [
     '*Security architecture principles and trust boundaries',
-    '*Zero trust concepts and practical access decisions',
-    'Network segmentation and secure remote access',
-    'Risk registers, treatment plans and control ownership',
-    '*NIST SP 800-53 control families and evidence',
-    'ISO/IEC 27001 ISMS concepts and audit evidence',
-    'CIS Controls and CIS Benchmarks for hardening',
-    'NZ Information Security Manual (NZISM) and government context',
-    'Privacy by design and data minimization',
-    'Business continuity, backup and recovery testing',
-    '*Choose a target role and map evidence to its requirements',
-    '*Security-focused resume and STAR examples with measurable evidence',
-    'Portfolio hygiene: remove secrets, sanitize data, verify licences',
-    '*Interview preparation: networking, Linux, web, forensics and security concepts',
-    'Build a 90-day learning and job-search plan',
+    '*Zero trust: design the access decisions for a small organisation',
+    'Network segmentation and secure remote access design',
+    '*Risk assessment: build a risk register with likelihood, impact and treatment',
+    'Controls in practice: map the CIS Controls to a small organisation (compare ISO 27001 and NZISM)',
+    'CIS Benchmarks: harden a Linux or Windows host and verify the result',
+    'Write a security policy and a network security policy for a case (COMP833)',
+    'Privacy by design and data minimisation in a system you build',
+    'Backup and recovery: design a plan and test a real restore',
   ] },
   // ---- New in-demand tracks (groups 13-18) ----
   { t: 'Cybercrime, law and policy (COMP844)', i: [
@@ -265,20 +259,7 @@ const securityGroups = [
     '[A]Detecting identity attacks with Defender for Identity and Sentinel',
     '[A]AD hardening: tiered admin model, LAPS, least privilege and auditing',
   ] },
-  { t: 'NZ job search and professional presence', i: [
-    '[B]*Check work-rights eligibility on every listing before applying',
-    '[B]*NZ-format CV and tailored cover letter for security roles',
-    '[B]*LinkedIn profile and a GitHub with two or three security projects',
-    '[B]Register with Summer of Tech and AUT Employability and Careers',
-    '[I]*Apply in the March–April graduate and internship round',
-    '[I]Join the AUT Cyber Security & Intelligence club and compete in CTFs',
-    '[I]Network in person: meetups, Kawaiicon, the NZ Cyber Security Challenge',
-    '[I]Behavioural interviews: STAR stories from labs, projects and work',
-    '[A]Technical interviews: explain a lab, a detection or a finding out loud',
-    '[A]Write up and publish one project or CTF solution per month',
-  ] },
   { t: 'Exam prep: CompTIA Security+ (SY0-701)', i: [
-    '[B]*Exam basics: 5 domains, up to 90 questions in 90 minutes, PBQs, 750/900 to pass; confirm SY0-701 or SY0-801 before booking',
     '[B]Domain 1 General Security Concepts (12%): control types, CIA and AAA, zero trust, change management, cryptographic solutions',
     '[I]*Domain 2 Threats, Vulnerabilities and Mitigations (22%): threat actors, vectors, vulnerability types, indicators, mitigations',
     '[I]Domain 3 Security Architecture (18%): architecture models, secure infrastructure, data protection, resilience and recovery',
@@ -286,19 +267,15 @@ const securityGroups = [
     '[I]Domain 5 Security Program Management and Oversight (20%): governance, risk, third parties, compliance, audits, awareness',
     '[A]Performance-based questions: firewall rule ordering, device placement and log analysis',
     '[A]*Timed full-length practice exams; drill any domain below 80%',
-    '[A]Book and pass the exam',
   ] },
   { t: 'Exam prep: eJPT (INE)', i: [
-    '[B]*Exam basics: 48-hour browser lab, 35 questions, 70% to pass (PJPT is an Active Directory-focused alternative)',
     '[I]Assessment Methodologies (25%): host discovery, port and service enumeration, vulnerability identification',
     '[I]Host and Network Auditing (25%): enumerate systems and services, gather hashes and credentials, transfer files',
     '[I]*Host and Network Penetration Testing (35%): exploitation including Metasploit, brute force, hash cracking, pivoting',
     '[I]Web Application Penetration Testing (15%): web recon, hidden directories, login brute force, common web vulnerabilities',
     '[A]*Full practice lab under exam conditions with a methodology checklist and notes',
-    '[A]Book and pass the exam',
   ] },
   { t: 'Exam prep: Microsoft SC-200', i: [
-    '[B]*Exam basics: skills outline as of 21 October 2026, 700 to pass, free annual renewal; free Microsoft Learn path and practice assessment',
     '[B]Ingest data into Sentinel: data connectors, Windows Security Events via AMA, Syslog and CEF, Azure activity logs, custom tables',
     '[I]Configure automation: Defender for Endpoint settings and ASR rules, automated investigation, Sentinel automation rules and playbooks',
     '[I]*Configure detections: Advanced Hunting custom detections, Sentinel analytics rules (scheduled, NRT), MITRE ATT&CK coverage',
@@ -306,17 +283,16 @@ const securityGroups = [
     '[I]Respond on endpoints and M365: device timelines, live response, investigation packages, Purview Audit',
     '[A]*Threat hunting (20-25%): choose tables, KQL and Advanced Hunting, threat analytics, hunting graphs, Sentinel hunting queries',
     '[A]Manage the platform: Sentinel roles, data retention tiers, workbooks and SOC optimization',
-    '[A]Practice assessment, then book and pass the exam',
+    '[A]*Score 80% or more on the free Microsoft practice assessment',
   ] },
   { t: 'Exam prep: Blue Team Level 1 (BTL1)', i: [
-    '[B]*Exam basics: 24-hour practical incident response exam, 70% to pass (provider renamed Centri in June 2026)',
     '[B]Security Fundamentals: controls, networking, risk and Active Directory basics',
     '[I]Phishing Analysis: headers, URLs, attachments, artefacts, defensive actions and reporting',
     '[I]Threat Intelligence: actors and APTs, operational, tactical and strategic intelligence, MITRE ATT&CK',
     '[I]*Digital Forensics: evidence collection, Windows and Linux investigations, Volatility, Autopsy',
     '[I]*SIEM: logging, aggregation, correlation and investigation in Splunk',
     '[A]*Incident Response: NIST lifecycle, linking SIEM alerts to forensic artefacts across one incident',
-    '[A]Practise full investigations on CyberDefenders, then book and pass the exam',
+    '[A]*Work three full investigations on CyberDefenders without hints',
   ] },
   { t: 'IoT security (COMP816)', i: [
     '*IoT architecture, protocols (MQTT, CoAP) and the expanded attack surface',
@@ -357,14 +333,12 @@ const D = oldRoadmap.tracks.find(t => t.id === 'D');
 
 const ccGroups = [
   { t: 'Exam prep: ISC2 Certified in Cybersecurity (CC)', i: [
-    '[B]*Exam basics: adaptive, 100-125 items in 2 hours, 700/1000 to pass; outline effective 1 September 2026; US$199 plus US$50 a year',
     '[B]Domain 1 Security Principles (24%): CIA, AAA, privacy, risk management, control types, ISC2 Code of Ethics',
     '[I]Domain 2 Security Governance (17.3%): GRC planning, redundancy and BCDR, security awareness, measuring effectiveness',
     '[I]Domain 3 Identity and Access Management Concepts (20%): logical access controls and identity lifecycle',
     '[I]Domain 4 Networking and Cloud Security Concepts (21.3%): network security, architecture, cloud security, zero trust',
     '[I]Domain 5 Security Operations and Incident Response (17.3%): data security, operations, IR, asset protection, testing',
-    '[A]Timed practice exams written for the post-September 2026 outline',
-    '[A]Book and pass the exam',
+    '[A]*Timed practice exams written for the post-September 2026 outline',
   ] },
 ];
 const tracks = [
@@ -420,7 +394,7 @@ const half = (g, which) => { const k = keysOf(g); const mid = Math.ceil(k.length
 const BLOCKS = 72;
 const PHASE_LEN = 8;
 const phaseNames = [
-  'Foundations, systems & Security+',
+  'Foundations, Linux & Security+',
   'Networking, secure coding & cryptography',
   'Web security & offensive labs',
   'SOC, SIEM & detection engineering',
@@ -428,7 +402,7 @@ const phaseNames = [
   'Cloud, IoT & application security',
   'AI security & emerging skills',
   'Research methods & dissertation',
-  'Career, cybercrime law & consolidation',
+  'Cybercrime law, governance & portfolio',
 ];
 // Phases reference groups by name via gi(), so adding or reordering groups above
 // never silently misplaces content. Each phase runs over exactly 8 blocks.
@@ -446,7 +420,7 @@ const G = {
   cloudCore: gi('Cloud and infrastructure'),
   appsec: gi('Application security and DevSecOps'),
   research: gi('Research methods'),
-  career: gi('architecture, engineering and career'),
+  career: gi('Security architecture and governance'),
   cybercrime: gi('Cybercrime, law'),
   siem: gi('SIEM and detection'),
   aisec: gi('AI security'),
@@ -458,10 +432,9 @@ const G = {
   ejpt: gi('Exam prep: eJPT'),
   sc200: gi('Exam prep: Microsoft SC-200'),
   btl1: gi('Exam prep: Blue Team Level 1'),
-  jobsearch: gi('NZ job search'),
 };
 const phaseGroups = [
-  interleave([keysOf(G.jobsearch), keysOf(G.foundations), keysOf(G.os), keysOf(G.scripting), keysOf(G.secplus)]), // P1 foundations + OS + scripting + networking + NZ job search (the first application round opens weeks after arrival)
+  interleave([keysOf(G.foundations), keysOf(G.os), keysOf(G.scripting), keysOf(G.secplus)]), // P1 foundations + OS + scripting + networking + NZ job search (the first application round opens weeks after arrival)
   interleave([keysOf(G.networking), keysOf(G.secureCoding), keysOf(G.crypto)]),                        // P2 secure coding + cryptography (COMP830)
   interleave([keysOf(G.web), keysOf(G.pentest), keysOf(G.ad), keysOf(G.ejpt)]),                 // P3 web + offensive labs + Active Directory
   interleave([keysOf(G.soc), keysOf(G.siem), keysOf(G.sc200)]),                                   // P4 SOC/IR + Sentinel/KQL detection (NZ market)
@@ -502,15 +475,31 @@ for (let b = 0; b < BLOCKS; b++) {
   }
 }
 
-// Titles: name each block by the groups its checkpoints come from.
-const groupName = (g) => securityGroups[g].t;
+// Titles: short skill names for the (at most three) skills with the most checkpoints
+// that week, so a title reads like "Linux & Windows · Scripting" rather than a list
+// of full group names.
+const SHORT = {
+  [G.foundations]: 'Security foundations', [G.networking]: 'Networking', [G.os]: 'Linux & Windows',
+  [G.scripting]: 'Scripting', [G.secureCoding]: 'Secure coding', [G.crypto]: 'Cryptography',
+  [G.web]: 'Web security', [G.pentest]: 'Pentesting', [G.ad]: 'Active Directory', [G.soc]: 'SOC & incident response',
+  [G.siem]: 'Sentinel & KQL', [G.forensics]: 'Digital forensics', [G.malware]: 'Malware analysis',
+  [G.cloudCore]: 'Cloud security', [G.cloudDepth]: 'Cloud security', [G.appsec]: 'AppSec & DevSecOps',
+  [G.aisec]: 'AI security', [G.iot]: 'IoT security', [G.research]: 'Research methods',
+  [G.career]: 'Architecture & governance', [G.cybercrime]: 'Cybercrime law', [G.secplus]: 'Security+ prep',
+  [G.ejpt]: 'eJPT prep', [G.sc200]: 'SC-200 prep', [G.btl1]: 'BTL1 prep',
+};
+for (const [g, name] of Object.entries(SHORT)) if (!name) throw new Error(`No short name for group ${g}`);
 for (const w of weeks) {
-  const gs = [...new Set(w.topics.map(k => Number(k.split('-')[1])))].map(groupName);
-  w.title = gs.join(' · ') || 'Review and consolidation';
+  const counts = new Map();
+  for (const k of w.topics) { const name = SHORT[Number(k.split('-')[1])]; counts.set(name, (counts.get(name) ?? 0) + 1); }
+  const names = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([name]) => name);
+  w.title = names.join(' · ') || 'Review';
 }
 
 const phases = phaseNames.map((name, i) => ({ name, start: i * 8 + 1, end: i * 8 + 8 }));
 
+const TRACK_ORDER = ['C', 'E', 'A', 'B', 'D'];
+tracks.sort((a, b) => TRACK_ORDER.indexOf(a.id) - TRACK_ORDER.indexOf(b.id));
 const plan = {
   version: 2,
   source: 'Security-first 72-block plan for the AUT Master of Cyber Security and Digital Forensics. Only the cybersecurity and digital forensics track (C) is scheduled; data engineering, GenAI and interview tracks remain optional in the Atlas.',
@@ -625,75 +614,134 @@ const act = {
   build: 'Build a small reproducible artifact, test the security property, and document assumptions and limitations.',
   review: 'Write a short design or review note: threat, evidence, impact, recommended fix and retest result.',
 };
-const secGroupRes = {
-  [G.foundations]: ['cyberFund', 'cyberTryHack', act.concept, ['cyberFund']],
-  [G.networking]: ['cyberNetwork', 'cyberWireshark', act.demo, ['cyberNmap']],
-  [G.os]: ['cyberLinux', 'cyberPractice', act.build, ['cyberLinux']],
-  [G.scripting]: ['cyberPython', 'cyberPractice', act.build, ['cyberBash', 'cyberPowershell']],
-  [G.secureCoding]: ['cyberSecure', 'cyberHacksplaining', act.review, ['cyberTop10']],
-  [G.crypto]: ['cyberCrypto', 'cyberCryptopals', act.build, ['cyberSecure']],
-  [G.web]: ['cyberWstg', 'cyberPortswigger', act.demo, ['cyberTop10']],
-  [G.pentest]: ['cyberWstg', 'cyberHTB', act.demo, ['cyberTryHack']],
-  [G.soc]: ['cyberNist', 'cyberCapstone', act.build, ['cyberAttack', 'cyberSigma']],
-  [G.forensics]: ['cyberForensics', 'cyberCapstone', act.build, ['cyberDFIR', 'cyberVolatility']],
-  [G.cloudCore]: ['cyberAzureSec', 'cyberAzureLearn', act.review, ['cyberDefenderCloud', 'cyberCloud']],
-  [G.appsec]: ['cyberWell', 'cyberSecure', act.review, ['cyberCisa']],
-  [G.research]: ['cyberResearchMethods', 'cyberResearch', act.build, ['cyberResearch']],
-  [G.career]: ['cyberNist53', 'cyberSeek', act.review, ['cyberIso', 'cyberCis', 'cyberNzism', 'cyberResume']],
-  [G.cybercrime]: ['cyberNzLaw', 'cyberFund', act.review, ['cyberPrivacyNz', 'cyberCrimesAct']],
-  [G.siem]: ['cyberSentinel', 'cyberKql', act.build, ['cyberSc200', 'cyberSigma']],
-  [G.aisec]: ['cyberLlmTop10b', 'cyberAiLab', act.build, ['cyberAiRmf', 'cyberHfLlm']],
-  [G.malware]: ['cyberMalware', 'cyberGhidra', act.build, ['cyberx64dbg', 'cyberYara']],
-  [G.cloudDepth]: ['cyberAzureSec', 'cyberProwler', act.review, ['cyberDefenderCloud', 'cyberKubeSec', 'cyberCloud']],
-  [G.secplus]: ['cyberSecPlus', 'cyberTryHack', act.concept, ['cyberSecPlus']],
-  [G.ejpt]: ['cyberEjpt', 'cyberHTB', act.demo, ['cyberTcm']],
-  [G.sc200]: ['cyberSc200Guide', 'cyberSc200Practice', act.build, ['cyberSentinel', 'cyberDefender', 'cyberKql']],
-  [G.btl1]: ['cyberBtl1', 'cyberCapstone', act.build, ['cyberVolatility']],
-  [G.iot]: ['cyberIotTop10', 'cyberTryHack', act.demo, ['cyberIotTop10']],
-  [G.ad]: ['cyberAdLearn', 'cyberHTB', act.demo, ['cyberEntra', 'cyberMdi']],
-  [G.jobsearch]: ['cyberResume', 'cyberSot', act.review, ['cyberSeek', 'cyberAutCareers']],
+// ---- Learning resources: one strong place to learn, one hands-on place to practise,
+// and a concrete task per skill. Policy documents and link lists are not used as
+// lessons. Rows: [learnId, practiceId, task, extraIds?]
+Object.assign(src, {
+  messerSecPlus: ['Professor Messer: free Security+ SY0-701 course', 'https://www.professormesser.com/sy0-701-certification-course/'],
+  thmFree: ['TryHackMe: guide to the 500+ free rooms', 'https://tryhackme.com/resources/blog/free_path'],
+  thmPreSec: ['TryHackMe Pre Security path', 'https://tryhackme.com/path/outline/presecurity'],
+  thmSoc1: ['TryHackMe SOC Level 1 path', 'https://tryhackme.com/path/outline/soclevel1'],
+  thmJrPentest: ['TryHackMe Jr Penetration Tester path', 'https://tryhackme.com/path/outline/jrpenetrationtester'],
+  letsDefend: ['LetsDefend: SOC alert practice', 'https://letsdefend.io/'],
+  otwBandit: ['OverTheWire Bandit (Linux wargame)', 'https://overthewire.org/wargames/bandit/'],
+  picoCtf: ['picoCTF practice challenges', 'https://picoctf.org/'],
+  wiresharkSamples: ['Wireshark sample captures', 'https://wiki.wireshark.org/SampleCaptures'],
+  juiceShop: ['OWASP Juice Shop (vulnerable app to practise on)', 'https://owasp.org/www-project-juice-shop/'],
+  asvs: ['OWASP Application Security Verification Standard', 'https://owasp.org/www-project-application-security-verification-standard/'],
+  semgrepPlay: ['Semgrep playground (try SAST rules)', 'https://semgrep.dev/playground'],
+  threatDragon: ['OWASP Threat Dragon (threat modelling tool)', 'https://owasp.org/www-project-threat-dragon/'],
+  goad: ['GOAD: free vulnerable Active Directory lab', 'https://github.com/Orange-Cyberdefense/GOAD'],
+  kustoDetective: ['Kusto Detective Agency (KQL investigations)', 'https://detective.kusto.io/'],
+  autopsyDocs: ['Autopsy user guide', 'https://sleuthkit.org/autopsy/docs/user-docs/latest/'],
+  zimmerman: ["Eric Zimmerman's forensic tools", 'https://ericzimmerman.github.io/'],
+  crackmes: ['crackmes.one (safe reverse-engineering practice)', 'https://crackmes.one/'],
+  portswiggerLlm: ['PortSwigger: LLM attacks topic and labs', 'https://portswigger.net/web-security/llm-attacks'],
+  gandalf: ['Gandalf by Lakera (prompt injection game)', 'https://gandalf.lakera.ai/'],
+  binwalk: ['binwalk (firmware analysis tool)', 'https://github.com/ReFirmLabs/binwalk'],
+  keshavPaper: ['How to Read a Paper (S. Keshav)', 'https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf'],
+  usenixSec: ['USENIX Security papers (free to read)', 'https://www.usenix.org/conferences/byname/108'],
+  zotero: ['Zotero (reference manager)', 'https://www.zotero.org/'],
+  scholar: ['Google Scholar', 'https://scholar.google.com/'],
+  sansPolicy: ['SANS security policy templates', 'https://www.sans.org/information-security-policy/'],
+  nzlii: ['NZLII: New Zealand case law', 'https://www.nzlii.org/'],
+  ncscNz: ['NCSC New Zealand threat reports and advisories', 'https://www.ncsc.govt.nz/'],
+});
+const T = {
+  study: 'Learn it from the course above, then practise until you can explain it without notes.',
+  foundations: 'Explain this in your own words with one real breach as an example, then answer the matching free TryHackMe room.',
+  networking: 'Capture traffic that shows this in Wireshark, annotate the key packets, and explain what each one does.',
+  os: 'Do this on a lab VM from the command line, and keep the commands and their output in your notes.',
+  scripting: 'Write a small script that uses this on a real task (for example parsing a log file) and push it to GitHub.',
+  secureCoding: 'Write a small insecure example and the fixed version side by side, and explain the difference.',
+  crypto: 'Work it through in Python or a Cryptopals challenge, and explain why the secure choice is secure.',
+  web: 'Solve the PortSwigger labs for this, then write the root cause and the fix in two or three sentences.',
+  pentest: 'Practise this on a TryHackMe or Hack The Box machine, and write it up as a short finding with evidence.',
+  ad: 'Practise this in a lab domain (GOAD or a TryHackMe AD room), then note how a defender would detect it.',
+  soc: 'Investigate this in a TryHackMe SOC room or a LetsDefend alert, and write a short triage note: what happened, evidence, verdict.',
+  siem: 'Write and run KQL for this (Sentinel lab or Kusto Detective Agency), and save the query with a one-line explanation.',
+  forensics: 'Practise this on a CyberDefenders case, and record the artefact, the tool you used, and what it proved.',
+  malware: 'Apply this to a crackme or a known-safe training sample in an isolated VM, and note what you found.',
+  cloud: 'Build this in a free Azure sandbox or trial, check it with Defender for Cloud or Prowler, then tear it down.',
+  appsec: 'Apply this to OWASP Juice Shop or your own project (for example with Semgrep), and triage what it finds.',
+  aisec: 'Try this in the PortSwigger LLM labs or Gandalf, then describe the defence that would have stopped you.',
+  iot: 'Explore this with a firmware image and binwalk, and note the weakness and how to fix it.',
+  research: 'Do this for your own dissertation idea and save the result in your research log.',
+  governance: 'Produce a one-page document for this, using a small fictional organisation as the case.',
+  law: 'Find one NZ case or real incident that shows this (NZLII or NCSC NZ), and summarise the legal and technical points.',
+  exam: 'Study this from the free course, then score at least 80% on practice questions for it before moving on.',
+  examLab: 'Practise this on lab machines until you can do it without notes.',
+  sc200: 'Do the matching Microsoft Learn module and its sandbox exercise, and note anything you could not do yet.',
 };
+const secGroupRes = {
+  [G.foundations]: ['messerSecPlus', 'thmFree', T.foundations, ['threatDragon']],
+  [G.networking]: ['cyberNetwork', 'wiresharkSamples', T.networking, ['cyberNmap']],
+  [G.os]: ['cyberLinux', 'otwBandit', T.os],
+  [G.scripting]: ['cyberPython', 'picoCtf', T.scripting],
+  [G.secureCoding]: ['cyberSecure', 'juiceShop', T.secureCoding],
+  [G.crypto]: ['cyberCrypto', 'cyberCryptopals', T.crypto],
+  [G.web]: ['cyberPortswigger', 'juiceShop', T.web],
+  [G.pentest]: ['thmJrPentest', 'cyberHTB', T.pentest],
+  [G.ad]: ['cyberAdLearn', 'goad', T.ad, ['cyberMdi']],
+  [G.soc]: ['thmSoc1', 'letsDefend', T.soc, ['cyberCapstone']],
+  [G.siem]: ['cyberSentinel', 'kustoDetective', T.siem, ['cyberKql']],
+  [G.forensics]: ['autopsyDocs', 'cyberCapstone', T.forensics, ['zimmerman']],
+  [G.malware]: ['cyberMalware', 'crackmes', T.malware, ['cyberGhidra']],
+  [G.cloudCore]: ['cyberAzureSec', 'cyberAzureLearn', T.cloud],
+  [G.cloudDepth]: ['cyberDefenderCloud', 'cyberProwler', T.cloud, ['cyberKubeSec']],
+  [G.appsec]: ['asvs', 'semgrepPlay', T.appsec, ['juiceShop']],
+  [G.aisec]: ['portswiggerLlm', 'gandalf', T.aisec, ['cyberLlmTop10b']],
+  [G.iot]: ['cyberIotTop10', 'binwalk', T.iot],
+  [G.research]: ['keshavPaper', 'usenixSec', T.research, ['zotero']],
+  [G.career]: ['cyberCis', 'sansPolicy', T.governance],
+  [G.cybercrime]: ['cyberCrimesAct', 'nzlii', T.law, ['cyberPrivacyNz']],
+  [G.secplus]: ['messerSecPlus', 'thmFree', T.exam],
+  [G.ejpt]: ['cyberEjpt', 'thmJrPentest', T.examLab],
+  [G.sc200]: ['cyberSc200Guide', 'cyberSc200Practice', T.sc200, ['kustoDetective']],
+  [G.btl1]: ['cyberBtl1', 'cyberCapstone', T.examLab, ['letsDefend']],
+};
+for (let g = 0; g < securityGroups.length; g++) if (!secGroupRes[g]) throw new Error(`No resources for group: ${securityGroups[g].t}`);
 
-// Per-checkpoint overrides for the security track where a more precise link helps.
-// Per-checkpoint overrides, targeted by a text match within a named group so they
-// survive reordering. Each entry: [groupNeedle, textNeedle, row].
+// A few checkpoints get a more precise link than their group default.
+// Entries: [groupNeedle, textNeedle, learnId, practiceId].
 const secTopicOverrides = [
-  ['Cloud and infrastructure', 'SC-900 or AZ-900', ['cyberSc900', 'cyberAzureLearn', act.concept, ['cyberSc900']]],
-  ['Cloud security depth', 'SC-500', ['cyberSc500', 'cyberAzureSec', act.concept, ['cyberSc500']]],
-  ['Penetration testing', 'PNPT then OSCP', ['cyberTcm', 'cyberOscp', act.concept, ['cyberOscp']]],
-  ['SIEM and detection', 'Security data engineering', ['cyberAsim', 'cyberKql', act.build, ['cyberSentinel']]],
-  ['NZ job search', 'Summer of Tech', ['cyberSot', 'cyberAutCareers', act.review, ['cyberSot']]],
-  ['Networking', 'Packet capture with Wireshark', ['cyberWireshark', 'cyberWireshark', act.demo, ['cyberNetwork']]],
-  ['Networking', 'Network scanning with nmap', ['cyberNmap', 'cyberHTB', act.demo, ['cyberNmap']]],
-  ['Scripting', 'Bash basics', ['cyberBash', 'cyberPractice', act.build, ['cyberBash']]],
-  ['Scripting', 'Bash scripting', ['cyberBash', 'cyberPractice', act.build, ['cyberBash']]],
-  ['Scripting', 'Python from scratch', ['cyberPython', 'cyberPyPractice', act.build, ['cyberPython']]],
-  ['Scripting', 'Python files, strings', ['cyberPython', 'cyberPyPractice', act.build, ['cyberPython']]],
-  ['Scripting', 'PowerShell basics', ['cyberPowershell', 'cyberPractice', act.build, ['cyberPowershell']]],
-  ['Scripting', 'PowerShell for investigation', ['cyberPowershell', 'cyberCapstone', act.build, ['cyberPowershell']]],
-  ['Cryptography', 'Number theory', ['cyberCrypto', 'cyberCrypto', act.concept, ['cyberCrypto']]],
-  ['Web application', 'OWASP Top 10 overview', ['cyberTop10', 'cyberPortswigger', act.demo, ['cyberWstg']]],
-  ['Web application', 'SQL injection', ['cyberWstg', 'cyberPortswigger', act.demo, ['cyberPortswigger', 'cyberHacksplaining']]],
-  ['Web application', 'Cross-site scripting', ['cyberWstg', 'cyberPortswigger', act.demo, ['cyberPortswigger', 'cyberHacksplaining']]],
-  ['SOC and incident', 'MITRE ATT&CK', ['cyberAttack', 'cyberCapstone', act.build, ['cyberAttack']]],
-  ['SOC and incident', 'Sigma detection', ['cyberSigma', 'cyberCapstone', act.build, ['cyberSigma']]],
-  ['SIEM and detection', 'KQL fundamentals', ['cyberKql', 'cyberKql', act.build, ['cyberSentinel']]],
-  ['SIEM and detection', 'KQL for hunting', ['cyberKql', 'cyberKql', act.build, ['cyberSentinel']]],
-  ['Digital forensics', 'Memory forensics', ['cyberVolatility', 'cyberCapstone', act.build, ['cyberVolatility']]],
-  ['Malware analysis', 'Disassembly and decompilation', ['cyberGhidra', 'cyberGhidra', act.build, ['cyberGhidra']]],
-  ['Malware analysis', 'Writing YARA rules', ['cyberYara', 'cyberCapstone', act.build, ['cyberYara']]],
-  ['AI security', 'prompt injection', ['cyberLlmTop10b', 'cyberAiLab', act.demo, ['cyberLlmTop10b']]],
-  ['Research methods', 'researchable question', ['cyberResearchMethods', 'cyberResearch', act.concept, ['cyberResearchMethods']]],
-  ['architecture, engineering and career', 'target role', ['cyberSeek', 'cyberSeek', act.review, ['cyberResume']]],
-  ['architecture, engineering and career', 'resume', ['cyberResume', 'cyberSeek', act.review, ['cyberResume']]],
-  ['architecture, engineering and career', 'Interview preparation', ['cyberFund', 'cyberTryHack', act.review, ['cyberPortswigger']]],
+  ['Cloud and infrastructure', 'SC-900 or AZ-900', 'cyberSc900', 'cyberAzureLearn'],
+  ['Cloud security depth', 'SC-500', 'cyberSc500', 'cyberAzureSec'],
+  ['Penetration testing', 'PNPT then OSCP', 'cyberTcm', 'cyberOscp'],
+  ['SIEM and detection', 'Security data engineering', 'cyberAsim', 'kustoDetective'],
+  ['SIEM and detection', 'KQL fundamentals', 'cyberKql', 'kustoDetective'],
+  ['SIEM and detection', 'KQL for hunting', 'cyberKql', 'kustoDetective'],
+  ['Networking', 'Network scanning with nmap', 'cyberNmap', 'thmPreSec'],
+  ['Security foundations', 'Threat modelling with STRIDE', 'threatDragon', 'threatDragon'],
+  ['Security foundations', 'Build a home lab', 'thmPreSec', 'thmFree'],
+  ['Scripting', 'Bash basics', 'cyberBash', 'otwBandit'],
+  ['Scripting', 'Bash scripting', 'cyberBash', 'otwBandit'],
+  ['Scripting', 'Bash for security', 'cyberBash', 'otwBandit'],
+  ['Scripting', 'Python from scratch', 'cyberPython', 'cyberPyPractice'],
+  ['Scripting', 'PowerShell basics', 'cyberPowershell', 'thmFree'],
+  ['Scripting', 'PowerShell for investigation', 'cyberPowershell', 'cyberCapstone'],
+  ['Scripting', 'Git and GitHub', 'gitBasics', 'githubPractice'],
+  ['Cryptography', 'Number theory', 'cyberCrypto', 'cyberCryptopals'],
+  ['Cryptography', 'OAuth 2.0', 'cyberOauth', 'cyberPortswigger'],
+  ['SOC and incident', 'MITRE ATT&CK', 'cyberAttack', 'letsDefend'],
+  ['SOC and incident', 'Sigma detection', 'cyberSigma', 'cyberCapstone'],
+  ['Digital forensics', 'Memory forensics', 'cyberVolatility', 'cyberCapstone'],
+  ['Digital forensics', 'Network forensics', 'cyberWireshark', 'wiresharkSamples'],
+  ['Malware analysis', 'Disassembly and decompilation', 'cyberGhidra', 'crackmes'],
+  ['Malware analysis', 'Debugging with x64dbg', 'cyberx64dbg', 'crackmes'],
+  ['Malware analysis', 'Writing YARA rules', 'cyberYara', 'cyberCapstone'],
+  ['Research methods', 'Literature search', 'scholar', 'zotero'],
+  ['Security architecture', 'CIS Benchmarks', 'cyberCis', 'thmFree'],
+  ['Cybercrime, law', 'Privacy Act 2020', 'cyberPrivacyNz', 'nzlii'],
+  ['Cybercrime, law', 'threat landscape', 'ncscNz', 'ncscNz'],
 ];
 const secTopicRes = {};
-for (const [groupNeedle, textNeedle, row] of secTopicOverrides) {
+for (const [groupNeedle, textNeedle, learn, practice] of secTopicOverrides) {
   const g = gi(groupNeedle);
   const idx = securityGroups[g].i.findIndex((it) => it.replace(/^\[(B|I|A)\]/, '').replace(/^\*/, '').toLowerCase().includes(textNeedle.toLowerCase()));
-  if (idx >= 0) secTopicRes[`C-${g}-${idx}`] = row;
-  else console.warn(`override not matched: ${groupNeedle} / ${textNeedle}`);
+  if (idx < 0) throw new Error(`override not matched: ${groupNeedle} / ${textNeedle}`);
+  if (!src[learn] || !src[practice]) throw new Error(`override uses unknown source: ${learn} / ${practice}`);
+  secTopicRes[`C-${g}-${idx}`] = [learn, practice];
 }
 
 // Build resources.groups: one row per group across ALL tracks (check requires this).
@@ -702,43 +750,27 @@ for (const t of tracks) {
   for (let gi = 0; gi < t.groups.length; gi++) {
     const key = `${t.id}-${gi}`;
     if (t.id === 'C') { groups[key] = secGroupRes[gi]; continue; }
-    // Optional tracks: reuse the old group row if it still exists, else a sane default.
     groups[key] = oldRes.groups[key] ?? defaultOptionalRow(t.id);
   }
 }
 function defaultOptionalRow(id) {
-  if (id === 'A') return ['deLearn', 'dePractice', 'Optional brush-up: work one small example and note how it applies to securing data systems.', ['github']];
-  if (id === 'B') return ['hfLlm', 'hfPractice', 'Optional brush-up: try one example and note an AI-security implication (prompt injection, data leakage).', ['cyberLlmTop10']];
-  if (id === 'E') return ['cyberIsc2Outline', 'cyberIsc2cc', 'Optional: study this domain from the official outline and score at least 80% on practice questions for it.', ['cyberIsc2cc']];
-  return ['dsa', 'dsaPractice', 'Optional: solve one problem and record the pattern and complexity.', ['dsa']];
+  if (id === 'A') return ['deLearn', 'dePractice', 'Optional brush-up: work one small example from the practice link.'];
+  if (id === 'B') return ['hfLlm', 'hfPractice', 'Optional brush-up: work one example from the course.'];
+  if (id === 'E') return ['cyberIsc2Outline', 'cyberIsc2cc', T.exam];
+  return ['dsa', 'dsaPractice', 'Optional: solve one problem and note the pattern and its complexity.'];
 }
 
-// Build resources.topics: an override for EVERY checkpoint in every track.
-// Security checkpoints get the tailored action text; optional-track checkpoints
-// inherit their group row so links stay relevant if ever scheduled.
+// Every checkpoint gets its group's task, plus any precise link override.
 const topics = {};
-const actionFor = (trackId, raw, group = '') => {
-  const text = raw.replace(/^\[(B|I|A)\]/, '').replace(/^\*/, '');
-  if (trackId === 'C' && group.startsWith('Exam prep')) return `For “${text}”, study the official objectives for this part, score at least 80% on practice questions for it, and list weak sub-objectives to revisit.`;
-  if (trackId === 'C') return `For “${text}”, complete a safe hands-on exercise, save reproducible evidence, explain the risk and mitigation, then record one limitation.`;
-  if (trackId === 'A') return `Optional brush-up on “${text}”: work one small example and note where it matters for securing data systems.`;
-  if (trackId === 'B') return `Optional brush-up on “${text}”: try one example and note an AI-security implication.`;
-  if (trackId === 'E') return `For “${text}”, study the official objectives, score at least 80% on practice questions for it, and list weak sub-objectives to revisit.`;
-  return `Optional practice on “${text}”: solve or summarize one example and record the key idea.`;
-};
 for (const t of tracks) {
   for (let gi = 0; gi < t.groups.length; gi++) {
-    const groupRow = groups[`${t.id}-${gi}`];
+    const [learn, practice, task, extra] = groups[`${t.id}-${gi}`];
     for (let ii = 0; ii < t.groups[gi].i.length; ii++) {
       const key = `${t.id}-${gi}-${ii}`;
-      if (t.id === 'C') {
-        const override = secTopicRes[key];
-        const [learn, practice, , extra] = override ?? groupRow;
-        topics[key] = [learn, practice, actionFor('C', t.groups[gi].i[ii], t.groups[gi].t), extra ?? [learn]];
-      } else {
-        const [learn, practice, , extra] = groupRow;
-        topics[key] = [learn, practice, actionFor(t.id, t.groups[gi].i[ii]), extra ?? [learn]];
-      }
+      const o = t.id === 'C' ? secTopicRes[key] : undefined;
+      const row = [o ? o[0] : learn, o ? o[1] : practice, task];
+      if (!o && extra && extra.length) row.push(extra);
+      topics[key] = row;
     }
   }
 }
