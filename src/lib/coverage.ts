@@ -3,7 +3,7 @@ import type { AppState } from '../state/model';
 
 export interface ScheduledTopic {
   key: string; trackId: string; track: string; groupIndex: number; itemIndex: number;
-  group: string; text: string; priority: boolean; week: number; taskId: string;
+  group: string; text: string; priority: boolean; level?: 'Beginner' | 'Intermediate' | 'Advanced'; week: number; taskId: string;
 }
 
 /** Every roadmap checkpoint has one exact weekly task; no broad task credits unrelated topics. */

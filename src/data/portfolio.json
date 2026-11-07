@@ -1,10 +1,10 @@
 [
   {
     "id": "soc",
-    "name": "SOC alert triage and detection pack",
+    "name": "Sentinel SOC detection pack (KQL + Sigma)",
     "role": "SOC Analyst · Detection Engineer",
     "weeks": "Weeks 25–38",
-    "brief": "Build a reproducible mini-SIEM workflow on a public or synthetic log set. Normalize events, investigate a seeded scenario, write and test detections, then communicate the incident.",
+    "brief": "Build a reproducible mini-SOC in Microsoft Sentinel (or a free SIEM) on a public or synthetic log set. Ingest and normalize events, write and test KQL/Sigma detections, investigate a seeded incident, then communicate it. Mirrors SC-200 outcomes.",
     "criteria": [
       "Document data source, lab boundaries and event schema",
       "Create a timeline with evidence-linked conclusions",
@@ -72,6 +72,36 @@
       "Enable audit logging, encryption and alert examples",
       "Add policy checks and explain failures versus exceptions",
       "Document deployment assumptions, teardown and cost/safety controls"
+    ]
+  },
+  {
+    "id": "aisec",
+    "name": "AI application red-team report",
+    "role": "AI Security · AppSec Engineer",
+    "weeks": "Weeks 49–60",
+    "brief": "Assess a small LLM or ML application you control. Test prompt injection, insecure output handling and pipeline risks, then propose mitigations mapped to the OWASP LLM Top 10 and NIST AI RMF.",
+    "criteria": [
+      "Define scope, the app's architecture and trust boundaries",
+      "Test direct and indirect prompt injection with safe proof",
+      "Check output handling, data disclosure and excessive agency",
+      "Review the data and model pipeline for integrity risks",
+      "Map findings to OWASP LLM Top 10 and NIST AI RMF",
+      "Recommend guardrails and show a before/after retest"
+    ]
+  },
+  {
+    "id": "malware",
+    "name": "Malware analysis casefile",
+    "role": "Malware Analyst · DFIR",
+    "weeks": "Weeks 33–46",
+    "brief": "Analyse a known-safe training sample in an isolated, snapshotted lab. Combine static and dynamic analysis, then write YARA rules and an IOC report. Never run live malware outside a contained lab.",
+    "criteria": [
+      "Record lab isolation, tooling and handling precautions",
+      "Static analysis: strings, hashes, PE structure and imports",
+      "Dynamic analysis: process, file and network behaviour",
+      "Identify capability and note anti-analysis techniques",
+      "Write YARA rules from observed traits",
+      "Deliver an IOC and capability report with attribution caveats"
     ]
   },
   {

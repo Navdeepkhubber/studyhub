@@ -3,7 +3,8 @@ import { defaultState, parseBackup, sanitize } from './../state/model';
 import { calcStreak, longestStreak, currentWeek, weekPercent, weekTasks, weekOutputReady, weekDate } from './progress';
 import { coverageForWeek, isTopicCovered } from './coverage';
 import { a2zItems, a2zByLc, ncBySlug, ncSolved, a2zSolved, setSolved } from './dsa';
-import { roadmap, neetcode, portfolioProjects } from '../data';
+import { roadmap, neetcode, portfolioProjects, certifications } from '../data';
+import { certReadiness } from './cert-readiness';
 import { roadmapViews, roadmapHas } from '../data/roadmaps';
 import { studyResourcesFor } from '../data/study-resources';
 import { weekWorkload, studySessions, sessionTargetMinutes } from './study-workload';
@@ -15,7 +16,7 @@ describe('state', () => {
     expect(sanitize(null)).toEqual(defaultState());
     const s = sanitize({ done: { a: true, b: 'x' }, hours: 999, bridge: 'nope', start: 'bad', activity: { '2026-01-01': { minutes: 'x' } } });
     expect(s.done).toEqual({ a: true });
-    expect(s.hours).toBe(12); expect(s.bridge).toBe('unknown'); expect(s.start).toBe('2026-10-12');
+    expect(s.hours).toBe(12); expect(s.bridge).toBe('unknown'); expect(s.start).toBe(defaultState().start);
     expect(s.activity['2026-01-01']).toEqual({ minutes: 0, tasks: [], missions: 0 });
   });
   it('accepts a legacy backup (no neetDone) and rejects non-backups', () => {
@@ -35,7 +36,9 @@ describe('progress', () => {
     expect(longestStreak(s)).toBe(2);
   });
   it('clamps the current week to the complete curriculum', () => {
-    const s = defaultState();
+    // 20 hours a week keeps block 1 to one calendar week, so this tests the boundary itself.
+    const s = { ...defaultState(), start: '2026-10-12', hours: 20 };
+    expect(weekWorkload(1, s).calendarWeeks).toBe(1);
     expect(currentWeek(s, new Date('2026-01-01'))).toBe(1);
     expect(currentWeek(s, new Date('2030-01-01'))).toBe(roadmap.weeks.length);
     expect(currentWeek(s, new Date('2026-10-20T12:00:00'))).toBe(2);
@@ -44,7 +47,7 @@ describe('progress', () => {
     const previous = process.env.TZ;
     try {
       process.env.TZ = 'Pacific/Auckland';
-      const s = { ...defaultState(), start: '2026-09-21' };
+      const s = { ...defaultState(), start: '2026-09-21', hours: 20 };
       expect(currentWeek(s, new Date('2026-09-27T23:59:00'))).toBe(1);
       expect(currentWeek(s, new Date('2026-09-28T00:00:00'))).toBe(2);
     } finally { if (previous === undefined) delete process.env.TZ; else process.env.TZ = previous; }
@@ -82,6 +85,11 @@ describe('progress', () => {
       s.bridge = bridge;
       for (const week of roadmap.weeks) expect(weekTasks(week, s).some(t => t.tag === 'BRIDGE')).toBe(false);
     }
+    // Bridge choices from old backups stay readable but are retired in the cybersecurity curriculum.
+    for (const bridge of ['stats', 'cs'] as const) {
+      s.bridge = bridge;
+      for (const week of roadmap.weeks) expect(weekTasks(week, s).some(t => t.tag === 'BRIDGE')).toBe(false);
+    }
   });
 });
 
@@ -106,24 +114,62 @@ describe('dsa data', () => {
 });
 
 describe('roadmap views', () => {
-  it('includes PDF prerequisites in the corresponding source views', () => {
+  it('maps role and course views to the right security groups', () => {
     const has = (viewId: string, trackId: string, groupIndex: number) => {
       const view = roadmapViews.find(v => v.id === viewId)!;
       const track = roadmap.tracks.find(t => t.id === trackId)!;
       return roadmapHas(view, track, track.groups[groupIndex]);
     };
-    expect(has('data-engineer', 'A', 21)).toBe(true); // SQL basics
-    expect(has('data-engineer', 'A', 22)).toBe(true); // Python basics
-    expect(has('ai-agents', 'B', 1)).toBe(true); // prompting
-    expect(has('ai-agents', 'B', 2)).toBe(true); // RAG
-    expect(has('ai-engineer', 'B', 3)).toBe(true); // agents
+    const C = roadmap.tracks.find(t => t.id === 'C')!;
+    const cg = (needle: string) => C.groups.findIndex(g => g.t.toLowerCase().includes(needle.toLowerCase()));
+    expect(has('pentester', 'C', cg('Web application'))).toBe(true);
+    expect(has('pentester', 'C', cg('Penetration testing'))).toBe(true);
+    expect(has('soc-dfir', 'C', cg('Digital forensics'))).toBe(true);
+    expect(has('comp830', 'C', cg('Cryptography'))).toBe(true);
+    expect(has('enge817', 'C', cg('Research methods'))).toBe(true);
+    expect(has('scripting', 'C', cg('Scripting and automation'))).toBe(true);
   });
-  it('has 13 views and each selects at least one group', () => {
-    expect(roadmapViews).toHaveLength(13);
+  it('has 22 views and each selects at least one group', () => {
+    expect(roadmapViews).toHaveLength(22);
     for (const v of roadmapViews) {
       const n = roadmap.tracks.flatMap((t) => t.groups.map((g) => roadmapHas(v, t, g))).filter(Boolean).length;
       expect(n, v.id).toBeGreaterThan(0);
     }
+  });
+});
+
+describe('curriculum ordering', () => {
+  it('never schedules a skill\'s later level before an earlier one', () => {
+    const rank = { Beginner: 0, Intermediate: 1, Advanced: 2 } as const;
+    const best = new Map<string, number>();
+    for (const w of roadmap.weeks) for (const t of coverageForWeek(w.n)) {
+      if (!t.level) continue;
+      const prev = best.get(t.group) ?? -1;
+      expect(rank[t.level], `${t.group}: ${t.text} (week ${w.n})`).toBeGreaterThanOrEqual(prev);
+      best.set(t.group, Math.max(prev, rank[t.level]));
+    }
+  });
+  it('puts the internship application inside the March–April round for a 22 February start', () => {
+    const s = { ...defaultState(), start: '2027-02-22' };
+    const apply = roadmap.weeks.flatMap(w => coverageForWeek(w.n)).find(t => /March–April/.test(t.text))!;
+    expect(apply).toBeDefined();
+    const due = weekDate(s, apply.week);
+    expect(due.getTime()).toBeLessThan(new Date('2027-04-30T12:00:00').getTime());
+  });
+});
+
+describe('certification plan', () => {
+  it('links every exam to its exam-prep checkpoints and feeding skills', () => {
+    const r = certReadiness(defaultState());
+    for (const c of certifications.certs) {
+      const x = r.find(y => y.id === c.id)!;
+      if (c.exam) expect(x.examKeys.length, c.id).toBeGreaterThan(0);
+      expect(x.examPct).toBe(0);
+    }
+    const s = defaultState();
+    const sec = r.find(y => y.id === 'secplus')!;
+    sec.examKeys.forEach(k => { s.topics[k] = true; });
+    expect(certReadiness(s).find(y => y.id === 'secplus')!.examPct).toBe(100);
   });
 });
 
@@ -141,17 +187,18 @@ describe('guided weekly study', () => {
     const normal = weekWorkload(1, defaultState());
     expect(normal.dsaMinutes).toBe(normal.dsaMinutesPerWeek * normal.calendarWeeks);
     expect(normal.dsaMinutesPerWeek).toBe(4 * 2 * 25);
-    expect(studySessions(1, defaultState()).filter(day => day.titles.some(title => title.includes('DSA')))).toHaveLength(4);
+    // DSA runs on 4 days in every calendar week the block spans.
+    expect(studySessions(1, defaultState()).filter(day => day.titles.some(title => title.includes('DSA')))).toHaveLength(4 * normal.calendarWeeks);
     const impossible = { ...defaultState(), hours: 2, dsaGoal: 20 };
     expect(weekWorkload(1, impossible).dsaFeasible).toBe(false);
     expect(studySessions(1, impossible).some(day => day.titles.some(title => title.includes('DSA')))).toBe(false);
     const slow = { ...defaultState(), hours: 2 };
     expect(weekDate(slow, 2).getTime()).toBeGreaterThan(weekDate(defaultState(), 2).getTime());
   });
-  it('opens direct chapters for curated checkpoints and gives every checkpoint a focused fallback search', () => {
-    const python = studyResourcesFor(coverageForWeek(1)[0]);
-    expect(python.learn[1]).toContain('/tutorial/introduction.html');
-    expect(python.extraLearn.map(link => link[1])).toContain('https://docs.python.org/3/tutorial/errors.html');
+  it('gives every scheduled checkpoint a reading, practice and a focused fallback search', () => {
+    const first = studyResourcesFor(coverageForWeek(1)[0]);
+    expect(first.learn[1]).toMatch(/^https:\/\//);
+    expect(first.targeted).toBe(true);
     for (let week = 1; week <= roadmap.weeks.length; week++) {
       for (const topic of coverageForWeek(week)) {
         const resources = studyResourcesFor(topic);
@@ -163,6 +210,8 @@ describe('guided weekly study', () => {
   });
   it('keeps portfolio milestones in the week and final proof honest', () => {
     const s = defaultState();
+    expect(portfolioMilestonesForWeek(15).some(m => m.key === 'webapp-0')).toBe(true);
+    expect(weekTasks(roadmap.weeks[14], s).some(t => t.portfolioKey === 'webapp-0')).toBe(true);
     expect(portfolioMilestonesForWeek(15).some(m => m.key === 'webapp-0')).toBe(true);
     expect(weekTasks(roadmap.weeks[14], s).some(t => t.portfolioKey === 'webapp-0')).toBe(true);
     expect(weekOutputReady(s, 1)).toBe(false);
@@ -192,13 +241,30 @@ describe('guided weekly study', () => {
       });
     }
   });
+  it('schedules every portfolio criterion exactly once, inside its project\'s weeks', () => {
+    const scheduled = new Map<string, number>();
+    for (let week = 1; week <= roadmap.weeks.length; week++) {
+      for (const m of portfolioMilestonesForWeek(week)) {
+        expect(scheduled.has(m.key)).toBe(false);
+        scheduled.set(m.key, week);
+      }
+    }
+    for (const project of portfolioProjects) {
+      const range = project.weeks.match(/(\d+)\D+(\d+)/);
+      project.criteria.forEach((_, i) => {
+        const week = scheduled.get(`${project.id}-${i}`);
+        expect(week, `${project.id}-${i} is never scheduled`).toBeDefined();
+        if (range) { expect(week!).toBeGreaterThanOrEqual(+range[1]); expect(week!).toBeLessThanOrEqual(+range[2]); }
+      });
+    }
+  });
   it('preserves Notion links and topic reviews in backups', () => {
-    const s = parseBackup(JSON.stringify({ done: {}, weekNotionUrls: { 1: 'https://www.notion.so/example' }, topicReviews: { 'A-22-0': { due: '2026-10-11', step: 0 } } }));
+    const s = parseBackup(JSON.stringify({ done: {}, weekNotionUrls: { 1: 'https://www.notion.so/example' }, topicReviews: { 'C-0-0': { due: '2026-10-11', step: 0 } } }));
     expect(s.weekNotionUrls['1']).toBe('https://www.notion.so/example');
-    expect(s.topicReviews['A-22-0']?.due).toBe('2026-10-11');
-    s.topics['A-22-0'] = true;
-    expect(dueTopicReviews(s, '2026-10-11').map(t => t.key)).toContain('A-22-0');
-    delete s.topicReviews['A-22-0'];
-    expect(dueTopicReviews(s, '2026-10-11').map(t => t.key)).toContain('A-22-0');
+    expect(s.topicReviews['C-0-0']?.due).toBe('2026-10-11');
+    s.topics['C-0-0'] = true;
+    expect(dueTopicReviews(s, '2026-10-11').map(t => t.key)).toContain('C-0-0');
+    delete s.topicReviews['C-0-0'];
+    expect(dueTopicReviews(s, '2026-10-11').map(t => t.key)).toContain('C-0-0');
   });
 });

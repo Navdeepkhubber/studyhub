@@ -1,0 +1,215 @@
+{
+  "checked": "2026-11-07",
+  "milestones": [
+    {
+      "id": "pre-cert",
+      "start": "2026-11-07",
+      "end": "2027-02-21",
+      "title": "Start Security+ (or ISC2 CC) and aim to pass by early in Semester 1",
+      "detail": "NZ graduate listings name these as a head start. Security+ is about US$425; ISC2 CC is US$199 plus US$50 a year (its free programme closed in May 2026). Take one, not both. The Security+ exam-prep checkpoints are in Phase 1, and you can start them before week 1.",
+      "link": "https://www.comptia.org/en-us/certifications/security/"
+    },
+    {
+      "id": "pre-cv",
+      "start": "2026-11-07",
+      "end": "2027-02-21",
+      "title": "NZ-format CV, LinkedIn and a GitHub with 2–3 security projects",
+      "detail": "Include one detection or log-pipeline project that shows your data engineering background. Your first application round opens weeks after arrival.",
+      "link": "https://www.careers.govt.nz/"
+    },
+    {
+      "id": "pre-eligibility",
+      "start": "2026-11-07",
+      "end": "2027-02-21",
+      "title": "Shortlist employers that accept your visa type",
+      "detail": "Use the eligibility tracker below. Many programmes are citizen/PR only; target the ones that are not.",
+      "link": ""
+    },
+    {
+      "id": "arrive",
+      "start": "2027-02-22",
+      "end": "2027-03-07",
+      "title": "Join the AUT CSI club, register with Summer of Tech, book an AUT careers appointment",
+      "detail": "Do all three in your first two weeks.",
+      "link": "https://www.summeroftech.co.nz/"
+    },
+    {
+      "id": "intern-round",
+      "start": "2027-03-01",
+      "end": "2027-04-30",
+      "title": "Apply in the summer internship round",
+      "detail": "Big 4 and many corporates recruit interns and graduates in one March–April window. Confirm with each employer that an 18-month master's counts as penultimate year.",
+      "link": "https://www.pwc.co.nz/careers/studentcareers/faqs.html"
+    },
+    {
+      "id": "parttime",
+      "start": "2027-04-01",
+      "end": "2027-11-30",
+      "title": "Find part-time IT or service desk work within your visa hours",
+      "detail": "Entry IT experience is a common step into SOC roles; Fujitsu has advertised a part-time junior SOC role of up to 24 hours a week.",
+      "link": "https://www.seek.co.nz/junior-soc-analyst-jobs"
+    },
+    {
+      "id": "challenge",
+      "start": "2027-06-01",
+      "end": "2027-09-30",
+      "title": "Compete in the NZ Cyber Security Challenge (dates vary; check the site)",
+      "detail": "Sponsors have included CyberCX, Deloitte and SecurityLit.",
+      "link": "https://cybersecuritychallenge.org.nz/"
+    },
+    {
+      "id": "kawaiicon",
+      "start": "2027-10-01",
+      "end": "2027-11-15",
+      "title": "Attend Kawaiicon in Wellington and play its mini CTF",
+      "detail": "The 2026 edition ran 30–31 October; check 2027 dates.",
+      "link": "https://kawaiicon.org/"
+    },
+    {
+      "id": "internship",
+      "start": "2027-11-15",
+      "end": "2028-02-20",
+      "title": "Summer internship (full-time is allowed in scheduled holidays)",
+      "detail": "If no internship, run a substantial portfolio project and keep applying to off-cycle roles.",
+      "link": ""
+    },
+    {
+      "id": "grad-round",
+      "start": "2028-03-01",
+      "end": "2028-04-30",
+      "title": "Apply in the graduate round during your final semester",
+      "detail": "Deloitte notes mid-year finishers may be able to start before the February intake.",
+      "link": "https://graduates.deloitte.co.nz/"
+    },
+    {
+      "id": "pswv",
+      "start": "2028-06-01",
+      "end": "2028-08-31",
+      "title": "Finish the degree and apply for the post-study work visa",
+      "detail": "A Level 9 master's can lead to a 3-year open work visa. Confirm current rules with Immigration NZ.",
+      "link": "https://www.immigration.govt.nz/"
+    },
+    {
+      "id": "year1",
+      "start": "2028-07-01",
+      "end": "2029-06-30",
+      "title": "First year of work: SC-500 for cloud security, or PNPT then OSCP for pentesting",
+      "detail": "SC-200, eJPT and BTL1 are scheduled during the degree. Pentest roles usually ask for 2–3 years’ experience; a SOC or graduate role is the usual first step. Check residence points with Immigration NZ or a licensed adviser.",
+      "link": ""
+    }
+  ],
+  "employers": [
+    {
+      "name": "Deloitte NZ",
+      "kind": "Big 4 graduate & intern",
+      "eligibility": "visa-ok",
+      "note": "Accepts graduates holding a 3-year post-study work visa; interns need NZ work rights.",
+      "url": "https://graduates.deloitte.co.nz/"
+    },
+    {
+      "name": "KPMG NZ",
+      "kind": "Big 4 cyber graduate",
+      "eligibility": "visa-ok",
+      "note": "Cyber graduate listing included temporary work visa holders; NZD 60–65k.",
+      "url": "https://kpmg.com/nz/en.html"
+    },
+    {
+      "name": "PwC NZ",
+      "kind": "Big 4 graduate & intern",
+      "eligibility": "check",
+      "note": "Welcomes work-visa applicants subject to criteria; some listings say citizen/PR only.",
+      "url": "https://www.pwc.co.nz/careers/studentcareers/graduate-programme.html"
+    },
+    {
+      "name": "Grant Thornton NZ",
+      "kind": "Cyber graduate",
+      "eligibility": "visa-ok",
+      "note": "Needs a legal right to work and to be living in NZ.",
+      "url": "https://www.grantthornton.co.nz/"
+    },
+    {
+      "name": "Air New Zealand",
+      "kind": "Cyber graduate (Elevate Digital)",
+      "eligibility": "check",
+      "note": "Final-year or recent grads; NZD 54–72k. Eligibility not stated in the listing seen.",
+      "url": "https://www.airnewzealand.co.nz/"
+    },
+    {
+      "name": "Fujitsu NZ",
+      "kind": "Junior SOC (incl. part-time)",
+      "eligibility": "check",
+      "note": "Part-time junior SOC role advertised up to 24 h/week; some SOC roles need clearance.",
+      "url": "https://www.fujitsu.com/nz/"
+    },
+    {
+      "name": "Canva",
+      "kind": "Security engineer intern",
+      "eligibility": "check",
+      "note": "Needs AU/NZ working rights; no visa sponsorship for early-talent roles.",
+      "url": "https://www.canva.com/careers/"
+    },
+    {
+      "name": "Summer of Tech employers",
+      "kind": "Internships",
+      "eligibility": "visa-ok",
+      "note": "Open to students enrolled at an NZ tertiary institution; very competitive.",
+      "url": "https://www.summeroftech.co.nz/"
+    },
+    {
+      "name": "ZX Security",
+      "kind": "Pentest consultancy",
+      "eligibility": "check",
+      "note": "Always open to talent; usually wants pentest experience and certs.",
+      "url": "https://zxsecurity.co.nz/about/careers/"
+    },
+    {
+      "name": "Pulse Security",
+      "kind": "Pentest & DFIR",
+      "eligibility": "check",
+      "note": "Must already be in NZ; strong written English.",
+      "url": "https://pulsesecurity.co.nz/careers"
+    },
+    {
+      "name": "CyberCX Academy & graduate",
+      "kind": "Entry programmes",
+      "eligibility": "citizen-pr",
+      "note": "NZ citizen, NZ PR or Australian citizen only. Its community events are open to all.",
+      "url": "https://cybercx.co.nz/cybercxacademy/faqs/"
+    },
+    {
+      "name": "EY NZ",
+      "kind": "Graduate programme",
+      "eligibility": "citizen-pr",
+      "note": "NZ/AU citizen or NZ PR.",
+      "url": "https://www.ey.com/en_nz"
+    },
+    {
+      "name": "Westpac NZ",
+      "kind": "Cyber graduate",
+      "eligibility": "citizen-pr",
+      "note": "NZ/AU citizen or PR.",
+      "url": "https://www.westpac.co.nz/"
+    },
+    {
+      "name": "Atlassian",
+      "kind": "Security intern",
+      "eligibility": "citizen-pr",
+      "note": "AU/NZ citizen or PR.",
+      "url": "https://www.atlassian.com/company/careers"
+    },
+    {
+      "name": "ANZ",
+      "kind": "Graduate & intern",
+      "eligibility": "citizen-pr",
+      "note": "Internships citizen/PR; graduate programme allows only specified visas.",
+      "url": "https://www.anz.co.nz/"
+    },
+    {
+      "name": "Government, NZDF, GCSB/NZSIS",
+      "kind": "Public sector cyber",
+      "eligibility": "clearance",
+      "note": "Clearance needs a 5–15 year checkable background in NZ/AU/CA/UK/US; usually years away for new arrivals.",
+      "url": "https://www.protectivesecurity.govt.nz/"
+    }
+  ]
+}

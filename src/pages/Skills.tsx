@@ -14,7 +14,7 @@ export function Skills() {
   useEffect(() => { if (focus) document.getElementById(`skill-${focus}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, [focus]);
   return <>
     <SectionHead title="Skill map">Rate what you can demonstrate, then save a link to evidence. A rating is a self-assessment, not a certification.</SectionHead>
-    <Callout><b>{strong} of {all.length} skills have strong evidence.</b> Use 0 = not started, 1 = learning, 2 = can do with notes, 3 = can explain and ship. Prioritise statistics and model evaluation before adding more AI tools.</Callout>
+    <Callout><b>{strong} of {all.length} skills have strong evidence.</b> Use 0 = not started, 1 = learning, 2 = can do with notes, 3 = can explain and ship. Prioritise the foundations and hands-on labs before reaching for advanced tooling.</Callout>
     {skillLanes.map((l) => <section key={l.name} className="skill-lane"><SectionHead title={l.name}>{l.description}</SectionHead>
       <div className="skill-grid">{l.skills.map((x) => <article key={x.id} id={`skill-${x.id}`} className={`skill-card ${focus === x.id ? 'focused' : ''}`}>
         <Label>Weeks {x.week}</Label><h3>{x.name}</h3><p><b>Show:</b> {x.evidence}</p>

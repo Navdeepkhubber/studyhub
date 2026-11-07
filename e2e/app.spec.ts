@@ -89,12 +89,11 @@ test('each weekly checkpoint supplies reading, practice and a concrete action', 
   await open(page, {}, 'week-1');
   await expect(page.locator('.curriculum-item')).toHaveCount(weekTopics(1).length);
   await expect(page.locator('.curriculum-item .topic-study')).toHaveCount(weekTopics(1).length);
-  const python = page.locator('#lesson-A-22-0');
-  await expect(python.getByRole('link', { name: 'Python: informal introduction' })).toHaveAttribute('href', 'https://docs.python.org/3/tutorial/introduction.html');
-  await expect(python.getByRole('link', { name: 'Python: errors and exceptions' })).toBeVisible();
+  const firstLesson = page.locator('#lesson-C-0-0');
+  await expect(firstLesson.getByRole('link', { name: 'NIST Cybersecurity Framework 2.0' })).toHaveAttribute('href', 'https://www.nist.gov/cyberframework');
+  await expect(firstLesson.getByRole('link', { name: 'TryHackMe learning paths' })).toBeVisible();
   await expect(page.locator('.weekly-workload')).toContainText('4 DSA practice days per calendar week');
-  await expect(python.getByRole('link', { name: 'Exercism Python exercises' })).toBeVisible();
-  await expect(python.locator('.topic-action')).toContainText('short script');
+  await expect(firstLesson.locator('.topic-action')).toContainText('hands-on exercise');
   await navTo(page, 'week-72');
   await expect(page.locator('.curriculum-item .topic-study')).toHaveCount(weekTopics(72).length);
 });

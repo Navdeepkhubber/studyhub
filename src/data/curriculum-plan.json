@@ -1,1076 +1,725 @@
 {
-  "version": 1,
-  "source": "72-block StudyHub plan: cybersecurity roadmap plus the AUT Master of Cyber Security and Digital Forensics; existing non-cyber study tracks retained.",
+  "version": 2,
+  "source": "Security-first 72-block plan for the AUT Master of Cyber Security and Digital Forensics. Only the cybersecurity and digital forensics track (C) is scheduled; data engineering, GenAI and interview tracks remain optional in the Atlas.",
   "weeks": [
     {
       "n": 1,
-      "title": "Python + Lifecycle and foundations",
       "topics": [
-        "A-22-0",
-        "A-11-0",
-        "F-0-0",
-        "A-21-0"
-      ]
+        "C-20-0",
+        "C-0-0",
+        "C-2-0",
+        "C-3-0",
+        "C-21-0",
+        "C-20-1"
+      ],
+      "title": "NZ job search and professional presence · Security foundations · Linux and Windows for security · Scripting and automation for security · Exam prep: CompTIA Security+ (SY0-701)"
     },
     {
       "n": 2,
-      "title": "Python + SQL fundamentals and database objects · Security practice · Security practice · Security practice",
       "topics": [
-        "A-22-1",
-        "A-11-1",
-        "A-2-1",
-        "A-20-0",
-        "F-0-1",
-        "C-0-0",
-        "A-21-1"
-      ]
+        "C-0-1",
+        "C-2-1",
+        "C-3-1",
+        "C-21-1",
+        "C-20-2"
+      ],
+      "title": "Security foundations · Linux and Windows for security · Scripting and automation for security · Exam prep: CompTIA Security+ (SY0-701) · NZ job search and professional presence"
     },
     {
       "n": 3,
-      "title": "SQL fundamentals and database objects + Python · Security practice · Security practice · Security practice",
       "topics": [
-        "A-11-2",
-        "A-20-12",
-        "F-0-2",
-        "C-0-1",
         "C-0-2",
-        "A-1-0",
-        "A-22-6",
-        "D-0-8"
-      ]
+        "C-2-2",
+        "C-3-2",
+        "C-21-2",
+        "C-20-3",
+        "C-0-3"
+      ],
+      "title": "Security foundations · Linux and Windows for security · Scripting and automation for security · Exam prep: CompTIA Security+ (SY0-701) · NZ job search and professional presence"
     },
     {
       "n": 4,
-      "title": "Python + Lifecycle and foundations · Security practice · Security practice · Security practice",
       "topics": [
-        "A-22-2",
-        "A-11-3",
-        "A-11-4",
-        "A-2-4",
-        "F-0-3",
-        "C-0-3",
-        "D-0-0",
-        "A-1-1",
-        "A-2-0"
-      ]
+        "C-2-3",
+        "C-3-3",
+        "C-21-3",
+        "C-20-4",
+        "C-0-4"
+      ],
+      "title": "Linux and Windows for security · Scripting and automation for security · Exam prep: CompTIA Security+ (SY0-701) · NZ job search and professional presence · Security foundations"
     },
     {
       "n": 5,
-      "title": "Python language and ecosystem + SQL fundamentals and database objects · Security practice · Security practice · Security practice",
       "topics": [
-        "A-22-3",
-        "A-22-4",
-        "A-11-5",
-        "A-1-4",
-        "A-2-6",
-        "A-20-2",
-        "F-0-4",
-        "C-0-4"
-      ]
+        "C-2-4",
+        "C-3-4",
+        "C-21-4",
+        "C-20-5",
+        "C-0-5"
+      ],
+      "title": "Linux and Windows for security · Scripting and automation for security · Exam prep: CompTIA Security+ (SY0-701) · NZ job search and professional presence · Security foundations"
     },
     {
       "n": 6,
-      "title": "SQL fundamentals and database objects + SQL language reference · Security practice · Security practice · Security practice",
       "topics": [
-        "A-11-6",
-        "A-1-5",
-        "A-1-6",
-        "A-2-7",
-        "A-21-2",
-        "F-0-5",
-        "C-0-5",
-        "A-2-2"
-      ]
+        "C-3-5",
+        "C-21-5",
+        "C-20-6",
+        "C-0-6",
+        "C-3-6",
+        "C-21-6"
+      ],
+      "title": "Scripting and automation for security · Exam prep: CompTIA Security+ (SY0-701) · NZ job search and professional presence · Security foundations"
     },
     {
       "n": 7,
-      "title": "Python + SQL fundamentals and database objects · Security practice · Security practice · Security practice",
       "topics": [
-        "A-22-5",
-        "A-11-7",
-        "A-2-8",
-        "A-2-9",
-        "A-21-3",
-        "F-0-6",
-        "F-1-0",
-        "C-0-6",
-        "C-1-0",
-        "C-1-1",
-        "C-1-2",
-        "D-0-1"
-      ]
+        "C-20-7",
+        "C-0-7",
+        "C-3-7",
+        "C-21-7",
+        "C-20-8"
+      ],
+      "title": "NZ job search and professional presence · Security foundations · Scripting and automation for security · Exam prep: CompTIA Security+ (SY0-701)"
     },
     {
       "n": 8,
-      "title": "Python + SQL language reference · Security practice · Security practice · Security practice",
       "topics": [
-        "A-2-10",
-        "A-21-4",
-        "F-1-1",
-        "C-1-3",
-        "C-1-4",
-        "C-1-5",
-        "C-1-6",
-        "A-1-2",
-        "A-2-3"
-      ]
+        "C-3-8",
+        "C-21-8",
+        "C-20-9",
+        "C-3-9",
+        "C-3-10"
+      ],
+      "title": "Scripting and automation for security · Exam prep: CompTIA Security+ (SY0-701) · NZ job search and professional presence"
     },
     {
       "n": 9,
-      "title": "Python + SQL · Security practice · Security practice · Security practice",
       "topics": [
-        "A-2-11",
-        "A-2-12",
-        "A-21-5",
-        "A-0-0",
-        "F-1-2",
-        "C-2-0",
-        "C-2-1",
-        "C-2-2"
-      ]
+        "C-1-0",
+        "C-4-0",
+        "C-5-0",
+        "C-1-1"
+      ],
+      "title": "Networking and protocols · Secure coding and application fundamentals · Cryptography and identity"
     },
     {
       "n": 10,
-      "title": "SQL language reference + SQL · Security practice · Security practice · Security practice",
       "topics": [
-        "A-22-9",
-        "A-2-13",
-        "A-21-6",
-        "A-21-7",
-        "A-0-1",
-        "F-1-3",
-        "C-2-3",
-        "D-0-2",
-        "A-2-5"
-      ]
+        "C-4-1",
+        "C-5-1",
+        "C-1-2"
+      ],
+      "title": "Secure coding and application fundamentals · Cryptography and identity · Networking and protocols"
     },
     {
       "n": 11,
-      "title": "SQL + SQL language reference · Security practice · Security practice · Security practice",
       "topics": [
-        "A-22-10",
-        "A-21-8",
-        "A-0-2",
-        "F-1-4",
-        "C-2-4",
-        "C-2-5",
-        "C-2-6",
-        "C-3-0",
-        "C-3-1"
-      ]
+        "C-4-2",
+        "C-5-2",
+        "C-1-3",
+        "C-4-3"
+      ],
+      "title": "Secure coding and application fundamentals · Cryptography and identity · Networking and protocols"
     },
     {
       "n": 12,
-      "title": "SQL + SQL language reference · Security practice · Security practice · Security practice",
       "topics": [
-        "A-21-9",
-        "A-0-3",
-        "A-0-4",
-        "F-1-5",
-        "F-2-0",
-        "C-3-2",
-        "C-3-3",
-        "C-3-4",
-        "C-3-5",
-        "C-3-6",
-        "C-3-7"
-      ]
+        "C-5-3",
+        "C-1-4",
+        "C-4-4"
+      ],
+      "title": "Cryptography and identity · Networking and protocols · Secure coding and application fundamentals"
     },
     {
       "n": 13,
-      "title": "SQL language reference + SQL · Security practice · Security practice · Security practice",
       "topics": [
-        "A-21-10",
-        "A-21-11",
-        "A-0-5",
-        "F-3-0",
-        "C-3-8",
-        "C-3-9",
-        "C-3-10",
-        "C-3-11",
-        "C-4-0",
-        "D-0-3"
-      ]
+        "C-5-4",
+        "C-1-5",
+        "C-4-5"
+      ],
+      "title": "Cryptography and identity · Networking and protocols · Secure coding and application fundamentals"
     },
     {
       "n": 14,
-      "title": "SQL + SQL language reference · Security practice · Security practice · Security practice",
       "topics": [
-        "A-21-12",
-        "A-0-6",
-        "F-2-1",
-        "C-4-1",
-        "C-4-2",
-        "C-4-3",
-        "C-4-4",
-        "C-4-5",
+        "C-5-5",
+        "C-1-6",
         "C-4-6",
-        "A-1-3"
-      ]
+        "C-5-6"
+      ],
+      "title": "Cryptography and identity · Networking and protocols · Secure coding and application fundamentals"
     },
     {
       "n": 15,
-      "title": "SQL + R: functions and errors · Security practice · Security practice · Security practice",
       "topics": [
-        "A-0-7",
-        "F-2-2",
-        "F-3-1",
         "C-4-7",
-        "C-4-8",
-        "C-4-9",
-        "C-4-10",
-        "C-4-11",
-        "A-1-7"
-      ]
+        "C-5-7",
+        "C-4-8"
+      ],
+      "title": "Secure coding and application fundamentals · Cryptography and identity"
     },
     {
       "n": 16,
-      "title": "Databases beyond SQL + R: importing and cleaning · Security practice · Security practice · Security practice",
       "topics": [
-        "A-12-0",
-        "F-3-2",
-        "C-4-12",
-        "C-4-13",
-        "D-0-4",
-        "A-5-4",
-        "A-6-8"
-      ]
-    },
-    {
-      "n": 17,
-      "title": "Python for data analysis: EDA and visualization + Databases beyond SQL · Security practice · Security practice · Security practice",
-      "topics": [
-        "A-12-1",
-        "A-20-1",
-        "F-2-3",
-        "C-4-14",
-        "C-5-0",
-        "C-5-1",
-        "C-5-2"
-      ]
-    },
-    {
-      "n": 18,
-      "title": "Modeling and warehousing + Databases beyond SQL · Security practice · Security practice · Security practice",
-      "topics": [
-        "A-5-0",
-        "A-12-2",
-        "F-3-3",
-        "C-5-3",
-        "C-5-4",
-        "C-5-5",
-        "C-5-6",
-        "D-0-5"
-      ]
-    },
-    {
-      "n": 19,
-      "title": "Cybersecurity and experiments + Modeling and warehousing · Security practice · Security practice · Security practice",
-      "topics": [
-        "A-5-1",
-        "F-3-4",
-        "F-4-0",
-        "C-5-7",
         "C-5-8",
         "C-5-9",
         "C-5-10"
-      ]
+      ],
+      "title": "Cryptography and identity"
+    },
+    {
+      "n": 17,
+      "topics": [
+        "C-6-0",
+        "C-7-0",
+        "C-19-0",
+        "C-22-0",
+        "C-6-1"
+      ],
+      "title": "Web application security · Penetration testing methodology · Active Directory and Microsoft identity · Exam prep: eJPT (INE)"
+    },
+    {
+      "n": 18,
+      "topics": [
+        "C-7-1",
+        "C-19-1",
+        "C-22-1",
+        "C-6-2"
+      ],
+      "title": "Penetration testing methodology · Active Directory and Microsoft identity · Exam prep: eJPT (INE) · Web application security"
+    },
+    {
+      "n": 19,
+      "topics": [
+        "C-7-2",
+        "C-19-2",
+        "C-22-2",
+        "C-6-3"
+      ],
+      "title": "Penetration testing methodology · Active Directory and Microsoft identity · Exam prep: eJPT (INE) · Web application security"
     },
     {
       "n": 20,
-      "title": "Modeling and warehousing + Databases beyond SQL · Security practice · Security practice · Security practice",
       "topics": [
-        "A-5-2",
-        "A-12-3",
-        "F-4-1",
-        "C-6-0",
-        "C-6-1",
-        "C-6-2",
-        "C-6-3"
-      ]
+        "C-7-3",
+        "C-19-3",
+        "C-22-3",
+        "C-6-4"
+      ],
+      "title": "Penetration testing methodology · Active Directory and Microsoft identity · Exam prep: eJPT (INE) · Web application security"
     },
     {
       "n": 21,
-      "title": "Modeling and warehousing + Databases beyond SQL · Security practice · Security practice · Security practice",
       "topics": [
-        "A-5-3",
-        "A-12-4",
-        "F-3-5",
-        "C-7-0",
-        "C-7-1",
-        "C-7-2",
-        "D-0-6",
-        "D-1-0"
-      ]
+        "C-7-4",
+        "C-19-4",
+        "C-22-4",
+        "C-6-5",
+        "C-7-5"
+      ],
+      "title": "Penetration testing methodology · Active Directory and Microsoft identity · Exam prep: eJPT (INE) · Web application security"
     },
     {
       "n": 22,
-      "title": "Cybersecurity and experiments + Modeling and warehousing · Security practice · Security practice · Security practice",
       "topics": [
-        "A-12-5",
-        "F-4-2",
-        "C-7-3",
-        "C-7-4",
-        "C-7-5",
-        "C-8-0"
-      ]
+        "C-19-5",
+        "C-22-5",
+        "C-6-6",
+        "C-7-6"
+      ],
+      "title": "Active Directory and Microsoft identity · Exam prep: eJPT (INE) · Web application security · Penetration testing methodology"
     },
     {
       "n": 23,
-      "title": "Modeling and warehousing + Storage, formats, cloud · Security practice · Security practice · Security practice",
       "topics": [
-        "A-5-5",
-        "A-8-0",
-        "A-12-6",
-        "A-13-0",
-        "F-4-3",
-        "C-8-1",
-        "C-8-2"
-      ]
+        "C-19-6",
+        "C-22-6",
+        "C-6-7",
+        "C-7-7"
+      ],
+      "title": "Active Directory and Microsoft identity · Exam prep: eJPT (INE) · Web application security · Penetration testing methodology"
     },
     {
       "n": 24,
-      "title": "Modeling and warehousing + Data engineering roadmap details · Security practice · Security practice · Security practice",
       "topics": [
-        "A-5-6",
-        "A-20-3",
-        "F-4-4",
-        "C-8-3",
-        "C-8-4",
-        "C-8-5",
-        "D-0-7"
-      ]
+        "C-19-7",
+        "C-6-8",
+        "C-6-9",
+        "C-6-10"
+      ],
+      "title": "Active Directory and Microsoft identity · Web application security"
     },
     {
       "n": 25,
-      "title": "Cybersecurity and experiments + Modeling and warehousing · Security practice · Security practice · Security practice",
       "topics": [
-        "A-5-7",
-        "A-8-1",
-        "A-13-1",
-        "F-4-5",
-        "F-5-0",
-        "C-8-6",
-        "C-8-7",
-        "C-9-0",
-        "C-9-1",
-        "A-6-0"
-      ]
+        "C-8-0",
+        "C-15-0",
+        "C-23-0",
+        "C-8-1"
+      ],
+      "title": "SOC and incident response · SIEM and detection: Microsoft Sentinel & Defender · Exam prep: Microsoft SC-200"
     },
     {
       "n": 26,
-      "title": "Cybersecurity + Storage, formats, cloud · Security practice · Security practice · Security practice",
       "topics": [
-        "A-8-2",
-        "A-13-2",
-        "F-4-6",
-        "C-9-2",
-        "C-9-3",
-        "C-9-4",
-        "C-9-5"
-      ]
+        "C-15-1",
+        "C-23-1",
+        "C-8-2",
+        "C-15-2"
+      ],
+      "title": "SIEM and detection: Microsoft Sentinel & Defender · Exam prep: Microsoft SC-200 · SOC and incident response"
     },
     {
       "n": 27,
-      "title": "Architectures and vocabulary + R: visualization · Security practice · Security practice · Security practice",
       "topics": [
-        "A-13-3",
-        "F-5-1",
-        "C-9-6",
-        "C-9-7"
-      ]
+        "C-23-2",
+        "C-8-3",
+        "C-15-3",
+        "C-23-3"
+      ],
+      "title": "Exam prep: Microsoft SC-200 · SOC and incident response · SIEM and detection: Microsoft Sentinel & Defender"
     },
     {
       "n": 28,
-      "title": "Storage, formats, cloud + R: tidyverse and manipulation · Security practice · Security practice · Security practice",
       "topics": [
-        "A-8-3",
-        "F-4-7",
-        "C-9-8",
-        "C-9-9",
-        "C-9-10",
-        "B-10-14"
-      ]
+        "C-8-4",
+        "C-15-4",
+        "C-23-4",
+        "C-8-5"
+      ],
+      "title": "SOC and incident response · SIEM and detection: Microsoft Sentinel & Defender · Exam prep: Microsoft SC-200"
     },
     {
       "n": 29,
-      "title": "Cybersecurity + LLM fundamentals · Security practice · Security practice · Security practice",
       "topics": [
-        "A-3-0",
-        "A-8-4",
-        "A-13-4",
-        "F-4-8",
-        "F-5-2",
-        "C-9-11",
-        "C-9-12",
-        "C-9-13",
-        "B-0-0",
-        "B-0-1"
-      ]
+        "C-15-5",
+        "C-23-5",
+        "C-8-6",
+        "C-15-6"
+      ],
+      "title": "SIEM and detection: Microsoft Sentinel & Defender · Exam prep: Microsoft SC-200 · SOC and incident response"
     },
     {
       "n": 30,
-      "title": "Spark and PySpark + Architectures and vocabulary · Security practice · Security practice · Security practice",
       "topics": [
-        "A-3-1",
-        "A-3-2",
-        "A-13-5",
-        "C-9-14",
-        "B-0-2",
-        "B-11-0",
-        "D-0-9"
-      ]
+        "C-23-6",
+        "C-8-7",
+        "C-15-7",
+        "C-23-7"
+      ],
+      "title": "Exam prep: Microsoft SC-200 · SOC and incident response · SIEM and detection: Microsoft Sentinel & Defender"
     },
     {
       "n": 31,
-      "title": "Cybersecurity + LLM fundamentals · Security practice · Security practice · Security practice",
       "topics": [
-        "A-3-3",
-        "A-8-5",
-        "A-14-0",
-        "F-5-3",
-        "F-6-0",
-        "C-9-15",
-        "C-9-16",
-        "C-9-17",
-        "B-0-3",
-        "B-0-4",
-        "E-0-0"
-      ]
+        "C-15-8",
+        "C-23-8",
+        "C-15-9",
+        "C-15-10"
+      ],
+      "title": "SIEM and detection: Microsoft Sentinel & Defender · Exam prep: Microsoft SC-200"
     },
     {
       "n": 32,
-      "title": "LLM fundamentals + Spark and PySpark · Security practice · Security practice · Security practice",
       "topics": [
-        "A-22-11",
-        "A-3-4",
-        "C-9-18",
-        "C-9-19",
-        "C-9-20",
-        "B-0-5",
-        "B-0-6",
-        "B-11-1"
-      ]
+        "C-15-11",
+        "C-15-12",
+        "C-15-13"
+      ],
+      "title": "SIEM and detection: Microsoft Sentinel & Defender"
     },
     {
       "n": 33,
-      "title": "Spark and PySpark + LLM fundamentals · Security practice · Security practice · Security practice",
       "topics": [
-        "A-3-5",
-        "A-3-6",
-        "A-14-1",
-        "F-5-4",
-        "F-6-1",
-        "C-10-0",
-        "C-10-1",
-        "C-10-2",
-        "B-0-7",
-        "B-0-8",
-        "B-7-0",
-        "B-11-2",
-        "D-1-1"
-      ]
+        "C-9-0",
+        "C-17-0",
+        "C-24-0",
+        "C-9-1"
+      ],
+      "title": "Digital forensics · Malware analysis and reverse engineering · Exam prep: Blue Team Level 1 (BTL1)"
     },
     {
       "n": 34,
-      "title": "Cybersecurity + Spark and PySpark · Security practice · Security practice · Security practice",
       "topics": [
-        "A-3-7",
-        "A-14-2",
-        "C-10-3",
-        "C-10-4",
-        "B-0-9",
-        "B-7-1"
-      ]
+        "C-17-1",
+        "C-24-1",
+        "C-9-2"
+      ],
+      "title": "Malware analysis and reverse engineering · Exam prep: Blue Team Level 1 (BTL1) · Digital forensics"
     },
     {
       "n": 35,
-      "title": "Spark and PySpark + LLM fundamentals · Security practice · Security practice · Security practice",
       "topics": [
-        "A-3-8",
-        "A-3-9",
-        "A-14-3",
-        "A-20-4",
-        "F-6-2",
-        "C-10-5",
-        "C-10-6",
-        "C-10-7",
-        "B-0-10",
-        "B-0-11",
-        "B-1-0",
-        "B-1-1",
-        "B-7-2",
-        "B-9-0",
-        "B-11-3"
-      ]
+        "C-17-2",
+        "C-24-2",
+        "C-9-3",
+        "C-17-3"
+      ],
+      "title": "Malware analysis and reverse engineering · Exam prep: Blue Team Level 1 (BTL1) · Digital forensics"
     },
     {
       "n": 36,
-      "title": "LLM fundamentals + Prompting and tool use · Security practice · Security practice · Security practice",
       "topics": [
-        "A-3-10",
-        "A-4-0",
-        "A-20-5",
-        "C-11-0",
-        "C-11-1",
-        "B-0-12",
-        "B-0-13",
-        "B-1-2",
-        "B-1-3",
-        "B-7-3",
-        "B-9-1",
-        "B-9-2",
-        "B-11-6"
-      ]
+        "C-24-3",
+        "C-9-4",
+        "C-17-4"
+      ],
+      "title": "Exam prep: Blue Team Level 1 (BTL1) · Digital forensics · Malware analysis and reverse engineering"
     },
     {
       "n": 37,
-      "title": "Delta Lake and lakehouse + Pipelines and orchestration · Security practice · Security practice · Security practice",
       "topics": [
-        "A-4-1",
-        "A-4-2",
-        "A-14-4",
-        "F-6-3",
-        "C-11-2",
-        "B-1-4",
-        "B-6-0",
-        "B-7-4",
-        "B-9-3",
-        "B-11-7",
-        "D-1-2"
-      ]
+        "C-24-4",
+        "C-9-5",
+        "C-17-5",
+        "C-24-5"
+      ],
+      "title": "Exam prep: Blue Team Level 1 (BTL1) · Digital forensics · Malware analysis and reverse engineering"
     },
     {
       "n": 38,
-      "title": "Prompting and tool use + Delta Lake and lakehouse · Security practice · Security practice · Security practice",
       "topics": [
-        "A-4-3",
-        "A-6-1",
-        "A-14-5",
-        "C-11-3",
-        "B-1-5",
-        "B-1-6",
-        "B-6-1",
-        "B-7-5",
-        "B-9-4",
-        "E-0-1",
-        "B-10-15"
-      ]
+        "C-9-6",
+        "C-17-6",
+        "C-24-6"
+      ],
+      "title": "Digital forensics · Malware analysis and reverse engineering · Exam prep: Blue Team Level 1 (BTL1)"
     },
     {
       "n": 39,
-      "title": "Delta Lake and lakehouse + Prompting and tool use · Security practice · Security practice · Security practice",
       "topics": [
-        "A-4-4",
-        "A-4-5",
-        "F-6-4",
-        "C-11-4",
-        "C-11-5",
-        "B-1-7",
-        "B-1-8",
-        "B-2-0",
-        "B-2-1",
-        "B-6-2",
-        "B-9-5",
-        "B-9-6",
-        "B-11-8"
-      ]
+        "C-9-7",
+        "C-17-7",
+        "C-24-7",
+        "C-9-8"
+      ],
+      "title": "Digital forensics · Malware analysis and reverse engineering · Exam prep: Blue Team Level 1 (BTL1)"
     },
     {
       "n": 40,
-      "title": "Cybersecurity + Prompting and tool use · Security practice · Security practice · Security practice",
       "topics": [
-        "A-4-6",
-        "A-6-2",
-        "A-16-0",
-        "C-11-6",
-        "C-11-7",
-        "C-11-8",
-        "B-1-9",
-        "B-1-10",
-        "B-2-2",
-        "B-6-3",
-        "B-9-7",
-        "B-11-9"
-      ]
+        "C-17-8",
+        "C-9-9",
+        "C-17-9"
+      ],
+      "title": "Malware analysis and reverse engineering · Digital forensics"
     },
     {
       "n": 41,
-      "title": "Delta Lake and lakehouse + RAG · Security practice · Security practice · Security practice",
       "topics": [
-        "A-4-7",
-        "A-4-8",
-        "A-6-3",
-        "F-6-5",
-        "C-12-0",
-        "C-12-1",
-        "B-2-3",
-        "B-2-4",
-        "B-6-4",
-        "B-9-8",
-        "B-9-9"
-      ]
+        "C-10-0",
+        "C-18-0",
+        "C-25-0",
+        "C-11-0",
+        "C-10-1"
+      ],
+      "title": "Cloud and infrastructure security · Cloud security depth (INFS803) · IoT security (COMP816) · Application security and DevSecOps"
     },
     {
       "n": 42,
-      "title": "RAG + Delta Lake and lakehouse · Security practice · Security practice · Security practice",
       "topics": [
-        "A-4-9",
-        "A-6-4",
-        "A-16-1",
-        "C-12-2",
-        "C-12-3",
-        "B-2-5",
-        "B-2-6",
-        "B-6-5",
-        "B-9-10"
-      ]
+        "C-18-1",
+        "C-25-1",
+        "C-11-1",
+        "C-10-2"
+      ],
+      "title": "Cloud security depth (INFS803) · IoT security (COMP816) · Application security and DevSecOps · Cloud and infrastructure security"
     },
     {
       "n": 43,
-      "title": "Pipelines and orchestration + Quality, operations, platform · Security practice · Security practice · Security practice",
       "topics": [
-        "A-6-5",
-        "A-7-0",
-        "A-20-6",
-        "F-6-6",
-        "F-7-0",
-        "C-12-4",
-        "C-12-5",
-        "C-12-6",
-        "B-6-6",
-        "B-11-10"
-      ]
+        "C-18-2",
+        "C-25-2",
+        "C-11-2",
+        "C-10-3",
+        "C-18-3"
+      ],
+      "title": "Cloud security depth (INFS803) · IoT security (COMP816) · Application security and DevSecOps · Cloud and infrastructure security"
     },
     {
       "n": 44,
-      "title": "RAG + Pipelines and orchestration · Security practice · Security practice · Security practice",
       "topics": [
-        "A-6-6",
-        "A-7-1",
-        "A-16-2",
-        "C-12-7",
-        "C-12-8",
-        "C-12-9",
-        "B-2-8",
-        "B-2-9",
-        "B-11-11",
-        "E-0-2"
-      ]
+        "C-25-3",
+        "C-11-3",
+        "C-10-4",
+        "C-18-4"
+      ],
+      "title": "IoT security (COMP816) · Application security and DevSecOps · Cloud and infrastructure security · Cloud security depth (INFS803)"
     },
     {
       "n": 45,
-      "title": "RAG + Delivery: testing, CI/CD, IaC, containers · Security practice · Security practice · Security practice",
       "topics": [
-        "A-17-0",
-        "C-12-10",
-        "C-12-11",
-        "B-2-10",
-        "B-2-11",
-        "B-10-0",
-        "B-11-12",
-        "D-1-3"
-      ]
+        "C-25-4",
+        "C-11-4",
+        "C-10-5",
+        "C-18-5"
+      ],
+      "title": "IoT security (COMP816) · Application security and DevSecOps · Cloud and infrastructure security · Cloud security depth (INFS803)"
     },
     {
       "n": 46,
-      "title": "AI engineer roadmap details + Pipelines and orchestration · Security practice · Security practice · Security practice",
       "topics": [
-        "A-6-7",
-        "A-7-2",
-        "A-16-3",
-        "F-7-1",
-        "C-12-12",
-        "B-2-12",
-        "B-10-1",
-        "B-11-4",
-        "B-11-13"
-      ]
+        "C-11-5",
+        "C-10-6",
+        "C-18-6",
+        "C-11-6",
+        "C-10-7"
+      ],
+      "title": "Application security and DevSecOps · Cloud and infrastructure security · Cloud security depth (INFS803)"
     },
     {
       "n": 47,
-      "title": "RAG + Agent foundations · Security practice · Security practice · Security practice",
       "topics": [
-        "A-7-3",
-        "A-17-1",
-        "A-20-7",
-        "C-13-0",
-        "B-2-13",
-        "B-2-14",
-        "B-10-2",
-        "B-10-3"
-      ]
+        "C-18-7",
+        "C-11-7",
+        "C-10-8",
+        "C-18-8"
+      ],
+      "title": "Cloud security depth (INFS803) · Application security and DevSecOps · Cloud and infrastructure security"
     },
     {
       "n": 48,
-      "title": "Agents and harness + Quality, operations, platform · Security practice · Security practice · Security practice",
       "topics": [
-        "A-7-4",
-        "A-17-2",
-        "F-7-2",
-        "C-13-1",
-        "C-13-2",
-        "B-3-0",
-        "B-3-1",
-        "B-10-4",
-        "B-11-5"
-      ]
+        "C-10-9",
+        "C-18-9",
+        "C-10-10",
+        "C-18-10"
+      ],
+      "title": "Cloud and infrastructure security · Cloud security depth (INFS803)"
     },
     {
       "n": 49,
-      "title": "Agents and harness + Quality, operations, platform · Security practice · Security practice · Security practice",
       "topics": [
-        "A-22-8",
-        "A-7-5",
-        "A-18-0",
-        "C-13-3",
-        "C-13-4",
-        "C-13-5",
-        "B-3-2",
-        "B-3-3",
-        "B-5-0",
-        "B-10-5",
-        "B-11-18"
-      ]
+        "C-16-0",
+        "C-16-1"
+      ],
+      "title": "AI security"
     },
     {
       "n": 50,
-      "title": "General system design + Delivery: testing, CI/CD, IaC, containers",
       "topics": [
-        "A-10-0",
-        "A-17-3",
-        "B-3-4",
-        "B-10-6"
-      ]
+        "C-16-2"
+      ],
+      "title": "AI security"
     },
     {
       "n": 51,
-      "title": "Agents and harness + Agent foundations · Security practice · Security practice · Security practice",
       "topics": [
-        "A-7-6",
-        "A-10-1",
-        "A-17-4",
-        "A-18-1",
-        "F-7-3",
-        "C-13-6",
-        "C-13-7",
-        "B-3-5",
-        "B-3-6",
-        "B-5-1",
-        "B-10-7",
-        "B-10-8",
-        "E-0-3"
-      ]
+        "C-16-3"
+      ],
+      "title": "AI security"
     },
     {
       "n": 52,
-      "title": "Agents and harness + Quality, operations, platform",
       "topics": [
-        "A-7-7",
-        "A-10-2",
-        "A-17-5",
-        "B-3-7",
-        "B-3-8",
-        "B-5-2",
-        "B-10-9",
-        "B-11-14",
-        "B-2-7"
-      ]
+        "C-16-4"
+      ],
+      "title": "AI security"
     },
     {
       "n": 53,
-      "title": "General system design + Agents and harness",
       "topics": [
-        "A-10-3",
-        "A-10-4",
-        "A-18-2",
-        "A-20-11",
-        "B-3-9",
-        "B-3-10",
-        "B-5-3",
-        "B-10-10",
-        "D-1-4"
-      ]
+        "C-16-5",
+        "C-16-6"
+      ],
+      "title": "AI security"
     },
     {
       "n": 54,
-      "title": "Agents and harness + General system design · Security practice · Security practice · Security practice",
       "topics": [
-        "A-10-5",
-        "A-17-6",
-        "A-20-8",
-        "A-23-0",
-        "C-13-8",
-        "B-3-11",
-        "B-3-12",
-        "B-10-11"
-      ]
+        "C-16-7"
+      ],
+      "title": "AI security"
     },
     {
       "n": 55,
-      "title": "Python language and ecosystem + Agents and harness",
       "topics": [
-        "A-22-7",
-        "A-22-12",
-        "A-9-0",
-        "A-10-6",
-        "A-18-3",
-        "A-23-1",
-        "B-3-13",
-        "B-3-14",
-        "B-4-0",
-        "B-5-4",
-        "B-10-12",
-        "B-10-13"
-      ]
+        "C-16-8"
+      ],
+      "title": "AI security"
     },
     {
       "n": 56,
-      "title": "General system design + Governance, privacy, regulation",
       "topics": [
-        "A-10-7",
-        "A-19-0",
-        "A-23-2",
-        "B-3-15",
-        "B-5-5"
-      ]
+        "C-16-9"
+      ],
+      "title": "AI security"
     },
     {
       "n": 57,
-      "title": "Agents and harness + System design",
       "topics": [
-        "A-9-1",
-        "A-10-8",
-        "A-19-1",
-        "A-20-10",
-        "A-23-3",
-        "B-3-16",
-        "B-3-17",
-        "B-4-1",
-        "B-5-6"
-      ]
+        "C-12-0",
+        "C-12-1"
+      ],
+      "title": "Research methods and dissertation"
     },
     {
       "n": 58,
-      "title": "Agents and harness + System design",
       "topics": [
-        "A-9-2",
-        "A-10-9",
-        "A-15-0",
-        "A-23-4",
-        "B-3-18",
-        "B-3-19",
-        "B-4-2",
-        "B-8-0",
-        "D-2-0",
-        "E-0-4"
-      ]
+        "C-12-2"
+      ],
+      "title": "Research methods and dissertation"
     },
     {
       "n": 59,
-      "title": "General system design + Cloud platforms",
       "topics": [
-        "A-10-10",
-        "A-10-11",
-        "A-15-1",
-        "A-19-2",
-        "A-23-5",
-        "A-24-0",
-        "B-4-3",
-        "B-5-7",
-        "B-11-15"
-      ]
+        "C-12-3"
+      ],
+      "title": "Research methods and dissertation"
     },
     {
       "n": 60,
-      "title": "AWS: foundations and networking + System design · Security practice · Security practice · Security practice",
       "topics": [
-        "A-9-3",
-        "A-10-12",
-        "A-19-3",
-        "A-24-1",
-        "A-24-2",
-        "C-13-9",
-        "B-5-8",
-        "B-8-1",
-        "B-11-16",
-        "D-2-1"
-      ]
+        "C-12-4"
+      ],
+      "title": "Research methods and dissertation"
     },
     {
       "n": 61,
-      "title": "General system design + Cloud platforms",
       "topics": [
-        "A-10-13",
-        "A-15-2",
-        "A-19-4",
-        "A-23-6",
-        "A-24-3",
-        "B-4-4",
-        "B-5-9"
-      ]
+        "C-12-5"
+      ],
+      "title": "Research methods and dissertation"
     },
     {
       "n": 62,
-      "title": "AWS: foundations and networking + System design",
       "topics": [
-        "A-9-4",
-        "A-15-3",
-        "A-20-9",
-        "A-23-7",
-        "A-24-4",
-        "A-24-5",
-        "B-4-5",
-        "B-8-2",
-        "B-11-17",
-        "D-2-2",
-        "D-3-0",
-        "E-1-0"
-      ]
+        "C-12-6"
+      ],
+      "title": "Research methods and dissertation"
     },
     {
       "n": 63,
-      "title": "System design + Cloud platforms",
       "topics": [
-        "A-9-5",
-        "A-15-4",
-        "A-19-5",
-        "A-23-8",
-        "A-24-6",
-        "B-5-10"
-      ]
+        "C-12-7"
+      ],
+      "title": "Research methods and dissertation"
     },
     {
       "n": 64,
-      "title": "AWS: foundations and networking + Governance, privacy, regulation · Security practice · Security practice · Security practice",
       "topics": [
-        "A-19-6",
-        "A-23-9",
-        "A-24-7",
-        "A-24-8",
-        "C-13-10",
-        "B-5-11",
-        "B-8-3",
-        "D-2-3",
-        "D-3-1",
-        "E-0-5",
-        "E-1-1"
-      ]
+        "C-12-8"
+      ],
+      "title": "Research methods and dissertation"
     },
     {
       "n": 65,
-      "title": "System design + Cloud platforms · Security practice · Security practice · Security practice",
       "topics": [
-        "A-9-6",
-        "A-15-5",
-        "A-23-10",
-        "A-24-9",
-        "A-25-0",
-        "C-13-11"
-      ]
+        "C-14-0",
+        "C-13-0",
+        "C-14-1",
+        "C-13-1"
+      ],
+      "title": "Cybercrime, law and policy (COMP844) · Security architecture, engineering and career"
     },
     {
       "n": 66,
-      "title": "Cloud platforms + Cloud design patterns",
       "topics": [
-        "A-15-6",
-        "A-23-11",
-        "A-25-1",
-        "D-2-4",
-        "D-3-2"
-      ]
+        "C-14-2",
+        "C-13-2",
+        "C-14-3"
+      ],
+      "title": "Cybercrime, law and policy (COMP844) · Security architecture, engineering and career"
     },
     {
       "n": 67,
-      "title": "Cloud design patterns + AWS: data, containers, serverless",
       "topics": [
-        "A-23-12",
-        "A-25-2",
-        "E-1-2"
-      ]
+        "C-13-3",
+        "C-14-4",
+        "C-13-4"
+      ],
+      "title": "Security architecture, engineering and career · Cybercrime, law and policy (COMP844)"
     },
     {
       "n": 68,
-      "title": "Behavioral and resume + Mock interviews",
       "topics": [
-        "D-2-5",
-        "D-3-3"
-      ]
+        "C-14-5",
+        "C-13-5",
+        "C-14-6"
+      ],
+      "title": "Cybercrime, law and policy (COMP844) · Security architecture, engineering and career"
     },
     {
       "n": 69,
-      "title": "AWS: data, containers, serverless + Ship",
       "topics": [
-        "A-25-3",
-        "E-1-3"
-      ]
+        "C-13-6",
+        "C-14-7",
+        "C-13-7"
+      ],
+      "title": "Security architecture, engineering and career · Cybercrime, law and policy (COMP844)"
     },
     {
       "n": 70,
-      "title": "AWS: data, containers, serverless + Mock interviews",
       "topics": [
-        "A-25-4",
-        "D-3-4"
-      ]
+        "C-14-8",
+        "C-13-8",
+        "C-14-9"
+      ],
+      "title": "Cybercrime, law and policy (COMP844) · Security architecture, engineering and career"
     },
     {
       "n": 71,
-      "title": "AWS: data, containers, serverless",
       "topics": [
-        "A-25-5"
-      ]
+        "C-13-9",
+        "C-13-10",
+        "C-13-11"
+      ],
+      "title": "Security architecture, engineering and career"
     },
     {
       "n": 72,
-      "title": "Ship",
       "topics": [
-        "E-1-4"
-      ]
+        "C-13-12",
+        "C-13-13",
+        "C-13-14"
+      ],
+      "title": "Security architecture, engineering and career"
     }
   ],
   "phases": [
     {
-      "name": "Foundations & security thinking",
+      "name": "Foundations, systems & Security+",
       "start": 1,
       "end": 8
     },
     {
-      "name": "Systems, networks & scripting",
+      "name": "Networking, secure coding & cryptography",
       "start": 9,
       "end": 16
     },
     {
-      "name": "Secure programming & identity",
+      "name": "Web security & offensive labs",
       "start": 17,
       "end": 24
     },
     {
-      "name": "Web application security",
+      "name": "SOC, SIEM & detection engineering",
       "start": 25,
       "end": 32
     },
     {
-      "name": "Penetration testing practice",
+      "name": "Digital forensics & malware analysis",
       "start": 33,
       "end": 40
     },
     {
-      "name": "SOC operations & incident response",
+      "name": "Cloud, IoT & application security",
       "start": 41,
       "end": 48
     },
     {
-      "name": "Digital forensics",
+      "name": "AI security & emerging skills",
       "start": 49,
       "end": 56
     },
     {
-      "name": "Cloud & application security engineering",
+      "name": "Research methods & dissertation",
       "start": 57,
       "end": 64
     },
     {
-      "name": "Research, dissertation & career portfolio",
+      "name": "Career, cybercrime law & consolidation",
       "start": 65,
       "end": 72
     }

@@ -12,5 +12,10 @@ export const topicRef = (key: string) => {
   const track = sourceRoadmap.tracks.find((t) => t.id === trackId)!;
   const group = track.groups[Number(groupIndex)];
   const raw = group.i[Number(itemIndex)];
-  return { key, trackId, track: track.name, groupIndex: Number(groupIndex), itemIndex: Number(itemIndex), group: group.t, text: raw.replace(/^\*/, ''), priority: raw.startsWith('*') };
+  // A checkpoint may be prefixed with a level tag and/or a priority star, e.g. "[I]*Topic".
+  const levelMatch = raw.match(/^\[(B|I|A)\]/);
+  const level = levelMatch ? ({ B: 'Beginner', I: 'Intermediate', A: 'Advanced' } as const)[levelMatch[1]] : undefined;
+  const afterLevel = raw.replace(/^\[(B|I|A)\]/, '');
+  const text = afterLevel.replace(/^\*/, '');
+  return { key, trackId, track: track.name, groupIndex: Number(groupIndex), itemIndex: Number(itemIndex), group: group.t, text, priority: afterLevel.startsWith('*'), level };
 };

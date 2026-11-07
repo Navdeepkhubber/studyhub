@@ -3,25 +3,25 @@ import { curriculum } from './curriculum';
 import type { Roadmap } from './types';
 const source = roadmapJson as unknown as Roadmap;
 const exits = [
-  'Run basic Python and R scripts, query relational data, use Git and the shell, and explain the data lifecycle.',
-  'Show worked linear algebra and probability examples, exploratory notebooks, and intermediate SQL queries.',
-  'Produce an experiment analysis and regression baseline; explain database and warehouse modelling choices.',
-  'Compare classical models with held-out evaluation and explain a basic distributed data workflow.',
-  'Train a reproducible neural model and build a tested pipeline; explain LLM foundations before RAG.',
-  'Evaluate retrieval and a cited RAG answerer; inspect data quality, lineage, and advanced ML results.',
-  'Build and test a bounded tool-using agent; document system design trade-offs and evaluation failures.',
-  'Deploy a small service, practise AWS essentials, and document projects with tests, cost, and safety notes.',
-  'Finish cloud and design depth, complete mock reviews and portfolio artifacts, and record degree bridge gaps.',
+  'Set up a safe home lab; explain CIA, risk and attack surface; read a packet capture and the Linux and Windows basics.',
+  'Trace untrusted input to a sensitive operation, write parameterized queries, and explain the core cryptographic primitives (COMP830).',
+  'Find and remediate the main OWASP Top 10 classes in a lab, and run an authorized test from scope to report.',
+  'Stand up a mini-SOC in Microsoft Sentinel: ingest logs, write KQL detections, and triage an incident toward SC-200 outcomes.',
+  'Acquire and verify evidence, carry a forensic case to defensible findings (COMP832/843), and analyse a malware sample safely.',
+  'Secure a cloud environment (INFS803) with IAM, network and logging controls; scan containers and reason about IoT risk (COMP816).',
+  'Red-team an AI application: prompt injection, pipeline risks, and using AI to assist detection; map to the NIST AI RMF.',
+  'Turn a security topic into a researchable question with ethics, method and baseline (ENGE817); draft a proposal.',
+  'Explain NZ cybercrime law and policy (COMP844), map evidence to a target role, and finish the portfolio and job-readiness review.',
 ];
 const capstoneOutputs: Record<number,string> = {
-  65: 'Deploy one portfolio service and record its architecture, tests, cost estimate, and recovery steps.',
-  66: 'Compare managed cloud data services for your project and complete a timed system design mock.',
-  67: 'Publish architecture diagrams for each major project and explain reliability trade-offs.',
-  68: 'Run a behavioral mock and revise your resume, LinkedIn, and GitHub from the feedback.',
-  69: 'Containerize or package a project, then pin four polished repositories with reproducible instructions.',
-  70: 'Build and test a scheduled Lambda task; review weak interview topics and record corrections.',
-  71: 'Expose the Lambda task through API Gateway and document security, limits, monitoring, and cost.',
-  72: 'Link the finished projects from your resume and perform a final portfolio and degree-bridge review.',
+  65: 'Publish one portfolio project end to end with a clear README, evidence and limitations.',
+  66: 'Complete a role-focused mock interview and record the topics to revise.',
+  67: 'Publish an architecture or investigation write-up and explain the key trade-offs.',
+  68: 'Revise your resume, LinkedIn and GitHub from mock feedback and sanitize all artefacts.',
+  69: 'Pin your strongest repositories with reproducible setup and sanitized data.',
+  70: 'Review weak areas across the programme and record corrections.',
+  71: 'Dry-run your dissertation companion repo: question, method, evidence and reproducibility.',
+  72: 'Link finished projects from your resume and complete a final portfolio and degree review.',
 };
 export const roadmap: Roadmap = {
   tracks: source.tracks,

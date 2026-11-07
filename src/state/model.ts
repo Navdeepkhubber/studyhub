@@ -43,7 +43,7 @@ export const STORAGE_KEY = 'study-compass-v2';
 export const defaultState = (): AppState => ({
   done: {}, topics: {}, dsaDone: {}, neetDone: {}, notes: {}, missions: {}, weekEvidence: {}, weekNotionUrls: {}, topicReviews: {},
   skillLevels: {}, skillEvidence: {}, portfolio: {}, portfolioLinks: {},
-  start: '2026-10-12', hours: 12, path: '240', bridge: 'unknown', activity: {}, timerSessions: [],
+  start: '2027-02-22', hours: 12, path: '240', bridge: 'unknown', activity: {}, timerSessions: [],
   onboarded: false, lastBackupAt: null, backupSnoozeUntil: null, dsaLog: {}, dsaGoal: 2, dsaRevise: {}, dsaNotes: {}, dsaLast: null,
 });
 

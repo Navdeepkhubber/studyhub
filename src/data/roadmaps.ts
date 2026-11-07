@@ -2,30 +2,60 @@ import { roadmap } from './index-roadmap';
 import type { Track, TopicGroup } from './types';
 
 /**
- * The roadmap views combine external role roadmaps with the cybersecurity curriculum.
- * Each view lists [trackId, groupIndex] pairs from roadmap.json.
- *
- * Each source view includes its domain topics and the prerequisite groups explicitly named by
- * that PDF. A group can appear in several views because the study task is shared.
- * The PDFs use short diagram labels; the Atlas checkpoints combine related labels into a
- * workable task. Source overlap is therefore intentional.
+ * Atlas views group the roadmap's tracks into role- and course-oriented lenses.
+ * Views reference security groups by a distinctive substring of their title (resolved
+ * at load) so adding or reordering groups never silently misplaces a view.
+ * The optional tracks (A data engineering, B GenAI, D interview craft) appear as
+ * whole-track views for brush-up.
  */
 export interface RoadmapView { id: string; name: string; source: string; url: string; groups: [track: string, group: number][] }
 
+const C = roadmap.tracks.find((t) => t.id === 'C');
+/** Resolve a Track C group index by a case-insensitive title substring. */
+const cg = (needle: string): number => {
+  const i = C ? C.groups.findIndex((g) => g.t.toLowerCase().includes(needle.toLowerCase())) : -1;
+  return i;
+};
+/** Build [ 'C', index ] pairs for the named security groups, dropping any not found. */
+const cGroups = (...needles: string[]): [string, number][] =>
+  needles.map((n) => ['C', cg(n)] as [string, number]).filter(([, i]) => i >= 0);
+const allGroups = (id: string): [string, number][] => {
+  const t = roadmap.tracks.find((x) => x.id === id);
+  return t ? t.groups.map((_, gi) => [id, gi] as [string, number]) : [];
+};
+
+const AUT = 'https://www.aut.ac.nz/study/study-options/engineering-computer-and-mathematical-sciences/courses/master-of-cyber-security-and-digital-forensics';
+
 export const roadmapViews: RoadmapView[] = [
-  { id: 'data-engineer', name: 'Data Engineer', source: 'data-engineer.pdf', url: 'https://roadmap.sh/data-engineer', groups: [['A', 3], ['A', 4], ['A', 5], ['A', 6], ['A', 7], ['A', 8], ['A', 11], ['A', 12], ['A', 13], ['A', 14], ['A', 16], ['A', 17], ['A', 18], ['A', 19], ['A', 20], ['A', 0], ['A', 1], ['A', 2], ['A', 21], ['A', 22], ['D', 0]] },
-  { id: 'sql', name: 'SQL', source: 'sql.pdf', url: 'https://roadmap.sh/sql', groups: [['A', 0], ['A', 1], ['A', 21], ['D', 1]] },
-  { id: 'python', name: 'Python', source: 'python.pdf', url: 'https://roadmap.sh/python', groups: [['A', 2], ['A', 22], ['D', 0]] },
-  { id: 'python-data-analysis', name: 'Python for Data Analysis', source: 'roadmap.sh', url: 'https://roadmap.sh/python', groups: [['A', 21], ['A', 2]] },
-  { id: 'r-programming', name: 'R Programming', source: 'r-programming.pdf', url: 'https://roadmap.sh/roadmaps', groups: [['F', 0], ['F', 1], ['F', 2], ['F', 3], ['F', 4], ['F', 5], ['F', 6], ['F', 7]] },
-  { id: 'system-design', name: 'System Design', source: 'system-design.pdf', url: 'https://roadmap.sh/system-design', groups: [['A', 9], ['A', 10], ['A', 23]] },
-  { id: 'aws', name: 'AWS', source: 'aws.pdf', url: 'https://roadmap.sh/aws', groups: [['A', 15], ['A', 24], ['A', 25]] },
-  { id: 'machine-learning', name: 'Penetration Tester', source: 'OWASP WSTG', url: 'https://owasp.org/www-project-web-security-testing-guide/', groups: [['C', 0], ['C', 1], ['C', 2], ['C', 3], ['C', 5], ['C', 6], ['C', 13]] },
-  { id: 'ai-data-scientist', name: 'Application Security Engineer', source: 'OWASP SAMM', url: 'https://owaspsamm.org/', groups: [['C', 0], ['C', 3], ['C', 4], ['C', 5], ['C', 9], ['C', 12]] },
-  { id: 'ai-engineer', name: 'AI Engineer', source: 'ai-engineer.pdf', url: 'https://roadmap.sh/ai-engineer', groups: [['B', 0], ['B', 2], ['B', 4], ['B', 6], ['B', 7], ['B', 8], ['B', 11], ['A', 22], ['B', 1], ['B', 3]] },
-  { id: 'prompt-engineering', name: 'Prompt Engineering', source: 'prompt-engineering.pdf', url: 'https://roadmap.sh/prompt-engineering', groups: [['B', 0], ['B', 1], ['B', 9]] },
-  { id: 'ai-agents', name: 'AI Agents', source: 'ai-agents.pdf', url: 'https://roadmap.sh/ai-agents', groups: [['B', 0], ['B', 3], ['B', 5], ['B', 10], ['A', 11], ['A', 22], ['B', 1], ['B', 2]] },
-  { id: 'gfg-data-scientist', name: 'SOC Analyst & Digital Forensics', source: 'MITRE ATT&CK and NIST', url: 'https://attack.mitre.org/', groups: [['C', 0], ['C', 1], ['C', 2], ['C', 7], ['C', 8], ['C', 10], ['C', 11]] },
+  // Job-role lenses over the security track
+  { id: 'pentester', name: 'Penetration Tester', source: 'OWASP WSTG', url: 'https://owasp.org/www-project-web-security-testing-guide/', groups: cGroups('Security foundations', 'Networking', 'Scripting and automation', 'Secure coding', 'Web application', 'Penetration testing', 'Active Directory', 'architecture, engineering and career') },
+  { id: 'soc-dfir', name: 'SOC Analyst & Digital Forensics', source: 'MITRE ATT&CK and NIST', url: 'https://attack.mitre.org/', groups: cGroups('Security foundations', 'Networking', 'Scripting and automation', 'SOC and incident', 'Digital forensics', 'SIEM and detection', 'Active Directory', 'architecture, engineering and career') },
+  { id: 'appsec', name: 'Application Security Engineer', source: 'OWASP SAMM', url: 'https://owaspsamm.org/', groups: cGroups('Security foundations', 'Secure coding', 'Cryptography', 'Web application', 'Cloud and infrastructure', 'Application security and DevSecOps', 'architecture, engineering and career') },
+  { id: 'security-engineer', name: 'Security Engineer', source: 'NIST SP 800-53', url: 'https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final', groups: cGroups('Security foundations', 'Networking', 'Scripting and automation', 'Cryptography', 'Cloud and infrastructure', 'Application security and DevSecOps', 'Active Directory', 'architecture, engineering and career') },
+
+  // AUT course lenses
+  { id: 'comp844', name: 'COMP844 Cybercrime, Law & Policy', source: 'AUT', url: AUT, groups: cGroups('Cybercrime, law', 'Security foundations', 'SOC and incident') },
+  { id: 'comp832-843', name: 'COMP832 / COMP843 Digital Forensics', source: 'AUT', url: AUT, groups: cGroups('Digital forensics', 'Malware analysis', 'SOC and incident') },
+  { id: 'comp830', name: 'COMP830 Cryptography & Cryptanalysis', source: 'AUT', url: AUT, groups: cGroups('Cryptography') },
+  { id: 'comp833', name: 'COMP833 Network Security & Forensics', source: 'AUT', url: AUT, groups: cGroups('Networking', 'Digital forensics') },
+  { id: 'comp821', name: 'COMP821 Information Security', source: 'AUT', url: AUT, groups: cGroups('Security foundations', 'Application security and DevSecOps', 'architecture, engineering and career') },
+  { id: 'infs803', name: 'INFS803 Cloud Computing', source: 'AUT', url: AUT, groups: cGroups('Cloud security depth', 'Cloud and infrastructure') },
+  { id: 'enge817', name: 'ENGE817 Research Methods & Dissertation', source: 'AUT', url: 'https://www.aut.ac.nz/research/postgraduate-research', groups: cGroups('Research methods') },
+  { id: 'comp816', name: 'COMP816 IoT Security', source: 'AUT', url: AUT, groups: cGroups('IoT security', 'Networking') },
+
+  // Emerging / market-demand lenses
+  { id: 'certifications', name: 'Certifications (exam prep)', source: 'Vendor exam objectives', url: 'https://learn.microsoft.com/en-us/credentials/', groups: [...cGroups('Exam prep: CompTIA Security+', 'Exam prep: eJPT', 'Exam prep: Microsoft SC-200', 'Exam prep: Blue Team Level 1'), ...allGroups('E')] },
+  { id: 'job-ready-nz', name: 'Job-ready in NZ (search, certs, presence)', source: 'NZ employer research', url: 'https://www.summeroftech.co.nz/', groups: cGroups('NZ job search', 'architecture, engineering and career', 'Security foundations') },
+  { id: 'scripting', name: 'Scripting & automation (Python, Bash, PowerShell)', source: 'NZ job ads', url: 'https://exercism.org/tracks/python', groups: cGroups('Scripting and automation', 'Linux and Windows') },
+  { id: 'siem-detection', name: 'SIEM & Detection Engineering (Sentinel, KQL)', source: 'Microsoft Learn / SC-200', url: 'https://learn.microsoft.com/en-us/azure/sentinel/', groups: cGroups('SIEM and detection', 'SOC and incident', 'Digital forensics') },
+  { id: 'ai-security', name: 'AI Security', source: 'OWASP LLM Top 10 / NIST AI RMF', url: 'https://genai.owasp.org/llm-top-10/', groups: cGroups('AI security', 'Secure coding', 'Application security and DevSecOps') },
+  { id: 'malware-re', name: 'Malware Analysis & Reverse Engineering', source: 'Ghidra / YARA', url: 'https://ghidra-sre.org/', groups: cGroups('Malware analysis', 'Linux and Windows', 'Digital forensics') },
+  { id: 'cloud-security', name: 'Cloud Security Engineer', source: 'Well-Architected / CSPM', url: 'https://docs.prowler.com/', groups: cGroups('Cloud security depth', 'Cloud and infrastructure', 'Networking', 'Application security and DevSecOps') },
+
+  // Optional brush-up tracks (not scheduled)
+  { id: 'data-engineering', name: 'Data engineering (optional)', source: 'roadmap.sh', url: 'https://roadmap.sh/data-engineer', groups: allGroups('A') },
+  { id: 'genai', name: 'GenAI, RAG & agents (optional)', source: 'roadmap.sh', url: 'https://roadmap.sh/ai-engineer', groups: allGroups('B') },
+  { id: 'interview', name: 'Coding & interview craft (optional)', source: 'NeetCode', url: 'https://neetcode.io/practice', groups: allGroups('D') },
 ];
 
 export function roadmapHas(view: RoadmapView, track: Track, group: TopicGroup): boolean {
@@ -33,7 +63,7 @@ export function roadmapHas(view: RoadmapView, track: Track, group: TopicGroup): 
   return view.groups.some(([t, g]) => t === track.id && g === gi);
 }
 
-/** e.g. "112 topics · Track A, B". Computed so it never drifts from roadmap.json. */
+/** e.g. "48 topics · Track C". Computed so it never drifts from roadmap.json. */
 export function roadmapScope(view: RoadmapView): string {
   const n = view.groups.reduce((a, [t, g]) => a + (roadmap.tracks.find((x) => x.id === t)?.groups[g]?.i.length ?? 0), 0);
   const tr = [...new Set(view.groups.map(([t]) => t))].join(', ');

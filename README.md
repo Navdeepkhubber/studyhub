@@ -1,6 +1,6 @@
 # Study Hub
 
-A personal learning platform with 72 ordered study blocks covering 593 roadmap checkpoints, a DSA tracker (Striver A2Z + NeetCode), AI engineering practice, cybersecurity learning, career and degree planning. Study block dates adapt to the learner’s available hours, so a dense block can span more than one calendar week.
+A personal learning platform for the AUT Master of Cyber Security and Digital Forensics. 72 ordered study blocks schedule 242 cybersecurity and digital forensics checkpoints, each tagged Beginner/Intermediate/Advanced, balancing job-ready skills with masters coursework; data engineering, GenAI and interview topics stay optional in the Atlas for brush-up. Includes a DSA tracker (Striver A2Z + NeetCode), a security portfolio, and career and degree planning. Study block dates adapt to the learner’s available hours, so a dense block can span more than one calendar week.
 Built with the same stack as [navdeep.dev](https://navdeep.dev) (React 19, strict TypeScript, Vite 6, lucide-react) in its own repo,
 with its own look: the original Study Compass theme (teal, mint, navy; Manrope + DM Sans), in light and dark.
 
@@ -60,7 +60,9 @@ DSA practice and due revisions appear in each block and share progress with the 
 
 ## Resource precision
 
-Every one of the 593 Atlas checkpoints now has its own resource entry in `src/data/study-resources.json`: a selected reading, a practice source, and an action. Broader checkpoints include additional readings for their named concepts, such as the Azure design patterns and the statistics papers. The 66 group mappings remain as a fallback for future curriculum changes; the current plan does not use them. The curriculum check fails if a scheduled checkpoint lacks a topic-specific entry. `npm run check:links` audits external URL health; external documentation can still move, and an accessible course overview may require choosing its named lesson.
+Every Atlas checkpoint has its own resource entry in `src/data/study-resources.json`: a selected reading, a practice source, and an action. Each topic group also has a fallback mapping. The curriculum check fails if a scheduled checkpoint lacks a topic-specific entry. `npm run check:links` audits external URL health; external documentation can still move, and an accessible course overview may require choosing its named lesson.
+
+The curriculum is generated from `scripts/rebuild-curriculum.mjs`, which defines the tracks, the balanced 72-block security plan, resources, skills and practice tracks. Edit that script and re-run it (`node scripts/rebuild-curriculum.mjs`) to reshape the plan, then `npm run check:data`.
 
 ## DSA data
 

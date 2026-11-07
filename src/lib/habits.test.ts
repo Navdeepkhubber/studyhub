@@ -28,7 +28,7 @@ describe('model: new fields', () => {
   });
   it('summarizes a backup for the restore comparison', () => {
     const s = sanitize({ done: { a: true, b: true }, dsaDone: { x: true }, neetDone: { y: true }, notes: { 1: 'n', 2: '' } });
-    expect(summarize({ ...s, topics: { 'B-0-0': true } })).toMatchObject({ tasks: 2, roadmapTopics: 1, problems: 2, notes: 1 });
+    expect(summarize({ ...s, topics: { 'C-0-0': true } })).toMatchObject({ tasks: 2, roadmapTopics: 1, problems: 2, notes: 1 });
   });
 });
 

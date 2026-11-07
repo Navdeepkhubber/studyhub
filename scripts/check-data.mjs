@@ -11,6 +11,6 @@ for(const it of items){for(const k of ['video','tuf','leetcode','gfg'])if(it[k]!
 check(new Set(nc.problems.map(p=>p.slug)).size===nc.problems.length,'NeetCode slugs are not unique');
 check(nc.meta.counts.nc150===150,'NeetCode 150 count is wrong');
 check(nc.problems.filter(p=>p.blind75).every(p=>p.nc150),'Blind 75 is not a subset of NeetCode 150');
-check(rm.tracks.length===6,'expected six Atlas tracks');
+check(rm.tracks.length===5,'expected five Atlas tracks (C scheduled; A, B, D, E optional)');
 if(errors.length){console.error(errors.join('\n'));process.exit(1)}
 console.log(`✓ data OK: ${items.length} A2Z items, ${nc.problems.length} NeetCode problems, ${rm.tracks.length} Atlas tracks`);

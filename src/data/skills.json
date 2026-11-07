@@ -1,139 +1,171 @@
 [
   {
     "name": "Foundations and systems",
-    "description": "Build the baseline every security role relies on.",
+    "description": "The baseline every security role relies on.",
     "skills": [
       {
-        "id": "n",
-        "name": "e",
+        "id": "networking",
+        "name": "Networking & protocols",
         "week": "See weekly plan",
-        "evidence": "t",
-        "learn": "w",
-        "practice": "o"
+        "evidence": "A Wireshark capture read and explained; subnetting and TLS notes.",
+        "learn": "https://skillsforall.com/course/networking-basics",
+        "practice": "https://www.wireshark.org/docs/wsug_html_chunked/"
       },
       {
-        "id": "T",
-        "name": "C",
+        "id": "linux",
+        "name": "Linux & Windows internals",
         "week": "See weekly plan",
-        "evidence": "P",
-        "learn": "/",
-        "practice": "I"
+        "evidence": "Lab notes on permissions, services, logs and event analysis.",
+        "learn": "https://linuxjourney.com/",
+        "practice": "https://overthewire.org/wargames/"
       },
       {
-        "id": "A",
-        "name": " ",
+        "id": "python-sec",
+        "name": "Scripting & automation",
         "week": "See weekly plan",
-        "evidence": "p",
-        "learn": "a",
-        "practice": "c"
+        "evidence": "A small Python tool that parses logs or calls an API.",
+        "learn": "https://docs.python.org/3/tutorial/",
+        "practice": "https://overthewire.org/wargames/"
       },
       {
-        "id": "h",
-        "name": "t",
+        "id": "crypto",
+        "name": "Cryptography & identity",
         "week": "See weekly plan",
-        "evidence": "t",
-        "learn": "p",
-        "practice": "s"
+        "evidence": "A crypto challenge solved; a short implementation review.",
+        "learn": "https://www.coursera.org/learn/crypto",
+        "practice": "https://cryptopals.com/"
       },
       {
-        "id": "h",
-        "name": "t",
+        "id": "threat-model",
+        "name": "Threat modelling",
         "week": "See weekly plan",
-        "evidence": "t",
-        "learn": "p",
-        "practice": "s"
+        "evidence": "A STRIDE model with trust boundaries and prioritised risks.",
+        "learn": "https://www.nist.gov/cyberframework",
+        "practice": "https://tryhackme.com/paths"
       }
     ]
   },
   {
-    "name": "Security practice",
-    "description": "Learn to investigate, validate, communicate and improve safely.",
+    "name": "Offensive & defensive practice",
+    "description": "Investigate, test, detect and communicate safely.",
     "skills": [
       {
-        "id": "t",
-        "name": "h",
+        "id": "pentest",
+        "name": "Web & application testing",
         "week": "See weekly plan",
-        "evidence": "r",
-        "learn": "e",
-        "practice": "a"
+        "evidence": "PortSwigger labs completed; a concise finding with remediation.",
+        "learn": "https://owasp.org/www-project-web-security-testing-guide/",
+        "practice": "https://portswigger.net/web-security"
       },
       {
-        "id": "T",
-        "name": "h",
+        "id": "soc",
+        "name": "SOC & detection engineering",
         "week": "See weekly plan",
-        "evidence": "r",
-        "learn": "e",
-        "practice": "a"
+        "evidence": "A tested detection mapped to ATT&CK with triage notes.",
+        "learn": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "practice": "https://cyberdefenders.org/"
       },
       {
-        "id": "T",
-        "name": "h",
+        "id": "dfir",
+        "name": "Digital forensics & IR",
         "week": "See weekly plan",
-        "evidence": "r",
-        "learn": "e",
-        "practice": "a"
+        "evidence": "A casefile: acquisition, hashes, timeline and defensible findings.",
+        "learn": "https://www.nist.gov/itl/ssd/software-quality-group/computer-forensics-tool-testing-program-cftt",
+        "practice": "https://cyberdefenders.org/"
       },
       {
-        "id": "h",
-        "name": "t",
+        "id": "cloudsec",
+        "name": "Cloud security",
         "week": "See weekly plan",
-        "evidence": "t",
-        "learn": "p",
-        "practice": "s"
+        "evidence": "IAM, network and logging controls applied and reviewed in a sandbox.",
+        "learn": "https://docs.aws.amazon.com/security/",
+        "practice": "https://owaspsamm.org/"
       },
       {
-        "id": "h",
-        "name": "t",
+        "id": "appsec",
+        "name": "AppSec & DevSecOps",
         "week": "See weekly plan",
-        "evidence": "t",
-        "learn": "p",
-        "practice": "s"
+        "evidence": "A pipeline with SAST/SCA/secret scanning and triaged findings.",
+        "learn": "https://owaspsamm.org/",
+        "practice": "https://cheatsheetseries.owasp.org/"
+      },
+      {
+        "id": "siem",
+        "name": "SIEM & detection (Sentinel, KQL)",
+        "week": "See weekly plan",
+        "evidence": "KQL detections in Sentinel with a triaged incident; progress toward SC-200.",
+        "learn": "https://learn.microsoft.com/en-us/azure/sentinel/",
+        "practice": "https://learn.microsoft.com/en-us/kusto/query/tutorials/learn-common-operators"
+      },
+      {
+        "id": "ad-identity",
+        "name": "Active Directory & Microsoft identity",
+        "week": "See weekly plan",
+        "evidence": "A lab domain you attacked and then hardened, with detections for the attacks.",
+        "learn": "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
+        "practice": "https://academy.hackthebox.com/"
+      },
+      {
+        "id": "malware",
+        "name": "Malware analysis & RE",
+        "week": "See weekly plan",
+        "evidence": "A casefile with static/dynamic analysis and YARA rules.",
+        "learn": "https://malwareunicorn.org/workshops/re101.html",
+        "practice": "https://ghidra-sre.org/"
       }
     ]
   },
   {
-    "name": "Engineering and research",
-    "description": "Translate security knowledge into shipped controls and defensible research.",
+    "name": "Engineering, research & career",
+    "description": "Turn security knowledge into shipped controls, defensible research and job offers.",
     "skills": [
       {
-        "id": "a",
-        "name": "p",
+        "id": "architecture",
+        "name": "Security architecture",
         "week": "See weekly plan",
-        "evidence": "p",
-        "learn": "s",
-        "practice": "e"
+        "evidence": "A design note with zero-trust decisions and control mapping.",
+        "learn": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "practice": "https://www.cisa.gov/securebydesign"
       },
       {
-        "id": "A",
-        "name": "p",
+        "id": "aisec",
+        "name": "AI security",
         "week": "See weekly plan",
-        "evidence": "p",
-        "learn": "l",
-        "practice": "i"
+        "evidence": "An AI app red-team report mapped to the OWASP LLM Top 10 and NIST AI RMF.",
+        "learn": "https://genai.owasp.org/llm-top-10/",
+        "practice": "https://tryhackme.com/paths"
       },
       {
-        "id": "S",
-        "name": "e",
+        "id": "cloudsec-depth",
+        "name": "Cloud security engineering",
         "week": "See weekly plan",
-        "evidence": "c",
-        "learn": "u",
-        "practice": "r"
+        "evidence": "A hardened cloud baseline with IAM, logging and a CSPM scan.",
+        "learn": "https://docs.aws.amazon.com/security/",
+        "practice": "https://docs.prowler.com/"
       },
       {
-        "id": "h",
-        "name": "t",
+        "id": "cybercrime-law",
+        "name": "Cybercrime, law & policy",
         "week": "See weekly plan",
-        "evidence": "t",
-        "learn": "p",
-        "practice": "s"
+        "evidence": "A case-study report citing NZ law and a risk-mitigation plan.",
+        "learn": "https://www.cert.govt.nz/",
+        "practice": "https://www.privacy.org.nz/privacy-act-2020/"
       },
       {
-        "id": "h",
-        "name": "t",
+        "id": "research",
+        "name": "Research & dissertation",
         "week": "See weekly plan",
-        "evidence": "t",
-        "learn": "p",
-        "practice": "s"
+        "evidence": "A proposal: question, method, ethics, baseline and validity threats.",
+        "learn": "https://www.aut.ac.nz/research/postgraduate-research",
+        "practice": "https://openrepository.aut.ac.nz/"
+      },
+      {
+        "id": "career",
+        "name": "Career readiness",
+        "week": "See weekly plan",
+        "evidence": "A security resume, STAR stories and a 90-day job-search plan.",
+        "learn": "https://www.careers.govt.nz/",
+        "practice": "https://www.seek.co.nz/cyber-security-jobs"
       }
     ]
   }

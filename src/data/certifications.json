@@ -1,0 +1,82 @@
+{
+  "checked": "2026-11-07",
+  "certs": [
+    {
+      "id": "secplus",
+      "name": "CompTIA Security+ (SY0-701)",
+      "when": "Before arrival or in Phase 1",
+      "role": "Entry credential named in NZ graduate listings",
+      "exam": "Exam prep: CompTIA Security+",
+      "prep": ["Security foundations", "Networking and protocols", "Cryptography", "SOC and incident", "architecture, engineering and career"],
+      "cost": "About US$425",
+      "note": "Training providers report SY0-801 launching around November 2026, with SY0-701 bookable until about June 2027. Confirm the version on CompTIA's site before booking.",
+      "url": "https://www.comptia.org/en-us/certifications/security/"
+    },
+    {
+      "id": "cc",
+      "name": "ISC2 CC (alternative to Security+)",
+      "when": "Instead of Security+, not as well",
+      "role": "Cheaper, lighter entry credential",
+      "exam": "Exam prep: ISC2",
+      "prep": ["Security foundations", "Networking and protocols", "SOC and incident", "architecture, engineering and career"],
+      "cost": "US$199 plus US$50 a year",
+      "note": "The outline changed on 1 September 2026, and the free 1MCC programme closed to new enrolments in May 2026. Use study material written for the new outline.",
+      "url": "https://www.isc2.org/certifications/cc/cc-certification-exam-outline"
+    },
+    {
+      "id": "ejpt",
+      "name": "eJPT (INE)",
+      "when": "Phase 3, after web and pentest labs",
+      "role": "Practical junior pentest credential",
+      "exam": "Exam prep: eJPT",
+      "prep": ["Networking and protocols", "Linux and Windows", "Web application", "Penetration testing"],
+      "cost": "About US$249 voucher",
+      "note": "48-hour hands-on lab exam. PJPT (TCM Security) is an Active Directory-focused alternative.",
+      "url": "https://ine.com/security/certifications/ejpt-certification"
+    },
+    {
+      "id": "sc200",
+      "name": "Microsoft SC-200",
+      "when": "Phase 4, with SOC and SIEM",
+      "role": "The cert that matches NZ SOC roles (Defender, Sentinel, KQL)",
+      "exam": "Exam prep: Microsoft SC-200",
+      "prep": ["SIEM and detection", "SOC and incident", "Active Directory", "Cloud and infrastructure"],
+      "cost": "About US$165; free annual renewal",
+      "note": "Skills outline as of 21 October 2026: manage a security operations environment (40-45%), respond to incidents (35-40%), threat hunting (20-25%). Microsoft Learn's training path and practice assessment are free.",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-200"
+    },
+    {
+      "id": "btl1",
+      "name": "Blue Team Level 1 (BTL1)",
+      "when": "Phase 5, with forensics",
+      "role": "Practical SOC and incident response credential",
+      "exam": "Exam prep: Blue Team Level 1",
+      "prep": ["SOC and incident", "Digital forensics", "SIEM and detection"],
+      "cost": "About US$490 including the course",
+      "note": "24-hour practical exam built around one connected incident. The provider renamed itself Centri in June 2026; the certification is unchanged.",
+      "url": "https://www.securityblue.team/certifications/blue-team-level-1"
+    },
+    {
+      "id": "sc500",
+      "name": "Microsoft SC-500 (replaced AZ-500)",
+      "when": "After your first role",
+      "role": "Cloud security engineering",
+      "exam": "",
+      "prep": ["Cloud security depth", "Cloud and infrastructure", "Active Directory"],
+      "cost": "About US$165",
+      "note": "AZ-500 retired on 31 August 2026. SC-500 has been in beta since May 2026 and is aimed at working engineers.",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-500"
+    },
+    {
+      "id": "oscp",
+      "name": "PNPT, then OSCP",
+      "when": "First years of work",
+      "role": "Penetration tester",
+      "exam": "",
+      "prep": ["Penetration testing", "Active Directory", "Web application"],
+      "cost": "A large investment; check OffSec and TCM pricing",
+      "note": "NZ pentest listings typically ask for 2-3 years' experience plus certs like these.",
+      "url": "https://www.offsec.com/courses/pen-200/"
+    }
+  ]
+}

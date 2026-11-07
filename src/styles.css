@@ -174,6 +174,14 @@ dialog.modal::backdrop,dialog.cmd::backdrop{background:rgba(7,29,72,.5)}
 /* skills, atlas, settings */
 .skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.skill-card.focused{box-shadow:0 0 0 3px var(--accent)}.skill-actions{display:flex;gap:16px;margin:12px 0 16px;font-size:13px;font-weight:800}
 .topic-groups{display:grid;grid-template-columns:1fr 1fr;gap:14px}.topic-group .check{margin:8px 0}.star{font-weight:700}
+.level-badge{margin-left:8px;padding:1px 7px;border-radius:20px;font-size:9.5px;font-weight:800;letter-spacing:.02em;vertical-align:middle}
+.level-beginner{background:#e3f4ea;color:#1b6b3a}.level-intermediate{background:#fdf0dc;color:#8a5a12}.level-advanced{background:#fbe3e6;color:#9a2535}
+:root[data-theme=dark] .level-beginner{background:#163726;color:#7fd3a0}:root[data-theme=dark] .level-intermediate{background:#3a2d16;color:#e3b36a}:root[data-theme=dark] .level-advanced{background:#3a1b20;color:#e89aa5}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .level-beginner{background:#163726;color:#7fd3a0}:root:not([data-theme=light]) .level-intermediate{background:#3a2d16;color:#e3b36a}:root:not([data-theme=light]) .level-advanced{background:#3a1b20;color:#e89aa5}}
+.skill-ladder .skill-ladder-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}.skill-ladder .skill-ladder-head h3{margin:0}
+.ladder-rung{border-left:3px solid var(--line);padding:6px 0 6px 12px;margin:8px 0}
+.ladder-rung.rung-beginner{border-left-color:#49a66f}.ladder-rung.rung-intermediate{border-left-color:#d79a3a}.ladder-rung.rung-advanced{border-left-color:#c85565}
+.ladder-rung .rung-head{display:flex;align-items:center;gap:8px;margin-bottom:4px}.ladder-rung .level-badge{margin-left:0}
 .settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.settings-grid .panel+.panel{margin-top:0}
 /* palette + toasts */
 dialog.cmd{border:0;padding:0;background:transparent;margin:12vh auto auto;max-width:640px;width:92%}
@@ -300,3 +308,20 @@ body,.topbar,.tabbar,footer,.panel,.card,.stat,.study-card,.practice-card,.skill
 .week-card{transition:transform .15s ease,box-shadow .3s ease,background-color .3s ease,border-color .3s ease,color .3s ease}
 @media(prefers-reduced-motion:reduce){main>*{animation:none!important}::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
 @media(prefers-reduced-motion:reduce){body::before,body,.sidebar,.topbar,.tabbar,footer,.panel,.card,.stat,.week-card,.study-card,.practice-card,.skill-card,.topic-group,.dsa-section,.intro,.dsa-intro,.icon-btn,.side-stat,.streak,.today-shortcuts a{transition:none!important}}
+/* Career timeline and employer eligibility tracker */
+.career-timeline{list-style:none;margin:0 0 8px;padding:0 0 0 14px;border-left:3px solid var(--line)}
+.timeline-item{position:relative;padding:8px 0 10px 14px}
+.timeline-item::before{content:"";position:absolute;left:-23px;top:14px;width:13px;height:13px;border-radius:50%;background:var(--card);border:3px solid var(--line)}
+.timeline-item.now::before{border-color:var(--accent);background:var(--accent)}
+.timeline-item.past{opacity:.72}
+.timeline-when{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:2px}
+.timeline-now{background:var(--accent-soft);color:var(--accent-ink);border-radius:20px;padding:1px 8px;font-size:10.5px}
+.table-scroll{overflow-x:auto;margin-bottom:8px}
+.elig-table{width:100%;border-collapse:collapse;font-size:13.5px}
+.elig-table th,.elig-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.elig-table th{font-size:12px;color:var(--muted)}
+.elig{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:800;white-space:nowrap}
+.elig-ok{background:#e3f4ea;color:#1b6b3a}.elig-check{background:#fdf0dc;color:#8a5a12}.elig-no{background:#fbe3e6;color:#9a2535}
+:root[data-theme=dark] .elig-ok{background:#163726;color:#7fd3a0}:root[data-theme=dark] .elig-check{background:#3a2d16;color:#e3b36a}:root[data-theme=dark] .elig-no{background:#3a1b20;color:#e89aa5}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .elig-ok{background:#163726;color:#7fd3a0}:root:not([data-theme=light]) .elig-check{background:#3a2d16;color:#e3b36a}:root:not([data-theme=light]) .elig-no{background:#3a1b20;color:#e89aa5}}
+.cert-card .progress{margin:8px 0 4px}

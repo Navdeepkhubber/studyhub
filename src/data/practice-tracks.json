@@ -1,118 +1,97 @@
 [
   {
-    "key": "sql",
-    "name": "SQL",
+    "key": "labs",
+    "name": "Hands-on security labs",
     "when": "Use with scheduled weekly checkpoints",
-    "cadence": "2\u20133 problems per week \u00b7 45\u201360 minutes",
-    "goal": "Start with SELECT, joins and grouping; move to CTEs and window functions.",
+    "cadence": "2–4 exercises per week · 45–90 minutes",
+    "goal": "Practise skills on deliberately vulnerable, isolated or authorized targets. Never test systems you do not own or have written permission to test.",
     "resources": [
       [
         "START HERE",
-        "LeetCode SQL 50",
-        "https://leetcode.com/studyplan/top-sql-50/",
-        "Follow the basic-to-intermediate sequence."
+        "TryHackMe paths",
+        "https://tryhackme.com/paths",
+        "Guided rooms from beginner to role-based paths."
       ],
       [
-        "MORE REPETITIONS",
-        "HackerRank SQL",
-        "https://www.hackerrank.com/domains/sql",
-        "Filter by joins, aggregation and advanced select."
+        "WEB SECURITY",
+        "PortSwigger Web Security Academy",
+        "https://portswigger.net/web-security",
+        "Free, high-quality labs for every web vulnerability class."
       ],
       [
-        "INTERVIEW PRACTICE",
-        "DataLemur SQL",
-        "https://datalemur.com/questions",
-        "Try one timed analytics question after the basics."
+        "GO DEEPER",
+        "Hack The Box Academy",
+        "https://academy.hackthebox.com/",
+        "Structured modules and machines once fundamentals are solid."
+      ],
+      [
+        "FUNDAMENTALS",
+        "OverTheWire wargames",
+        "https://overthewire.org/wargames/",
+        "Linux and networking skills through a terminal."
       ]
     ]
   },
   {
-    "key": "python",
-    "name": "Python",
-    "when": "Use with scheduled weekly checkpoints",
-    "cadence": "2 small exercises per week \u00b7 30\u201345 minutes",
-    "goal": "Work in Python first, then reuse the same ideas in notebooks and data projects.",
+    "key": "bluelabs",
+    "name": "Blue-team & forensics labs",
+    "when": "Use with SOC, IR and forensics weeks",
+    "cadence": "1–2 investigations per week · 60–120 minutes",
+    "goal": "Build detection, triage and forensic evidence skills on realistic, legal datasets.",
     "resources": [
       [
         "START HERE",
-        "Exercism Python",
-        "https://exercism.org/tracks/python/exercises",
-        "Short coding exercises with tests and feedback."
+        "CyberDefenders",
+        "https://cyberdefenders.org/",
+        "Blue-team and DFIR challenges with sample data."
       ],
       [
-        "DATA SCIENCE",
-        "Kaggle Python",
-        "https://www.kaggle.com/learn/python",
-        "Complete the interactive lesson exercises."
+        "DETECTIONS",
+        "Sigma rules",
+        "https://sigmahq.io/docs/",
+        "Write and test portable detection rules."
       ],
       [
-        "DATA WRANGLING",
-        "Kaggle Pandas",
-        "https://www.kaggle.com/learn/pandas",
-        "Practise selecting, grouping and joining real data."
+        "MEMORY",
+        "Volatility",
+        "https://volatility3.readthedocs.io/en/latest/",
+        "Analyse memory images for processes and injection."
+      ],
+      [
+        "MAPPING",
+        "MITRE ATT&CK",
+        "https://attack.mitre.org/",
+        "Map detections and techniques to adversary behaviour."
       ]
     ]
   },
   {
-    "key": "r",
-    "name": "R",
-    "when": "Use with scheduled weekly checkpoints",
-    "cadence": "1\u20132 exercises per week \u00b7 30\u201345 minutes",
-    "goal": "Get comfortable with vectors and functions, then practise tidy data analysis.",
+    "key": "crypto",
+    "name": "Cryptography",
+    "when": "Use with the cryptography weeks (COMP830)",
+    "cadence": "1–2 challenges per week · 45–60 minutes",
+    "goal": "Understand primitives by using and breaking them in a controlled setting.",
     "resources": [
       [
-        "START HERE",
-        "Exercism R",
-        "https://exercism.org/tracks/r/exercises/",
-        "Work through the language exercises in order."
+        "LEARN",
+        "Cryptography I (Stanford)",
+        "https://www.coursera.org/learn/crypto",
+        "Dan Boneh’s course on the maths and primitives."
       ],
       [
-        "APPLIED R",
-        "R for Data Science",
-        "https://r4ds.hadley.nz/",
-        "Do the end-of-chapter exercises with your own dataset."
-      ],
-      [
-        "MODELLING",
-        "Tidy Modeling with R",
-        "https://www.tmwr.org/",
-        "Run the worked examples after your R foundations."
-      ]
-    ]
-  },
-  {
-    "key": "ai",
-    "name": "AI engineering",
-    "when": "Use with scheduled weekly checkpoints",
-    "cadence": "One small experiment per week \u00b7 60\u201390 minutes",
-    "goal": "Build one cited RAG system and improve it with a held-out evaluation set.",
-    "resources": [
-      [
-        "FOUNDATIONS",
-        "Hugging Face LLM course",
-        "https://huggingface.co/learn/llm-course",
-        "Learn tokenization, embeddings and model basics."
-      ],
-      [
-        "BUILD",
-        "Hugging Face agents course",
-        "https://huggingface.co/learn/agents-course",
-        "Practise retrieval and tool use on a small project."
-      ],
-      [
-        "EVALUATE",
-        "Ragas documentation",
-        "https://docs.ragas.io/",
-        "Measure retrieval and answer quality on your own questions."
+        "PRACTISE",
+        "Cryptopals",
+        "https://cryptopals.com/",
+        "Hands-on challenges that reveal real crypto failures."
       ]
     ]
   },
   {
     "key": "dsa",
-    "name": "DSA",
-    "when": "Use with scheduled weekly checkpoints",
-    "cadence": "1\u20132 problems per week \u00b7 45\u201360 minutes if relevant",
-    "goal": "Follow the complete A2Z sequence with its video lessons and direct practice problems.",
+    "name": "DSA (interview prep)",
+    "when": "Optional, for technical screens",
+    "cadence": "2–4 problems per week · ~25 minutes each",
+    "goal": "Keep algorithm skills warm for engineering interviews. Tracked separately in the DSA tracker.",
     "resources": "DSA_TRACKERS"
   }
 ]

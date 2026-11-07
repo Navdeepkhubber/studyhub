@@ -15,7 +15,7 @@ export function Plan(){
   const weeks=filter==='all'?roadmap.weeks:filter==='incomplete'?roadmap.weeks.filter(w=>weekPercent(s,w)<100):roadmap.weeks.slice(phase*8,phase*8+8);
   return <>
     <SectionHead title="Your weekly plan">Open a week, follow its lessons in order, and check off what you finish.</SectionHead>
-    <details className="callout rules"><summary>How the full plan works</summary><p>{curriculum.weeks.length} study blocks cover 593 checkpoints across about {calendarWeeks} calendar weeks at {s.hours} hours per week. Each checkpoint has a reading, practice, and a small task. Dense blocks take longer, and DSA practice is included in the schedule. You can adjust your start date and study hours in <a href="/settings">Settings</a>.</p></details>
+    <details className="callout rules"><summary>How the full plan works</summary><p>{curriculum.weeks.length} study blocks cover the cybersecurity and digital forensics checkpoints across about {calendarWeeks} calendar weeks at {s.hours} hours per week. Each checkpoint has a reading, practice, and a small task. Dense blocks take longer. Data engineering, GenAI and interview topics stay optional in the <a href="/atlas">Atlas</a> for brush-up. You can adjust your start date and study hours in <a href="/settings">Settings</a>.</p></details>
     {!weekWorkload(currentWeek(s),s).dsaFeasible && <div className="callout" role="alert">Your DSA daily goal cannot fit the current weekly hour target. The dates exclude DSA until you lower the goal or raise hours in <a href="/settings">Settings</a>.</div>}
     <div className="toolbar" role="group" aria-label="Filter weeks">
       <button className={`chip ${filter==='current'?'active':''}`} onClick={()=>setFilter('current')}>Current phase</button>
